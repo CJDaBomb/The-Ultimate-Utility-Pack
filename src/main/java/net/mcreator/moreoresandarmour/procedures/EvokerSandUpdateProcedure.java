@@ -4,8 +4,6 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.entity.monster.PillagerEntity;
-import net.minecraft.entity.monster.IllusionerEntity;
 import net.minecraft.entity.monster.EvokerEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.MobEntity;
@@ -14,8 +12,6 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.moreoresandarmour.entity.LootCreeperEntity;
-import net.mcreator.moreoresandarmour.entity.BloodSpiderEntity;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Map;
@@ -52,56 +48,6 @@ public class EvokerSandUpdateProcedure extends MoreOresAndArmourModElements.ModE
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("spawnMob1", Math.random());
-			world.notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
-		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "spawnMob1")) == (1e-10))) {
-			if (!world.isRemote) {
-				Entity entityToSpawn = new LootCreeperEntity.CustomEntity(LootCreeperEntity.entity, world);
-				entityToSpawn.setLocationAndAngles(x, y, z, world.rand.nextFloat() * 360F, 0);
-				if (entityToSpawn instanceof MobEntity)
-					((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
-							SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-				world.addEntity(entityToSpawn);
-			}
-		}
-		if (!world.isRemote) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("spawnMob2", Math.random());
-			world.notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
-		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "spawnMob2")) == (1e-10))) {
-			if (!world.isRemote) {
-				Entity entityToSpawn = new BloodSpiderEntity.CustomEntity(BloodSpiderEntity.entity, world);
-				entityToSpawn.setLocationAndAngles(x, y, z, world.rand.nextFloat() * 360F, 0);
-				if (entityToSpawn instanceof MobEntity)
-					((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
-							SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-				world.addEntity(entityToSpawn);
-			}
-		}
-		if (!world.isRemote) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("spawnMob3", Math.random());
 			world.notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
@@ -112,109 +58,9 @@ public class EvokerSandUpdateProcedure extends MoreOresAndArmourModElements.ModE
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "spawnMob3")) == (1e-10))) {
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "spawnMob3")) == 1000)) {
 			if (!world.isRemote) {
 				Entity entityToSpawn = new EvokerEntity(EntityType.EVOKER, world);
-				entityToSpawn.setLocationAndAngles(x, y, z, world.rand.nextFloat() * 360F, 0);
-				if (entityToSpawn instanceof MobEntity)
-					((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
-							SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-				world.addEntity(entityToSpawn);
-			}
-		}
-		if (!world.isRemote) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("spawnMob4", Math.random());
-			world.notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
-		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "spawnMob4")) == (1e-10))) {
-			if (!world.isRemote) {
-				Entity entityToSpawn = new IllusionerEntity(EntityType.ILLUSIONER, world);
-				entityToSpawn.setLocationAndAngles(x, y, z, world.rand.nextFloat() * 360F, 0);
-				if (entityToSpawn instanceof MobEntity)
-					((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
-							SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-				world.addEntity(entityToSpawn);
-			}
-		}
-		if (!world.isRemote) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("spawnMob5", Math.random());
-			world.notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
-		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "spawnMob5")) == (1e-10))) {
-			if (!world.isRemote) {
-				Entity entityToSpawn = new IllusionerEntity(EntityType.ILLUSIONER, world);
-				entityToSpawn.setLocationAndAngles(x, y, z, world.rand.nextFloat() * 360F, 0);
-				if (entityToSpawn instanceof MobEntity)
-					((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
-							SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-				world.addEntity(entityToSpawn);
-			}
-		}
-		if (!world.isRemote) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("spawnMob6", Math.random());
-			world.notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
-		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "spawnMob6")) == (1e-10))) {
-			if (!world.isRemote) {
-				Entity entityToSpawn = new PillagerEntity(EntityType.PILLAGER, world);
-				entityToSpawn.setLocationAndAngles(x, y, z, world.rand.nextFloat() * 360F, 0);
-				if (entityToSpawn instanceof MobEntity)
-					((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
-							SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-				world.addEntity(entityToSpawn);
-			}
-		}
-		if (!world.isRemote) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("spawnMob7", Math.random());
-			world.notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
-		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "spawnMob7")) == (1e-10))) {
-			if (!world.isRemote) {
-				Entity entityToSpawn = new PillagerEntity(EntityType.PILLAGER, world);
 				entityToSpawn.setLocationAndAngles(x, y, z, world.rand.nextFloat() * 360F, 0);
 				if (entityToSpawn instanceof MobEntity)
 					((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
