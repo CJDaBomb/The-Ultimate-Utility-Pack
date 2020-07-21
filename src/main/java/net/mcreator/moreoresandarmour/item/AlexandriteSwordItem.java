@@ -46,7 +46,7 @@ public class AlexandriteSwordItem extends MoreOresAndArmourModElements.ModElemen
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(AlexandriteItem.block, (int) (1)));
 			}
-		}, 3, -3f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
+		}, 3, -2.4f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 		}.setRegistryName("alexandrite_sword"));
 	}
 }

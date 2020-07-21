@@ -46,7 +46,7 @@ public class AluminumAxeItem extends MoreOresAndArmourModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(AluminumIngotItem.block, (int) (1)));
 			}
-		}, 1, -2.7f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
+		}, 1, -3f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 		}.setRegistryName("aluminum_axe"));
 	}
 }

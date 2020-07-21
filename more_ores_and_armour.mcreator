@@ -2764,6 +2764,32 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "powered_copper_wire"
+    },
+    {
+      "name": "BleedingOnPotionActiveTick",
+      "type": "procedure",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bleeding_on_potion_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bleeding",
+      "type": "potion",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bleeding"
     }
   ],
   "variable_elements": [],
@@ -2772,10 +2798,10 @@
     "en_us": {
       "item.more_ores_and_armour.ruby_armourbody": "Ruby Chestplate",
       "item.more_ores_and_armour.aluminum_shovel": "Aluminum Shovel",
-      "item.more_ores_and_armour.turquoise_shovel": "Turquoise Shovel",
       "item.more_ores_and_armour.bedrock_armourhelmet": "Shadowrock Helmet",
-      "item.more_ores_and_armour.sapphire_armourhelmet": "Sapphire Helmet",
+      "item.more_ores_and_armour.turquoise_shovel": "Turquoise Shovel",
       "block.more_ores_and_armour.lemon_log": "Lemon Log",
+      "item.more_ores_and_armour.sapphire_armourhelmet": "Sapphire Helmet",
       "block.more_ores_and_armour.alexandrite_ore": "Alexandrite Ore",
       "item.more_ores_and_armour.shadow_armourhelmet": "Shadow  Helmet",
       "block.more_ores_and_armour.infused_stone": "Infused Stone",
@@ -2785,8 +2811,8 @@
       "block.more_ores_and_armour.lemon_leaves": "Lemon Leaves",
       "item.more_ores_and_armour.ruby_axe": "Ruby Axe",
       "block.more_ores_and_armour.stripped_cherry_log": "Stripped Cherry Log",
-      "item.more_ores_and_armour.aluminum_ingot": "Aluminum Ingot",
       "item.more_ores_and_armour.cracked_end_roots": "Cracked End Roots",
+      "item.more_ores_and_armour.aluminum_ingot": "Aluminum Ingot",
       "block.more_ores_and_armour.rubyore": "Ruby Ore",
       "item.more_ores_and_armour.bolt": "Bolt",
       "hey": "",
@@ -2794,6 +2820,7 @@
       "item.more_ores_and_armour.shadow_armourlegs": "Shadow Armour Leggings",
       "block.more_ores_and_armour.electric_furnace_on": "Electric Furnace",
       "item.more_ores_and_armour.sapphire_armourlegs": "Sapphire Leggings",
+      "item.minecraft.lingering_potion.effect.bleeding": "Lingering Bleeding",
       "item.more_ores_and_armour.loot_creeper": "Loot Creeper Spawn Egg",
       "block.more_ores_and_armour.copper_block": "Copper Block",
       "block.more_ores_and_armour.bluestone_leaves": "Bluestone Leaves",
@@ -2859,6 +2886,7 @@
       "item.more_ores_and_armour.electric_arrow": "Electric Arrow",
       "block.more_ores_and_armour.aluminum_block": "Aluminum Block",
       "item.minecraft.tipped_arrow.effect.absorbsion": "Arrow of Absorbsion",
+      "effect.bleeding": "Bleeding",
       "block.more_ores_and_armour.stripped_lemon_log": "Stripped Lemon Log",
       "block.more_ores_and_armour.bluestone_log": "Bluestone Log",
       "item.more_ores_and_armour.turquoise": "Turquoise",
@@ -2928,7 +2956,10 @@
       "item.more_ores_and_armour.bedrock_zone": "Shadow Rock",
       "item.more_ores_and_armour.alexandrite_pickaxe": "Alexandrite Pickaxe",
       "item.more_ores_and_armour.bedrock_armourlegs": "Shadowrock Leggings",
+      "item.minecraft.potion.effect.bleeding": "Bleeding",
+      "item.minecraft.tipped_arrow.effect.bleeding": "Arrow of Bleeding",
       "item.more_ores_and_armour.aluminum_armourlegs": "Aluminum Leggings",
+      "item.minecraft.splash_potion.effect.bleeding": "Splash Bleeding",
       "item.minecraft.tipped_arrow.effect.wither_potion": "Arrow of Wither",
       "item.more_ores_and_armour.emerald_crystal": "Emerald Crystal",
       "item.more_ores_and_armour.shadow_armourboots": "Shadow Armour Boots",

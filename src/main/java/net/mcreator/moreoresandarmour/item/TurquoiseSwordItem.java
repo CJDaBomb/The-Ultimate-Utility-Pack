@@ -46,7 +46,7 @@ public class TurquoiseSwordItem extends MoreOresAndArmourModElements.ModElement 
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(TurquoiseItem.block, (int) (1)));
 			}
-		}, 3, -3f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
+		}, 3, -2.4f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 		}.setRegistryName("turquoise_sword"));
 	}
 }
