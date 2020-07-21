@@ -1,0 +1,55 @@
+{
+  "_fv": 10,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "shadow_helmet",
+    "enableBody": true,
+    "textureBody": "shadow_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "shadow_leggings",
+    "enableBoots": true,
+    "textureBoots": "shadow_boots",
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "armorTextureFile": "shadowarmour_",
+    "helmetName": "Shadow  Helmet",
+    "bodyName": "Shadow Armour Body",
+    "leggingsName": "Shadow Armour Leggings",
+    "bootsName": "Shadow Armour Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 55,
+    "damageValueHelmet": 15,
+    "damageValueBody": 25,
+    "damageValueLeggings": 20,
+    "damageValueBoots": 14,
+    "enchantability": 40,
+    "toughness": 3.5,
+    "equipSound": {
+      "value": "item.armor.equip_diamond"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:ShadowIngot"
+      }
+    ]
+  }
+}

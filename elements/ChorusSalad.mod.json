@@ -1,0 +1,25 @@
+{
+  "_fv": 10,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "chorus_salad",
+    "customModelName": "Normal",
+    "name": "Chorus Salad",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 6,
+    "saturation": 2.8000000000000003,
+    "eatingSpeed": 32,
+    "forDogs": false,
+    "isAlwaysEdible": false,
+    "animation": "eat",
+    "hasGlow": true,
+    "onEaten": {
+      "name": "ChorusSaladFoodEaten"
+    }
+  }
+}

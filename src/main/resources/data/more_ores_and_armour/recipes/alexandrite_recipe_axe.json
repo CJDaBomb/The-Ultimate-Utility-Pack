@@ -1,0 +1,30 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    " 5"
+  ],
+  "key": {
+    "0": {
+      "item": "more_ores_and_armour:alexandrite"
+    },
+    "1": {
+      "item": "more_ores_and_armour:alexandrite"
+    },
+    "2": {
+      "item": "more_ores_and_armour:alexandrite"
+    },
+    "3": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:alexandrite_axe",
+    "count": 1
+  }
+}

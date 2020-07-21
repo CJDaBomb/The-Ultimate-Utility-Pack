@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "more_ores_and_armour:block/bedrock_zone_portal_ew"
+    },
+    "axis=x": {
+      "model": "more_ores_and_armour:block/bedrock_zone_portal_ns"
+    }
+  }
+}

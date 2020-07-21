@@ -1,0 +1,30 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "3": {
+      "item": "minecraft:gold_block"
+    },
+    "4": {
+      "item": "minecraft:emerald"
+    },
+    "5": {
+      "item": "minecraft:gold_block"
+    },
+    "7": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "result": {
+    "item": "minecraft:totem_of_undying",
+    "count": 1
+  }
+}

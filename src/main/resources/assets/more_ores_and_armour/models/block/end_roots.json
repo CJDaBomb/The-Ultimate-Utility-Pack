@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "more_ores_and_armour:blocks/end_roots",
+    "particle": "more_ores_and_armour:blocks/end_roots"
+  }
+}

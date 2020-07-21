@@ -1,0 +1,16 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    {
+      "item": "minecraft:totem_of_undying"
+    }
+  ],
+  "result": {
+    "item": "more_ores_and_armour:enchanted_totem",
+    "count": 1
+  }
+}

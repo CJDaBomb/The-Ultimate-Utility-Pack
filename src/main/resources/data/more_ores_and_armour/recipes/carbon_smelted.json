@@ -1,0 +1,12 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:blasting",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "more_ores_and_armour:carbon_ore"
+  },
+  "result": {
+    "item": "more_ores_and_armour:carbon"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_fv": 10,
+  "_type": "potion",
+  "definition": {
+    "name": "Wither",
+    "effectName": "Wither",
+    "icon": "wither.png",
+    "color": {
+      "value": -12315587,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "registerPotionType": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "WitherPotionPotionStartedapplied"
+    }
+  }
+}

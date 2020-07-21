@@ -1,0 +1,20 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1"
+  ],
+  "key": {
+    "0": {
+      "tag": "items/planks"
+    },
+    "1": {
+      "tag": "items/planks"
+    }
+  },
+  "result": {
+    "item": "minecraft:stick",
+    "count": 4
+  }
+}

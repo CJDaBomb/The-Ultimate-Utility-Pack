@@ -1,0 +1,73 @@
+{
+  "_fv": 10,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 366,
+    "height": 376,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "name": "Slot #0",
+          "x": 329,
+          "y": 112
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:Bolt"
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "name": "Slot #1",
+          "x": 329,
+          "y": 180
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disableStackInteraction": false,
+          "name": "Slot #2",
+          "x": 422,
+          "y": 146
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "width": 240,
+          "height": 40,
+          "name": "Electric_Furnace",
+          "x": 252,
+          "y": 60
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Electric Furnace",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Electric Furnace",
+          "x": 293,
+          "y": 68
+        }
+      }
+    ]
+  }
+}

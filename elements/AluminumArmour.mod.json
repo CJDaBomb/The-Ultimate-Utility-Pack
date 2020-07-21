@@ -1,0 +1,55 @@
+{
+  "_fv": 10,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "aluminumarmour_head",
+    "enableBody": true,
+    "textureBody": "aluminumarmour_body",
+    "enableLeggings": true,
+    "textureLeggings": "aluminumarmour_leggings",
+    "enableBoots": true,
+    "textureBoots": "aluminumarmour_boots",
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "armorTextureFile": "aluminumarmour",
+    "helmetName": "Aluminum  Helmet",
+    "bodyName": "Aluminum Chestplate",
+    "leggingsName": "Aluminum Leggings",
+    "bootsName": "Aluminum Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 25,
+    "damageValueHelmet": 2,
+    "damageValueBody": 6,
+    "damageValueLeggings": 5,
+    "damageValueBoots": 2,
+    "enchantability": 9,
+    "toughness": 0.5,
+    "equipSound": {
+      "value": "item.armor.equip_iron"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:AluminumIngot"
+      }
+    ]
+  }
+}

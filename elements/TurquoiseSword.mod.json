@@ -1,0 +1,30 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "turquoise_sword",
+    "customModelName": "Normal",
+    "name": "Turquoise Sword",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 6,
+    "efficiency": 15.0,
+    "attackSpeed": 1.0,
+    "enchantability": 29,
+    "damageVsEntity": 10.5,
+    "usageCount": 2800,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Turquoise"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

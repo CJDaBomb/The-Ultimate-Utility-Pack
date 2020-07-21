@@ -1,0 +1,59 @@
+{
+  "_fv": 10,
+  "_type": "dimension",
+  "definition": {
+    "portalFrame": {
+      "value": "Blocks.BEDROCK"
+    },
+    "portalParticles": {
+      "value": "PORTAL"
+    },
+    "portalLuminance": 1.0,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Shadow Rock",
+    "igniterTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "texture": "bedrock_zone_ignitor",
+    "portalTexture": "bedrock_zone_portal",
+    "enablePortal": true,
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:BlueStoneBiome"
+      },
+      {
+        "value": "end_midlands"
+      },
+      {
+        "value": "end_highlands"
+      },
+      {
+        "value": "end_barrens"
+      },
+      {
+        "value": "CUSTOM:NightmareWoods"
+      }
+    ],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "CUSTOM:BlueStone"
+    },
+    "fluidBlock": {
+      "value": "CUSTOM:Oil"
+    },
+    "airColor": {
+      "value": -11711155,
+      "falpha": 0.0
+    },
+    "canRespawnHere": true,
+    "hasFog": true,
+    "hasWeather": true,
+    "isDark": false,
+    "doesWaterVaporize": false,
+    "sleepResult": "ALLOW",
+    "hasSkyLight": true,
+    "imitateOverworldBehaviour": true
+  }
+}

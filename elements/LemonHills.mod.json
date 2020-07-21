@@ -1,0 +1,118 @@
+{
+  "_fv": 10,
+  "_type": "biome",
+  "definition": {
+    "groundBlock": {
+      "value": "Blocks.GRASS"
+    },
+    "undergroundBlock": {
+      "value": "Blocks.DIRT#0"
+    },
+    "generateLakes": true,
+    "treeType": 1,
+    "vanillaTreeType": "Default",
+    "minHeight": 3,
+    "spawnVines": false,
+    "treeVines": {
+      "value": "Blocks.AIR"
+    },
+    "treeStem": {
+      "value": "CUSTOM:LemonLog"
+    },
+    "treeBranch": {
+      "value": "CUSTOM:LemonLeaves"
+    },
+    "treeFruits": {
+      "value": "Blocks.AIR"
+    },
+    "airColor": {
+      "value": -5916161,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -13261999,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -14329397,
+      "falpha": 0.0
+    },
+    "treesPerChunk": 5,
+    "grassPerChunk": 4,
+    "flowersPerChunk": 4,
+    "mushroomsPerChunk": 0,
+    "bigMushroomsChunk": 0,
+    "sandPathcesPerChunk": 0,
+    "gravelPatchesPerChunk": 0,
+    "reedsPerChunk": 0,
+    "cactiPerChunk": 0,
+    "rainingPossibility": 0.5,
+    "temperature": 0.5,
+    "baseHeight": 0.1,
+    "heightVariation": 1.3,
+    "spawnBiome": true,
+    "biomeWeight": 10,
+    "biomeType": "WARM",
+    "biomeCategory": "NONE",
+    "parent": {
+      "value": "No parent"
+    },
+    "biomeDictionaryTypes": [],
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "EntityAmbientCreature"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityAnimal"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityMonster"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityWanderingTrader"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityWaterMob"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityPhantom"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      }
+    ]
+  }
+}

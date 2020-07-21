@@ -1,0 +1,99 @@
+{
+  "_fv": 10,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 429,
+    "height": 388,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "Previous",
+          "onClick": {
+            "name": "PreviousPlayerPage"
+          },
+          "width": 160,
+          "height": 40,
+          "name": "Previous",
+          "x": 269,
+          "y": 166
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Next",
+          "onClick": {
+            "name": "PlayerTradePage"
+          },
+          "width": 80,
+          "height": 40,
+          "name": "Next",
+          "x": 507,
+          "y": 166
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "SetTradeItemAmount"
+          },
+          "name": "Slot #0",
+          "x": 333,
+          "y": 83
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disableStackInteraction": false,
+          "onTakenFromSlot": {
+            "name": "EmeraldCrsytalRemoveFromSlot"
+          },
+          "onStackTransfer": {
+            "name": "EmeraldCrsytalRemoveFromSlot"
+          },
+          "name": "Slot #1",
+          "x": 526,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": " Emerald Crystals",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": " Emerald Crystals",
+          "x": 257,
+          "y": 129
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Trade",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Trade",
+          "x": 519,
+          "y": 128
+        }
+      }
+    ]
+  }
+}

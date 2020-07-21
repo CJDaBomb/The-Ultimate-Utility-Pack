@@ -1,0 +1,20 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "xpReward": 1.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "Items.DIAMOND_CHESTPLATE"
+    },
+    "smeltingReturnStack": {
+      "value": "Items.DIAMOND"
+    },
+    "name": "diamond_chestplate_smelted",
+    "namespace": "mod"
+  }
+}

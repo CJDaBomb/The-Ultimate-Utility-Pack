@@ -1,0 +1,25 @@
+{
+  "_fv": 10,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "shadow_apple",
+    "customModelName": "Normal",
+    "name": "Shadow Apple",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 10,
+    "saturation": 3.9999999999999996,
+    "eatingSpeed": 32,
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "ShadowAppleFoodEaten"
+    }
+  }
+}

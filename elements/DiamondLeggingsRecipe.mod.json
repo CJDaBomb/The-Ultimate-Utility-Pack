@@ -1,0 +1,20 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "xpReward": 100.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "Items.DIAMOND_LEGGINGS"
+    },
+    "smeltingReturnStack": {
+      "value": "Items.DIAMOND"
+    },
+    "name": "diamond_leggings_recipe",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "sapphire_axe",
+    "customModelName": "Normal",
+    "name": "Sapphire Axe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 5,
+    "efficiency": 13.0,
+    "attackSpeed": 1.0,
+    "enchantability": 26,
+    "damageVsEntity": 4.0,
+    "usageCount": 2500,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Sapphire"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

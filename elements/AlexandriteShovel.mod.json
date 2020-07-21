@@ -1,0 +1,30 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "alexandrite_shovel",
+    "customModelName": "Normal",
+    "name": "Alexandrite Shovel",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 7,
+    "efficiency": 20.0,
+    "attackSpeed": 1.0,
+    "enchantability": 33,
+    "damageVsEntity": 4.0,
+    "usageCount": 3400,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Alexandrite"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

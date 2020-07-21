@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "more_ores_and_armour:aluminum_ingot"
+    },
+    "title": {
+      "translate": "advancements.shiny_metal.title"
+    },
+    "description": {
+      "translate": "advancements.shiny_metal.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "shiny_metal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "more_ores_and_armour:aluminum_ingot",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "more_ores_and_armour:gem_of_fire"
+}

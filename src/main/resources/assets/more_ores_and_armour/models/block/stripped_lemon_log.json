@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_ores_and_armour:blocks/stripped_lemon_log_top",
+    "up": "more_ores_and_armour:blocks/stripped_lemon_log_top",
+    "north": "more_ores_and_armour:blocks/stripped_lemon_log",
+    "east": "more_ores_and_armour:blocks/stripped_lemon_log",
+    "south": "more_ores_and_armour:blocks/stripped_lemon_log",
+    "west": "more_ores_and_armour:blocks/stripped_lemon_log",
+    "particle": "more_ores_and_armour:blocks/stripped_lemon_log_top"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "more_ores_and_armour:sapphire"
+    },
+    "2": {
+      "item": "more_ores_and_armour:sapphire"
+    },
+    "3": {
+      "item": "more_ores_and_armour:sapphire"
+    },
+    "4": {
+      "item": "more_ores_and_armour:sapphire"
+    },
+    "5": {
+      "item": "more_ores_and_armour:sapphire"
+    },
+    "6": {
+      "item": "more_ores_and_armour:sapphire"
+    },
+    "7": {
+      "item": "more_ores_and_armour:sapphire"
+    },
+    "8": {
+      "item": "more_ores_and_armour:sapphire"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:sapphire_armourbody",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_fv": 10,
+  "_type": "loottable",
+  "definition": {
+    "type": "Generic",
+    "pools": [],
+    "name": "challenge_completed",
+    "namespace": "mod"
+  }
+}

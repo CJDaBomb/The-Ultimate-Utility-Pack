@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_ores_and_armour:blocks/battery_bottom",
+    "up": "more_ores_and_armour:blocks/battery_top",
+    "north": "more_ores_and_armour:blocks/battery",
+    "east": "more_ores_and_armour:blocks/battery",
+    "south": "more_ores_and_armour:blocks/battery",
+    "west": "more_ores_and_armour:blocks/battery",
+    "particle": "more_ores_and_armour:blocks/battery_bottom"
+  }
+}

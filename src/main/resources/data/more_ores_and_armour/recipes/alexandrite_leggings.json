@@ -1,0 +1,36 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "more_ores_and_armour:alexandrite"
+    },
+    "1": {
+      "item": "more_ores_and_armour:alexandrite"
+    },
+    "2": {
+      "item": "more_ores_and_armour:alexandrite"
+    },
+    "3": {
+      "item": "more_ores_and_armour:alexandrite"
+    },
+    "5": {
+      "item": "more_ores_and_armour:alexandrite"
+    },
+    "6": {
+      "item": "more_ores_and_armour:alexandrite"
+    },
+    "8": {
+      "item": "more_ores_and_armour:alexandrite"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:alexandrite_armourlegs",
+    "count": 1
+  }
+}

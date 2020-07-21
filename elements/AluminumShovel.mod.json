@@ -1,0 +1,30 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "aluminum_shovel",
+    "customModelName": "Normal",
+    "name": "Aluminum Shovel",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 2,
+    "efficiency": 5.0,
+    "attackSpeed": 1.0,
+    "enchantability": 14,
+    "damageVsEntity": 4.0,
+    "usageCount": 250,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:AluminumIngot"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

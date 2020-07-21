@@ -1,0 +1,30 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    " 5"
+  ],
+  "key": {
+    "0": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "1": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "2": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "3": {
+      "item": "minecraft:iron_ingot"
+    },
+    "5": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:ruby_axe",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:smelting",
+  "experience": 100,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "minecraft:diamond_boots"
+  },
+  "result": {
+    "item": "minecraft:diamond",
+    "count": 4
+  }
+}

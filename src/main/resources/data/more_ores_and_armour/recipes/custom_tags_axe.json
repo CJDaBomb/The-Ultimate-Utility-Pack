@@ -1,0 +1,30 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    " 5"
+  ],
+  "key": {
+    "0": {
+      "tag": "items/planks"
+    },
+    "1": {
+      "tag": "items/planks"
+    },
+    "2": {
+      "tag": "items/planks"
+    },
+    "3": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "minecraft:wooden_axe",
+    "count": 1
+  }
+}

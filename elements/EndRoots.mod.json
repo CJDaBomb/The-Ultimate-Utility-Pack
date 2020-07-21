@@ -1,0 +1,52 @@
+{
+  "_fv": 10,
+  "_type": "plant",
+  "definition": {
+    "renderType": 12,
+    "texture": "end_roots",
+    "customModelName": "Cross model",
+    "plantType": "normal",
+    "growapableSpawnType": "Plains",
+    "growapableMaxHeight": 6,
+    "name": "End Roots",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "hardness": 0.0,
+    "resistance": 0.0,
+    "luminance": 0.0,
+    "unbreakable": false,
+    "soundOnStep": {
+      "value": "PLANT"
+    },
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 1,
+    "forceTicking": false,
+    "emissiveRendering": false,
+    "hasTileEntity": false,
+    "isReplaceable": false,
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "XZ",
+    "aiPathNodeType": "DEFAULT",
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "frequencyOnChunks": 4,
+    "spawnWorldTypes": [
+      "End"
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "end_midlands"
+      },
+      {
+        "value": "end_highlands"
+      }
+    ]
+  }
+}

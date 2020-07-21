@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "more_ores_and_armour:blocks/diamond_crystal_lantern",
+    "particle": "more_ores_and_armour:blocks/diamond_crystal_lantern"
+  }
+}

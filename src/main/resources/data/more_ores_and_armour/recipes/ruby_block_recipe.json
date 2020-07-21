@@ -1,0 +1,42 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "1": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "2": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "3": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "4": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "5": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "6": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "7": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "8": {
+      "item": "more_ores_and_armour:ruby"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:ruby_block",
+    "count": 1
+  }
+}

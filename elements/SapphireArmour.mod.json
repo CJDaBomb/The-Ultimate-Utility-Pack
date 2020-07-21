@@ -1,0 +1,55 @@
+{
+  "_fv": 10,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "sapphire_helmet",
+    "enableBody": true,
+    "textureBody": "sapphire_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "sapphire_leggings",
+    "enableBoots": true,
+    "textureBoots": "sapphire_boots",
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "armorTextureFile": "sapphire_armour",
+    "helmetName": "Sapphire Helmet",
+    "bodyName": "Sapphire Chestplate",
+    "leggingsName": "Sapphire Leggings",
+    "bootsName": "Sapphire  Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 35,
+    "damageValueHelmet": 5,
+    "damageValueBody": 9,
+    "damageValueLeggings": 7,
+    "damageValueBoots": 3,
+    "enchantability": 26,
+    "toughness": 2.5,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:Sapphire"
+      }
+    ]
+  }
+}

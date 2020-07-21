@@ -1,0 +1,22 @@
+{
+  "_fv": 10,
+  "_type": "potion",
+  "definition": {
+    "name": "Absorbsion",
+    "effectName": "Absorbsion",
+    "icon": "absorbsion.png",
+    "color": {
+      "value": -12520449,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "registerPotionType": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "AbsorbsionPotionStartedapplied"
+    }
+  }
+}

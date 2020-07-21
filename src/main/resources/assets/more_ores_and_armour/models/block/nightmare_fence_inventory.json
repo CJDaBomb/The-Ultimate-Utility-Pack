@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "more_ores_and_armour:blocks/nightmare_planks",
+    "particle": "more_ores_and_armour:blocks/nightmare_planks"
+  }
+}

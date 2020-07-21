@@ -1,0 +1,39 @@
+{
+  "_fv": 10,
+  "_type": "gun",
+  "definition": {
+    "renderType": 0,
+    "texture": "bow",
+    "customModelName": "Normal",
+    "name": "Electric Bow",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "CUSTOM:ElectricArrow"
+    },
+    "shootConstantly": false,
+    "usageCount": 384,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": true,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 1.0,
+    "bulletDamage": 5.0,
+    "bulletKnockback": 1,
+    "bulletParticles": true,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:ElectricArrow"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsEntity": {
+      "name": "ElectricArrowLivingEntityIsHitWithItem"
+    }
+  }
+}

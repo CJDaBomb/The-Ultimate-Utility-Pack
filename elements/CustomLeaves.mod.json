@@ -1,0 +1,19 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:BluestoneLeaves"
+      },
+      {
+        "value": "CUSTOM:NightmareLeaves"
+      }
+    ],
+    "functions": [],
+    "name": "leaves",
+    "namespace": "minecraft"
+  }
+}

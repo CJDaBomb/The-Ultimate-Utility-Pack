@@ -1,0 +1,55 @@
+{
+  "_fv": 10,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "bedrock_helmet",
+    "enableBody": true,
+    "textureBody": "bedrock_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "bedrock_leggings",
+    "enableBoots": true,
+    "textureBoots": "bedrock_boots",
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "armorTextureFile": "bedrockarmour_",
+    "helmetName": "Shadowrock Helmet",
+    "bodyName": "Shadowrock Chestplate",
+    "leggingsName": "Shadowrock Leggings",
+    "bootsName": "Shadowrock  Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 60,
+    "damageValueHelmet": 40,
+    "damageValueBody": 50,
+    "damageValueLeggings": 50,
+    "damageValueBoots": 40,
+    "enchantability": 60,
+    "toughness": 0.1,
+    "equipSound": {
+      "value": "item.armor.equip_diamond"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:ShadowRock"
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "_fv": 10,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "alexandrite_helmet",
+    "enableBody": true,
+    "textureBody": "alexandrite_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "alexandrite_leggings",
+    "enableBoots": true,
+    "textureBoots": "alexandrite_boots",
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "armorTextureFile": "diamond_",
+    "helmetName": "Alexandrite Helmet",
+    "bodyName": "Alexandrite Chestplate",
+    "leggingsName": "Alexandrite Leggings",
+    "bootsName": "Alexandrite Armour Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 50,
+    "damageValueHelmet": 15,
+    "damageValueBody": 25,
+    "damageValueLeggings": 20,
+    "damageValueBoots": 10,
+    "enchantability": 33,
+    "toughness": 5.0,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:Alexandrite"
+      }
+    ]
+  }
+}

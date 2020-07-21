@@ -1,0 +1,37 @@
+{
+  "_fv": 10,
+  "_type": "structure",
+  "definition": {
+    "structure": "ship",
+    "randomlyRotateStructure": true,
+    "surfaceDetectionType": "First block",
+    "spawnProbability": 10000,
+    "minCountPerChunk": 1,
+    "maxCountPerChunk": 1,
+    "spawnLocation": "Ground",
+    "spawnHeightOffset": 13,
+    "spawnWorldTypes": [
+      "End"
+    ],
+    "restrictionBlocks": [
+      {
+        "value": "Blocks.AIR"
+      }
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "end_barrens"
+      },
+      {
+        "value": "end_highlands"
+      },
+      {
+        "value": "end_midlands"
+      },
+      {
+        "value": "small_end_islands"
+      }
+    ],
+    "ignoreBlocks": "STRUCTURE_BLOCK"
+  }
+}

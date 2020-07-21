@@ -1,0 +1,26 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "more_ores_and_armour:shadow_ingot"
+    },
+    "2": {
+      "item": "more_ores_and_armour:shadow_ingot"
+    },
+    "3": {
+      "item": "more_ores_and_armour:shadow_ingot"
+    },
+    "5": {
+      "item": "more_ores_and_armour:shadow_ingot"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:shadow_armourboots",
+    "count": 1
+  }
+}

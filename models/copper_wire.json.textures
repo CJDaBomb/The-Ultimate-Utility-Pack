@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "east": "copper_wire_side",
+        "north": "copper_wire_frontorback",
+        "down": "copper_wire2"
+      },
+      "name": "default"
+    }
+  }
+}

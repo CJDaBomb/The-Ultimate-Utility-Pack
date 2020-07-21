@@ -1,0 +1,30 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "1": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "2": {
+      "item": "more_ores_and_armour:ruby"
+    },
+    "4": {
+      "item": "minecraft:iron_ingot"
+    },
+    "7": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:ruby_pickaxe",
+    "count": 1
+  }
+}

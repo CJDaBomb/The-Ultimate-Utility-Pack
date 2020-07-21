@@ -1,0 +1,11 @@
+{
+  "_fv": 10,
+  "_type": "tab",
+  "definition": {
+    "name": "Custom Ore Mod",
+    "icon": {
+      "value": "CUSTOM:Ruby"
+    },
+    "showSearch": true
+  }
+}

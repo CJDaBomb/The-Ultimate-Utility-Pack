@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "more_ores_and_armour:block/nightmare_log"
+    },
+    "facing=north": {
+      "model": "more_ores_and_armour:block/nightmare_log"
+    },
+    "facing=east": {
+      "model": "more_ores_and_armour:block/nightmare_log",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "more_ores_and_armour:block/nightmare_log",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "more_ores_and_armour:block/nightmare_log",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "more_ores_and_armour:block/nightmare_log",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

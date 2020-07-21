@@ -1,0 +1,26 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "more_ores_and_armour:shadow_ingot"
+    },
+    "1": {
+      "item": "minecraft:bedrock"
+    },
+    "2": {
+      "item": "minecraft:bedrock"
+    },
+    "3": {
+      "item": "more_ores_and_armour:shadow_ingot"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:shadow_rock",
+    "count": 1
+  }
+}

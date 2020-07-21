@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "more_ores_and_armour:bluestone_planks",
+    "more_ores_and_armour:nightmare_planks",
+    "minecraft:oak_planks",
+    "minecraft:spruce_planks",
+    "minecraft:birch_planks",
+    "minecraft:jungle_planks",
+    "minecraft:acacia_planks",
+    "minecraft:birch_planks",
+    "minecraft:acacia_planks",
+    "minecraft:dark_oak_planks"
+  ]
+}

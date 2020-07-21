@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "more_ores_and_armour:shadow_rock"
+    },
+    "title": {
+      "translate": "advancements.bedrock_zone_enter.title"
+    },
+    "description": {
+      "translate": "advancements.bedrock_zone_enter.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "bedrock_zone_enter": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "more_ores_and_armour:bedrock_zone"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "more_ores_and_armour:gem_of_fire"
+}

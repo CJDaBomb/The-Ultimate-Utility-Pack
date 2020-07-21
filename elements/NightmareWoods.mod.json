@@ -1,0 +1,154 @@
+{
+  "_fv": 10,
+  "_type": "biome",
+  "definition": {
+    "groundBlock": {
+      "value": "CUSTOM:NightmareSand"
+    },
+    "undergroundBlock": {
+      "value": "Blocks.DIRT#0"
+    },
+    "generateLakes": false,
+    "treeType": 1,
+    "vanillaTreeType": "Default",
+    "minHeight": 4,
+    "spawnVines": false,
+    "treeVines": {
+      "value": "Blocks.AIR"
+    },
+    "treeStem": {
+      "value": "CUSTOM:NightmareLog"
+    },
+    "treeBranch": {
+      "value": "CUSTOM:NightmareLeaves"
+    },
+    "treeFruits": {
+      "value": "Blocks.AIR"
+    },
+    "airColor": {
+      "value": -13420484,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -14669277,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -14468760,
+      "falpha": 0.0
+    },
+    "treesPerChunk": 7,
+    "grassPerChunk": 4,
+    "flowersPerChunk": 4,
+    "mushroomsPerChunk": 0,
+    "bigMushroomsChunk": 0,
+    "sandPathcesPerChunk": 0,
+    "gravelPatchesPerChunk": 0,
+    "reedsPerChunk": 0,
+    "cactiPerChunk": 0,
+    "rainingPossibility": 0.5,
+    "temperature": 0.5,
+    "baseHeight": 0.1,
+    "heightVariation": 0.2,
+    "spawnBiome": true,
+    "biomeWeight": 1,
+    "biomeType": "ICY",
+    "biomeCategory": "ICY",
+    "parent": {
+      "value": "No parent"
+    },
+    "biomeDictionaryTypes": [],
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "CUSTOM:LootCreeper"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityBee"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityMonster"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityPhantom"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityRavager"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityWitherSkeleton"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityVindicator"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityCreeper"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityIllusionIllager"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityEvoker"
+        },
+        "minGroup": 1,
+        "maxGroup": 15,
+        "weight": 15,
+        "spawnType": "creature"
+      }
+    ]
+  }
+}

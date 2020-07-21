@@ -1,0 +1,55 @@
+{
+  "_fv": 10,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "ruby_helmet",
+    "enableBody": true,
+    "textureBody": "ruby_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "ruby_leggings",
+    "enableBoots": true,
+    "textureBoots": "ruby_boots",
+    "creativeTab": {
+      "value": "CUSTOM:CustomOreMod"
+    },
+    "armorTextureFile": "ruby_mod",
+    "helmetName": "Ruby Helmet",
+    "bodyName": "Ruby Chestplate",
+    "leggingsName": "Ruby Leggings",
+    "bootsName": "Ruby Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 25,
+    "damageValueHelmet": 5,
+    "damageValueBody": 8,
+    "damageValueLeggings": 11,
+    "damageValueBoots": 6,
+    "enchantability": 26,
+    "toughness": 2.5,
+    "equipSound": {
+      "value": "item.armor.equip_diamond"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:Ruby"
+      }
+    ]
+  }
+}

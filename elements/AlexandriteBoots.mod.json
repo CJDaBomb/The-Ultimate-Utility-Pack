@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Alexandrite"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Alexandrite"
+      },
+      {
+        "value": "CUSTOM:Alexandrite"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Alexandrite"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:AlexandriteArmour.boots"
+    },
+    "name": "alexandrite_boots",
+    "namespace": "mod"
+  }
+}
