@@ -1,5 +1,6 @@
 package net.mcreator.moreoresandarmour.procedures;
 
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
@@ -19,8 +20,6 @@ public class OilMobplayerCollidesBlockProcedure extends MoreOresAndArmourModElem
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		double PowerOfSlowness = 0;
-		PowerOfSlowness = (double) (0.95 * (-1));
-		entity.setMotion(((entity.getMotion().getX()) * (PowerOfSlowness)), ((entity.getMotion().getY()) * (PowerOfSlowness)),
-				((entity.getMotion().getZ()) * (PowerOfSlowness)));
+		entity.setMotionMultiplier(null, new Vec3d(0.25D, (double) 0.05F, 0.25D));
 	}
 }
