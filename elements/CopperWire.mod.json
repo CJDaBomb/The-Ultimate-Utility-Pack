@@ -12,6 +12,7 @@
     "customModelName": "copper_wire:default",
     "rotationMode": 1,
     "emissiveRendering": false,
+    "itemTexture": "",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "SOLID",
@@ -29,7 +30,7 @@
     "creativeTab": {
       "value": "CUSTOM:CustomOreMod"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },
@@ -50,13 +51,13 @@
       "value": ""
     },
     "offsetType": "NONE",
-    "aiPathNodeType": "TRAPDOOR",
+    "aiPathNodeType": "DEFAULT",
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,
-    "reactionToPushing": "NORMAL",
-    "isNotColidable": false,
+    "reactionToPushing": "DESTROY",
+    "isNotColidable": true,
     "soundOnStep": {
       "value": "METAL"
     },
@@ -86,6 +87,7 @@
     "energyMaxExtract": 200,
     "isFluidTank": false,
     "fluidCapacity": 8000,
+    "fluidRestrictions": [],
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [],
