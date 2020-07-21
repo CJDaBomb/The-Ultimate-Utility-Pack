@@ -2740,15 +2740,6 @@
       "registry_name": "stripped_grape_log"
     },
     {
-      "name": "ReversedMusic",
-      "type": "function",
-      "sortid": 197,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "reversed_music"
-    },
-    {
       "name": "Sdaasd",
       "type": "procedure",
       "sortid": 198,
