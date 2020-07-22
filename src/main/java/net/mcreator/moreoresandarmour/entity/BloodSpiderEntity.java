@@ -29,6 +29,7 @@ import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.LeapAtTargetGoal;
+import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
@@ -66,11 +67,6 @@ public class BloodSpiderEntity extends MoreOresAndArmourModElements.ModElement {
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
-			boolean biomeCriteria = false;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("more_ores_and_armour:nightmare_woods")))
-				biomeCriteria = true;
-			if (!biomeCriteria)
-				continue;
 			biome.getSpawns(EntityClassification.MONSTER).add(new Biome.SpawnListEntry(entity, 36, 1, 9));
 		}
 		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
@@ -107,11 +103,12 @@ public class BloodSpiderEntity extends MoreOresAndArmourModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new LeapAtTargetGoal(this, (float) 1));
-			this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1, true));
-			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 1));
-			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
-			this.goalSelector.addGoal(5, new SwimGoal(this));
+			this.goalSelector.addGoal(1, new LeapAtTargetGoal(this, (float) 0.5));
+			this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
+			this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1, true));
+			this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 1));
+			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(6, new SwimGoal(this));
 		}
 
 		@Override
