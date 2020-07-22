@@ -46,7 +46,7 @@ public class AluminumPickaxeItem extends MoreOresAndArmourModElements.ModElement
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(AluminumIngotItem.block, (int) (1)));
 			}
-		}, 1, -3f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
+		}, 1, -2.8f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 		}.setRegistryName("aluminum_pickaxe"));
 	}
 }

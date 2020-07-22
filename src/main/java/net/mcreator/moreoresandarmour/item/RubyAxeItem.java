@@ -48,7 +48,7 @@ public class RubyAxeItem extends MoreOresAndArmourModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(RubyItem.block, (int) (1)));
 			}
-		}, 1, -2f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
+		}, 1, -3f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 			@Override
 			@OnlyIn(Dist.CLIENT)
 			public boolean hasEffect(ItemStack itemstack) {

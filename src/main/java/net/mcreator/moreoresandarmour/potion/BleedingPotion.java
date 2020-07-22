@@ -2,15 +2,15 @@
 package net.mcreator.moreoresandarmour.potion;
 
 @MoreOresAndArmourModElements.ModElement.Tag
-public class BleedingEffectPotion extends MoreOresAndArmourModElements.ModElement {
+public class BleedingPotion extends MoreOresAndArmourModElements.ModElement {
 
-	@ObjectHolder("more_ores_and_armour:bleeding_effect")
+	@ObjectHolder("more_ores_and_armour:bleeding")
 	public static final Effect potion = null;
 
-	@ObjectHolder("more_ores_and_armour:bleeding_effect")
+	@ObjectHolder("more_ores_and_armour:bleeding")
 	public static final Potion potionType = null;
 
-	public BleedingEffectPotion(MoreOresAndArmourModElements instance) {
+	public BleedingPotion(MoreOresAndArmourModElements instance) {
 		super(instance, 200);
 
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
@@ -30,7 +30,7 @@ public class BleedingEffectPotion extends MoreOresAndArmourModElements.ModElemen
 
 		public PotionCustom() {
 			super(new EffectInstance(potion, 3600));
-			setRegistryName("bleeding_effect");
+			setRegistryName("bleeding");
 		}
 
 	}
@@ -40,14 +40,14 @@ public class BleedingEffectPotion extends MoreOresAndArmourModElements.ModElemen
 		private final ResourceLocation potionIcon;
 
 		public EffectCustom() {
-			super(EffectType.HARMFUL, -1);
-			setRegistryName("bleeding_effect");
-			potionIcon = new ResourceLocation("more_ores_and_armour:textures/wither.png");
+			super(EffectType.HARMFUL, -6750208);
+			setRegistryName("bleeding");
+			potionIcon = new ResourceLocation("more_ores_and_armour:textures/bleeding.png");
 		}
 
 		@Override
 		public String getName() {
-			return "effect.bleeding_effect";
+			return "effect.bleeding";
 		}
 
 		@Override
@@ -73,6 +73,21 @@ public class BleedingEffectPotion extends MoreOresAndArmourModElements.ModElemen
 		@Override
 		public boolean shouldRenderHUD(EffectInstance effect) {
 			return true;
+		}
+
+		@Override
+		public void performEffect(LivingEntity entity, int amplifier) {
+			World world = entity.world;
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+
+				$_dependencies.put("entity", entity);
+
+				BleedingOnPotionActiveTickProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
