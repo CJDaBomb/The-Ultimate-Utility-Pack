@@ -45,17 +45,6 @@
         }
       },
       {
-        "type": "textfield",
-        "data": {
-          "placeholder": "",
-          "width": 240,
-          "height": 40,
-          "name": "Electric_Furnace",
-          "x": 252,
-          "y": 60
-        }
-      },
-      {
         "type": "label",
         "data": {
           "text": "Electric Furnace",

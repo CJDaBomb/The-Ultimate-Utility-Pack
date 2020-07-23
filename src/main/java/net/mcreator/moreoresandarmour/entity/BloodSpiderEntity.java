@@ -22,10 +22,10 @@ import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.monster.SpiderEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
+import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.LeapAtTargetGoal;
@@ -88,7 +88,7 @@ public class BloodSpiderEntity extends MoreOresAndArmourModElements.ModElement {
 			}
 		});
 	}
-	public static class CustomEntity extends SpiderEntity {
+	public static class CustomEntity extends MonsterEntity {
 		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
 			this(entity, world);
 		}
@@ -107,11 +107,12 @@ public class BloodSpiderEntity extends MoreOresAndArmourModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new LeapAtTargetGoal(this, (float) 1));
-			this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1, true));
-			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 1));
+			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1, true));
+			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.goalSelector.addGoal(3, new LeapAtTargetGoal(this, (float) 1));
 			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
 			this.goalSelector.addGoal(5, new SwimGoal(this));
+			this.goalSelector.addGoal(6, new RandomWalkingGoal(this, 1));
 		}
 
 		@Override
@@ -175,7 +176,7 @@ public class BloodSpiderEntity extends MoreOresAndArmourModElements.ModElement {
 				this.getAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(0);
 			if (this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE) == null)
 				this.getAttributes().registerAttribute(SharedMonsterAttributes.ATTACK_DAMAGE);
-			this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(3);
+			this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(4);
 		}
 	}
 }

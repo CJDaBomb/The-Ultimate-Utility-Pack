@@ -30,7 +30,6 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
@@ -301,7 +300,6 @@ public class ElectricFurnaceGui extends MoreOresAndArmourModElements.ModElement 
 		private World world;
 		private int x, y, z;
 		private PlayerEntity entity;
-		TextFieldWidget Electric_Furnace;
 		public GuiWindow(GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 			super(container, inventory, text);
 			this.world = container.world;
@@ -318,7 +316,6 @@ public class ElectricFurnaceGui extends MoreOresAndArmourModElements.ModElement 
 			this.renderBackground();
 			super.render(mouseX, mouseY, partialTicks);
 			this.renderHoveredToolTip(mouseX, mouseY);
-			Electric_Furnace.render(mouseX, mouseY, partialTicks);
 		}
 
 		@Override
@@ -336,15 +333,12 @@ public class ElectricFurnaceGui extends MoreOresAndArmourModElements.ModElement 
 				this.minecraft.player.closeScreen();
 				return true;
 			}
-			if (Electric_Furnace.isFocused())
-				return Electric_Furnace.keyPressed(key, b, c);
 			return super.keyPressed(key, b, c);
 		}
 
 		@Override
 		public void tick() {
 			super.tick();
-			Electric_Furnace.tick();
 		}
 
 		@Override
@@ -362,10 +356,6 @@ public class ElectricFurnaceGui extends MoreOresAndArmourModElements.ModElement 
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			Electric_Furnace = new TextFieldWidget(this.font, this.guiLeft + 4, this.guiTop + 4, 120, 20, "");
-			guistate.put("text:Electric_Furnace", Electric_Furnace);
-			Electric_Furnace.setMaxStringLength(32767);
-			this.children.add(this.Electric_Furnace);
 		}
 	}
 

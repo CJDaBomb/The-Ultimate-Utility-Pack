@@ -13,7 +13,7 @@
     "toolType": "Pickaxe",
     "harvestLevel": 2,
     "efficiency": 6.0,
-    "attackSpeed": 1.0,
+    "attackSpeed": 1.2,
     "enchantability": 14,
     "damageVsEntity": 4.0,
     "usageCount": 250,

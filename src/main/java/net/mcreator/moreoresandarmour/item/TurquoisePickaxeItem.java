@@ -46,7 +46,7 @@ public class TurquoisePickaxeItem extends MoreOresAndArmourModElements.ModElemen
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(TurquoiseItem.block, (int) (1)));
 			}
-		}, 1, -3f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
+		}, 1, -2.7999999999999998f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 		}.setRegistryName("turquoise_pickaxe"));
 	}
 }
