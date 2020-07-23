@@ -1,8 +1,6 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
@@ -21,7 +19,6 @@ public class OilMobplayerCollidesBlockProcedure extends MoreOresAndArmourModElem
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 60, (int) 4));
+		entity.setMotionMultiplier(null, new Vec3d(0.25D, (double) 0.05F, 0.25D));
 	}
 }
