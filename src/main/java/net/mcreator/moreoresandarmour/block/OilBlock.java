@@ -76,7 +76,7 @@ public class OilBlock extends MoreOresAndArmourModElements.ModElement {
 	@Override
 	public void initElements() {
 		fluidproperties = new ForgeFlowingFluid.Properties(() -> still, () -> flowing, FluidAttributes
-				.builder(new ResourceLocation("more_ores_and_armour:blocks/oil_2"), new ResourceLocation("more_ores_and_armour:blocks/oil_flowing"))
+				.builder(new ResourceLocation("more_ores_and_armour:blocks/oil_still"), new ResourceLocation("more_ores_and_armour:blocks/oil_flow"))
 				.luminosity(1).density(1000).viscosity(1000)).bucket(() -> bucket).block(() -> block);
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("oil");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("oil_flowing");

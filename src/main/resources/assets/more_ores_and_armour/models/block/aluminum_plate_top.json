@@ -1,7 +1,7 @@
 {
   "parent": "block/template_orientable_trapdoor_top",
   "textures": {
-    "texture": "more_ores_and_armour:blocks/aluminum_bottom",
-    "particle": "more_ores_and_armour:blocks/aluminum_bottom"
+    "texture": "more_ores_and_armour:blocks/aluminium_plate",
+    "particle": "more_ores_and_armour:blocks/aluminium_plate"
   }
 }
