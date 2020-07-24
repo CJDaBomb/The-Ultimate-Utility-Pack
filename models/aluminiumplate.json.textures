@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "aluminium_plate",
+        "1": "aluminium_plate_sides"
+      },
+      "name": "default"
+    }
+  }
+}

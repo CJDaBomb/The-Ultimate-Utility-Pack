@@ -16,7 +16,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.TrapDoorBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
@@ -45,9 +44,9 @@ public class AluminumPlateBlock extends MoreOresAndArmourModElements.ModElement 
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void clientLoad(FMLClientSetupEvent event) {
-		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
-	public static class CustomBlock extends TrapDoorBlock {
+	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).notSolid());
