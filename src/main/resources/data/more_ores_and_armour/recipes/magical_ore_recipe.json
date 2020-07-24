@@ -1,0 +1,37 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "more_ores_and_armour:alexandrite_ore"
+    },
+    {
+      "item": "more_ores_and_armour:copper_ore"
+    },
+    {
+      "item": "minecraft:emerald_ore"
+    },
+    {
+      "item": "minecraft:iron_ore"
+    },
+    {
+      "item": "minecraft:gold_ore"
+    },
+    {
+      "item": "more_ores_and_armour:aluminum_ore"
+    },
+    {
+      "item": "more_ores_and_armour:rubyore"
+    },
+    {
+      "item": "more_ores_and_armour:sapphire_ore"
+    },
+    {
+      "item": "more_ores_and_armour:alexandrite_ore"
+    }
+  ],
+  "result": {
+    "item": "more_ores_and_armour:magical_ore",
+    "count": 1
+  }
+}
