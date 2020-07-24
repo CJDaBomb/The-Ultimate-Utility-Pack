@@ -1,0 +1,16 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "more_ores_and_armour:magical_ore"
+    },
+    {
+      "item": "minecraft:flint"
+    }
+  ],
+  "result": {
+    "item": "more_ores_and_armour:other_world",
+    "count": 1
+  }
+}
