@@ -2,7 +2,7 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "aluminum_bottom",
+    "texture": "aluminium_plate",
     "textureTop": "aluminum_bottom",
     "textureLeft": "aluminum_side",
     "textureFront": "",
@@ -13,6 +13,7 @@
     "rotationMode": 0,
     "emissiveRendering": false,
     "itemTexture": "",
+    "blockBase": "TrapDoor",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "SOLID",
