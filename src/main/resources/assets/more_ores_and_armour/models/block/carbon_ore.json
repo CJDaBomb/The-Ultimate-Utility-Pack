@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "more_ores_and_armour:blocks/carbon_ore",
-    "particle": "more_ores_and_armour:blocks/carbon_ore"
+    "all": "more_ores_and_armour:blocks/carbon_ore2",
+    "particle": "more_ores_and_armour:blocks/carbon_ore2"
   }
 }

@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "aluminium_plate",
+        "0": "aluminiumplate2",
         "1": "aluminium_plate_sides"
       },
       "name": "default"

@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "aluminum_ingot",
+    "texture": "aluminium_bar3",
     "customModelName": "Normal",
     "name": "Aluminum Ingot",
     "creativeTab": {
