@@ -2835,6 +2835,57 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "golden_apple_block"
+    },
+    {
+      "name": "GoldenAppleSeeds",
+      "type": "item",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "golden_apple_seeds"
+    },
+    {
+      "name": "GoldenAppleSeedsRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "golden_apple_seeds_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LargerGoldenAppleBlock",
+      "type": "block",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "larger_golden_apple_block"
     }
   ],
   "variable_elements": [],
@@ -2890,6 +2941,7 @@
       "block.more_ores_and_armour.shadow_rock": "Shadow Rock",
       "block.more_ores_and_armour.golden_apple_block": "Golden Apple Block",
       "item.more_ores_and_armour.shadow_ingot": "Shadow Ingot",
+      "block.more_ores_and_armour.larger_golden_apple_block": "Enchanted Golden Apple Block",
       "block.more_ores_and_armour.blueberry_leaves": "Blueberry Leaves",
       "item.more_ores_and_armour.ruby_shovel": "Ruby Shovel",
       "item.more_ores_and_armour.ruby": "Ruby",
@@ -2915,6 +2967,7 @@
       "block.more_ores_and_armour.nightmare_slab": "Nightmare Slab",
       "item.more_ores_and_armour.aluminum_apple": "Aluminum Apple",
       "item.more_ores_and_armour.chorus_salad": "Chorus Salad",
+      "item.more_ores_and_armour.golden_apple_seeds": "Golden Apple Seeds",
       "block.more_ores_and_armour.stripped_nightmare_log": "Stripped Nightmare Log",
       "block.more_ores_and_armour.sapphire_ore": "Sapphire Ore",
       "item.more_ores_and_armour.bucket_of_carbon": "Bucket Of Carbon",
