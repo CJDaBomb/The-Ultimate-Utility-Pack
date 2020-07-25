@@ -2817,6 +2817,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "magical_ore_recipe"
+    },
+    {
+      "name": "OilBarrel",
+      "type": "block",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oil_barrel"
     }
   ],
   "variable_elements": [],

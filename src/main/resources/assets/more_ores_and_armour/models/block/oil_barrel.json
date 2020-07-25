@@ -1,0 +1,7 @@
+{
+  "parent": "more_ores_and_armour:custom/barrel",
+  "textures": {
+    "all": "more_ores_and_armour:blocks/oil5",
+    "particle": "more_ores_and_armour:blocks/oil5"
+  }
+}
