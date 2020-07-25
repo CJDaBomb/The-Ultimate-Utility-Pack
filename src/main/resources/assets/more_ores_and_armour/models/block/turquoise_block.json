@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "more_ores_and_armour:blocks/turquoise_block",
-    "particle": "more_ores_and_armour:blocks/turquoise_block"
+    "all": "more_ores_and_armour:blocks/turquoise_block2",
+    "particle": "more_ores_and_armour:blocks/turquoise_block2"
   }
 }

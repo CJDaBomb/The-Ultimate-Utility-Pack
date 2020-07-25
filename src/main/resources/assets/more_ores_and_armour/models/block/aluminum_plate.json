@@ -1,9 +1,9 @@
 {
   "parent": "more_ores_and_armour:custom/aluminiumplate",
   "textures": {
-    "all": "more_ores_and_armour:blocks/aluminium_plate",
-    "particle": "more_ores_and_armour:blocks/aluminium_plate",
-    "0": "more_ores_and_armour:blocks/aluminium_plate",
+    "all": "more_ores_and_armour:blocks/aluminiumplate2",
+    "particle": "more_ores_and_armour:blocks/aluminiumplate2",
+    "0": "more_ores_and_armour:blocks/aluminiumplate2",
     "1": "more_ores_and_armour:blocks/aluminium_plate_sides"
   }
 }

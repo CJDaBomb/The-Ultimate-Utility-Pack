@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "copper_ingot",
+    "texture": "copper_bar",
     "customModelName": "Normal",
     "name": "Copper Ingot",
     "creativeTab": {

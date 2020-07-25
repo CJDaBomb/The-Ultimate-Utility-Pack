@@ -1,0 +1,9 @@
+{
+  "parent": "more_ores_and_armour:custom/goldenapple",
+  "textures": {
+    "all": "more_ores_and_armour:blocks/copper_wire_back",
+    "particle": "more_ores_and_armour:blocks/copper_wire_back",
+    "0": "more_ores_and_armour:blocks/goldenaplle",
+    "missing": "more_ores_and_armour:blocks/"
+  }
+}

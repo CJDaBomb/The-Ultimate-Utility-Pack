@@ -2,11 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "oil5",
-        "1": "oil5",
-        "2": "oil5",
-        "3": "oil5",
-        "missing": "oil5"
+        "0": "oil5"
       },
       "name": "default"
     }

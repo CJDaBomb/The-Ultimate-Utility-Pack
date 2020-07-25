@@ -2,7 +2,7 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "aluminium_plate",
+    "texture": "aluminiumplate2",
     "textureTop": "aluminum_bottom",
     "textureLeft": "aluminum_side",
     "textureFront": "",
@@ -20,7 +20,7 @@
     "my": 0.0,
     "mz": 0.0,
     "Mx": 1.0,
-    "My": 1.0,
+    "My": 0.0625,
     "Mz": 1.0,
     "name": "Aluminum Plate",
     "specialInfo": [],
