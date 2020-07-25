@@ -2,16 +2,16 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "aluminiumplate2",
-    "textureTop": "aluminum_bottom",
-    "textureLeft": "aluminum_side",
+    "texture": "copper_wire_back",
+    "textureTop": "",
+    "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "aluminiumplate:default",
+    "customModelName": "goldenapple:default",
     "rotationMode": 0,
-    "emissiveRendering": false,
+    "emissiveRendering": true,
     "itemTexture": "",
     "hasTransparency": true,
     "connectedSides": false,
@@ -20,9 +20,9 @@
     "my": 0.0,
     "mz": 0.0,
     "Mx": 1.0,
-    "My": 0.0625,
+    "My": 1.0,
     "Mz": 1.0,
-    "name": "Aluminum Plate",
+    "name": "Golden Apple Block",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -30,7 +30,7 @@
     "creativeTab": {
       "value": "CUSTOM:CustomOreMod"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },
@@ -41,7 +41,7 @@
     "canProvidePower": false,
     "lightOpacity": 0,
     "material": {
-      "value": "IRON"
+      "value": "WOOD"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -57,13 +57,13 @@
     "isLadder": false,
     "slipperiness": 0.6,
     "reactionToPushing": "NORMAL",
-    "isNotColidable": false,
+    "isNotColidable": true,
     "soundOnStep": {
-      "value": "METAL"
+      "value": "PLANT"
     },
     "luminance": 0.0,
     "unbreakable": false,
-    "breakHarvestLevel": 2,
+    "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "EXPLOSION_NORMAL"
@@ -90,7 +90,11 @@
     "fluidRestrictions": [],
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "blocksToReplace": [],
+    "blocksToReplace": [
+      {
+        "value": "Blocks.STONE"
+      }
+    ],
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,

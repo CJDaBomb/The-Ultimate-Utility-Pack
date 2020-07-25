@@ -8,9 +8,6 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -29,11 +26,11 @@ import java.util.List;
 import java.util.Collections;
 
 @MoreOresAndArmourModElements.ModElement.Tag
-public class OilBarrelBlock extends MoreOresAndArmourModElements.ModElement {
-	@ObjectHolder("more_ores_and_armour:oil_barrel")
+public class GoldenAppleBlockBlock extends MoreOresAndArmourModElements.ModElement {
+	@ObjectHolder("more_ores_and_armour:golden_apple_block")
 	public static final Block block = null;
-	public OilBarrelBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 204);
+	public GoldenAppleBlockBlock(MoreOresAndArmourModElements instance) {
+		super(instance, 205);
 	}
 
 	@Override
@@ -50,8 +47,9 @@ public class OilBarrelBlock extends MoreOresAndArmourModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(0.25f, 10f).lightValue(0).notSolid());
-			setRegistryName("oil_barrel");
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.PLANT).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement()
+					.notSolid());
+			setRegistryName("golden_apple_block");
 		}
 
 		@OnlyIn(Dist.CLIENT)
@@ -68,11 +66,6 @@ public class OilBarrelBlock extends MoreOresAndArmourModElements.ModElement {
 		@Override
 		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
 			return true;
-		}
-
-		@Override
-		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			return VoxelShapes.create(0.125D, 0D, 0.125D, 0.875D, 1D, 0.875D);
 		}
 
 		@Override

@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "goldenaplle",
+        "missing": ""
+      },
+      "name": "default"
+    }
+  }
+}
