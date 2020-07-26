@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Blood Spider",
     "mobLabel": "",
-    "mobModelName": "Spider",
-    "mobModelTexture": "blood_spider.png",
+    "mobModelName": "Modelcustom_model",
+    "mobModelTexture": "blood_spider2.png",
     "mobModelGlowTexture": "",
     "modelWidth": 1.4,
     "modelHeight": 0.9,
