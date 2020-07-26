@@ -8,6 +8,9 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -65,6 +68,11 @@ public class OilBarrelBlock extends MoreOresAndArmourModElements.ModElement {
 		@Override
 		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
 			return true;
+		}
+
+		@Override
+		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
+			return VoxelShapes.create(0.125D, 0D, 0.125D, 0.875D, 1D, 0.875D);
 		}
 
 		@Override

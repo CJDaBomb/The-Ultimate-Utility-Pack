@@ -15,7 +15,7 @@
     "itemTexture": "",
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT_MIPPED",
+    "transparencyType": "CUTOUT",
     "mx": 0.125,
     "my": 0.0,
     "mz": 0.125,

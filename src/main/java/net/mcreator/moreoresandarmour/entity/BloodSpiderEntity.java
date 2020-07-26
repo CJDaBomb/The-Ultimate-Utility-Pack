@@ -272,12 +272,12 @@ public class BloodSpiderEntity extends MoreOresAndArmourModElements.ModElement {
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
 			this.cabea.rotateAngleY = f3 / (180F / (float) Math.PI);
 			this.cabea.rotateAngleX = f4 / (180F / (float) Math.PI);
-			this.E1.rotateAngleZ = MathHelper.cos(f * 1.0F) * -1.0F * f1;
-			this.D1.rotateAngleZ = MathHelper.cos(f * 1.0F) * 1.0F * f1;
-			this.E2.rotateAngleZ = MathHelper.cos(f * 1.0F) * -1.0F * f1;
-			this.D2.rotateAngleZ = MathHelper.cos(f * 1.0F) * 1.0F * f1;
-			this.E3.rotateAngleZ = MathHelper.cos(f * 1.0F) * -1.0F * f1;
-			this.D3.rotateAngleZ = MathHelper.cos(f * 1.0F) * 1.0F * f1;
+			this.E1.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
+			this.D1.rotateAngleY = MathHelper.cos(f * 1.0F) * 1.0F * f1;
+			this.E2.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
+			this.D2.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
+			this.E3.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
+			this.D3.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
 		}
 	}
 }
