@@ -3,7 +3,7 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "chorus_salad",
+    "texture": "chorussalad2",
     "customModelName": "Normal",
     "name": "Chorus Salad",
     "specialInfo": [],

@@ -3,10 +3,31 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
+      "item": "more_ores_and_armour:aluminum_ingot"
+    },
+    {
+      "item": "more_ores_and_armour:aluminum_ingot"
+    },
+    {
+      "item": "more_ores_and_armour:aluminum_ingot"
+    },
+    {
+      "item": "more_ores_and_armour:aluminum_ingot"
+    },
+    {
       "item": "more_ores_and_armour:magical_ore"
     },
     {
-      "item": "minecraft:flint"
+      "item": "more_ores_and_armour:aluminum_ingot"
+    },
+    {
+      "item": "more_ores_and_armour:aluminum_ingot"
+    },
+    {
+      "item": "more_ores_and_armour:aluminum_ingot"
+    },
+    {
+      "item": "more_ores_and_armour:aluminum_ingot"
     }
   ],
   "result": {

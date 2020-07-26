@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "more_ores_and_armour:items/shadow_ingot"
+    "layer0": "more_ores_and_armour:items/sadow_ingot"
   }
 }

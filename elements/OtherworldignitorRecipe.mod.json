@@ -10,31 +10,31 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
+        "value": "CUSTOM:AluminumIngot"
+      },
+      {
+        "value": "CUSTOM:AluminumIngot"
+      },
+      {
+        "value": "CUSTOM:AluminumIngot"
+      },
+      {
+        "value": "CUSTOM:AluminumIngot"
+      },
+      {
         "value": "CUSTOM:MagicalOre"
       },
       {
-        "value": "Items.FLINT"
+        "value": "CUSTOM:AluminumIngot"
       },
       {
-        "value": ""
+        "value": "CUSTOM:AluminumIngot"
       },
       {
-        "value": ""
+        "value": "CUSTOM:AluminumIngot"
       },
       {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
+        "value": "CUSTOM:AluminumIngot"
       }
     ],
     "recipeReturnStack": {
