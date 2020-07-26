@@ -1,9 +1,9 @@
 {
-  "parent": "more_ores_and_armour:custom/goldenapple",
+  "parent": "more_ores_and_armour:custom/goldenapple2",
   "textures": {
     "all": "more_ores_and_armour:blocks/goldenaplle",
     "particle": "more_ores_and_armour:blocks/goldenaplle",
     "0": "more_ores_and_armour:blocks/goldenaplle",
-    "missing": "more_ores_and_armour:blocks/"
+    "missing": "more_ores_and_armour:blocks/goldenaplle"
   }
 }
