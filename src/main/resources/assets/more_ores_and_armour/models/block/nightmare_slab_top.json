@@ -1,8 +1,8 @@
 {
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "more_ores_and_armour:blocks/nightmare_planks",
-    "top": "more_ores_and_armour:blocks/nightmare_planks",
-    "side": "more_ores_and_armour:blocks/nightmare_planks"
+    "bottom": "more_ores_and_armour:blocks/nightmare2_planks",
+    "top": "more_ores_and_armour:blocks/nightmare2_planks",
+    "side": "more_ores_and_armour:blocks/nightmare2_planks"
   }
 }

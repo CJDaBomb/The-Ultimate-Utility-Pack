@@ -2,7 +2,7 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "bluestone_sand",
+    "texture": "bluesand",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -12,6 +12,7 @@
     "customModelName": "Single texture",
     "rotationMode": 0,
     "emissiveRendering": false,
+    "itemTexture": "",
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
@@ -86,6 +87,7 @@
     "energyMaxExtract": 200,
     "isFluidTank": false,
     "fluidCapacity": 8000,
+    "fluidRestrictions": [],
     "onEntityWalksOn": {
       "name": "BluestoneSandEntityWalksOnTheBlock"
     },

@@ -7,10 +7,10 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:ShadowIngot"
+        "value": ""
       },
       {
         "value": "CUSTOM:ShadowRock"
@@ -22,7 +22,7 @@
         "value": ""
       },
       {
-        "value": ""
+        "value": "CUSTOM:ShadowIngot"
       },
       {
         "value": ""
@@ -31,7 +31,7 @@
         "value": ""
       },
       {
-        "value": ""
+        "value": "CUSTOM:ShadowIngot"
       },
       {
         "value": ""

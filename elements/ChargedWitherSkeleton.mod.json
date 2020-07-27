@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Charged Wither Skeleton",
     "mobLabel": "",
-    "mobModelName": "Biped",
-    "mobModelTexture": "charged_wither_skeleton.png",
+    "mobModelName": "Modelskeletonwither",
+    "mobModelTexture": "whiter_skeleton.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,

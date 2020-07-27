@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom",
+  "textures": {
+    "bottom": "more_ores_and_armour:blocks/dark_oak_door_bottom",
+    "top": "more_ores_and_armour:blocks/nightmare2_door_top"
+  }
+}

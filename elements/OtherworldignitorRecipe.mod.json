@@ -7,7 +7,7 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": "CUSTOM:AluminumIngot"

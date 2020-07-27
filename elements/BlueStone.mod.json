@@ -2,7 +2,7 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "blue_stone",
+    "texture": "bluestone",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -12,6 +12,7 @@
     "customModelName": "Single texture",
     "rotationMode": 0,
     "emissiveRendering": false,
+    "itemTexture": "",
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
@@ -21,7 +22,7 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Blue Stone",
+    "name": "Bluestone",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -31,7 +32,7 @@
     },
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:BlueCobbleStone"
     },
     "dropAmount": 1,
     "isBeaconBase": false,
@@ -86,6 +87,7 @@
     "energyMaxExtract": 200,
     "isFluidTank": false,
     "fluidCapacity": 8000,
+    "fluidRestrictions": [],
     "spawnWorldTypes": [
       "Surface"
     ],
