@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 3,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:BluestonePlanks"
+      },
+      {
+        "value": "CUSTOM:BluestonePlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:BluestonePlanks"
+      },
+      {
+        "value": "CUSTOM:BluestonePlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:BluestonePlanks"
+      },
+      {
+        "value": "CUSTOM:BluestonePlanks"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:BlueStoneDoor"
+    },
+    "name": "bluestone_wood_door_recipe",
+    "namespace": "mod"
+  }
+}

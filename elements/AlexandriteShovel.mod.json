@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "alexandrite_shovel",
+    "texture": "alexandrite2_shovel",
     "customModelName": "Normal",
     "name": "Alexandrite Shovel",
     "specialInfo": [],

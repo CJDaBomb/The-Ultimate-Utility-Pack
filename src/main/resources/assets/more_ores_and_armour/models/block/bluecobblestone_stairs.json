@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_ores_and_armour:blocks/bluecobblestone",
+    "up": "more_ores_and_armour:blocks/bluecobblestone",
+    "north": "more_ores_and_armour:blocks/bluecobblestone",
+    "east": "more_ores_and_armour:blocks/bluecobblestone",
+    "south": "more_ores_and_armour:blocks/bluecobblestone",
+    "west": "more_ores_and_armour:blocks/bluecobblestone",
+    "particle": "more_ores_and_armour:blocks/bluecobblestone"
+  }
+}

@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "aluminum_shovel",
+    "texture": "aluminium_shovel2",
     "customModelName": "Normal",
     "name": "Aluminum Shovel",
     "specialInfo": [],

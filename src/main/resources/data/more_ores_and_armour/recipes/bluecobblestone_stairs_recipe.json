@@ -1,0 +1,33 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "more_ores_and_armour:blue_cobble_stone"
+    },
+    "3": {
+      "item": "more_ores_and_armour:blue_cobble_stone"
+    },
+    "4": {
+      "item": "more_ores_and_armour:blue_cobble_stone"
+    },
+    "6": {
+      "item": "more_ores_and_armour:blue_cobble_stone"
+    },
+    "7": {
+      "item": "more_ores_and_armour:blue_cobble_stone"
+    },
+    "8": {
+      "item": "more_ores_and_armour:blue_cobble_stone"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:unknown_element",
+    "count": 1
+  }
+}

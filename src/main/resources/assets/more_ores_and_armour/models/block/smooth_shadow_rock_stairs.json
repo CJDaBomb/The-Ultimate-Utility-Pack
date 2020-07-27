@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "more_ores_and_armour:blocks/shadowstone",
+    "top": "more_ores_and_armour:blocks/shadowstone",
+    "side": "more_ores_and_armour:blocks/shadowstone"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "more_ores_and_armour:blocks/shadow",
-    "particle": "more_ores_and_armour:blocks/shadow"
+    "all": "more_ores_and_armour:blocks/shadowblock",
+    "particle": "more_ores_and_armour:blocks/shadowblock"
   }
 }

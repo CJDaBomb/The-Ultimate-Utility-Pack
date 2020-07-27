@@ -59,7 +59,7 @@ public class BlueStoneBlock extends MoreOresAndArmourModElements.ModElement {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
+			return Collections.singletonList(new ItemStack(BlueCobbleStoneBlock.block, (int) (1)));
 		}
 	}
 	@Override

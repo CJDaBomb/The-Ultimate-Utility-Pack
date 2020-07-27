@@ -16,7 +16,7 @@
     "igniterTab": {
       "value": "CUSTOM:CustomOreMod"
     },
-    "texture": "flint_and_steel",
+    "texture": "magicallinker",
     "portalTexture": "otherworld_portal",
     "enablePortal": true,
     "biomesInDimension": [

@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "amulet_2",
+    "texture": "strenghtamulet",
     "customModelName": "Normal",
     "name": "Amulet Of Strenth",
     "creativeTab": {

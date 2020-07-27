@@ -3,7 +3,7 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "diamond_apple",
+    "texture": "diamondapple2",
     "customModelName": "Normal",
     "name": "Diamond Apple",
     "specialInfo": [],

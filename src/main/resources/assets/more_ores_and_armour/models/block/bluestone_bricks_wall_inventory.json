@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "more_ores_and_armour:blocks/bluestone_bricks",
+    "particle": "more_ores_and_armour:blocks/bluestone_bricks"
+  }
+}

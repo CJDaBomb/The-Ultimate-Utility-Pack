@@ -1,0 +1,16 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "more_ores_and_armour:stripped_nightmare_log"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:nightmare_planks",
+    "count": 4
+  }
+}

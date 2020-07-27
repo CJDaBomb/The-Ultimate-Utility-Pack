@@ -3,7 +3,7 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "ruby_apple",
+    "texture": "ruby2apple",
     "customModelName": "Normal",
     "name": "Ruby Apple",
     "specialInfo": [],

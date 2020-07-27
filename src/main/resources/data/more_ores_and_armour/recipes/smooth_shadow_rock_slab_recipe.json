@@ -1,0 +1,22 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "more_ores_and_armour:smooth_shadow_rock"
+    },
+    "1": {
+      "item": "more_ores_and_armour:smooth_shadow_rock"
+    },
+    "2": {
+      "item": "more_ores_and_armour:smooth_shadow_rock"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:unknown_element",
+    "count": 6
+  }
+}

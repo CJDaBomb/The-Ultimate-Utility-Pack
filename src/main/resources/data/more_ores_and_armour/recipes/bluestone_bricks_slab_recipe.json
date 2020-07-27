@@ -1,0 +1,22 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "more_ores_and_armour:bluestone_bricks"
+    },
+    "1": {
+      "item": "more_ores_and_armour:bluestone_bricks"
+    },
+    "2": {
+      "item": "more_ores_and_armour:bluestone_bricks"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:bluestone_bricks_slab",
+    "count": 6
+  }
+}

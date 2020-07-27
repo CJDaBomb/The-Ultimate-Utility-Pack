@@ -1,0 +1,13 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "more_ores_and_armour:stripped_bluestone_log"
+    }
+  ],
+  "result": {
+    "item": "more_ores_and_armour:bluestone_planks",
+    "count": 4
+  }
+}

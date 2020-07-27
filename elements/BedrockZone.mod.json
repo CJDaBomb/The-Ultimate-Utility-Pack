@@ -16,7 +16,7 @@
     "igniterTab": {
       "value": "CUSTOM:CustomOreMod"
     },
-    "texture": "bedrock_zone_ignitor",
+    "texture": "shadowigniter",
     "portalTexture": "bedrock_zone_portal",
     "enablePortal": true,
     "biomesInDimension": [
