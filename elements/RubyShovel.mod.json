@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "ruby_shovel",
+    "texture": "ruby2_shovel",
     "customModelName": "Normal",
     "name": "Ruby Shovel",
     "specialInfo": [],

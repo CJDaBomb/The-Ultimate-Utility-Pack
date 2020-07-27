@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "alexandrite_pickaxe",
+    "texture": "alexandrite2_pickaxe",
     "customModelName": "Normal",
     "name": "Alexandrite Pickaxe",
     "specialInfo": [],

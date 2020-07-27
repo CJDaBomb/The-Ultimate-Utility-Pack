@@ -3,7 +3,7 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "turquoise_apple",
+    "texture": "turquoise_apple2",
     "customModelName": "Normal",
     "name": "Turquoise Apple",
     "specialInfo": [],

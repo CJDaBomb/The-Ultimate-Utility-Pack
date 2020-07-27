@@ -61,7 +61,7 @@ public class BloodSpiderEntity extends MoreOresAndArmourModElements.ModElement {
 	@Override
 	public void initElements() {
 		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(1.4f, 0.9f)).build("blood_spider")
+				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 0.3f)).build("blood_spider")
 						.setRegistryName("blood_spider");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -63480, -16777216, new Item.Properties().group(CustomOreModItemGroup.tab))
@@ -270,13 +270,11 @@ public class BloodSpiderEntity extends MoreOresAndArmourModElements.ModElement {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
-			this.cabea.rotateAngleY = f3 / (180F / (float) Math.PI);
-			this.cabea.rotateAngleX = f4 / (180F / (float) Math.PI);
-			this.E1.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
-			this.D1.rotateAngleY = MathHelper.cos(f * 1.0F) * 1.0F * f1;
-			this.E2.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
-			this.D2.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
-			this.E3.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
+			this.E1.rotateAngleX = MathHelper.cos(f * 0.6662F) * f1;
+			this.D1.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
+			this.E2.rotateAngleX = MathHelper.cos(f * 0.6662F) * f1;
+			this.D2.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
+			this.E3.rotateAngleX = MathHelper.cos(f * 0.6662F) * f1;
 			this.D3.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
 		}
 	}

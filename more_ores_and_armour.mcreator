@@ -2859,6 +2859,24 @@
         "eb": true,
         "ec": true
       }
+    },
+    {
+      "name": "IronRod",
+      "type": "item",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_rod"
+    },
+    {
+      "name": "IronRodRecipe",
+      "type": "recipe",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_rod_recipe"
     }
   ],
   "variable_elements": [],
@@ -3029,6 +3047,7 @@
       "item.more_ores_and_armour.copper_ingot": "Copper Ingot",
       "fluid.oil": "Oil",
       "entity.more_ores_and_armour.blood_spider": "Blood Spider",
+      "item.more_ores_and_armour.iron_rod": "Iron Rod",
       "item.more_ores_and_armour.electric_bow": "Electric Bow",
       "item.more_ores_and_armour.amulet_of_night_vision": "Amulet Of Night Vision",
       "item.more_ores_and_armour.bedrock_zone": "Shadow Rock",

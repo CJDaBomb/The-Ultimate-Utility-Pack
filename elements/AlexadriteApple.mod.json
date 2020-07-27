@@ -3,7 +3,7 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "alexandrite_apple",
+    "texture": "alexandriteapple1",
     "customModelName": "Normal",
     "name": "Alexandrite Apple",
     "specialInfo": [],
