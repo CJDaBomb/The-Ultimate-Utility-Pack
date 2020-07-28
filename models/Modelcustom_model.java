@@ -97,11 +97,11 @@ public static class Modelcustom_model extends EntityModel<Entity> {
 		super.setRotationAngles(f, f1, f2, f3, f4, f5, e);
 		this.cabea.rotateAngleY = f3 / (180F / (float) Math.PI);
 		this.cabea.rotateAngleX = f4 / (180F / (float) Math.PI);
-		this.E1.rotateAngleY = MathHelper.cos(f * 1.0F) * -1.0F * f1;
-		this.D1.rotateAngleY = MathHelper.cos(f * 1.0F) * 1.0F * f1;
-		this.E2.rotateAngleY = MathHelper.cos(f * 1.0F) * -1.0F * f1;
-		this.D2.rotateAngleY = MathHelper.cos(f * 1.0F) * 1.0F * f1;
-		this.E3.rotateAngleY = MathHelper.cos(f * 1.0F) * -1.0F * f1;
-		this.D3.rotateAngleY = MathHelper.cos(f * 1.0F) * 1.0F * f1;
+		this.E1.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
+		this.D1.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
+		this.E2.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
+		this.D2.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
+		this.E3.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
+		this.D3.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
 	}
 }
