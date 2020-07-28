@@ -36,14 +36,17 @@ import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
-import net.minecraft.client.renderer.entity.model.BipedModel;
-import net.minecraft.client.renderer.entity.layers.BipedArmorLayer;
-import net.minecraft.client.renderer.entity.BipedRenderer;
+import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.client.renderer.entity.model.EntityModel;
+import net.minecraft.client.renderer.entity.MobRenderer;
 
 import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
 import net.mcreator.moreoresandarmour.item.ShadowArmourItem;
 import net.mcreator.moreoresandarmour.item.RubySwordItem;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
+
+import com.mojang.blaze3d.vertex.IVertexBuilder;
+import com.mojang.blaze3d.matrix.MatrixStack;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.ModElement {
@@ -84,14 +87,12 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 	@OnlyIn(Dist.CLIENT)
 	public void registerModels(ModelRegistryEvent event) {
 		RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> {
-			BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
+			return new MobRenderer(renderManager, new Modelskeletonwither(), 0.5f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
 					return new ResourceLocation("more_ores_and_armour:textures/charged_wither_skeleton.png");
 				}
 			};
-			customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));
-			return customRender;
 		});
 	}
 	public static class CustomEntity extends SkeletonEntity {
@@ -167,6 +168,79 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 			if (this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE) == null)
 				this.getAttributes().registerAttribute(SharedMonsterAttributes.ATTACK_DAMAGE);
 			this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(3);
+		}
+	}
+
+	// Made with Blockbench 3.6.5
+	// Exported for Minecraft version 1.15
+	// Paste this class into your mod and generate all required imports
+	public static class Modelskeletonwither extends EntityModel<Entity> {
+		private final ModelRenderer waist;
+		private final ModelRenderer body;
+		private final ModelRenderer head;
+		private final ModelRenderer hat;
+		private final ModelRenderer rightArm;
+		private final ModelRenderer rightItem;
+		private final ModelRenderer leftArm;
+		private final ModelRenderer leftItem;
+		private final ModelRenderer rightLeg;
+		private final ModelRenderer leftLeg;
+		public Modelskeletonwither() {
+			textureWidth = 64;
+			textureHeight = 32;
+			waist = new ModelRenderer(this);
+			waist.setRotationPoint(0.0F, 12.0F, 0.0F);
+			body = new ModelRenderer(this);
+			body.setRotationPoint(0.0F, -12.0F, 0.0F);
+			waist.addChild(body);
+			body.setTextureOffset(16, 16).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, 0.0F, false);
+			head = new ModelRenderer(this);
+			head.setRotationPoint(0.0F, 0.0F, 0.0F);
+			body.addChild(head);
+			head.setTextureOffset(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.0F, false);
+			hat = new ModelRenderer(this);
+			hat.setRotationPoint(0.0F, 0.0F, 0.0F);
+			head.addChild(hat);
+			hat.setTextureOffset(32, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.5F, false);
+			rightArm = new ModelRenderer(this);
+			rightArm.setRotationPoint(-5.0F, 2.0F, 0.0F);
+			body.addChild(rightArm);
+			rightArm.setTextureOffset(40, 16).addBox(-1.0F, -2.0F, -1.0F, 2.0F, 12.0F, 2.0F, 0.0F, false);
+			rightItem = new ModelRenderer(this);
+			rightItem.setRotationPoint(0.0F, 7.0F, 1.0F);
+			rightArm.addChild(rightItem);
+			leftArm = new ModelRenderer(this);
+			leftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
+			body.addChild(leftArm);
+			leftArm.setTextureOffset(40, 16).addBox(-1.0F, -2.0F, -1.0F, 2.0F, 12.0F, 2.0F, 0.0F, true);
+			leftItem = new ModelRenderer(this);
+			leftItem.setRotationPoint(1.0F, 7.0F, 1.0F);
+			leftArm.addChild(leftItem);
+			rightLeg = new ModelRenderer(this);
+			rightLeg.setRotationPoint(-2.0F, 12.0F, 0.0F);
+			body.addChild(rightLeg);
+			rightLeg.setTextureOffset(0, 16).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 12.0F, 2.0F, 0.0F, false);
+			leftLeg = new ModelRenderer(this);
+			leftLeg.setRotationPoint(2.0F, 12.0F, 0.0F);
+			body.addChild(leftLeg);
+			leftLeg.setTextureOffset(0, 16).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 12.0F, 2.0F, 0.0F, true);
+		}
+
+		@Override
+		public void setRotationAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+			// previously the render function, render code was moved to a method below
+		}
+
+		@Override
+		public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue,
+				float alpha) {
+			waist.render(matrixStack, buffer, packedLight, packedOverlay);
+		}
+
+		public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
+			modelRenderer.rotateAngleX = x;
+			modelRenderer.rotateAngleY = y;
+			modelRenderer.rotateAngleZ = z;
 		}
 	}
 }
