@@ -2,6 +2,16 @@
   "replace": false,
   "values": [
     "more_ores_and_armour:bluestone_log",
-    "more_ores_and_armour:nightmare_planks"
+    "more_ores_and_armour:nightmare_log",
+    "more_ores_and_armour:cherry_log",
+    "more_ores_and_armour:lemon_log",
+    "more_ores_and_armour:blueberry_log",
+    "more_ores_and_armour:grape_log",
+    "more_ores_and_armour:stripped_bluestone_log",
+    "more_ores_and_armour:stripped_nightmare_log",
+    "more_ores_and_armour:stripped_cherry_log",
+    "more_ores_and_armour:stripped_blueberry_log",
+    "more_ores_and_armour:stripped_lemon_log",
+    "more_ores_and_armour:stripped_grape_log"
   ]
 }
