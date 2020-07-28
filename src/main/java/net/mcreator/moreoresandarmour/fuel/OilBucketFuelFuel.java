@@ -7,7 +7,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.item.ItemStack;
 
-import net.mcreator.moreoresandarmour.item.BucketOfCarbonItem;
+import net.mcreator.moreoresandarmour.block.OilBlock;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 @MoreOresAndArmourModElements.ModElement.Tag
@@ -19,7 +19,7 @@ public class OilBucketFuelFuel extends MoreOresAndArmourModElements.ModElement {
 
 	@SubscribeEvent
 	public void furnaceFuelBurnTimeEvent(FurnaceFuelBurnTimeEvent event) {
-		if (event.getItemStack().getItem() == new ItemStack(BucketOfCarbonItem.block, (int) (1)).getItem())
+		if (event.getItemStack().getItem() == new ItemStack(OilBlock.block, (int) (1)).getItem())
 			event.setBurnTime(32000);
 	}
 }

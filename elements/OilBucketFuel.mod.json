@@ -4,7 +4,7 @@
   "definition": {
     "power": 32000,
     "block": {
-      "value": "CUSTOM:BucketOfCarbon"
+      "value": "CUSTOM:Oil"
     }
   }
 }
