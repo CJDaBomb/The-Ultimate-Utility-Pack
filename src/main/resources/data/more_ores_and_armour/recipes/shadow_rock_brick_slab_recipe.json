@@ -6,17 +6,17 @@
   ],
   "key": {
     "0": {
-      "item": "more_ores_and_armour:shadow_rock_brick"
+      "item": "more_ores_and_armour:unknown_element"
     },
     "1": {
-      "item": "more_ores_and_armour:shadow_rock_brick"
+      "item": "more_ores_and_armour:unknown_element"
     },
     "2": {
-      "item": "more_ores_and_armour:shadow_rock_brick"
+      "item": "more_ores_and_armour:unknown_element"
     }
   },
   "result": {
-    "item": "more_ores_and_armour:shadow_rock_brick_slab",
+    "item": "more_ores_and_armour:unknown_element",
     "count": 6
   }
 }
