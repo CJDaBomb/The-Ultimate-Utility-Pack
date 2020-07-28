@@ -16,7 +16,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.World;
-import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
@@ -38,7 +38,8 @@ import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
-import net.minecraft.client.renderer.entity.model.CreeperModel;
+import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.MobRenderer;
 
 import net.mcreator.moreoresandarmour.procedures.LootCreeperThisEntityKillsAnotherOneProcedure;
@@ -49,6 +50,9 @@ import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Map;
 import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.IVertexBuilder;
+import com.mojang.blaze3d.matrix.MatrixStack;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class LootCreeperEntity extends MoreOresAndArmourModElements.ModElement {
@@ -86,11 +90,13 @@ public class LootCreeperEntity extends MoreOresAndArmourModElements.ModElement {
 	@SubscribeEvent
 	@OnlyIn(Dist.CLIENT)
 	public void registerModels(ModelRegistryEvent event) {
-		RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> new MobRenderer(renderManager, new CreeperModel(), 0.5f) {
-			@Override
-			public ResourceLocation getEntityTexture(Entity entity) {
-				return new ResourceLocation("more_ores_and_armour:textures/loot_creeper.png");
-			}
+		RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> {
+			return new MobRenderer(renderManager, new ModelLootCreeper(), 0.5f) {
+				@Override
+				public ResourceLocation getEntityTexture(Entity entity) {
+					return new ResourceLocation("more_ores_and_armour:textures/lootcreeper.png");
+				}
+			};
 		});
 	}
 	public static class CustomEntity extends CreeperEntity {
@@ -102,8 +108,6 @@ public class LootCreeperEntity extends MoreOresAndArmourModElements.ModElement {
 			super(type, world);
 			experienceValue = 6;
 			setNoAI(false);
-			setCustomName(new StringTextComponent("Loot Creeper"));
-			setCustomNameVisible(true);
 		}
 
 		@Override
@@ -215,6 +219,72 @@ public class LootCreeperEntity extends MoreOresAndArmourModElements.ModElement {
 			if (this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE) == null)
 				this.getAttributes().registerAttribute(SharedMonsterAttributes.ATTACK_DAMAGE);
 			this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(3);
+		}
+	}
+
+	// Made with Blockbench 3.6.5
+	// Exported for Minecraft version 1.15
+	// Paste this class into your mod and generate all required imports
+	public static class ModelLootCreeper extends EntityModel<Entity> {
+		private final ModelRenderer body;
+		private final ModelRenderer head;
+		private final ModelRenderer leg0;
+		private final ModelRenderer leg1;
+		private final ModelRenderer leg2;
+		private final ModelRenderer leg3;
+		private final ModelRenderer bone;
+		public ModelLootCreeper() {
+			textureWidth = 80;
+			textureHeight = 40;
+			body = new ModelRenderer(this);
+			body.setRotationPoint(0.0F, 24.0F, 0.0F);
+			body.setTextureOffset(16, 16).addBox(-4.0F, -18.0F, -2.0F, 8.0F, 12.0F, 4.0F, 0.0F, false);
+			head = new ModelRenderer(this);
+			head.setRotationPoint(0.0F, -18.0F, 0.0F);
+			body.addChild(head);
+			head.setTextureOffset(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.0F, false);
+			leg0 = new ModelRenderer(this);
+			leg0.setRotationPoint(-2.0F, -6.0F, 4.0F);
+			body.addChild(leg0);
+			leg0.setTextureOffset(0, 16).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
+			leg1 = new ModelRenderer(this);
+			leg1.setRotationPoint(2.0F, -6.0F, 4.0F);
+			body.addChild(leg1);
+			leg1.setTextureOffset(0, 16).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
+			leg2 = new ModelRenderer(this);
+			leg2.setRotationPoint(-2.0F, -6.0F, -4.0F);
+			body.addChild(leg2);
+			leg2.setTextureOffset(0, 16).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
+			leg3 = new ModelRenderer(this);
+			leg3.setRotationPoint(2.0F, -6.0F, -4.0F);
+			body.addChild(leg3);
+			leg3.setTextureOffset(0, 16).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
+			bone = new ModelRenderer(this);
+			bone.setRotationPoint(0.0F, -1.0F, 0.0F);
+			body.addChild(bone);
+			bone.setTextureOffset(36, 4).addBox(-5.0F, -15.0F, 2.0F, 10.0F, 8.0F, 8.0F, 0.0F, false);
+			bone.setTextureOffset(38, 7).addBox(-1.0F, -14.0F, 10.0F, 2.0F, 3.0F, 1.0F, 0.0F, false);
+		}
+
+		@Override
+		public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue,
+				float alpha) {
+			body.render(matrixStack, buffer, packedLight, packedOverlay);
+		}
+
+		public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
+			modelRenderer.rotateAngleX = x;
+			modelRenderer.rotateAngleY = y;
+			modelRenderer.rotateAngleZ = z;
+		}
+
+		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+			this.head.rotateAngleY = f3 / (180F / (float) Math.PI);
+			this.head.rotateAngleX = f4 / (180F / (float) Math.PI);
+			this.leg0.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
+			this.leg1.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
+			this.leg2.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
+			this.leg3.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
 		}
 	}
 }
