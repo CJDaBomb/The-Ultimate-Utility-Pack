@@ -5,7 +5,7 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 3,
+    "recipeRetstackSize": 1,
     "group": "",
     "recipeShapeless": false,
     "recipeSlots": [
@@ -19,28 +19,28 @@
         "value": ""
       },
       {
-        "value": "CUSTOM:BluestonePlanks"
+        "value": "CUSTOM:LemonPlanks"
       },
       {
-        "value": "CUSTOM:BluestonePlanks"
+        "value": "CUSTOM:LemonPlanks"
       },
       {
-        "value": "CUSTOM:BluestonePlanks"
+        "value": "CUSTOM:LemonPlanks"
       },
       {
-        "value": "CUSTOM:BluestonePlanks"
+        "value": "CUSTOM:LemonPlanks"
       },
       {
-        "value": "CUSTOM:BluestonePlanks"
+        "value": "CUSTOM:LemonPlanks"
       },
       {
-        "value": "CUSTOM:BluestonePlanks"
+        "value": "CUSTOM:LemonPlanks"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:BlueStoneTapdoor"
+      "value": "CUSTOM:LemonTrapdoor"
     },
-    "name": "bluestone_wood_trapdoor_recipe",
+    "name": "lemon_recipe_trapdoor",
     "namespace": "mod"
   }
 }

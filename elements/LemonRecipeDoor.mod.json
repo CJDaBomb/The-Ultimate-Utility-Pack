@@ -10,37 +10,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "CUSTOM:LemonPlanks"
+      },
+      {
+        "value": "CUSTOM:LemonPlanks"
       },
       {
         "value": ""
       },
       {
+        "value": "CUSTOM:LemonPlanks"
+      },
+      {
+        "value": "CUSTOM:LemonPlanks"
+      },
+      {
         "value": ""
       },
       {
-        "value": "CUSTOM:BluestonePlanks"
+        "value": "CUSTOM:LemonPlanks"
       },
       {
-        "value": "CUSTOM:BluestonePlanks"
+        "value": "CUSTOM:LemonPlanks"
       },
       {
-        "value": "CUSTOM:BluestonePlanks"
-      },
-      {
-        "value": "CUSTOM:BluestonePlanks"
-      },
-      {
-        "value": "CUSTOM:BluestonePlanks"
-      },
-      {
-        "value": "CUSTOM:BluestonePlanks"
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:BlueStoneTapdoor"
+      "value": "CUSTOM:LemonDoor"
     },
-    "name": "bluestone_wood_trapdoor_recipe",
+    "name": "lemon_door",
     "namespace": "mod"
   }
 }
