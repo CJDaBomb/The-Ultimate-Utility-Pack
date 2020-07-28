@@ -1,5 +1,5 @@
 {
-  "parent": "block/stairs",
+  "parent": "block/outer_stairs",
   "textures": {
     "bottom": "more_ores_and_armour:blocks/bluecobblestone",
     "top": "more_ores_and_armour:blocks/bluecobblestone",
