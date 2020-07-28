@@ -12,6 +12,9 @@
       },
       {
         "value": "CUSTOM:ShadowRockBrickWall"
+      },
+      {
+        "value": "CUSTOM:BlueSandstoneWall"
       }
     ],
     "blocks": [],
