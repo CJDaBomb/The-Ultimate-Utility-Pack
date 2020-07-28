@@ -12,7 +12,7 @@
     "customModelName": "Single texture",
     "rotationMode": 0,
     "emissiveRendering": false,
-    "itemTexture": "",
+    "itemTexture": "cherry_door",
     "blockBase": "Door",
     "hasTransparency": true,
     "connectedSides": false,

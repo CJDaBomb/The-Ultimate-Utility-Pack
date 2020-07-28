@@ -1,0 +1,22 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:BluestoneBricksWall"
+      },
+      {
+        "value": "CUSTOM:BluecobblestoneWall"
+      },
+      {
+        "value": "CUSTOM:ShadowRockBrickWall"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "walls",
+    "namespace": "minecraft"
+  }
+}

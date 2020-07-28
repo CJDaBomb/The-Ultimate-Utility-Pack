@@ -1,0 +1,16 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:BlueCobbleStone"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "stone_tool_materials",
+    "namespace": "minecraft"
+  }
+}

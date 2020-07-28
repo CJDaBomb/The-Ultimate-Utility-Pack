@@ -1,7 +1,7 @@
 {
   "parent": "block/template_orientable_trapdoor_top",
   "textures": {
-    "texture": "more_ores_and_armour:blocks/lemon_planks",
-    "particle": "more_ores_and_armour:blocks/lemon_planks"
+    "texture": "more_ores_and_armour:blocks/lemon_trapdoor",
+    "particle": "more_ores_and_armour:blocks/lemon_trapdoor"
   }
 }

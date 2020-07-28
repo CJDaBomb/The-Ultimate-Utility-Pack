@@ -1,0 +1,37 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:BluestoneWoodStairs"
+      },
+      {
+        "value": "CUSTOM:NightmareStairs"
+      },
+      {
+        "value": "CUSTOM:ShadowRockBrickStairs"
+      },
+      {
+        "value": "CUSTOM:BluestoneBricksStairs"
+      },
+      {
+        "value": "CUSTOM:BluecobblestoneStairs"
+      },
+      {
+        "value": "CUSTOM:SmoothShadowRockStairs"
+      },
+      {
+        "value": "CUSTOM:LemonStairs"
+      },
+      {
+        "value": "CUSTOM:CherryStairs"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "stairs",
+    "namespace": "minecraft"
+  }
+}
