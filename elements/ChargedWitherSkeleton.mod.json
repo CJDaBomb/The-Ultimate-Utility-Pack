@@ -5,7 +5,7 @@
     "mobName": "Charged Wither Skeleton",
     "mobLabel": "",
     "mobModelName": "Modelskeletonwither",
-    "mobModelTexture": "charged_wither_skeleton.png",
+    "mobModelTexture": "wither_skeletonbuffed.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
@@ -13,11 +13,11 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16777216,
+      "value": -13421773,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -15165770,
+      "value": -13874064,
       "falpha": 0.0
     },
     "creativeTab": {

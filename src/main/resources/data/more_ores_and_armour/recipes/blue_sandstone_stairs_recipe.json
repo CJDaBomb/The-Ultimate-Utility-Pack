@@ -1,0 +1,33 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "more_ores_and_armour:bluesandstone"
+    },
+    "3": {
+      "item": "more_ores_and_armour:bluesandstone"
+    },
+    "4": {
+      "item": "more_ores_and_armour:bluesandstone"
+    },
+    "6": {
+      "item": "more_ores_and_armour:bluesandstone"
+    },
+    "7": {
+      "item": "more_ores_and_armour:bluesandstone"
+    },
+    "8": {
+      "item": "more_ores_and_armour:bluesandstone"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:blue_sandstone_stairs",
+    "count": 4
+  }
+}

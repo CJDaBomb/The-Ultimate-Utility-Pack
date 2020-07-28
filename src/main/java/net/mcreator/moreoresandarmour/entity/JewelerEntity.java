@@ -39,7 +39,6 @@ import net.minecraft.entity.ai.goal.LookAtGoal;
 import net.minecraft.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
@@ -77,8 +76,8 @@ public class JewelerEntity extends MoreOresAndArmourModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(1f, 1f)).build("jeweler")
 						.setRegistryName("jeweler");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -16727556, -851968, new Item.Properties().group(CustomOreModItemGroup.tab))
-				.setRegistryName("jeweler"));
+		elements.items.add(
+				() -> new SpawnEggItem(entity, -15089, -14869219, new Item.Properties().group(CustomOreModItemGroup.tab)).setRegistryName("jeweler"));
 	}
 
 	@Override
@@ -130,7 +129,7 @@ public class JewelerEntity extends MoreOresAndArmourModElements.ModElement {
 			this.goalSelector.addGoal(5, new OpenDoorGoal(this, true));
 			this.goalSelector.addGoal(6, new OpenDoorGoal(this, false));
 			this.goalSelector.addGoal(7, new LookRandomlyGoal(this));
-			this.goalSelector.addGoal(8, new AvoidEntityGoal(this, MobEntity.class, (float) 6, 1, 1.2));
+			this.goalSelector.addGoal(8, new AvoidEntityGoal(this, LootCreeperEntity.CustomEntity.class, (float) 6, 1, 1.2));
 			this.goalSelector.addGoal(9, new LookAtGoal(this, LootCreeperEntity.CustomEntity.class, (float) 8));
 			this.goalSelector.addGoal(10, new LookAtGoal(this, ServerPlayerEntity.class, (float) 8));
 			this.goalSelector.addGoal(11, new SwimGoal(this));

@@ -68,7 +68,7 @@ public class LootCreeperEntity extends MoreOresAndArmourModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.7f)).build("loot_creeper")
 						.setRegistryName("loot_creeper");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -16718337, -16718363, new Item.Properties().group(CustomOreModItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -15961141, -14238211, new Item.Properties().group(CustomOreModItemGroup.tab))
 				.setRegistryName("loot_creeper"));
 	}
 

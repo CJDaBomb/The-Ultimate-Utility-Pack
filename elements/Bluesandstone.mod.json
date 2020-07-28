@@ -2,14 +2,14 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "bluesand",
-    "textureTop": "",
-    "textureLeft": "",
-    "textureFront": "",
-    "textureRight": "",
-    "textureBack": "",
-    "renderType": 11,
-    "customModelName": "Single texture",
+    "texture": "bluessandstone_bottom",
+    "textureTop": "bluessandstone_top",
+    "textureLeft": "bluesandstone",
+    "textureFront": "bluesandstone",
+    "textureRight": "bluesandstone",
+    "textureBack": "bluesandstone",
+    "renderType": 10,
+    "customModelName": "Normal",
     "rotationMode": 0,
     "emissiveRendering": false,
     "itemTexture": "",
@@ -22,15 +22,15 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Blue Sand",
+    "name": "Blue Sandstone",
     "specialInfo": [],
-    "hardness": 1.0,
-    "resistance": 10.0,
+    "hardness": 0.8,
+    "resistance": 0.8,
     "hasGravity": false,
     "creativeTab": {
       "value": "CUSTOM:CustomOreMod"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },
@@ -41,7 +41,7 @@
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "SAND"
+      "value": "ROCK"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -59,7 +59,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "SAND"
+      "value": "STONE"
     },
     "luminance": 0.0,
     "unbreakable": false,
@@ -88,12 +88,13 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onEntityWalksOn": {
-      "name": "BluestoneSandEntityWalksOnTheBlock"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "blocksToReplace": [],
+    "blocksToReplace": [
+      {
+        "value": "Blocks.STONE"
+      }
+    ],
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
