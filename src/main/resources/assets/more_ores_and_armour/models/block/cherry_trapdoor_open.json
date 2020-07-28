@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_orientable_trapdoor_open",
+  "textures": {
+    "texture": "more_ores_and_armour:blocks/cherry_trapdoor",
+    "particle": "more_ores_and_armour:blocks/cherry_trapdoor"
+  }
+}
