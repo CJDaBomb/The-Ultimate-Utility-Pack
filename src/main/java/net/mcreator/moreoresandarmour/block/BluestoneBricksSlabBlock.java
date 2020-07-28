@@ -3,8 +3,11 @@ package net.mcreator.moreoresandarmour.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.util.Direction;
 import net.minecraft.state.properties.SlabType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -40,6 +43,11 @@ public class BluestoneBricksSlabBlock extends MoreOresAndArmourModElements.ModEl
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(2f, 6f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE));
 			setRegistryName("bluestone_bricks_slab");
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		public boolean isSideInvisible(BlockState state, BlockState adjacentBlockState, Direction side) {
+			return adjacentBlockState.getBlock() == this ? true : super.isSideInvisible(state, adjacentBlockState, side);
 		}
 
 		@Override
