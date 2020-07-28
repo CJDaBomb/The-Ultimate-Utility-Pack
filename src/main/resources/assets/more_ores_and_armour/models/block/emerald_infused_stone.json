@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "more_ores_and_armour:blocks/emerald_infused_stone",
-    "particle": "more_ores_and_armour:blocks/emerald_infused_stone"
+    "all": "more_ores_and_armour:blocks/infused_emerald",
+    "particle": "more_ores_and_armour:blocks/infused_emerald"
   }
 }
