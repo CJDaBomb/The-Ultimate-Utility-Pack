@@ -1,4 +1,4 @@
-// Made with Blockbench 3.5.4
+// Made with Blockbench 3.6.1
 // Exported for Minecraft version 1.15
 // Paste this class into your mod and generate all required imports
 

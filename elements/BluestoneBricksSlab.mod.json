@@ -15,7 +15,7 @@
     "itemTexture": "",
     "blockBase": "Slab",
     "hasTransparency": false,
-    "connectedSides": false,
+    "connectedSides": true,
     "transparencyType": "SOLID",
     "mx": 0.0,
     "my": 0.0,
