@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "more_ores_and_armour:blocks/grape_door_bottom"
+    "layer0": "more_ores_and_armour:items/grape_door"
   }
 }

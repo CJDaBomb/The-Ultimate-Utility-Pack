@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "more_ores_and_armour:block/grape_wood"
+    },
+    "facing=east": {
+      "model": "more_ores_and_armour:block/grape_wood",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "more_ores_and_armour:block/grape_wood",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "more_ores_and_armour:block/grape_wood",
+      "y": 270
+    }
+  }
+}

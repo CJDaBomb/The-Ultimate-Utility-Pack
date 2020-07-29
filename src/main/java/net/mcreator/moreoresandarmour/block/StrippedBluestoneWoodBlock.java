@@ -5,6 +5,7 @@ import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.util.Rotation;
+import net.minecraft.util.Mirror;
 import net.minecraft.util.Direction;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.DirectionProperty;
@@ -14,7 +15,7 @@ import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.DirectionalBlock;
+import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -39,10 +40,10 @@ public class StrippedBluestoneWoodBlock extends MoreOresAndArmourModElements.Mod
 				.add(() -> new BlockItem(block, new Item.Properties().group(CustomOreModItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
-		public static final DirectionProperty FACING = DirectionalBlock.FACING;
+		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).lightValue(0));
-			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.SOUTH));
+			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("stripped_bluestone_wood");
 		}
 
@@ -51,28 +52,17 @@ public class StrippedBluestoneWoodBlock extends MoreOresAndArmourModElements.Mod
 			builder.add(FACING);
 		}
 
-		@Override
 		public BlockState rotate(BlockState state, Rotation rot) {
-			if (rot == Rotation.CLOCKWISE_90 || rot == Rotation.COUNTERCLOCKWISE_90) {
-				if ((Direction) state.get(FACING) == Direction.WEST || (Direction) state.get(FACING) == Direction.EAST) {
-					return state.with(FACING, Direction.UP);
-				} else if ((Direction) state.get(FACING) == Direction.UP || (Direction) state.get(FACING) == Direction.DOWN) {
-					return state.with(FACING, Direction.WEST);
-				}
-			}
-			return state;
+			return state.with(FACING, rot.rotate(state.get(FACING)));
+		}
+
+		public BlockState mirror(BlockState state, Mirror mirrorIn) {
+			return state.rotate(mirrorIn.toRotation(state.get(FACING)));
 		}
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
-			Direction facing = context.getFace();
-			if (facing == Direction.WEST || facing == Direction.EAST)
-				facing = Direction.UP;
-			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
-				facing = Direction.EAST;
-			else
-				facing = Direction.SOUTH;
-			return this.getDefaultState().with(FACING, facing);
+			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
 		}
 
 		@Override

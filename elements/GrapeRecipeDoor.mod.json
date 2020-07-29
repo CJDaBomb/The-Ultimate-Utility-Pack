@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 3,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:GrapePlanks"
+      },
+      {
+        "value": "CUSTOM:GrapePlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:GrapePlanks"
+      },
+      {
+        "value": "CUSTOM:GrapePlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:GrapePlanks"
+      },
+      {
+        "value": "CUSTOM:GrapePlanks"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:GrapeDoor"
+    },
+    "name": "grape_recipe_door",
+    "namespace": "mod"
+  }
+}

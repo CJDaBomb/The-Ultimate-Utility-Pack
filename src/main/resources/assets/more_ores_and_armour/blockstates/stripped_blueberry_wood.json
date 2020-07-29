@@ -1,28 +1,19 @@
 {
   "variants": {
-    "facing=south": {
-      "model": "more_ores_and_armour:block/stripped_blueberry_wood"
-    },
     "facing=north": {
       "model": "more_ores_and_armour:block/stripped_blueberry_wood"
     },
     "facing=east": {
       "model": "more_ores_and_armour:block/stripped_blueberry_wood",
-      "x": 90
+      "y": 90
+    },
+    "facing=south": {
+      "model": "more_ores_and_armour:block/stripped_blueberry_wood",
+      "y": 180
     },
     "facing=west": {
       "model": "more_ores_and_armour:block/stripped_blueberry_wood",
-      "x": 90
-    },
-    "facing=up": {
-      "model": "more_ores_and_armour:block/stripped_blueberry_wood",
-      "x": 90,
-      "y": 90
-    },
-    "facing=down": {
-      "model": "more_ores_and_armour:block/stripped_blueberry_wood",
-      "x": 90,
-      "y": 90
+      "y": 270
     }
   }
 }

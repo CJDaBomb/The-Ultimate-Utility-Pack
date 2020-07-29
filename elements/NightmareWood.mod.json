@@ -10,7 +10,7 @@
     "textureBack": "",
     "renderType": 11,
     "customModelName": "Single texture",
-    "rotationMode": 5,
+    "rotationMode": 1,
     "emissiveRendering": false,
     "itemTexture": "",
     "hasTransparency": false,

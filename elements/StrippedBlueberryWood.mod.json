@@ -10,7 +10,7 @@
     "textureBack": "stripped_blueberry_log",
     "renderType": 10,
     "customModelName": "Normal",
-    "rotationMode": 5,
+    "rotationMode": 1,
     "emissiveRendering": false,
     "itemTexture": "",
     "hasTransparency": false,
