@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "more_ores_and_armour:blocks/grape_planks",
+    "particle": "more_ores_and_armour:blocks/grape_planks"
+  }
+}

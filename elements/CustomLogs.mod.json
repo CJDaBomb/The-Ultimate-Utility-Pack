@@ -9,7 +9,37 @@
         "value": "CUSTOM:BluestoneLog"
       },
       {
-        "value": "CUSTOM:NightmarePlanks"
+        "value": "CUSTOM:NightmareLog"
+      },
+      {
+        "value": "CUSTOM:CherryLog"
+      },
+      {
+        "value": "CUSTOM:LemonLog"
+      },
+      {
+        "value": "CUSTOM:BlueberryLog"
+      },
+      {
+        "value": "CUSTOM:GrapeLog"
+      },
+      {
+        "value": "CUSTOM:StrippedBluestoneLog"
+      },
+      {
+        "value": "CUSTOM:StrippedNightmareLog"
+      },
+      {
+        "value": "CUSTOM:StrippedCherryLog"
+      },
+      {
+        "value": "CUSTOM:StrippedBlueberryLog"
+      },
+      {
+        "value": "CUSTOM:StrippedLemonLog"
+      },
+      {
+        "value": "CUSTOM:StrippedGrapeLog"
       }
     ],
     "functions": [],

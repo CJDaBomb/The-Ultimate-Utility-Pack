@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "more_ores_and_armour:bluestone_leaves",
-    "more_ores_and_armour:nightmare_leaves"
+    "more_ores_and_armour:nightmare_leaves",
+    "more_ores_and_armour:lemon_leaves",
+    "more_ores_and_armour:cherry_leaves",
+    "more_ores_and_armour:blueberry_leaves",
+    "more_ores_and_armour:grape_leaves"
   ]
 }

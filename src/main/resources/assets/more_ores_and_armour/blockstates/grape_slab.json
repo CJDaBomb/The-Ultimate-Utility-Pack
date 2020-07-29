@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "more_ores_and_armour:block/grape_slab"
+    },
+    "type=top": {
+      "model": "more_ores_and_armour:block/grape_slab_top"
+    },
+    "type=double": {
+      "model": "more_ores_and_armour:block/grape_slab_full"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "more_ores_and_armour:blocks/blueberry_planks",
+    "top": "more_ores_and_armour:blocks/blueberry_planks",
+    "side": "more_ores_and_armour:blocks/blueberry_planks"
+  }
+}

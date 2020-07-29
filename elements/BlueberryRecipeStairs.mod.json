@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:BlueberryPlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:BlueberryPlanks"
+      },
+      {
+        "value": "CUSTOM:BlueberryPlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:BlueberryPlanks"
+      },
+      {
+        "value": "CUSTOM:BlueberryPlanks"
+      },
+      {
+        "value": "CUSTOM:BlueberryPlanks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:BlueberryStairs"
+    },
+    "name": "blueberry_recipe_stairs",
+    "namespace": "mod"
+  }
+}

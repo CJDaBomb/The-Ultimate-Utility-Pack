@@ -10,6 +10,18 @@
       },
       {
         "value": "CUSTOM:NightmareLeaves"
+      },
+      {
+        "value": "CUSTOM:LemonLeaves"
+      },
+      {
+        "value": "CUSTOM:CherryLeaves"
+      },
+      {
+        "value": "CUSTOM:BlueberryLeaves"
+      },
+      {
+        "value": "CUSTOM:GrapeLeaves"
       }
     ],
     "functions": [],

@@ -26,7 +26,7 @@
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
-    "hasGravity": false,
+    "hasGravity": true,
     "creativeTab": {
       "value": "CUSTOM:CustomOreMod"
     },

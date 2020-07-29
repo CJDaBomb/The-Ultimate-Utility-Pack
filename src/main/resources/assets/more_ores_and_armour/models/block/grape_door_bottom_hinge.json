@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom_rh",
+  "textures": {
+    "bottom": "more_ores_and_armour:blocks/grape_door_bottom",
+    "top": "more_ores_and_armour:blocks/grape_door_top"
+  }
+}
