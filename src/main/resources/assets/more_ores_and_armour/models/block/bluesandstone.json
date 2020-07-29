@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_ores_and_armour:blocks/bluessandstone_bottom",
+    "up": "more_ores_and_armour:blocks/bluessandstone_top",
+    "north": "more_ores_and_armour:blocks/bluesandstone",
+    "east": "more_ores_and_armour:blocks/bluesandstone",
+    "south": "more_ores_and_armour:blocks/bluesandstone",
+    "west": "more_ores_and_armour:blocks/bluesandstone",
+    "particle": "more_ores_and_armour:blocks/bluessandstone_bottom"
+  }
+}

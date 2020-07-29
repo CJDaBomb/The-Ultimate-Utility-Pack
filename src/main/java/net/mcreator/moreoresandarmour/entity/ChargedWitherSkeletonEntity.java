@@ -16,6 +16,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.World;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
@@ -62,7 +63,7 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 				.setTrackingRange(65).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f))
 						.build("charged_wither_skeleton").setRegistryName("charged_wither_skeleton");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -16777216, -15165770, new Item.Properties().group(CustomOreModItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -13421773, -13874064, new Item.Properties().group(CustomOreModItemGroup.tab))
 				.setRegistryName("charged_wither_skeleton"));
 	}
 
@@ -90,7 +91,7 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 			return new MobRenderer(renderManager, new Modelskeletonwither(), 0.5f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("more_ores_and_armour:textures/charged_wither_skeleton.png");
+					return new ResourceLocation("more_ores_and_armour:textures/wither_skeletonbuffed.png");
 				}
 			};
 		});
@@ -178,7 +179,9 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 		private final ModelRenderer waist;
 		private final ModelRenderer body;
 		private final ModelRenderer head;
-		private final ModelRenderer hat;
+		private final ModelRenderer capacete;
+		private final ModelRenderer bone2;
+		private final ModelRenderer bone;
 		private final ModelRenderer rightArm;
 		private final ModelRenderer rightItem;
 		private final ModelRenderer leftArm;
@@ -187,7 +190,7 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 		private final ModelRenderer leftLeg;
 		public Modelskeletonwither() {
 			textureWidth = 64;
-			textureHeight = 32;
+			textureHeight = 64;
 			waist = new ModelRenderer(this);
 			waist.setRotationPoint(0.0F, 12.0F, 0.0F);
 			body = new ModelRenderer(this);
@@ -197,15 +200,35 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 			head = new ModelRenderer(this);
 			head.setRotationPoint(0.0F, 0.0F, 0.0F);
 			body.addChild(head);
-			head.setTextureOffset(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.0F, false);
-			hat = new ModelRenderer(this);
-			hat.setRotationPoint(0.0F, 0.0F, 0.0F);
-			head.addChild(hat);
-			hat.setTextureOffset(32, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.5F, false);
+			head.setTextureOffset(0, 0).addBox(-4.0F, -7.0F, -4.0F, 8.0F, 7.0F, 8.0F, 0.0F, false);
+			capacete = new ModelRenderer(this);
+			capacete.setRotationPoint(0.0F, 24.0F, 0.0F);
+			head.addChild(capacete);
+			capacete.setTextureOffset(0, 32).addBox(-5.0F, -32.0F, -5.0F, 10.0F, 1.0F, 10.0F, 0.0F, false);
+			capacete.setTextureOffset(11, 32).addBox(-4.0F, -31.0F, 4.0F, 8.0F, 7.0F, 1.0F, 0.0F, false);
+			capacete.setTextureOffset(14, 36).addBox(-1.0F, -28.0F, -5.0F, 2.0F, 2.0F, 1.0F, 0.0F, false);
+			capacete.setTextureOffset(11, 33).addBox(-4.0F, -31.0F, -5.0F, 8.0F, 3.0F, 1.0F, 0.0F, false);
+			capacete.setTextureOffset(42, 32).addBox(4.0F, -31.0F, -5.0F, 1.0F, 7.0F, 10.0F, 0.0F, false);
+			capacete.setTextureOffset(42, 32).addBox(-5.0F, -31.0F, -5.0F, 1.0F, 7.0F, 10.0F, 0.0F, false);
+			capacete.setTextureOffset(16, 44).addBox(4.0F, -34.0F, -4.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
+			capacete.setTextureOffset(12, 45).addBox(-6.0F, -34.0F, -4.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
+			bone2 = new ModelRenderer(this);
+			bone2.setRotationPoint(-4.0F, -11.5F, -3.0F);
+			capacete.addChild(bone2);
+			setRotationAngle(bone2, 0.0F, 0.0F, 0.7854F);
+			bone2.setTextureOffset(14, 44).addBox(-17.2635F, -17.7634F, -1.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
+			bone = new ModelRenderer(this);
+			bone.setRotationPoint(4.0F, -11.5F, -3.0F);
+			capacete.addChild(bone);
+			setRotationAngle(bone, 0.0F, 0.0F, -0.7854F);
+			bone.setTextureOffset(14, 45).addBox(15.2635F, -17.7634F, -1.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
 			rightArm = new ModelRenderer(this);
 			rightArm.setRotationPoint(-5.0F, 2.0F, 0.0F);
 			body.addChild(rightArm);
 			rightArm.setTextureOffset(40, 16).addBox(-1.0F, -2.0F, -1.0F, 2.0F, 12.0F, 2.0F, 0.0F, false);
+			rightArm.setTextureOffset(2, 50).addBox(-0.5F, 7.5F, -13.0F, 1.0F, 3.0F, 11.0F, 0.0F, false);
+			rightArm.setTextureOffset(11, 54).addBox(-0.5F, 8.5F, -14.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+			rightArm.setTextureOffset(28, 59).addBox(-0.5F, 8.5F, -2.0F, 1.0F, 1.0F, 4.0F, 0.0F, false);
 			rightItem = new ModelRenderer(this);
 			rightItem.setRotationPoint(0.0F, 7.0F, 1.0F);
 			rightArm.addChild(rightItem);
@@ -227,11 +250,6 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 		}
 
 		@Override
-		public void setRotationAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-			// previously the render function, render code was moved to a method below
-		}
-
-		@Override
 		public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue,
 				float alpha) {
 			waist.render(matrixStack, buffer, packedLight, packedOverlay);
@@ -241,6 +259,15 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 			modelRenderer.rotateAngleX = x;
 			modelRenderer.rotateAngleY = y;
 			modelRenderer.rotateAngleZ = z;
+		}
+
+		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+			this.head.rotateAngleY = f3 / (180F / (float) Math.PI);
+			this.head.rotateAngleX = f4 / (180F / (float) Math.PI);
+			this.rightLeg.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
+			this.rightArm.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
+			this.leftArm.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
+			this.leftLeg.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
 		}
 	}
 }

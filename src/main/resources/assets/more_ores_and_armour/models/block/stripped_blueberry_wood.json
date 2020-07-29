@@ -1,7 +1,12 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "more_ores_and_armour:blocks/bluestone_oak_log",
-    "particle": "more_ores_and_armour:blocks/bluestone_oak_log"
+    "down": "more_ores_and_armour:blocks/stripped_blueberry_log_top",
+    "up": "more_ores_and_armour:blocks/stripped_blueberry_log_top",
+    "north": "more_ores_and_armour:blocks/stripped_blueberry_log",
+    "east": "more_ores_and_armour:blocks/stripped_blueberry_log",
+    "south": "more_ores_and_armour:blocks/stripped_blueberry_log",
+    "west": "more_ores_and_armour:blocks/stripped_blueberry_log",
+    "particle": "more_ores_and_armour:blocks/stripped_blueberry_log_top"
   }
 }

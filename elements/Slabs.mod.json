@@ -1,0 +1,40 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:BlueStoneWoodSlab"
+      },
+      {
+        "value": "CUSTOM:NightmareSlab"
+      },
+      {
+        "value": "CUSTOM:BluestoneBricksSlab"
+      },
+      {
+        "value": "CUSTOM:BluecobblestoneSlab"
+      },
+      {
+        "value": "CUSTOM:ShadowRockBrickSlab"
+      },
+      {
+        "value": "CUSTOM:SmoothShadowRockSlab"
+      },
+      {
+        "value": "CUSTOM:LemonSlab"
+      },
+      {
+        "value": "CUSTOM:CherrySlab"
+      },
+      {
+        "value": "CUSTOM:BlueSandstoneSlab"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "slabs",
+    "namespace": "minecraft"
+  }
+}

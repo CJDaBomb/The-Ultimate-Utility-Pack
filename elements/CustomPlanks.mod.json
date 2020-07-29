@@ -11,28 +11,10 @@
         "value": "CUSTOM:NightmarePlanks"
       },
       {
-        "value": "Blocks.PLANKS#0"
+        "value": "CUSTOM:LemonPlanks"
       },
       {
-        "value": "Blocks.PLANKS#1"
-      },
-      {
-        "value": "Blocks.PLANKS#2"
-      },
-      {
-        "value": "Blocks.PLANKS#3"
-      },
-      {
-        "value": "Blocks.PLANKS#4"
-      },
-      {
-        "value": "Blocks.PLANKS#2"
-      },
-      {
-        "value": "Blocks.PLANKS#4"
-      },
-      {
-        "value": "Blocks.PLANKS#5"
+        "value": "CUSTOM:CherryPlanks"
       }
     ],
     "blocks": [],
