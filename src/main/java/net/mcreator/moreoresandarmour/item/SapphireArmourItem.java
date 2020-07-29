@@ -68,7 +68,7 @@ public class SapphireArmourItem extends MoreOresAndArmourModElements.ModElement 
 			}
 
 			public float getToughness() {
-				return 2.5f;
+				return 2.6f;
 			}
 		};
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(CustomOreModItemGroup.tab)) {

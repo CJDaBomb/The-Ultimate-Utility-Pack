@@ -36,7 +36,7 @@
     "bootsModelPartL": "Boots L",
     "bootsModelPartR": "Boots R",
     "bootsModelTexture": "From armor",
-    "maxDamage": 50,
+    "maxDamage": 40,
     "damageValueHelmet": 15,
     "damageValueBody": 25,
     "damageValueLeggings": 20,
