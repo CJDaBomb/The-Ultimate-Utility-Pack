@@ -5,7 +5,7 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 2,
+    "recipeRetstackSize": 1,
     "group": "",
     "recipeShapeless": false,
     "recipeSlots": [
@@ -22,7 +22,7 @@
         "value": ""
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "Items.IRON_NUGGET"
       },
       {
         "value": ""
@@ -31,7 +31,7 @@
         "value": ""
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "Items.IRON_NUGGET"
       },
       {
         "value": ""
