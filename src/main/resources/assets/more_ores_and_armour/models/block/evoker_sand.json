@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "more_ores_and_armour:blocks/evoker_sand",
-    "particle": "more_ores_and_armour:blocks/evoker_sand"
+    "all": "more_ores_and_armour:blocks/evokedsand",
+    "particle": "more_ores_and_armour:blocks/evokedsand"
   }
 }
