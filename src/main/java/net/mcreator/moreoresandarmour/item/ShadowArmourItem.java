@@ -68,7 +68,7 @@ public class ShadowArmourItem extends MoreOresAndArmourModElements.ModElement {
 			}
 
 			public float getToughness() {
-				return 3.5f;
+				return 5f;
 			}
 		};
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(CustomOreModItemGroup.tab)) {
@@ -112,8 +112,8 @@ public class ShadowArmourItem extends MoreOresAndArmourModElements.ModElement {
 	// Paste this class into your mod and generate all required imports
 	public static class Modelshadow_Helmet extends EntityModel<Entity> {
 		private final ModelRenderer capacete;
-		private final ModelRenderer bone;
 		private final ModelRenderer bone2;
+		private final ModelRenderer bone;
 		public Modelshadow_Helmet() {
 			textureWidth = 64;
 			textureHeight = 64;
@@ -128,16 +128,16 @@ public class ShadowArmourItem extends MoreOresAndArmourModElements.ModElement {
 			capacete.setTextureOffset(0, 19).addBox(-5.0F, -8.0F, -5.0F, 1.0F, 7.0F, 10.0F, 0.0F, false);
 			capacete.setTextureOffset(1, 13).addBox(4.0F, -11.0F, -4.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
 			capacete.setTextureOffset(1, 13).addBox(-6.0F, -11.0F, -4.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
-			bone = new ModelRenderer(this);
-			bone.setRotationPoint(4.0F, -11.5F, -3.0F);
-			capacete.addChild(bone);
-			setRotationAngle(bone, 0.0F, 0.0F, -0.6981F);
-			bone.setTextureOffset(1, 13).addBox(-0.7F, -1.5F, -1.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
 			bone2 = new ModelRenderer(this);
 			bone2.setRotationPoint(-4.0F, -11.5F, -3.0F);
 			capacete.addChild(bone2);
 			setRotationAngle(bone2, 0.0F, 0.0F, 0.7854F);
 			bone2.setTextureOffset(1, 13).addBox(-1.0F, -1.5F, -1.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
+			bone = new ModelRenderer(this);
+			bone.setRotationPoint(4.0F, -11.5F, -3.0F);
+			capacete.addChild(bone);
+			setRotationAngle(bone, 0.0F, 0.0F, -0.7854F);
+			bone.setTextureOffset(1, 13).addBox(-1.0F, -1.5F, -1.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
 		}
 
 		@Override

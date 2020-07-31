@@ -42,7 +42,7 @@
     "damageValueLeggings": 20,
     "damageValueBoots": 14,
     "enchantability": 40,
-    "toughness": 3.5,
+    "toughness": 5.0,
     "equipSound": {
       "value": "item.armor.equip_diamond"
     },

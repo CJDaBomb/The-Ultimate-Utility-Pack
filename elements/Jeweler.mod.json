@@ -54,8 +54,8 @@
     "xpAmount": 2,
     "waterMob": false,
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
-    "inventorySize": 9,
+    "guiBoundTo": "JewelerGui",
+    "inventorySize": 2,
     "inventoryStackSize": 64,
     "disableCollisions": false,
     "ridable": false,
@@ -89,10 +89,7 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "onRightClickedOn": {
-      "name": "JewelerRightClickedOnEntity"
-    },
-    "onInitialSpawn": {
-      "name": "JewelerOnInitialEntitySpawn"
+      "name": "JewelerRightClickedOnEntity2"
     },
     "hasAI": true,
     "aiBase": "(none)",

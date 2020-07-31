@@ -48,11 +48,11 @@ public class BedrockArmourItem extends MoreOresAndArmourModElements.ModElement {
 			}
 
 			public int getDamageReductionAmount(EquipmentSlotType slot) {
-				return new int[]{40, 50, 50, 40}[slot.getIndex()];
+				return new int[]{17, 25, 30, 25}[slot.getIndex()];
 			}
 
 			public int getEnchantability() {
-				return 60;
+				return 50;
 			}
 
 			public net.minecraft.util.SoundEvent getSoundEvent() {
@@ -69,7 +69,7 @@ public class BedrockArmourItem extends MoreOresAndArmourModElements.ModElement {
 			}
 
 			public float getToughness() {
-				return 0.1f;
+				return 5f;
 			}
 		};
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(CustomOreModItemGroup.tab)) {

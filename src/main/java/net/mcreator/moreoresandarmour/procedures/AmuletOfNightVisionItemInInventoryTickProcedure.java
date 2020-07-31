@@ -22,6 +22,6 @@ public class AmuletOfNightVisionItemInInventoryTickProcedure extends MoreOresAnd
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, (int) 1, (int) 1));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, (int) 20, (int) 0));
 	}
 }

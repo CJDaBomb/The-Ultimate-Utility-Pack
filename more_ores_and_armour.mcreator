@@ -3954,6 +3954,52 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "shadow_rock_pillar_recipe"
+    },
+    {
+      "name": "InfusedIron",
+      "type": "block",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_iron"
+    },
+    {
+      "name": "JewelerRightClickedOnEntity2",
+      "type": "procedure",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jeweler_right_clicked_on_entity_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -4034,6 +4080,7 @@
       "item.more_ores_and_armour.turquoise_axe": "Turquoise Axe",
       "item.more_ores_and_armour.ruby_apple": "Ruby Apple",
       "effect.bleeding": "Bleeding",
+      "block.more_ores_and_armour.infused_iron": "Infused Iron",
       "block.more_ores_and_armour.powered_copper_wire": "Powered Copper Wire",
       "block.more_ores_and_armour.aluminum_ore": "Aluminum Ore",
       "block.more_ores_and_armour.turquoise_ore": "Turquoise Ore",
@@ -4204,7 +4251,7 @@
     "modid": "more_ores_and_armour",
     "modName": "More Ores and Armour",
     "version": "1.0.0",
-    "description": "This mod adds new ores from the real world into minecraftt",
+    "description": "adds new ores from the real world into minecraft.",
     "author": "CJDaBomb",
     "websiteURL": "https://github.com/CJDaBomb/The-Ultimate-Utility-Pack",
     "disableForgeVersionCheck": false,

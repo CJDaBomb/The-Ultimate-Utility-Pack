@@ -1,8 +1,8 @@
 {
   "parent": "more_ores_and_armour:custom/copper_wire",
   "textures": {
-    "all": "more_ores_and_armour:blocks/copper_wire2",
-    "particle": "more_ores_and_armour:blocks/copper_wire2",
+    "all": "more_ores_and_armour:blocks/copper_wire",
+    "particle": "more_ores_and_armour:blocks/copper_wire",
     "east": "more_ores_and_armour:blocks/copper_wire_side",
     "north": "more_ores_and_armour:blocks/copper_wire_frontorback",
     "down": "more_ores_and_armour:blocks/copper_wire2"

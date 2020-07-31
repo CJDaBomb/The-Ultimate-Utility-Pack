@@ -61,10 +61,11 @@ public class GoldenAppleSeedsRightClickedOnBlockProcedure extends MoreOresAndArm
 				return false;
 			}
 		}.checkGamemode(entity))) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), GoldenAppleBlockBlock.block.getDefaultState(), 3);
+			world.setBlockState(new BlockPos((int) 1, (int) y, (int) z), GoldenAppleBlockBlock.block.getDefaultState(), 3);
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).inventory
 						.clearMatchingItems(p -> new ItemStack(GoldenAppleSeedsItem.block, (int) (1)).getItem() == p.getItem(), (int) 1);
 		}
+		world.setBlockState(new BlockPos((int) x, (int) y, (int) z), GoldenAppleBlockBlock.block.getDefaultState(), 3);
 	}
 }

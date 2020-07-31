@@ -10,7 +10,7 @@ displayURL="https://github.com/CJDaBomb/The-Ultimate-Utility-Pack"
 logoFile="logo.png"
 authors="CJDaBomb"
 description='''
-This mod adds new ores from the real world into minecraftt
+adds new ores from the real world into minecraft.
 '''
 
 [[dependencies.more_ores_and_armour]]
