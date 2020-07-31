@@ -7,14 +7,14 @@
   ],
   "key": {
     "0": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:iron_nugget"
     },
     "1": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:iron_nugget"
     }
   },
   "result": {
     "item": "more_ores_and_armour:iron_rod",
-    "count": 2
+    "count": 1
   }
 }
