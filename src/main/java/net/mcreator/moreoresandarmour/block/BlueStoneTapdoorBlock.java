@@ -49,7 +49,7 @@ public class BlueStoneTapdoorBlock extends MoreOresAndArmourModElements.ModEleme
 	}
 	public static class CustomBlock extends TrapDoorBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(1)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 3f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.AXE).notSolid());
 			setRegistryName("blue_stone_tapdoor");
 		}

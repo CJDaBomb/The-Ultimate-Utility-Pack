@@ -51,7 +51,7 @@ public class GrapeDoorBlock extends MoreOresAndArmourModElements.ModElement {
 	}
 	public static class CustomBlock extends DoorBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(1)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 3f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.AXE).notSolid());
 			setRegistryName("grape_door");
 		}

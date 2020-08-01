@@ -51,7 +51,7 @@ public class BlueberryFenceBlock extends MoreOresAndArmourModElements.ModElement
 	}
 	public static class CustomBlock extends FenceBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(1)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.AXE).notSolid());
 			setRegistryName("blueberry_fence");
 		}
@@ -71,6 +71,11 @@ public class BlueberryFenceBlock extends MoreOresAndArmourModElements.ModElement
 		@Override
 		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
 			return true;
+		}
+
+		@Override
+		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+			return 5;
 		}
 
 		@Override

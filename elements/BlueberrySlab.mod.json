@@ -25,8 +25,8 @@
     "Mz": 1.0,
     "name": "Blueberry Slab",
     "specialInfo": [],
-    "hardness": 1.0,
-    "resistance": 10.0,
+    "hardness": 2.0,
+    "resistance": 3.0,
     "hasGravity": false,
     "creativeTab": {
       "value": "CUSTOM:CustomOreMod"
@@ -53,7 +53,7 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
-    "flammability": 0,
+    "flammability": 5,
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,
