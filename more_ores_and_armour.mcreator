@@ -2143,7 +2143,7 @@
       "type": "mob",
       "sortid": 157,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "goblin"
     },
@@ -2185,7 +2185,7 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "sourceentity",
+            "name": "entity",
             "type": "entity"
           }
         ]
@@ -3956,6 +3956,39 @@
       "registry_name": "shadow_rock_pillar_recipe"
     },
     {
+      "name": "StrippedWood",
+      "type": "procedure",
+      "sortid": 290,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stripped_wood",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
       "name": "InfusedIron",
       "type": "block",
       "sortid": 287,
@@ -4033,39 +4066,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "StrippedWood",
-      "type": "procedure",
-      "sortid": 290,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "stripped_wood",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
     }
   ],
   "variable_elements": [],
@@ -4075,12 +4075,12 @@
       "item.more_ores_and_armour.ruby_armourbody": "Ruby Chestplate",
       "item.more_ores_and_armour.aluminum_armour_helmet": "Aluminum  Helmet",
       "item.more_ores_and_armour.aluminum_shovel": "Aluminum Shovel",
-      "item.more_ores_and_armour.bedrock_armourhelmet": "Shadowrock Helmet",
       "item.more_ores_and_armour.turquoise_shovel": "Turquoise Shovel",
-      "block.more_ores_and_armour.lemon_log": "Lemon Log",
+      "item.more_ores_and_armour.bedrock_armourhelmet": "Shadowrock Helmet",
       "item.more_ores_and_armour.sapphire_armourhelmet": "Sapphire Helmet",
-      "block.more_ores_and_armour.alexandrite_ore": "Alexandrite Ore",
+      "block.more_ores_and_armour.lemon_log": "Lemon Log",
       "item.more_ores_and_armour.shadow_armourhelmet": "Shadow  Helmet",
+      "block.more_ores_and_armour.alexandrite_ore": "Alexandrite Ore",
       "block.more_ores_and_armour.blueberry_trapdoor": "Blueberry Trapdoor",
       "block.more_ores_and_armour.shadow_block": "Shadow Block",
       "block.more_ores_and_armour.lemon_leaves": "Lemon Leaves",
@@ -4104,14 +4104,14 @@
       "item.minecraft.lingering_potion.effect.absorbsion": "Lingering Absorbsion",
       "block.more_ores_and_armour.blue_cobble_stone": "Bluecobblestone",
       "block.more_ores_and_armour.electric_furnace_off": "Electric Furnace",
+      "block.more_ores_and_armour.bluestone_sand": "Bluestone Sand",
       "block.more_ores_and_armour.shadow_rock_pillar": "Shadow Rock Pillar",
-      "block.more_ores_and_armour.bluestone_sand": "Blue Sand",
       "block.more_ores_and_armour.blue_sandstone_wall": "Blue Sandstone Wall",
       "block.more_ores_and_armour.carbon_ore": "Carbon Ore",
       "item.more_ores_and_armour.aluminum_armour_leggings": "Aluminum Leggings",
       "item.more_ores_and_armour.sapphire": "Sapphire",
-      "advancements.shiny_metal.descr": "Find Some Wonderful Aluminum",
       "block.more_ores_and_armour.grape_planks": "Grape Planks",
+      "advancements.shiny_metal.descr": "Find Some Wonderful Aluminum",
       "item.more_ores_and_armour.copper_armorlegs": "Copper Leggings",
       "block.more_ores_and_armour.lemon_wood": "Lemon Wood",
       "block.more_ores_and_armour.golden_apple_block": "Golden Apple Block",
@@ -4127,8 +4127,8 @@
       "item.more_ores_and_armour.aluminum_armour_chestplate": "Aluminum Chestplate",
       "itemGroup.tabcustom_ore_mod": "Custom Ore Mod",
       "entity.more_ores_and_armour.goblin": "Goblin",
-      "block.more_ores_and_armour.dark_stone": "Dark Stone",
       "block.more_ores_and_armour.grape_leaves": "Grape Leaves",
+      "block.more_ores_and_armour.dark_stone": "Dark Stone",
       "item.more_ores_and_armour.bedrock_armour_chestplate": "Shadowrock Chestplate",
       "block.more_ores_and_armour.nightmare_stone": "Nightmare Stone",
       "block.more_ores_and_armour.carbon_block": "Carbon Block",
@@ -4158,14 +4158,13 @@
       "item.more_ores_and_armour.ruby_apple": "Ruby Apple",
       "item.more_ores_and_armour.aluminum_armour_boots": "Aluminum Boots",
       "effect.bleeding": "Bleeding",
-      "block.more_ores_and_armour.infused_iron": "Infused Iron",
       "block.more_ores_and_armour.powered_copper_wire": "Powered Copper Wire",
       "item.more_ores_and_armour.bedrock_armour_helmet": "Shadowrock Helmet",
       "block.more_ores_and_armour.aluminum_ore": "Aluminum Ore",
       "block.more_ores_and_armour.turquoise_ore": "Turquoise Ore",
       "item.more_ores_and_armour.ruby_pickaxe": "Ruby Pickaxe",
-      "item.more_ores_and_armour.alexandrite_sword": "Alexandrite Sword",
       "block.more_ores_and_armour.nightmare_door": "Nightmare Door",
+      "item.more_ores_and_armour.alexandrite_sword": "Alexandrite Sword",
       "item.more_ores_and_armour.alexandrite_armour_leggings": "Alexandrite Leggings",
       "effect.absorbsion": "Absorbsion",
       "item.more_ores_and_armour.ruby_armourhelmet": "Ruby Helmet",
@@ -4345,7 +4344,7 @@
     "modid": "more_ores_and_armour",
     "modName": "More Ores and Armour",
     "version": "1.0.0",
-    "description": "adds new ores from the real world into minecraft.",
+    "description": "This mod adds new ores from the real world into minecraftt",
     "author": "CJDaBomb",
     "websiteURL": "https://github.com/CJDaBomb/The-Ultimate-Utility-Pack",
     "disableForgeVersionCheck": false,
@@ -4360,5 +4359,5 @@
     "modElementsPackage": "net.mcreator.moreoresandarmour",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000432115
+  "mcreatorVersion": 202000428114
 }

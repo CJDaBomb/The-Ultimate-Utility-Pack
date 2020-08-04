@@ -4,6 +4,8 @@ package net.mcreator.moreoresandarmour.block;
 import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Direction;
@@ -42,7 +44,7 @@ public class StrippedBluestoneWoodBlock extends MoreOresAndArmourModElements.Mod
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).lightValue(0));
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 2f).lightValue(0));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("stripped_bluestone_wood");
 		}
@@ -63,6 +65,11 @@ public class StrippedBluestoneWoodBlock extends MoreOresAndArmourModElements.Mod
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
 			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
+		}
+
+		@Override
+		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+			return 5;
 		}
 
 		@Override

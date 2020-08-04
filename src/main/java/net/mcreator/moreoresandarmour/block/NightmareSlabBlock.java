@@ -10,6 +10,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Direction;
 import net.minecraft.state.properties.SlabType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -50,7 +51,7 @@ public class NightmareSlabBlock extends MoreOresAndArmourModElements.ModElement 
 	}
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(1)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.AXE).notSolid());
 			setRegistryName("nightmare_slab");
 		}
@@ -63,6 +64,11 @@ public class NightmareSlabBlock extends MoreOresAndArmourModElements.ModElement 
 		@Override
 		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
 			return true;
+		}
+
+		@Override
+		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+			return 5;
 		}
 
 		@Override

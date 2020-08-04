@@ -45,7 +45,7 @@ public class StrippedCherryLogBlock extends MoreOresAndArmourModElements.ModElem
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = DirectionalBlock.FACING;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(1)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 2f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.AXE));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.SOUTH));
 			setRegistryName("stripped_cherry_log");
@@ -87,12 +87,7 @@ public class StrippedCherryLogBlock extends MoreOresAndArmourModElements.ModElem
 
 		@Override
 		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-			return 9;
-		}
-
-		@Override
-		public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-			return 4;
+			return 5;
 		}
 
 		@Override

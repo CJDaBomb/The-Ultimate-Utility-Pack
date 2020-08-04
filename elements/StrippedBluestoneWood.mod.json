@@ -24,8 +24,8 @@
     "Mz": 1.0,
     "name": "Stripped Bluestone Wood",
     "specialInfo": [],
-    "hardness": 1.0,
-    "resistance": 10.0,
+    "hardness": 2.0,
+    "resistance": 2.0,
     "hasGravity": false,
     "creativeTab": {
       "value": "CUSTOM:CustomOreMod"
@@ -41,7 +41,7 @@
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "ROCK"
+      "value": "WOOD"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -52,14 +52,14 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
-    "flammability": 0,
+    "flammability": 5,
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "WOOD"
     },
     "luminance": 0.0,
     "unbreakable": false,
