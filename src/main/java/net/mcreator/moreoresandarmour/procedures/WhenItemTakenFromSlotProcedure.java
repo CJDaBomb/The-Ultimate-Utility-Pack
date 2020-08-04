@@ -1,6 +1,7 @@
 package net.mcreator.moreoresandarmour.procedures;
 
 import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
 import net.minecraft.entity.item.ExperienceOrbEntity;
 
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
@@ -33,9 +34,9 @@ public class WhenItemTakenFromSlotProcedure extends MoreOresAndArmourModElements
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		World world = (World) dependencies.get("world");
-		if (!world.isRemote) {
-			world.addEntity(new ExperienceOrbEntity(world, x, y, z, (int) 10));
+		IWorld world = (IWorld) dependencies.get("world");
+		if (world instanceof World && !world.getWorld().isRemote) {
+			world.getWorld().addEntity(new ExperienceOrbEntity(world.getWorld(), x, y, z, (int) 10));
 		}
 	}
 }

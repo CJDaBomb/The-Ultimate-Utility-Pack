@@ -422,7 +422,7 @@ public class OtherWorldDimension extends MoreOresAndArmourModElements.ModElement
 	@SubscribeEvent
 	public void registerPointOfInterest(RegistryEvent.Register<PointOfInterestType> event) {
 		try {
-			Method method = ObfuscationReflectionHelper.findMethod(PointOfInterestType.class, "register", String.class, Set.class, int.class,
+			Method method = ObfuscationReflectionHelper.findMethod(PointOfInterestType.class, "func_226359_a_", String.class, Set.class, int.class,
 					int.class);
 			method.setAccessible(true);
 			poi = (PointOfInterestType) method.invoke(null, "other_world_portal",

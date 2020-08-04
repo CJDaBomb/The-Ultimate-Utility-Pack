@@ -27,13 +27,13 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class AlexandriteArmourItem extends MoreOresAndArmourModElements.ModElement {
-	@ObjectHolder("more_ores_and_armour:alexandrite_armourhelmet")
+	@ObjectHolder("more_ores_and_armour:alexandrite_armour_helmet")
 	public static final Item helmet = null;
-	@ObjectHolder("more_ores_and_armour:alexandrite_armourbody")
+	@ObjectHolder("more_ores_and_armour:alexandrite_armour_chestplate")
 	public static final Item body = null;
-	@ObjectHolder("more_ores_and_armour:alexandrite_armourlegs")
+	@ObjectHolder("more_ores_and_armour:alexandrite_armour_leggings")
 	public static final Item legs = null;
-	@ObjectHolder("more_ores_and_armour:alexandrite_armourboots")
+	@ObjectHolder("more_ores_and_armour:alexandrite_armour_boots")
 	public static final Item boots = null;
 	public AlexandriteArmourItem(MoreOresAndArmourModElements instance) {
 		super(instance, 86);
@@ -87,25 +87,25 @@ public class AlexandriteArmourItem extends MoreOresAndArmourModElements.ModEleme
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/alexandritehelmettexture.png";
 			}
-		}.setRegistryName("alexandrite_armourhelmet"));
+		}.setRegistryName("alexandrite_armour_helmet"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/alexandrite2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("alexandrite_armourbody"));
+		}.setRegistryName("alexandrite_armour_chestplate"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/alexandrite2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("alexandrite_armourlegs"));
+		}.setRegistryName("alexandrite_armour_leggings"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/alexandrite2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("alexandrite_armourboots"));
+		}.setRegistryName("alexandrite_armour_boots"));
 	}
 	// Made with Blockbench 3.6.3
 	// Exported for Minecraft version 1.15

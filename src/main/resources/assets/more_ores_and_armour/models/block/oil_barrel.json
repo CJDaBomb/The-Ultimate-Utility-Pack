@@ -1,8 +1,8 @@
 {
   "parent": "more_ores_and_armour:custom/barrel",
   "textures": {
-    "all": "more_ores_and_armour:blocks/stripped_cherry_log",
-    "particle": "more_ores_and_armour:blocks/stripped_cherry_log",
+    "all": "more_ores_and_armour:blocks/oil5",
+    "particle": "more_ores_and_armour:blocks/oil5",
     "0": "more_ores_and_armour:blocks/oil5"
   }
 }

@@ -1,10 +1,10 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.moreoresandarmour.potion.BleedingPotion;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Map;
@@ -16,12 +16,12 @@ public class BloodSpiderPlayerCollidesWithThisEntityProcedure extends MoreOresAn
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure BloodSpiderPlayerCollidesWithThisEntity!");
+		if (dependencies.get("sourceentity") == null) {
+			System.err.println("Failed to load dependency sourceentity for procedure BloodSpiderPlayerCollidesWithThisEntity!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
-		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WEAKNESS, (int) 1222222, (int) 1));
+		Entity sourceentity = (Entity) dependencies.get("sourceentity");
+		if (sourceentity instanceof LivingEntity)
+			((LivingEntity) sourceentity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 20, (int) 1));
 	}
 }

@@ -54,7 +54,7 @@
     "xpAmount": 2,
     "waterMob": false,
     "flyingMob": false,
-    "guiBoundTo": "JewelerGui",
+    "guiBoundTo": "<NONE>",
     "inventorySize": 2,
     "inventoryStackSize": 64,
     "disableCollisions": false,
@@ -80,6 +80,9 @@
     },
     "deathSound": {
       "value": "entity.generic.death"
+    },
+    "stepSound": {
+      "value": ""
     },
     "spawnParticles": false,
     "particleToSpawn": {

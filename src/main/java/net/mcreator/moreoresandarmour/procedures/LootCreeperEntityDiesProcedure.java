@@ -1,6 +1,6 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.item.ItemEntity;
@@ -38,7 +38,7 @@ public class LootCreeperEntityDiesProcedure extends MoreOresAndArmourModElements
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		World world = (World) dependencies.get("world");
+		IWorld world = (IWorld) dependencies.get("world");
 		double random = 0;
 		double random2 = 0;
 		double random3 = 0;
@@ -53,14 +53,14 @@ public class LootCreeperEntityDiesProcedure extends MoreOresAndArmourModElements
 			if (((random2) > 0.5)) {
 				random3 = (double) Math.random();
 				if (((random) > 0.95)) {
-					if (!world.isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world, x, y, z, new ItemStack(EnchantedTotemItem.block, (int) (1)));
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(EnchantedTotemItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
 				} else if (((random) <= 0.95)) {
-					if (!world.isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world, x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
@@ -68,14 +68,14 @@ public class LootCreeperEntityDiesProcedure extends MoreOresAndArmourModElements
 			} else if (((random2) <= 0.5)) {
 				random4 = (double) Math.random();
 				if (((random4) > 0.5)) {
-					if (!world.isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world, x, y, z, new ItemStack(RubyAppleItem.block, (int) (1)));
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(RubyAppleItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
 				} else if (((random4) <= 0.5)) {
-					if (!world.isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world, x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
@@ -86,14 +86,14 @@ public class LootCreeperEntityDiesProcedure extends MoreOresAndArmourModElements
 			if (((random5) > 0.5)) {
 				random6 = (double) Math.random();
 				if (((random6) > 0.5)) {
-					if (!world.isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world, x, y, z, new ItemStack(Items.GOLDEN_APPLE, (int) (1)));
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.GOLDEN_APPLE, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
 				} else if (((random6) <= 0.5)) {
-					if (!world.isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world, x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
@@ -101,14 +101,14 @@ public class LootCreeperEntityDiesProcedure extends MoreOresAndArmourModElements
 			} else if (((random5) <= 0.5)) {
 				random7 = (double) Math.random();
 				if (((random7) > 0.6)) {
-					if (!world.isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world, x, y, z, new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, (int) (1)));
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
 				} else if (((random7) <= 0.6)) {
-					if (!world.isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world, x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}

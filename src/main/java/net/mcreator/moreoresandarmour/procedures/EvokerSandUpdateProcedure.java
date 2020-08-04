@@ -1,6 +1,7 @@
 package net.mcreator.moreoresandarmour.procedures;
 
 import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.nbt.CompoundNBT;
@@ -42,14 +43,14 @@ public class EvokerSandUpdateProcedure extends MoreOresAndArmourModElements.ModE
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		World world = (World) dependencies.get("world");
-		if (!world.isRemote) {
+		IWorld world = (IWorld) dependencies.get("world");
+		if (!world.getWorld().isRemote) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("spawnMob3", Math.random());
-			world.notifyBlockUpdate(_bp, _bs, _bs, 3);
+			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (((new Object() {
 			public double getValue(BlockPos pos, String tag) {
@@ -58,10 +59,10 @@ public class EvokerSandUpdateProcedure extends MoreOresAndArmourModElements.ModE
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "spawnMob3")) == 1000)) {
-			if (!world.isRemote) {
-				Entity entityToSpawn = new EvokerEntity(EntityType.EVOKER, world);
-				entityToSpawn.setLocationAndAngles(x, y, z, world.rand.nextFloat() * 360F, 0);
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "spawnMob3")) <= (1e-8))) {
+			if (world instanceof World && !world.getWorld().isRemote) {
+				Entity entityToSpawn = new EvokerEntity(EntityType.EVOKER, world.getWorld());
+				entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 				if (entityToSpawn instanceof MobEntity)
 					((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
 							SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);

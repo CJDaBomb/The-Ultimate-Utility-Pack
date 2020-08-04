@@ -2,19 +2,12 @@
 package net.mcreator.moreoresandarmour.entity;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.items.wrapper.EntityHandsInvWrapper;
-import net.minecraftforge.items.wrapper.EntityArmorInvWrapper;
-import net.minecraftforge.items.wrapper.CombinedInvWrapper;
-import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.network.FMLPlayMessages;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -22,25 +15,15 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.World;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Direction;
 import net.minecraft.util.DamageSource;
-import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.IPacket;
-import net.minecraft.nbt.INBT;
-import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
-import net.minecraft.inventory.container.INamedContainerProvider;
-import net.minecraft.inventory.container.Container;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RestrictSunGoal;
@@ -58,7 +41,6 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.MobRenderer;
@@ -66,16 +48,10 @@ import net.minecraft.block.material.Material;
 
 import net.mcreator.moreoresandarmour.procedures.JewelerRightClickedOnEntity2Procedure;
 import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
-import net.mcreator.moreoresandarmour.gui.JewelerGuiGui;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import javax.annotation.Nullable;
-import javax.annotation.Nonnull;
 
 import java.util.Map;
 import java.util.HashMap;
-
-import io.netty.buffer.Unpooled;
 
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.mojang.blaze3d.matrix.MatrixStack;
@@ -168,11 +144,6 @@ public class JewelerEntity extends MoreOresAndArmourModElements.ModElement {
 		}
 
 		@Override
-		public net.minecraft.util.SoundEvent getAmbientSound() {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
-		}
-
-		@Override
 		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
 		}
@@ -183,74 +154,9 @@ public class JewelerEntity extends MoreOresAndArmourModElements.ModElement {
 		}
 
 		@Override
-		protected float getSoundVolume() {
-			return 1.0F;
-		}
-		private final ItemStackHandler inventory = new ItemStackHandler(2) {
-			@Override
-			public int getSlotLimit(int slot) {
-				return 64;
-			}
-		};
-		private final CombinedInvWrapper combined = new CombinedInvWrapper(inventory, new EntityHandsInvWrapper(this),
-				new EntityArmorInvWrapper(this));
-		@Override
-		public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> capability, @Nullable Direction side) {
-			if (this.isAlive() && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY && side == null)
-				return LazyOptional.of(() -> combined).cast();
-			return super.getCapability(capability, side);
-		}
-
-		@Override
-		protected void dropInventory() {
-			super.dropInventory();
-			for (int i = 0; i < inventory.getSlots(); ++i) {
-				ItemStack itemstack = inventory.getStackInSlot(i);
-				if (!itemstack.isEmpty() && !EnchantmentHelper.hasVanishingCurse(itemstack)) {
-					this.entityDropItem(itemstack);
-				}
-			}
-		}
-
-		@Override
-		public void writeAdditional(CompoundNBT compound) {
-			super.writeAdditional(compound);
-			compound.put("InventoryCustom", inventory.serializeNBT());
-		}
-
-		@Override
-		public void readAdditional(CompoundNBT compound) {
-			super.readAdditional(compound);
-			INBT inventoryCustom = compound.get("InventoryCustom");
-			if (inventoryCustom instanceof CompoundNBT)
-				inventory.deserializeNBT((CompoundNBT) inventoryCustom);
-		}
-
-		@Override
 		public boolean processInteract(PlayerEntity sourceentity, Hand hand) {
 			ItemStack itemstack = sourceentity.getHeldItem(hand);
 			boolean retval = true;
-			if (sourceentity instanceof ServerPlayerEntity) {
-				NetworkHooks.openGui((ServerPlayerEntity) sourceentity, new INamedContainerProvider() {
-					@Override
-					public ITextComponent getDisplayName() {
-						return new StringTextComponent("Jeweler");
-					}
-
-					@Override
-					public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-						PacketBuffer packetBuffer = new PacketBuffer(Unpooled.buffer());
-						packetBuffer.writeBlockPos(new BlockPos(sourceentity));
-						packetBuffer.writeByte(0);
-						packetBuffer.writeVarInt(CustomEntity.this.getEntityId());
-						return new JewelerGuiGui.GuiContainerMod(id, inventory, packetBuffer);
-					}
-				}, buf -> {
-					buf.writeBlockPos(new BlockPos(sourceentity));
-					buf.writeByte(0);
-					buf.writeVarInt(this.getEntityId());
-				});
-			}
 			super.processInteract(sourceentity, hand);
 			double x = this.getPosX();
 			double y = this.getPosY();
@@ -258,7 +164,7 @@ public class JewelerEntity extends MoreOresAndArmourModElements.ModElement {
 			Entity entity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
+				$_dependencies.put("sourceentity", sourceentity);
 				$_dependencies.put("itemstack", itemstack);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);

@@ -27,13 +27,13 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class AluminumArmourItem extends MoreOresAndArmourModElements.ModElement {
-	@ObjectHolder("more_ores_and_armour:aluminum_armourhelmet")
+	@ObjectHolder("more_ores_and_armour:aluminum_armour_helmet")
 	public static final Item helmet = null;
-	@ObjectHolder("more_ores_and_armour:aluminum_armourbody")
+	@ObjectHolder("more_ores_and_armour:aluminum_armour_chestplate")
 	public static final Item body = null;
-	@ObjectHolder("more_ores_and_armour:aluminum_armourlegs")
+	@ObjectHolder("more_ores_and_armour:aluminum_armour_leggings")
 	public static final Item legs = null;
-	@ObjectHolder("more_ores_and_armour:aluminum_armourboots")
+	@ObjectHolder("more_ores_and_armour:aluminum_armour_boots")
 	public static final Item boots = null;
 	public AluminumArmourItem(MoreOresAndArmourModElements instance) {
 		super(instance, 73);
@@ -87,25 +87,25 @@ public class AluminumArmourItem extends MoreOresAndArmourModElements.ModElement 
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/aluminiumhelmetttttt.png";
 			}
-		}.setRegistryName("aluminum_armourhelmet"));
+		}.setRegistryName("aluminum_armour_helmet"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/aluminium22__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("aluminum_armourbody"));
+		}.setRegistryName("aluminum_armour_chestplate"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/aluminium22__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("aluminum_armourlegs"));
+		}.setRegistryName("aluminum_armour_leggings"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/aluminium22__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("aluminum_armourboots"));
+		}.setRegistryName("aluminum_armour_boots"));
 	}
 	// Made with Blockbench 3.6.3
 	// Exported for Minecraft version 1.15

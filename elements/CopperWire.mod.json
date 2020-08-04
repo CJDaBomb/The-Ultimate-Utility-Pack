@@ -12,7 +12,7 @@
     "customModelName": "copper_wire:default",
     "rotationMode": 1,
     "emissiveRendering": false,
-    "itemTexture": "copper",
+    "itemTexture": "copperwire",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "SOLID",

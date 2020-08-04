@@ -27,13 +27,13 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ShadowArmourItem extends MoreOresAndArmourModElements.ModElement {
-	@ObjectHolder("more_ores_and_armour:shadow_armourhelmet")
+	@ObjectHolder("more_ores_and_armour:shadow_armour_helmet")
 	public static final Item helmet = null;
-	@ObjectHolder("more_ores_and_armour:shadow_armourbody")
+	@ObjectHolder("more_ores_and_armour:shadow_armour_chestplate")
 	public static final Item body = null;
-	@ObjectHolder("more_ores_and_armour:shadow_armourlegs")
+	@ObjectHolder("more_ores_and_armour:shadow_armour_leggings")
 	public static final Item legs = null;
-	@ObjectHolder("more_ores_and_armour:shadow_armourboots")
+	@ObjectHolder("more_ores_and_armour:shadow_armour_boots")
 	public static final Item boots = null;
 	public ShadowArmourItem(MoreOresAndArmourModElements instance) {
 		super(instance, 98);
@@ -87,25 +87,25 @@ public class ShadowArmourItem extends MoreOresAndArmourModElements.ModElement {
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/shadowhelmet_texture.png";
 			}
-		}.setRegistryName("shadow_armourhelmet"));
+		}.setRegistryName("shadow_armour_helmet"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/shadow2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("shadow_armourbody"));
+		}.setRegistryName("shadow_armour_chestplate"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/shadow2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("shadow_armourlegs"));
+		}.setRegistryName("shadow_armour_leggings"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/shadow2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("shadow_armourboots"));
+		}.setRegistryName("shadow_armour_boots"));
 	}
 	// Made with Blockbench 3.6.3
 	// Exported for Minecraft version 1.15

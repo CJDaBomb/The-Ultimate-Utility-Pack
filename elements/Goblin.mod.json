@@ -81,6 +81,9 @@
     "deathSound": {
       "value": "entity.villager.death"
     },
+    "stepSound": {
+      "value": ""
+    },
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "EXPLOSION_NORMAL"
