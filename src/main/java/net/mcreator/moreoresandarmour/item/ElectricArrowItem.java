@@ -59,7 +59,7 @@ public class ElectricArrowItem extends MoreOresAndArmourModElements.ModElement {
 
 		@Override
 		public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
-			super.hitEntity(itemstack, entity, sourceentity);
+			boolean retval = super.hitEntity(itemstack, entity, sourceentity);
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
@@ -72,7 +72,7 @@ public class ElectricArrowItem extends MoreOresAndArmourModElements.ModElement {
 				$_dependencies.put("world", world);
 				ElectricArrowLivingEntityIsHitWithItemProcedure.executeProcedure($_dependencies);
 			}
-			return true;
+			return retval;
 		}
 	}
 }

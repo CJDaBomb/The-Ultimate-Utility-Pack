@@ -2,8 +2,9 @@ package net.mcreator.moreoresandarmour.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
-import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.GameType;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.potion.Effects;
@@ -53,7 +54,7 @@ public class RubyAppleFoodEatenProcedure extends MoreOresAndArmourModElements.Mo
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		World world = (World) dependencies.get("world");
+		IWorld world = (IWorld) dependencies.get("world");
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.ABSORPTION, (int) 3000, (int) 2, (true), (true)));
 		if (entity instanceof LivingEntity)
@@ -62,7 +63,7 @@ public class RubyAppleFoodEatenProcedure extends MoreOresAndArmourModElements.Mo
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
-				} else if (_ent instanceof ClientPlayerEntity) {
+				} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
 					NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
 							.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
 					return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
@@ -70,16 +71,28 @@ public class RubyAppleFoodEatenProcedure extends MoreOresAndArmourModElements.Mo
 				return false;
 			}
 		}.checkGamemode(entity))) {
-			world.playSound((PlayerEntity) null, x, y, z,
-					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.eat")),
-					SoundCategory.NEUTRAL, (float) 1, (float) 1);
+			if (!world.getWorld().isRemote) {
+				world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.eat")),
+						SoundCategory.NEUTRAL, (float) 1, (float) 1);
+			} else {
+				world.getWorld().playSound(x, y, z,
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.eat")),
+						SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+			}
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).inventory.clearMatchingItems(p -> new ItemStack(RubyAppleItem.block, (int) (1)).getItem() == p.getItem(),
 						(int) 1);
 		} else {
-			world.playSound((PlayerEntity) null, x, y, z,
-					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.eat")),
-					SoundCategory.NEUTRAL, (float) 1, (float) 1);
+			if (!world.getWorld().isRemote) {
+				world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.eat")),
+						SoundCategory.NEUTRAL, (float) 1, (float) 1);
+			} else {
+				world.getWorld().playSound(x, y, z,
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.eat")),
+						SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+			}
 		}
 	}
 }

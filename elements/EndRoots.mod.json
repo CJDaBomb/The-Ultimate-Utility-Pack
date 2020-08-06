@@ -6,6 +6,7 @@
     "texture": "end_roots",
     "customModelName": "Cross model",
     "plantType": "normal",
+    "staticPlantGenerationType": "Flower",
     "growapableSpawnType": "Plains",
     "growapableMaxHeight": 6,
     "name": "End Roots",

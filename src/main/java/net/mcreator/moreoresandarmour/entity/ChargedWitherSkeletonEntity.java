@@ -153,11 +153,6 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 		}
 
 		@Override
-		protected float getSoundVolume() {
-			return 1.0F;
-		}
-
-		@Override
 		protected void registerAttributes() {
 			super.registerAttributes();
 			if (this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED) != null)

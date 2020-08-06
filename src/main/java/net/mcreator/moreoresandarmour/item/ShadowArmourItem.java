@@ -27,13 +27,13 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ShadowArmourItem extends MoreOresAndArmourModElements.ModElement {
-	@ObjectHolder("more_ores_and_armour:shadow_armourhelmet")
+	@ObjectHolder("more_ores_and_armour:shadow_armour_helmet")
 	public static final Item helmet = null;
-	@ObjectHolder("more_ores_and_armour:shadow_armourbody")
+	@ObjectHolder("more_ores_and_armour:shadow_armour_chestplate")
 	public static final Item body = null;
-	@ObjectHolder("more_ores_and_armour:shadow_armourlegs")
+	@ObjectHolder("more_ores_and_armour:shadow_armour_leggings")
 	public static final Item legs = null;
-	@ObjectHolder("more_ores_and_armour:shadow_armourboots")
+	@ObjectHolder("more_ores_and_armour:shadow_armour_boots")
 	public static final Item boots = null;
 	public ShadowArmourItem(MoreOresAndArmourModElements instance) {
 		super(instance, 98);
@@ -87,33 +87,33 @@ public class ShadowArmourItem extends MoreOresAndArmourModElements.ModElement {
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/shadowhelmet_texture.png";
 			}
-		}.setRegistryName("shadow_armourhelmet"));
+		}.setRegistryName("shadow_armour_helmet"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/shadow2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("shadow_armourbody"));
+		}.setRegistryName("shadow_armour_chestplate"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/shadow2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("shadow_armourlegs"));
+		}.setRegistryName("shadow_armour_leggings"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(CustomOreModItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/shadow2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("shadow_armourboots"));
+		}.setRegistryName("shadow_armour_boots"));
 	}
 	// Made with Blockbench 3.6.3
 	// Exported for Minecraft version 1.15
 	// Paste this class into your mod and generate all required imports
 	public static class Modelshadow_Helmet extends EntityModel<Entity> {
 		private final ModelRenderer capacete;
-		private final ModelRenderer bone;
 		private final ModelRenderer bone2;
+		private final ModelRenderer bone;
 		public Modelshadow_Helmet() {
 			textureWidth = 64;
 			textureHeight = 64;
@@ -128,16 +128,16 @@ public class ShadowArmourItem extends MoreOresAndArmourModElements.ModElement {
 			capacete.setTextureOffset(0, 19).addBox(-5.0F, -8.0F, -5.0F, 1.0F, 7.0F, 10.0F, 0.0F, false);
 			capacete.setTextureOffset(1, 13).addBox(4.0F, -11.0F, -4.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
 			capacete.setTextureOffset(1, 13).addBox(-6.0F, -11.0F, -4.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
-			bone = new ModelRenderer(this);
-			bone.setRotationPoint(4.0F, -11.5F, -3.0F);
-			capacete.addChild(bone);
-			setRotationAngle(bone, 0.0F, 0.0F, -0.6981F);
-			bone.setTextureOffset(1, 13).addBox(-0.7F, -1.5F, -1.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
 			bone2 = new ModelRenderer(this);
 			bone2.setRotationPoint(-4.0F, -11.5F, -3.0F);
 			capacete.addChild(bone2);
 			setRotationAngle(bone2, 0.0F, 0.0F, 0.7854F);
 			bone2.setTextureOffset(1, 13).addBox(-1.0F, -1.5F, -1.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
+			bone = new ModelRenderer(this);
+			bone.setRotationPoint(4.0F, -11.5F, -3.0F);
+			capacete.addChild(bone);
+			setRotationAngle(bone, 0.0F, 0.0F, -0.7854F);
+			bone.setTextureOffset(1, 13).addBox(-1.0F, -1.5F, -1.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
 		}
 
 		@Override

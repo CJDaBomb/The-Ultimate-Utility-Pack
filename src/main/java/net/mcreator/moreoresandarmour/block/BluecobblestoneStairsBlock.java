@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
@@ -33,10 +34,10 @@ public class BluecobblestoneStairsBlock extends MoreOresAndArmourModElements.Mod
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(CustomOreModItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
-	public static class CustomBlock extends Block {
+	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(2f, 6f).lightValue(0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE));
+			super(new Block(Block.Properties.create(Material.ROCK)).getDefaultState(), Block.Properties.create(Material.ROCK).sound(SoundType.STONE)
+					.hardnessAndResistance(2f, 6f).lightValue(0).harvestLevel(1).harvestTool(ToolType.PICKAXE));
 			setRegistryName("bluecobblestone_stairs");
 		}
 

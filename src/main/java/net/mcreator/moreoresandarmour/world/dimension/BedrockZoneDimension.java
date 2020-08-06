@@ -421,7 +421,7 @@ public class BedrockZoneDimension extends MoreOresAndArmourModElements.ModElemen
 	@SubscribeEvent
 	public void registerPointOfInterest(RegistryEvent.Register<PointOfInterestType> event) {
 		try {
-			Method method = ObfuscationReflectionHelper.findMethod(PointOfInterestType.class, "register", String.class, Set.class, int.class,
+			Method method = ObfuscationReflectionHelper.findMethod(PointOfInterestType.class, "func_226359_a_", String.class, Set.class, int.class,
 					int.class);
 			method.setAccessible(true);
 			poi = (PointOfInterestType) method.invoke(null, "bedrock_zone_portal",

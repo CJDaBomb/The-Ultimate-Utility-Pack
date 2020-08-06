@@ -1,7 +1,8 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube_bottom_top",
   "textures": {
-    "all": "more_ores_and_armour:blocks/bluessandstone_bottom",
-    "particle": "more_ores_and_armour:blocks/bluessandstone_bottom"
+    "bottom": "more_ores_and_armour:blocks/bluessandstone_bottom",
+    "top": "more_ores_and_armour:blocks/bluessandstone_top",
+    "side": "more_ores_and_armour:blocks/bluesandstone"
   }
 }

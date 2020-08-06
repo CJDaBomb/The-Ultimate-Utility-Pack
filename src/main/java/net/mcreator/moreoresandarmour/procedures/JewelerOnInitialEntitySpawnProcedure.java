@@ -1,6 +1,6 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
@@ -23,8 +23,8 @@ public class JewelerOnInitialEntitySpawnProcedure extends MoreOresAndArmourModEl
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		World world = (World) dependencies.get("world");
-		if ((!(world.isRemote))) {
+		IWorld world = (IWorld) dependencies.get("world");
+		if ((!(world.getWorld().isRemote))) {
 			entity.getPersistentData().putDouble("randomTradeItem1", Math.random());
 			if (((entity.getPersistentData().getDouble("randomTradeItem1")) >= 0.917)) {
 				entity.getPersistentData().putDouble("tradeItem1", 1);

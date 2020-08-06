@@ -27,13 +27,13 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class CopperArmorItem extends MoreOresAndArmourModElements.ModElement {
-	@ObjectHolder("more_ores_and_armour:copper_armorhelmet")
+	@ObjectHolder("more_ores_and_armour:copper_armor_helmet")
 	public static final Item helmet = null;
-	@ObjectHolder("more_ores_and_armour:copper_armorbody")
+	@ObjectHolder("more_ores_and_armour:copper_armor_chestplate")
 	public static final Item body = null;
-	@ObjectHolder("more_ores_and_armour:copper_armorlegs")
+	@ObjectHolder("more_ores_and_armour:copper_armor_leggings")
 	public static final Item legs = null;
-	@ObjectHolder("more_ores_and_armour:copper_armorboots")
+	@ObjectHolder("more_ores_and_armour:copper_armor_boots")
 	public static final Item boots = null;
 	public CopperArmorItem(MoreOresAndArmourModElements instance) {
 		super(instance, 207);
@@ -87,25 +87,25 @@ public class CopperArmorItem extends MoreOresAndArmourModElements.ModElement {
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/copper_helmet_.png";
 			}
-		}.setRegistryName("copper_armorhelmet"));
+		}.setRegistryName("copper_armor_helmet"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/copper__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("copper_armorbody"));
+		}.setRegistryName("copper_armor_chestplate"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/copper__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("copper_armorlegs"));
+		}.setRegistryName("copper_armor_leggings"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "more_ores_and_armour:textures/models/armor/copper__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("copper_armorboots"));
+		}.setRegistryName("copper_armor_boots"));
 	}
 	// Made with Blockbench 3.6.3
 	// Exported for Minecraft version 1.15

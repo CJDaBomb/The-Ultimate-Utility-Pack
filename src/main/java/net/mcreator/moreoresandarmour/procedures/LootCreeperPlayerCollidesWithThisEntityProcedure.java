@@ -2,10 +2,12 @@ package net.mcreator.moreoresandarmour.procedures;
 
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.GameType;
 import net.minecraft.world.Explosion;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.network.play.NetworkPlayerInfo;
 import net.minecraft.client.entity.player.ClientPlayerEntity;
@@ -46,12 +48,12 @@ public class LootCreeperPlayerCollidesWithThisEntityProcedure extends MoreOresAn
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		World world = (World) dependencies.get("world");
+		IWorld world = (IWorld) dependencies.get("world");
 		if ((new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
-				} else if (_ent instanceof ClientPlayerEntity) {
+				} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
 					NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
 							.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
 					return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
@@ -59,8 +61,8 @@ public class LootCreeperPlayerCollidesWithThisEntityProcedure extends MoreOresAn
 				return false;
 			}
 		}.checkGamemode(entity))) {
-			if (!world.isRemote) {
-				world.createExplosion(null, (int) x, (int) y, (int) z, (float) 4, Explosion.Mode.BREAK);
+			if (world instanceof World && !world.getWorld().isRemote) {
+				world.getWorld().createExplosion(null, (int) x, (int) y, (int) z, (float) 4, Explosion.Mode.BREAK);
 			}
 			if (world instanceof ServerWorld) {
 				((ServerWorld) world).spawnParticle(ParticleTypes.EXPLOSION, x, y, z, (int) 5, 3, 3, 3, 1);

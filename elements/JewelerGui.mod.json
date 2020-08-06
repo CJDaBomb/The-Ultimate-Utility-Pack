@@ -44,6 +44,7 @@
           },
           "id": 0,
           "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
           "onSlotChanged": {
             "name": "SetTradeItemAmount"
           },
@@ -57,6 +58,7 @@
         "data": {
           "id": 1,
           "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
           "onTakenFromSlot": {
             "name": "EmeraldCrsytalRemoveFromSlot"
           },

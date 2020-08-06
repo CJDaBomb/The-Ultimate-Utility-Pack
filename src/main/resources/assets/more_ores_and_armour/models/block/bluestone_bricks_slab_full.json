@@ -1,7 +1,8 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube_bottom_top",
   "textures": {
-    "all": "more_ores_and_armour:blocks/bluestone_bricks",
-    "particle": "more_ores_and_armour:blocks/bluestone_bricks"
+    "bottom": "more_ores_and_armour:blocks/bluestone_bricks",
+    "top": "more_ores_and_armour:blocks/bluestone_bricks",
+    "side": "more_ores_and_armour:blocks/bluestone_bricks"
   }
 }

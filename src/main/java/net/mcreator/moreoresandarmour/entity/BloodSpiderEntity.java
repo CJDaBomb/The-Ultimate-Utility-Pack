@@ -147,11 +147,6 @@ public class BloodSpiderEntity extends MoreOresAndArmourModElements.ModElement {
 		}
 
 		@Override
-		protected float getSoundVolume() {
-			return 1.0F;
-		}
-
-		@Override
 		public boolean attackEntityFrom(DamageSource source, float amount) {
 			if (source == DamageSource.DROWN)
 				return false;
