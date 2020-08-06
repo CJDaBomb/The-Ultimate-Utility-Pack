@@ -2,7 +2,7 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "copper_wire2",
+    "texture": "copper_wire",
     "textureTop": "copper_wire2",
     "textureLeft": "copper_wire_side",
     "textureFront": "copper_wire_frontorback",
@@ -12,7 +12,7 @@
     "customModelName": "copper_wire:default",
     "rotationMode": 1,
     "emissiveRendering": false,
-    "itemTexture": "",
+    "itemTexture": "copperwire",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "SOLID",

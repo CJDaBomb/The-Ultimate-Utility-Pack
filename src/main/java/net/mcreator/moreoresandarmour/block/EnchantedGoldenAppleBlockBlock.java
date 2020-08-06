@@ -47,7 +47,7 @@ public class EnchantedGoldenAppleBlockBlock extends MoreOresAndArmourModElements
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOL).sound(SoundType.PLANT).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement()
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement()
 					.notSolid());
 			setRegistryName("enchanted_golden_apple_block");
 		}

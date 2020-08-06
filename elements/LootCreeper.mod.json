@@ -81,6 +81,9 @@
     "deathSound": {
       "value": "entity.creeper.death"
     },
+    "stepSound": {
+      "value": ""
+    },
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "EXPLOSION_NORMAL"
@@ -90,12 +93,6 @@
     "particleAmount": 4,
     "whenMobDies": {
       "name": "LootCreeperEntityDies"
-    },
-    "whenThisMobKillsAnother": {
-      "name": "LootCreeperThisEntityKillsAnotherOne"
-    },
-    "onPlayerCollidesWith": {
-      "name": "LootCreeperPlayerCollidesWithThisEntity"
     },
     "hasAI": true,
     "aiBase": "Creeper",

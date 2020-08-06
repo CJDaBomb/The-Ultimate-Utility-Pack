@@ -27,22 +27,22 @@
     "bossBarColor": "BLUE",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": "CUSTOM:RubySword"
+      "value": ""
     },
     "equipmentOffHand": {
-      "value": "CUSTOM:RubySword"
+      "value": ""
     },
     "equipmentHelmet": {
-      "value": "CUSTOM:ShadowArmour.helmet"
+      "value": ""
     },
     "equipmentBody": {
-      "value": "CUSTOM:ShadowArmour.body"
+      "value": ""
     },
     "equipmentLeggings": {
-      "value": "CUSTOM:ShadowArmour.legs"
+      "value": ""
     },
     "equipmentBoots": {
-      "value": "CUSTOM:ShadowArmour.boots"
+      "value": ""
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEAD",
@@ -81,6 +81,9 @@
     "deathSound": {
       "value": "entity.wither_skeleton.death"
     },
+    "stepSound": {
+      "value": ""
+    },
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "EXPLOSION_NORMAL"
@@ -88,9 +91,12 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
+    "onInitialSpawn": {
+      "name": "ChargedWitherSkeletonOnInitialEntitySpawn"
+    },
     "hasAI": true,
     "aiBase": "Skeleton",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:LootCreeper</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:LootCreeper</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:LootCreeper</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],

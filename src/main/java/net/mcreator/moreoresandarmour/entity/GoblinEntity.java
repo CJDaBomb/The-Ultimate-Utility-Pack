@@ -15,6 +15,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.World;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
@@ -142,11 +143,6 @@ public class GoblinEntity extends MoreOresAndArmourModElements.ModElement {
 		}
 
 		@Override
-		protected float getSoundVolume() {
-			return 1.0F;
-		}
-
-		@Override
 		protected void registerAttributes() {
 			super.registerAttributes();
 			if (this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED) != null)
@@ -232,6 +228,12 @@ public class GoblinEntity extends MoreOresAndArmourModElements.ModElement {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+			this.head.rotateAngleY = f3 / (180F / (float) Math.PI);
+			this.head.rotateAngleX = f4 / (180F / (float) Math.PI);
+			this.rightleg.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
+			this.rightarm.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
+			this.leftleg.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
+			this.leftarm.rotateAngleX = MathHelper.cos(f * 0.6662F) * f1;
 		}
 	}
 }

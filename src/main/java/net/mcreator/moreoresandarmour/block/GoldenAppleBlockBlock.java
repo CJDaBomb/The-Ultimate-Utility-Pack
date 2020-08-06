@@ -47,7 +47,7 @@ public class GoldenAppleBlockBlock extends MoreOresAndArmourModElements.ModEleme
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOL).sound(SoundType.PLANT).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement()
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement()
 					.notSolid());
 			setRegistryName("golden_apple_block");
 		}

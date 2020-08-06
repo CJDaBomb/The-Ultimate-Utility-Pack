@@ -41,7 +41,7 @@
     "canProvidePower": false,
     "lightOpacity": 0,
     "material": {
-      "value": "CLOTH"
+      "value": "IRON"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -59,7 +59,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": true,
     "soundOnStep": {
-      "value": "PLANT"
+      "value": "METAL"
     },
     "luminance": 0.0,
     "unbreakable": false,

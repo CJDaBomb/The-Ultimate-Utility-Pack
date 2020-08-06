@@ -68,7 +68,7 @@ public class ShadowArmourItem extends MoreOresAndArmourModElements.ModElement {
 			}
 
 			public float getToughness() {
-				return 3.5f;
+				return 5f;
 			}
 		};
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(CustomOreModItemGroup.tab)) {

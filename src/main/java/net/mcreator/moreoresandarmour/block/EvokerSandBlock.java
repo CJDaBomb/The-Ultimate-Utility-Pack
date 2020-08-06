@@ -83,8 +83,8 @@ public class EvokerSandBlock extends MoreOresAndArmourModElements.ModElement {
 		}
 
 		@Override
-		public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
-			super.onEntityCollision(state, world, pos, entity);
+		public void onEntityWalk(World world, BlockPos pos, Entity entity) {
+			super.onEntityWalk(world, pos, entity);
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();

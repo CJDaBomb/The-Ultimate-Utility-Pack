@@ -32,7 +32,7 @@
     },
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "CUSTOM:Turquoise"
+      "value": "Blocks.AIR"
     },
     "dropAmount": 1,
     "isBeaconBase": false,
@@ -88,6 +88,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "TurquoiseOreBlockDestroyedByPlayer"
+    },
+    "onDestroyedByExplosion": {
+      "name": "TurquoiseOreBlockDestroyedByExplosion"
+    },
     "spawnWorldTypes": [
       "Surface"
     ],
