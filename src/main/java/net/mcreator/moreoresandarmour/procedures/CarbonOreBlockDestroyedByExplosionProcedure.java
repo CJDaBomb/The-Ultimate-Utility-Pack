@@ -1,11 +1,18 @@
 package net.mcreator.moreoresandarmour.procedures;
 
+import net.minecraft.world.IWorld;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.item.ItemEntity;
+
+import net.mcreator.moreoresandarmour.item.CarbonItem;
+import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
+
+import java.util.Map;
+
 @MoreOresAndArmourModElements.ModElement.Tag
 public class CarbonOreBlockDestroyedByExplosionProcedure extends MoreOresAndArmourModElements.ModElement {
-
 	public CarbonOreBlockDestroyedByExplosionProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 292);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -25,18 +32,14 @@ public class CarbonOreBlockDestroyedByExplosionProcedure extends MoreOresAndArmo
 			System.err.println("Failed to load dependency world for procedure CarbonOreBlockDestroyedByExplosion!");
 			return;
 		}
-
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if (!world.getWorld().isRemote) {
 			ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(CarbonItem.block, (int) (1)));
 			entityToSpawn.setPickupDelay(10);
 			world.addEntity(entityToSpawn);
 		}
-
 	}
-
 }

@@ -15,6 +15,9 @@
     "registerPotionType": true,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "BleedingPotionStartedapplied"
+    },
     "onActiveTick": {
       "name": "BleedingOnPotionActiveTick"
     }
