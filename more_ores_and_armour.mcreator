@@ -545,6 +545,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -2185,7 +2189,7 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
+            "name": "sourceentity",
             "type": "entity"
           }
         ]
@@ -4025,7 +4029,7 @@
       "name": "StrippedWood",
       "type": "procedure",
       "sortid": 290,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "stripped_wood",
@@ -4493,7 +4497,7 @@
       "name": "StrippedLogs",
       "type": "procedure",
       "sortid": 289,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "stripped_logs",
@@ -4717,7 +4721,7 @@
       "item.more_ores_and_armour.iron_rod": "Iron Rod",
       "item.more_ores_and_armour.electric_bow": "Electric Bow",
       "item.more_ores_and_armour.amulet_of_night_vision": "Amulet Of Night Vision",
-      "item.more_ores_and_armour.bedrock_zone": "Shadow Rock",
+      "item.more_ores_and_armour.bedrock_zone": "Shadow Igniter",
       "item.more_ores_and_armour.alexandrite_pickaxe": "Alexandrite Pickaxe",
       "item.minecraft.tipped_arrow.effect.bleeding": "Arrow of Bleeding",
       "item.more_ores_and_armour.aluminum_armourlegs": "Aluminum Leggings",
@@ -4812,7 +4816,7 @@
       "item.more_ores_and_armour.copper_armorbody": "Copper Chestplate",
       "block.more_ores_and_armour.nightmare_sand": "Nightmare Sand",
       "item.more_ores_and_armour.copper_armor_helmet": "Copper Helmet",
-      "item.more_ores_and_armour.other_world": "Other World Igniter",
+      "item.more_ores_and_armour.other_world": "Other World Linker",
       "block.more_ores_and_armour.nightmare_log": "Nightmare Log",
       "item.more_ores_and_armour.amulet_of_strenth": "Amulet Of Strenth",
       "block.more_ores_and_armour.nightmare_leaves": "Nightmare Leaves",
@@ -4877,5 +4881,5 @@
     "modElementsPackage": "net.mcreator.moreoresandarmour",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000428114
+  "mcreatorVersion": 202000432115
 }
