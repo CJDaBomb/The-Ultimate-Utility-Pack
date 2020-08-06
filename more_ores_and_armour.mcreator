@@ -774,6 +774,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -4587,6 +4591,133 @@
           }
         ]
       }
+    },
+    {
+      "name": "ChargedCoal",
+      "type": "item",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charged_coal"
+    },
+    {
+      "name": "ChargedWitherBones",
+      "type": "item",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charged_wither_bones"
+    },
+    {
+      "name": "ChargedWitherSkeletonEntityDies",
+      "type": "procedure",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charged_wither_skeleton_entity_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloodSpiderDies",
+      "type": "procedure",
+      "sortid": 302,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blood_spider_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BleedingPotionStartedapplied",
+      "type": "procedure",
+      "sortid": 303,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bleeding_potion_startedapplied",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BleedingEnchant",
+      "type": "enchantment",
+      "sortid": 304,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bleeding_enchant"
+    },
+    {
+      "name": "BloodyFang",
+      "type": "item",
+      "sortid": 305,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloody_fang"
     }
   ],
   "variable_elements": [],

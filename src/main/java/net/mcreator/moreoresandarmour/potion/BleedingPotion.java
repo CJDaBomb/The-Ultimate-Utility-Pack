@@ -12,8 +12,10 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effect;
+import net.minecraft.entity.ai.attributes.AbstractAttributeMap;
 import net.minecraft.entity.LivingEntity;
 
+import net.mcreator.moreoresandarmour.procedures.BleedingPotionStartedappliedProcedure;
 import net.mcreator.moreoresandarmour.procedures.BleedingOnPotionActiveTickProcedure;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
@@ -83,6 +85,19 @@ public class BleedingPotion extends MoreOresAndArmourModElements.ModElement {
 		@Override
 		public boolean shouldRenderHUD(EffectInstance effect) {
 			return true;
+		}
+
+		@Override
+		public void applyAttributesModifiersToEntity(LivingEntity entity, AbstractAttributeMap attributeMapIn, int amplifier) {
+			World world = entity.world;
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				BleedingPotionStartedappliedProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override

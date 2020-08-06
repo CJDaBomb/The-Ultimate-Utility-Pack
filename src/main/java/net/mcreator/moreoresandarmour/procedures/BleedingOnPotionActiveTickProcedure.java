@@ -19,6 +19,10 @@ public class BleedingOnPotionActiveTickProcedure extends MoreOresAndArmourModEle
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		entity.attackEntityFrom(DamageSource.GENERIC, (float) 2);
+		if (((entity.getPersistentData().getDouble("bleedingEffect")) > 80)) {
+			entity.attackEntityFrom(DamageSource.GENERIC, (float) 2);
+		} else if (((entity.getPersistentData().getDouble("bleedingEffect")) < 80)) {
+			entity.getPersistentData().putDouble("bleedingEffect", ((entity.getPersistentData().getDouble("bleedingEffect")) + 1));
+		}
 	}
 }
