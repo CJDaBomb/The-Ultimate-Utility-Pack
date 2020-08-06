@@ -82,7 +82,7 @@
       "value": "entity.wither_skeleton.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "entity.wither_skeleton.hurt"
     },
     "spawnParticles": false,
     "particleToSpawn": {
