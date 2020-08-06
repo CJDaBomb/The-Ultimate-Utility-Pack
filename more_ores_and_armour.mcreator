@@ -545,10 +545,6 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -2189,7 +2185,7 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "sourceentity",
+            "name": "entity",
             "type": "entity"
           }
         ]
@@ -3960,6 +3956,72 @@
       "registry_name": "shadow_rock_pillar_recipe"
     },
     {
+      "name": "CarbonOreBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 292,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "carbon_ore_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SapphireOreBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 296,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sapphire_ore_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
       "name": "StrippedWood",
       "type": "procedure",
       "sortid": 290,
@@ -3993,65 +4055,15 @@
       }
     },
     {
-      "name": "InfusedIron",
-      "type": "block",
-      "sortid": 287,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "infused_iron"
-    },
-    {
-      "name": "JewelerRightClickedOnEntity2",
+      "name": "AluminumOreBlockDestroyedByExplosion",
       "type": "procedure",
-      "sortid": 287,
+      "sortid": 293,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "jeweler_right_clicked_on_entity_2",
+      "registry_name": "aluminum_ore_block_destroyed_by_explosion",
       "metadata": {
         "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "StrippedLogs",
-      "type": "procedure",
-      "sortid": 289,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "stripped_logs",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "x",
             "type": "number"
@@ -4134,6 +4146,27 @@
       }
     },
     {
+      "name": "ChargedWitherSkeletonOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 300,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charged_wither_skeleton_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
       "name": "CarbonOreBlockDestroyedByExplosion",
       "type": "procedure",
       "sortid": 292,
@@ -4163,46 +4196,13 @@
       }
     },
     {
-      "name": "CarbonOreBlockDestroyedByPlayer",
+      "name": "SapphireOreBlockDestroyedByExplosion",
       "type": "procedure",
-      "sortid": 292,
+      "sortid": 296,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "carbon_ore_block_destroyed_by_player",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "AluminumOreBlockDestroyedByExplosion",
-      "type": "procedure",
-      "sortid": 293,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "aluminum_ore_block_destroyed_by_explosion",
+      "registry_name": "sapphire_ore_block_destroyed_by_explosion",
       "metadata": {
         "dependencies": [
           {
@@ -4287,79 +4287,13 @@
       }
     },
     {
-      "name": "CopperOreBlockDestroyedByPlayer",
+      "name": "ShadowOreBlockDestroyedByExplosion",
       "type": "procedure",
-      "sortid": 295,
+      "sortid": 299,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "copper_ore_block_destroyed_by_player",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "SapphireOreBlockDestroyedByPlayer",
-      "type": "procedure",
-      "sortid": 296,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "sapphire_ore_block_destroyed_by_player",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "SapphireOreBlockDestroyedByExplosion",
-      "type": "procedure",
-      "sortid": 296,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "sapphire_ore_block_destroyed_by_explosion",
+      "registry_name": "shadow_ore_block_destroyed_by_explosion",
       "metadata": {
         "dependencies": [
           {
@@ -4415,6 +4349,118 @@
       }
     },
     {
+      "name": "AlexandriteOreBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 298,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alexandrite_ore_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "InfusedIron",
+      "type": "block",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_iron"
+    },
+    {
+      "name": "JewelerRightClickedOnEntity2",
+      "type": "procedure",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jeweler_right_clicked_on_entity_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CopperOreBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 295,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_ore_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
       "name": "TurquoiseOreBlockDestroyedByExplosion",
       "type": "procedure",
       "sortid": 297,
@@ -4424,6 +4470,39 @@
       "registry_name": "turquoise_ore_block_destroyed_by_explosion",
       "metadata": {
         "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StrippedLogs",
+      "type": "procedure",
+      "sortid": 289,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stripped_logs",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -4473,68 +4552,6 @@
       }
     },
     {
-      "name": "AlexandriteOreBlockDestroyedByPlayer",
-      "type": "procedure",
-      "sortid": 298,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alexandrite_ore_block_destroyed_by_player",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "ShadowOreBlockDestroyedByExplosion",
-      "type": "procedure",
-      "sortid": 299,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "shadow_ore_block_destroyed_by_explosion",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "ShadowOreBlockDestroyedByPlayer",
       "type": "procedure",
       "sortid": 299,
@@ -4559,27 +4576,6 @@
           {
             "name": "z",
             "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "ChargedWitherSkeletonOnInitialEntitySpawn",
-      "type": "procedure",
-      "sortid": 300,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "charged_wither_skeleton_on_initial_entity_spawn",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           },
           {
             "name": "world",
@@ -4881,5 +4877,5 @@
     "modElementsPackage": "net.mcreator.moreoresandarmour",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000432115
+  "mcreatorVersion": 202000428114
 }
