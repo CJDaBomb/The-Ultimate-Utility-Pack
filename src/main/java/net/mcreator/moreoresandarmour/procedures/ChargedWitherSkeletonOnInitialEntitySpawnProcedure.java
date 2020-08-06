@@ -1,28 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.items.CapabilityItemHandler;
-
-import net.minecraft.world.IWorld;
-import net.minecraft.world.Difficulty;
-import net.minecraft.util.Hand;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.moreoresandarmour.item.ShadowArmourItem;
-import net.mcreator.moreoresandarmour.item.SapphireArmourItem;
-import net.mcreator.moreoresandarmour.item.RubySwordItem;
-import net.mcreator.moreoresandarmour.item.RubyArmourItem;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ChargedWitherSkeletonOnInitialEntitySpawnProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public ChargedWitherSkeletonOnInitialEntitySpawnProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 300);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -34,8 +17,10 @@ public class ChargedWitherSkeletonOnInitialEntitySpawnProcedure extends MoreOres
 			System.err.println("Failed to load dependency world for procedure ChargedWitherSkeletonOnInitialEntitySpawn!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		if ((world.getDifficulty() == Difficulty.EASY)) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).setHealth((float) 50);
@@ -541,5 +526,7 @@ public class ChargedWitherSkeletonOnInitialEntitySpawnProcedure extends MoreOres
 				}
 			}
 		}
+
 	}
+
 }
