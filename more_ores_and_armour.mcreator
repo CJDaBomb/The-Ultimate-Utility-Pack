@@ -3981,127 +3981,6 @@
       "registry_name": "shadow_rock_pillar_recipe"
     },
     {
-      "name": "StrippedWood",
-      "type": "procedure",
-      "sortid": 290,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "stripped_wood",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "InfusedIron",
-      "type": "block",
-      "sortid": 287,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "infused_iron"
-    },
-    {
-      "name": "JewelerRightClickedOnEntity2",
-      "type": "procedure",
-      "sortid": 287,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "jeweler_right_clicked_on_entity_2",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "StrippedLogs",
-      "type": "procedure",
-      "sortid": 289,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "stripped_logs",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "BloodyFang",
-      "type": "item",
-      "sortid": 305,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "bloody_fang"
-    },
-    {
       "name": "CarbonOreBlockDestroyedByPlayer",
       "type": "procedure",
       "sortid": 292,
@@ -4168,6 +4047,39 @@
       }
     },
     {
+      "name": "StrippedWood",
+      "type": "procedure",
+      "sortid": 290,
+      "compiles": false,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stripped_wood",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
       "name": "AluminumOreBlockDestroyedByExplosion",
       "type": "procedure",
       "sortid": 293,
@@ -4195,15 +4107,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "ChargedCoal",
-      "type": "item",
-      "sortid": 301,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "charged_coal"
     },
     {
       "name": "RubyoreBlockDestroyedByExplosion",
@@ -4284,69 +4187,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "BloodSpiderDies",
-      "type": "procedure",
-      "sortid": 302,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "blood_spider_dies",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "ChargedWitherBones",
-      "type": "item",
-      "sortid": 301,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "charged_wither_bones"
-    },
-    {
-      "name": "BleedingPotionStartedapplied",
-      "type": "procedure",
-      "sortid": 303,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "bleeding_potion_startedapplied",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       }
@@ -4534,21 +4374,17 @@
       }
     },
     {
-      "name": "ChargedWitherSkeletonEntityDies",
+      "name": "AlexandriteOreBlockDestroyedByPlayer",
       "type": "procedure",
-      "sortid": 301,
+      "sortid": 298,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "charged_wither_skeleton_entity_dies",
+      "registry_name": "alexandrite_ore_block_destroyed_by_player",
       "metadata": {
         "dependencies": [
           {
             "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
             "type": "entity"
           },
           {
@@ -4571,27 +4407,31 @@
       }
     },
     {
-      "name": "BleedingEnchant",
-      "type": "enchantment",
-      "sortid": 304,
+      "name": "InfusedIron",
+      "type": "block",
+      "sortid": 287,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "bleeding_enchant"
+      "registry_name": "infused_iron"
     },
     {
-      "name": "AlexandriteOreBlockDestroyedByPlayer",
+      "name": "JewelerRightClickedOnEntity2",
       "type": "procedure",
-      "sortid": 298,
+      "sortid": 287,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "alexandrite_ore_block_destroyed_by_player",
+      "registry_name": "jeweler_right_clicked_on_entity_2",
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
+            "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           },
           {
             "name": "x",
@@ -4675,6 +4515,39 @@
       }
     },
     {
+      "name": "StrippedLogs",
+      "type": "procedure",
+      "sortid": 289,
+      "compiles": false,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stripped_logs",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
       "name": "AlexandriteOreBlockDestroyedByExplosion",
       "type": "procedure",
       "sortid": 298,
@@ -4735,6 +4608,133 @@
           }
         ]
       }
+    },
+    {
+      "name": "ChargedCoal",
+      "type": "item",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charged_coal"
+    },
+    {
+      "name": "ChargedWitherBones",
+      "type": "item",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charged_wither_bones"
+    },
+    {
+      "name": "ChargedWitherSkeletonEntityDies",
+      "type": "procedure",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charged_wither_skeleton_entity_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloodSpiderDies",
+      "type": "procedure",
+      "sortid": 302,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blood_spider_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BleedingPotionStartedapplied",
+      "type": "procedure",
+      "sortid": 303,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bleeding_potion_startedapplied",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BleedingEnchant",
+      "type": "enchantment",
+      "sortid": 304,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bleeding_enchant"
+    },
+    {
+      "name": "BloodyFang",
+      "type": "item",
+      "sortid": 305,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloody_fang"
     }
   ],
   "variable_elements": [],
@@ -5018,7 +5018,7 @@
     "modid": "more_ores_and_armour",
     "modName": "More Ores and Armour",
     "version": "1.0.0",
-    "description": "This mod adds new ores from the real world into minecraftt",
+    "description": "This mod adds new ores from the real world into minecraft",
     "author": "CJDaBomb",
     "websiteURL": "https://github.com/CJDaBomb/The-Ultimate-Utility-Pack",
     "disableForgeVersionCheck": false,
