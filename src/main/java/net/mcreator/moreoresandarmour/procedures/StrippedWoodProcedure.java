@@ -6,8 +6,8 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.item.SwordItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.AxeItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
@@ -61,7 +61,7 @@ public class StrippedWoodProcedure extends MoreOresAndArmourModElements.ModEleme
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem() instanceof SwordItem)) {
+				.getItem() instanceof AxeItem)) {
 			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BluestoneWoodBlock.block.getDefaultState()
 					.getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), StrippedBluestoneWoodBlock.block.getDefaultState(), 3);
@@ -126,11 +126,11 @@ public class StrippedWoodProcedure extends MoreOresAndArmourModElements.ModEleme
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), StrippedCherryWoodBlock.block.getDefaultState(), 3);
 				if (!world.getWorld().isRemote) {
 					world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.axe.strip")),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.cave")),
 							SoundCategory.NEUTRAL, (float) 1, (float) 1);
 				} else {
 					world.getWorld().playSound(x, y, z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.axe.strip")),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.cave")),
 							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 				{

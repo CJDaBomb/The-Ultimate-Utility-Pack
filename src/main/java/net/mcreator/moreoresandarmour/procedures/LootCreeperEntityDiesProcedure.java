@@ -47,10 +47,10 @@ public class LootCreeperEntityDiesProcedure extends MoreOresAndArmourModElements
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		for (int index0 = 0; index0 < (int) ((Math.round((Math.random() * 2)) + 1)); index0++) {
+		for (int index0 = 0; index0 < (int) (2); index0++) {
 			entity.getPersistentData().putDouble("lootCreeperDrops", Math.random());
 			entity.getPersistentData().putDouble("lootCreeperDrops2", Math.round((Math.random() + 6)));
-			if (((entity.getPersistentData().getDouble("lootCreeperDrops")) >= 0.35)) {
+			if (((entity.getPersistentData().getDouble("lootCreeperDrops")) >= 0.2)) {
 				if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 0)) {
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(DiamondAppleItem.block, (int) (1)));

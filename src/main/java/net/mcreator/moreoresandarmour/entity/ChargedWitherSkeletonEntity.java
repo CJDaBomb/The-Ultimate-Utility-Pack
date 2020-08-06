@@ -24,9 +24,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.monster.SkeletonEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
@@ -48,8 +46,6 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 
 import net.mcreator.moreoresandarmour.procedures.ChargedWitherSkeletonOnInitialEntitySpawnProcedure;
 import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
-import net.mcreator.moreoresandarmour.item.ShadowArmourItem;
-import net.mcreator.moreoresandarmour.item.RubySwordItem;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Map;
@@ -100,7 +96,7 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 			return new MobRenderer(renderManager, new Modelskeletonwither(), 0.5f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("more_ores_and_armour:textures/wither_skeleton.png");
+					return new ResourceLocation("more_ores_and_armour:textures/wither_skeletonbuffed.png");
 				}
 			};
 		});
@@ -114,12 +110,6 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 			super(type, world);
 			experienceValue = 0;
 			setNoAI(false);
-			this.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(RubySwordItem.block, (int) (1)));
-			this.setItemStackToSlot(EquipmentSlotType.OFFHAND, new ItemStack(RubySwordItem.block, (int) (1)));
-			this.setItemStackToSlot(EquipmentSlotType.HEAD, new ItemStack(ShadowArmourItem.helmet, (int) (1)));
-			this.setItemStackToSlot(EquipmentSlotType.CHEST, new ItemStack(ShadowArmourItem.body, (int) (1)));
-			this.setItemStackToSlot(EquipmentSlotType.LEGS, new ItemStack(ShadowArmourItem.legs, (int) (1)));
-			this.setItemStackToSlot(EquipmentSlotType.FEET, new ItemStack(ShadowArmourItem.boots, (int) (1)));
 		}
 
 		@Override

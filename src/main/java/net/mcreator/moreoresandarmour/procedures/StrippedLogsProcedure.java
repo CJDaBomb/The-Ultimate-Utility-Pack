@@ -8,8 +8,8 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Direction;
 import net.minecraft.state.DirectionProperty;
-import net.minecraft.item.SwordItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.AxeItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.BlockState;
@@ -64,7 +64,7 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem() instanceof SwordItem)) {
+				.getItem() instanceof AxeItem)) {
 			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BluestoneLogBlock.block.getDefaultState().getBlock())) {
 				if ((((new Object() {
 					public Direction getDirection(BlockPos pos) {

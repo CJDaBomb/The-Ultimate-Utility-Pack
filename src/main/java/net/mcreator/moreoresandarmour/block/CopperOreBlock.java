@@ -33,7 +33,6 @@ import net.minecraft.block.Block;
 import net.mcreator.moreoresandarmour.procedures.CopperOreBlockDestroyedByPlayerProcedure;
 import net.mcreator.moreoresandarmour.procedures.CopperOreBlockDestroyedByExplosionProcedure;
 import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
-import net.mcreator.moreoresandarmour.item.CopperIngotItem;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Random;
@@ -68,7 +67,7 @@ public class CopperOreBlock extends MoreOresAndArmourModElements.ModElement {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(CopperIngotItem.block, (int) (1)));
+			return Collections.singletonList(new ItemStack(Blocks.AIR, (int) (1)));
 		}
 
 		@Override
