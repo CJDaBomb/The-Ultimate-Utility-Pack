@@ -1,13 +1,16 @@
 package net.mcreator.moreoresandarmour.procedures;
 
 import net.minecraft.world.IWorld;
-import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
+import net.mcreator.moreoresandarmour.item.TurquoiseAppleItem;
 import net.mcreator.moreoresandarmour.item.RubyAppleItem;
-import net.mcreator.moreoresandarmour.item.EnchantedTotemItem;
+import net.mcreator.moreoresandarmour.item.DiamondAppleItem;
+import net.mcreator.moreoresandarmour.item.AluminumAppleItem;
+import net.mcreator.moreoresandarmour.item.AlexadriteAppleItem;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Map;
@@ -19,6 +22,10 @@ public class LootCreeperEntityDiesProcedure extends MoreOresAndArmourModElements
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			System.err.println("Failed to load dependency entity for procedure LootCreeperEntityDies!");
+			return;
+		}
 		if (dependencies.get("x") == null) {
 			System.err.println("Failed to load dependency x for procedure LootCreeperEntityDies!");
 			return;
@@ -35,78 +42,121 @@ public class LootCreeperEntityDiesProcedure extends MoreOresAndArmourModElements
 			System.err.println("Failed to load dependency world for procedure LootCreeperEntityDies!");
 			return;
 		}
+		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		double random = 0;
-		double random2 = 0;
-		double random3 = 0;
-		double random4 = 0;
-		double random5 = 0;
-		double random6 = 0;
-		double random7 = 0;
-		double random8 = 0;
-		random = (double) Math.random();
-		if (((random) > 0.5)) {
-			random2 = (double) Math.random();
-			if (((random2) > 0.5)) {
-				random3 = (double) Math.random();
-				if (((random) > 0.95)) {
+		for (int index0 = 0; index0 < (int) (2); index0++) {
+			entity.getPersistentData().putDouble("lootCreeperDrops", Math.random());
+			entity.getPersistentData().putDouble("lootCreeperDrops2", Math.round((Math.random() + 6)));
+			if (((entity.getPersistentData().getDouble("lootCreeperDrops")) >= 0.2)) {
+				if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 0)) {
 					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(EnchantedTotemItem.block, (int) (1)));
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(DiamondAppleItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-				} else if (((random) <= 0.95)) {
+				} else if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 1)) {
 					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(TurquoiseAppleItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-				}
-			} else if (((random2) <= 0.5)) {
-				random4 = (double) Math.random();
-				if (((random4) > 0.5)) {
+				} else if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 2)) {
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(RubyAppleItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-				} else if (((random4) <= 0.5)) {
+				} else if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 3)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(AluminumAppleItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 4)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(AlexadriteAppleItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 5)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 6)) {
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
 				}
-			}
-		} else if (((random) <= 0.5)) {
-			random5 = (double) Math.random();
-			if (((random5) > 0.5)) {
-				random6 = (double) Math.random();
-				if (((random6) > 0.5)) {
+			} else if (((entity.getPersistentData().getDouble("lootCreeperDrops")) >= 0)) {
+				if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 0)) {
 					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.GOLDEN_APPLE, (int) (1)));
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(DiamondAppleItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-				} else if (((random6) <= 0.5)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(DiamondAppleItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 1)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(TurquoiseAppleItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(TurquoiseAppleItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 2)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(RubyAppleItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(RubyAppleItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 3)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(AluminumAppleItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(AluminumAppleItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 4)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(AlexadriteAppleItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(AlexadriteAppleItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 5)) {
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-				}
-			} else if (((random5) <= 0.5)) {
-				random7 = (double) Math.random();
-				if (((random7) > 0.6)) {
-					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, (int) (1)));
-						entityToSpawn.setPickupDelay(10);
-						world.addEntity(entityToSpawn);
-					}
-				} else if (((random7) <= 0.6)) {
+				} else if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 6)) {
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
 						entityToSpawn.setPickupDelay(10);

@@ -82,7 +82,7 @@
       "value": "entity.spider.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "entity.spider.step"
     },
     "spawnParticles": false,
     "particleToSpawn": {

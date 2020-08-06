@@ -32,7 +32,7 @@
     },
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "CUSTOM:CopperIngot"
+      "value": "Blocks.AIR"
     },
     "dropAmount": 1,
     "isBeaconBase": false,
@@ -88,6 +88,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "CopperOreBlockDestroyedByPlayer"
+    },
+    "onDestroyedByExplosion": {
+      "name": "CopperOreBlockDestroyedByExplosion"
+    },
     "spawnWorldTypes": [
       "Surface"
     ],
