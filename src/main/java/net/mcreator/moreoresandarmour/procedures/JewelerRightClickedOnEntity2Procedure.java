@@ -1,11 +1,34 @@
 package net.mcreator.moreoresandarmour.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.particles.ParticleTypes;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.block.Blocks;
+
+import net.mcreator.moreoresandarmour.item.RubyItem;
+import net.mcreator.moreoresandarmour.item.EmeraldCrystalItem;
+import net.mcreator.moreoresandarmour.item.DiamondAppleItem;
+import net.mcreator.moreoresandarmour.item.AmuletofLevitationItem;
+import net.mcreator.moreoresandarmour.item.AmuletOfStrenthItem;
+import net.mcreator.moreoresandarmour.item.AluminumAppleItem;
+import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
+
+import java.util.Map;
+
 @MoreOresAndArmourModElements.ModElement.Tag
 public class JewelerRightClickedOnEntity2Procedure extends MoreOresAndArmourModElements.ModElement {
-
 	public JewelerRightClickedOnEntity2Procedure(MoreOresAndArmourModElements instance) {
 		super(instance, 287);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -33,14 +56,12 @@ public class JewelerRightClickedOnEntity2Procedure extends MoreOresAndArmourModE
 			System.err.println("Failed to load dependency world for procedure JewelerRightClickedOnEntity2!");
 			return;
 		}
-
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(EmeraldCrystalItem.block, (int) (1)).getItem())) {
 			(itemstack).getOrCreateTag().putDouble("randomTrade", Math.round((Math.random() * 5)));
@@ -169,7 +190,5 @@ public class JewelerRightClickedOnEntity2Procedure extends MoreOresAndArmourModE
 				}
 			}
 		}
-
 	}
-
 }

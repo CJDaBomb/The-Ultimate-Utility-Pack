@@ -32,7 +32,6 @@ import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
@@ -42,8 +41,6 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.MobRenderer;
 
-import net.mcreator.moreoresandarmour.procedures.LootCreeperThisEntityKillsAnotherOneProcedure;
-import net.mcreator.moreoresandarmour.procedures.LootCreeperPlayerCollidesWithThisEntityProcedure;
 import net.mcreator.moreoresandarmour.procedures.LootCreeperEntityDiesProcedure;
 import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
@@ -154,46 +151,12 @@ public class LootCreeperEntity extends MoreOresAndArmourModElements.ModElement {
 			Entity entity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				LootCreeperEntityDiesProcedure.executeProcedure($_dependencies);
-			}
-		}
-
-		@Override
-		public void onKillEntity(LivingEntity entity) {
-			super.onKillEntity(entity);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity sourceentity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				LootCreeperThisEntityKillsAnotherOneProcedure.executeProcedure($_dependencies);
-			}
-		}
-
-		@Override
-		public void onCollideWithPlayer(PlayerEntity sourceentity) {
-			super.onCollideWithPlayer(sourceentity);
-			Entity entity = this;
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				LootCreeperPlayerCollidesWithThisEntityProcedure.executeProcedure($_dependencies);
+				LootCreeperEntityDiesProcedure.executeProcedure($_dependencies);
 			}
 		}
 

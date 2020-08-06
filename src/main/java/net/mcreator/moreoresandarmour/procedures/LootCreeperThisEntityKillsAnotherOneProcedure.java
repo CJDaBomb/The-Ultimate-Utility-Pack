@@ -6,6 +6,7 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.block.Blocks;
 
@@ -45,15 +46,15 @@ public class LootCreeperThisEntityKillsAnotherOneProcedure extends MoreOresAndAr
 		IWorld world = (IWorld) dependencies.get("world");
 		double Hi = 0;
 		world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CHEST.getDefaultState(), 3);
-		for (int index0 = 0; index0 < (int) ((Math.random() * 10)); index0++) {
-			Hi = (double) (Math.random() * 10);
+		for (int index0 = 0; index0 < (int) (Math.round((Math.random() * 2))); index0++) {
+			Hi = (double) Math.round((Math.random() * 5));
 			if (((Hi) == 0)) {
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
 						final int _sltid = (int) (0);
 						final ItemStack _setstack = new ItemStack(Blocks.SPAWNER, (int) (1));
-						_setstack.setCount((int) 1);
+						_setstack.setCount((int) Math.round((Math.random() * 2)));
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
 								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -67,7 +68,7 @@ public class LootCreeperThisEntityKillsAnotherOneProcedure extends MoreOresAndAr
 					if (_ent != null) {
 						final int _sltid = (int) (1);
 						final ItemStack _setstack = new ItemStack(EnchantedTotemItem.block, (int) (1));
-						_setstack.setCount((int) 2);
+						_setstack.setCount((int) Math.round((Math.random() * 2)));
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
 								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -81,7 +82,7 @@ public class LootCreeperThisEntityKillsAnotherOneProcedure extends MoreOresAndAr
 					if (_ent != null) {
 						final int _sltid = (int) (2);
 						final ItemStack _setstack = new ItemStack(SapphireItem.block, (int) (1));
-						_setstack.setCount((int) 5);
+						_setstack.setCount((int) (Math.round((Math.random() * 3)) + 2));
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
 								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -95,7 +96,35 @@ public class LootCreeperThisEntityKillsAnotherOneProcedure extends MoreOresAndAr
 					if (_ent != null) {
 						final int _sltid = (int) (3);
 						final ItemStack _setstack = new ItemStack(RubyAppleItem.block, (int) (1));
-						_setstack.setCount((int) 3);
+						_setstack.setCount((int) Math.round((Math.random() * 2)));
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((Hi) == 5)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+					if (_ent != null) {
+						final int _sltid = (int) (4);
+						final ItemStack _setstack = new ItemStack(Items.EXPERIENCE_BOTTLE, (int) (1));
+						_setstack.setCount((int) (Math.round((Math.random() * 30)) + 10));
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((Hi) == 5)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+					if (_ent != null) {
+						final int _sltid = (int) (5);
+						final ItemStack _setstack = new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, (int) (1));
+						_setstack.setCount((int) Math.round((Math.random() * 2)));
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
 								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
