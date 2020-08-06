@@ -1,12 +1,21 @@
 
 package net.mcreator.moreoresandarmour.item;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Item;
+import net.minecraft.block.BlockState;
+
+import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
+
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ChargedCoalItem extends MoreOresAndArmourModElements.ModElement {
-
 	@ObjectHolder("more_ores_and_armour:charged_coal")
 	public static final Item block = null;
-
 	public ChargedCoalItem(MoreOresAndArmourModElements instance) {
 		super(instance, 301);
 	}
@@ -15,9 +24,7 @@ public class ChargedCoalItem extends MoreOresAndArmourModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
-
 	public static class ItemCustom extends Item {
-
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64));
 			setRegistryName("charged_coal");
@@ -43,7 +50,5 @@ public class ChargedCoalItem extends MoreOresAndArmourModElements.ModElement {
 		public boolean hasEffect(ItemStack itemstack) {
 			return true;
 		}
-
 	}
-
 }

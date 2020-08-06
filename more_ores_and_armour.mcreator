@@ -545,6 +545,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -769,6 +773,10 @@
       "registry_name": "electric_arrow_living_entity_is_hit_with_item",
       "metadata": {
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -1367,7 +1375,24 @@
       "ids": {},
       "registry_name": "chorus_salad_food_eaten",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -4739,9 +4764,9 @@
       "block.more_ores_and_armour.electric_furnace_on": "Electric Furnace",
       "item.minecraft.lingering_potion.effect.bleeding": "Lingering Bleeding",
       "block.more_ores_and_armour.cherry_trapdoor": "Cherry Trapdoor",
-      "block.more_ores_and_armour.bluestone_leaves": "Bluestone Leaves",
-      "block.more_ores_and_armour.copper_block": "Copper Block",
       "item.more_ores_and_armour.loot_creeper": "Loot Creeper Spawn Egg",
+      "block.more_ores_and_armour.copper_block": "Copper Block",
+      "block.more_ores_and_armour.bluestone_leaves": "Bluestone Leaves",
       "block.more_ores_and_armour.stripped_blueberry_wood": "Stripped Blueberry Wood",
       "block.more_ores_and_armour.nightmare_planks": "Nightmare Planks",
       "item.more_ores_and_armour.alexandrite_armourboots": "Alexandrite Armour Boots",
@@ -4777,6 +4802,7 @@
       "block.more_ores_and_armour.nightmare_stone": "Nightmare Stone",
       "block.more_ores_and_armour.carbon_block": "Carbon Block",
       "block.more_ores_and_armour.cherry_leaves": "Cherry Leaves",
+      "item.more_ores_and_armour.charged_wither_bones": "Charged Wither Bones",
       "item.more_ores_and_armour.sapphire_pickaxe": "Sapphire Pickaxe",
       "block.more_ores_and_armour.blueberry_fence": "Blueberry Fence",
       "block.more_ores_and_armour.bluestone_bricks": "Bluestone Bricks",
@@ -4788,8 +4814,8 @@
       "item.more_ores_and_armour.shadow_armour_helmet": "Shadow  Helmet",
       "block.more_ores_and_armour.cherry_slab": "Cherry Slab",
       "item.more_ores_and_armour.bedrock_armourbody": "Shadowrock Chestplate",
-      "item.more_ores_and_armour.copper_armor_chestplate": "Copper Chestplate",
       "block.more_ores_and_armour.blue_stone_tapdoor": "Bluestone Wood Tapdoor",
+      "item.more_ores_and_armour.copper_armor_chestplate": "Copper Chestplate",
       "item.more_ores_and_armour.aluminum_armourboots": "Aluminum Boots",
       "block.more_ores_and_armour.bluesandstone": "Blue Sandstone",
       "item.more_ores_and_armour.alexandrite_armour_chestplate": "Alexandrite Chestplate",
@@ -4803,6 +4829,7 @@
       "item.more_ores_and_armour.aluminum_armour_boots": "Aluminum Boots",
       "effect.bleeding": "Bleeding",
       "block.more_ores_and_armour.infused_iron": "Infused Iron",
+      "enchantment.more_ores_and_armour.bleeding_enchant": "Bleeding ",
       "block.more_ores_and_armour.powered_copper_wire": "Powered Copper Wire",
       "item.more_ores_and_armour.bedrock_armour_helmet": "Shadowrock Helmet",
       "block.more_ores_and_armour.aluminum_ore": "Aluminum Ore",
@@ -4844,7 +4871,7 @@
       "item.more_ores_and_armour.iron_rod": "Iron Rod",
       "item.more_ores_and_armour.electric_bow": "Electric Bow",
       "item.more_ores_and_armour.amulet_of_night_vision": "Amulet Of Night Vision",
-      "item.more_ores_and_armour.bedrock_zone": "Shadow Rock",
+      "item.more_ores_and_armour.bedrock_zone": "Shadow Igniter",
       "item.more_ores_and_armour.alexandrite_pickaxe": "Alexandrite Pickaxe",
       "item.minecraft.tipped_arrow.effect.bleeding": "Arrow of Bleeding",
       "item.more_ores_and_armour.aluminum_armourlegs": "Aluminum Leggings",
@@ -4888,6 +4915,7 @@
       "item.more_ores_and_armour.ruby_armour_boots": "Ruby Boots",
       "item.more_ores_and_armour.shadow_ingot": "Shadow Ingot",
       "block.more_ores_and_armour.lemon_door": "Lemon Door",
+      "item.more_ores_and_armour.charged_coal": "Charged Coal",
       "block.more_ores_and_armour.blueberry_leaves": "Blueberry Leaves",
       "item.more_ores_and_armour.bedrock_armour_leggings": "Shadowrock Leggings",
       "block.more_ores_and_armour.blue_stone_wood_slab": "Bluestone Wood Slab",
@@ -4939,7 +4967,7 @@
       "item.more_ores_and_armour.copper_armorbody": "Copper Chestplate",
       "block.more_ores_and_armour.nightmare_sand": "Nightmare Sand",
       "item.more_ores_and_armour.copper_armor_helmet": "Copper Helmet",
-      "item.more_ores_and_armour.other_world": "Other World Igniter",
+      "item.more_ores_and_armour.other_world": "Other World Linker",
       "block.more_ores_and_armour.nightmare_log": "Nightmare Log",
       "item.more_ores_and_armour.amulet_of_strenth": "Amulet Of Strenth",
       "block.more_ores_and_armour.nightmare_leaves": "Nightmare Leaves",
@@ -4982,7 +5010,8 @@
       "block.more_ores_and_armour.bluecobblestone_wall": "Bluecobblestone Wall",
       "item.minecraft.splash_potion.effect.bleeding": "Splash Bleeding",
       "item.minecraft.tipped_arrow.effect.wither_potion": "Arrow of Wither",
-      "item.more_ores_and_armour.ruby_armour_leggings": "Ruby Leggings"
+      "item.more_ores_and_armour.ruby_armour_leggings": "Ruby Leggings",
+      "item.more_ores_and_armour.bloody_fang": "Bloody Fang"
     }
   },
   "workspaceSettings": {
@@ -5004,5 +5033,5 @@
     "modElementsPackage": "net.mcreator.moreoresandarmour",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000428114
+  "mcreatorVersion": 202000432115
 }
