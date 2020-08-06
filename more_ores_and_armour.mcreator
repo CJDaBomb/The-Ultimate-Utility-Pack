@@ -1367,7 +1367,24 @@
       "ids": {},
       "registry_name": "chorus_salad_food_eaten",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -2185,7 +2202,7 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
+            "name": "sourceentity",
             "type": "entity"
           }
         ]
@@ -4072,15 +4089,15 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.more_ores_and_armour.ruby_armourbody": "Ruby Chestplate",
       "item.more_ores_and_armour.aluminum_armour_helmet": "Aluminum  Helmet",
+      "item.more_ores_and_armour.ruby_armourbody": "Ruby Chestplate",
       "item.more_ores_and_armour.aluminum_shovel": "Aluminum Shovel",
       "item.more_ores_and_armour.turquoise_shovel": "Turquoise Shovel",
       "item.more_ores_and_armour.bedrock_armourhelmet": "Shadowrock Helmet",
-      "item.more_ores_and_armour.sapphire_armourhelmet": "Sapphire Helmet",
       "block.more_ores_and_armour.lemon_log": "Lemon Log",
-      "item.more_ores_and_armour.shadow_armourhelmet": "Shadow  Helmet",
+      "item.more_ores_and_armour.sapphire_armourhelmet": "Sapphire Helmet",
       "block.more_ores_and_armour.alexandrite_ore": "Alexandrite Ore",
+      "item.more_ores_and_armour.shadow_armourhelmet": "Shadow  Helmet",
       "block.more_ores_and_armour.blueberry_trapdoor": "Blueberry Trapdoor",
       "block.more_ores_and_armour.shadow_block": "Shadow Block",
       "block.more_ores_and_armour.lemon_leaves": "Lemon Leaves",
@@ -4091,8 +4108,8 @@
       "block.more_ores_and_armour.smooth_shadow_rock_fence": "Smooth Shadow Rock Wall",
       "item.more_ores_and_armour.sapphire_armour_helmet": "Sapphire Helmet",
       "item.more_ores_and_armour.shadow_armour_boots": "Shadow Armour Boots",
-      "block.more_ores_and_armour.electric_furnace_on": "Electric Furnace",
       "item.more_ores_and_armour.copper_armor_leggings": "Copper Leggings",
+      "block.more_ores_and_armour.electric_furnace_on": "Electric Furnace",
       "item.minecraft.lingering_potion.effect.bleeding": "Lingering Bleeding",
       "block.more_ores_and_armour.cherry_trapdoor": "Cherry Trapdoor",
       "block.more_ores_and_armour.bluestone_leaves": "Bluestone Leaves",
@@ -4104,14 +4121,14 @@
       "item.minecraft.lingering_potion.effect.absorbsion": "Lingering Absorbsion",
       "block.more_ores_and_armour.blue_cobble_stone": "Bluecobblestone",
       "block.more_ores_and_armour.electric_furnace_off": "Electric Furnace",
-      "block.more_ores_and_armour.bluestone_sand": "Bluestone Sand",
+      "block.more_ores_and_armour.bluestone_sand": "Blue Sand",
       "block.more_ores_and_armour.shadow_rock_pillar": "Shadow Rock Pillar",
       "block.more_ores_and_armour.blue_sandstone_wall": "Blue Sandstone Wall",
       "block.more_ores_and_armour.carbon_ore": "Carbon Ore",
       "item.more_ores_and_armour.aluminum_armour_leggings": "Aluminum Leggings",
       "item.more_ores_and_armour.sapphire": "Sapphire",
-      "block.more_ores_and_armour.grape_planks": "Grape Planks",
       "advancements.shiny_metal.descr": "Find Some Wonderful Aluminum",
+      "block.more_ores_and_armour.grape_planks": "Grape Planks",
       "item.more_ores_and_armour.copper_armorlegs": "Copper Leggings",
       "block.more_ores_and_armour.lemon_wood": "Lemon Wood",
       "block.more_ores_and_armour.golden_apple_block": "Golden Apple Block",
@@ -4127,8 +4144,8 @@
       "item.more_ores_and_armour.aluminum_armour_chestplate": "Aluminum Chestplate",
       "itemGroup.tabcustom_ore_mod": "Custom Ore Mod",
       "entity.more_ores_and_armour.goblin": "Goblin",
-      "block.more_ores_and_armour.grape_leaves": "Grape Leaves",
       "block.more_ores_and_armour.dark_stone": "Dark Stone",
+      "block.more_ores_and_armour.grape_leaves": "Grape Leaves",
       "item.more_ores_and_armour.bedrock_armour_chestplate": "Shadowrock Chestplate",
       "block.more_ores_and_armour.nightmare_stone": "Nightmare Stone",
       "block.more_ores_and_armour.carbon_block": "Carbon Block",
@@ -4144,8 +4161,8 @@
       "item.more_ores_and_armour.shadow_armour_helmet": "Shadow  Helmet",
       "block.more_ores_and_armour.cherry_slab": "Cherry Slab",
       "item.more_ores_and_armour.bedrock_armourbody": "Shadowrock Chestplate",
-      "block.more_ores_and_armour.blue_stone_tapdoor": "Bluestone Wood Tapdoor",
       "item.more_ores_and_armour.copper_armor_chestplate": "Copper Chestplate",
+      "block.more_ores_and_armour.blue_stone_tapdoor": "Bluestone Wood Tapdoor",
       "item.more_ores_and_armour.aluminum_armourboots": "Aluminum Boots",
       "block.more_ores_and_armour.bluesandstone": "Blue Sandstone",
       "item.more_ores_and_armour.alexandrite_armour_chestplate": "Alexandrite Chestplate",
@@ -4158,6 +4175,7 @@
       "item.more_ores_and_armour.ruby_apple": "Ruby Apple",
       "item.more_ores_and_armour.aluminum_armour_boots": "Aluminum Boots",
       "effect.bleeding": "Bleeding",
+      "block.more_ores_and_armour.infused_iron": "Infused Iron",
       "block.more_ores_and_armour.powered_copper_wire": "Powered Copper Wire",
       "item.more_ores_and_armour.bedrock_armour_helmet": "Shadowrock Helmet",
       "block.more_ores_and_armour.aluminum_ore": "Aluminum Ore",
@@ -4245,7 +4263,7 @@
       "block.more_ores_and_armour.lemon_door": "Lemon Door",
       "block.more_ores_and_armour.blueberry_leaves": "Blueberry Leaves",
       "item.more_ores_and_armour.bedrock_armour_leggings": "Shadowrock Leggings",
-      "block.more_ores_and_armour.blue_stone_wood_slab": "Blue Stone Wood Slab",
+      "block.more_ores_and_armour.blue_stone_wood_slab": "Bluestone Wood Slab",
       "block.more_ores_and_armour.blue_sandstone_stairs": "Blue Sandstone Stairs",
       "block.more_ores_and_armour.blueberry_planks": "Blueberry Planks",
       "item.more_ores_and_armour.copper_armorboots": "Copper Boots",
@@ -4359,5 +4377,5 @@
     "modElementsPackage": "net.mcreator.moreoresandarmour",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000428114
+  "mcreatorVersion": 202000432115
 }
