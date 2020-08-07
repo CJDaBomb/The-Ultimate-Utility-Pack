@@ -2168,7 +2168,7 @@
       "type": "mob",
       "sortid": 157,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "ids": {},
       "registry_name": "goblin"
     },

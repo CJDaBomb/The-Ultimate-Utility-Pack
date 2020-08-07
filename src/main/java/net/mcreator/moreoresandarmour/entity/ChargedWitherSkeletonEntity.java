@@ -47,6 +47,7 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.moreoresandarmour.procedures.ChargedWitherSkeletonOnInitialEntitySpawnProcedure;
+import net.mcreator.moreoresandarmour.procedures.ChargedWitherSkeletonEntityDiesProcedure;
 import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
@@ -67,7 +68,7 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 	@Override
 	public void initElements() {
 		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(65).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f))
+				.setTrackingRange(65).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.6f, 1.8f))
 						.build("charged_wither_skeleton").setRegistryName("charged_wither_skeleton");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -13421773, -13874064, new Item.Properties().group(CustomOreModItemGroup.tab))
@@ -158,6 +159,26 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 		@Override
 		public net.minecraft.util.SoundEvent getDeathSound() {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wither_skeleton.death"));
+		}
+
+		@Override
+		public void onDeath(DamageSource source) {
+			super.onDeath(source);
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity sourceentity = source.getTrueSource();
+			Entity entity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("sourceentity", sourceentity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ChargedWitherSkeletonEntityDiesProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override

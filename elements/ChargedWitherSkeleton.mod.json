@@ -61,7 +61,7 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "immuneToArrows": false,
     "immuneToFallDamage": false,
     "immuneToCactus": false,
@@ -91,6 +91,9 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
+    "whenMobDies": {
+      "name": "ChargedWitherSkeletonEntityDies"
+    },
     "onInitialSpawn": {
       "name": "ChargedWitherSkeletonOnInitialEntitySpawn"
     },
