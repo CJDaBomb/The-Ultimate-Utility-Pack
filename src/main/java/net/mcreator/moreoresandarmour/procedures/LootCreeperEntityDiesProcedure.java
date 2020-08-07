@@ -49,8 +49,8 @@ public class LootCreeperEntityDiesProcedure extends MoreOresAndArmourModElements
 		IWorld world = (IWorld) dependencies.get("world");
 		for (int index0 = 0; index0 < (int) (2); index0++) {
 			entity.getPersistentData().putDouble("lootCreeperDrops", Math.random());
-			entity.getPersistentData().putDouble("lootCreeperDrops2", Math.round((Math.random() + 6)));
 			if (((entity.getPersistentData().getDouble("lootCreeperDrops")) >= 0.2)) {
+				entity.getPersistentData().putDouble("lootCreeperDrops2", Math.round((Math.random() + 6)));
 				if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 0)) {
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(DiamondAppleItem.block, (int) (1)));
@@ -95,6 +95,7 @@ public class LootCreeperEntityDiesProcedure extends MoreOresAndArmourModElements
 					}
 				}
 			} else if (((entity.getPersistentData().getDouble("lootCreeperDrops")) >= 0)) {
+				entity.getPersistentData().putDouble("lootCreeperDrops2", Math.round((Math.random() + 6)));
 				if (((entity.getPersistentData().getDouble("lootCreeperDrops2")) == 0)) {
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(DiamondAppleItem.block, (int) (1)));

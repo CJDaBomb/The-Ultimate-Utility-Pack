@@ -1,11 +1,24 @@
 package net.mcreator.moreoresandarmour.procedures;
 
+import net.minecraft.world.IWorld;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.block.Blocks;
+
+import net.mcreator.moreoresandarmour.item.ChargedWitherBonesItem;
+import net.mcreator.moreoresandarmour.item.ChargedCoalItem;
+import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
+
+import java.util.Map;
+
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ChargedWitherSkeletonEntityDiesProcedure extends MoreOresAndArmourModElements.ModElement {
-
 	public ChargedWitherSkeletonEntityDiesProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 301);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -33,14 +46,12 @@ public class ChargedWitherSkeletonEntityDiesProcedure extends MoreOresAndArmourM
 			System.err.println("Failed to load dependency world for procedure ChargedWitherSkeletonEntityDies!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if (((EnchantmentHelper.getEnchantmentLevel(Enchantments.LOOTING,
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 0)) {
 			for (int index0 = 0; index0 < (int) ((Math.round(Math.random()) + 1)); index0++) {
@@ -198,7 +209,5 @@ public class ChargedWitherSkeletonEntityDiesProcedure extends MoreOresAndArmourM
 				}
 			}
 		}
-
 	}
-
 }

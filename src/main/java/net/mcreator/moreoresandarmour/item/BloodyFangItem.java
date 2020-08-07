@@ -1,12 +1,21 @@
 
 package net.mcreator.moreoresandarmour.item;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Item;
+import net.minecraft.block.BlockState;
+
+import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
+
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BloodyFangItem extends MoreOresAndArmourModElements.ModElement {
-
 	@ObjectHolder("more_ores_and_armour:bloody_fang")
 	public static final Item block = null;
-
 	public BloodyFangItem(MoreOresAndArmourModElements instance) {
 		super(instance, 305);
 	}
@@ -15,9 +24,7 @@ public class BloodyFangItem extends MoreOresAndArmourModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
-
 	public static class ItemCustom extends Item {
-
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64));
 			setRegistryName("bloody_fang");
@@ -43,7 +50,5 @@ public class BloodyFangItem extends MoreOresAndArmourModElements.ModElement {
 		public boolean hasEffect(ItemStack itemstack) {
 			return true;
 		}
-
 	}
-
 }

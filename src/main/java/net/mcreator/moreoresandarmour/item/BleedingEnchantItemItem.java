@@ -6,18 +6,17 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 @MoreOresAndArmourModElements.ModElement.Tag
-public class ChargedCoalItem extends MoreOresAndArmourModElements.ModElement {
-	@ObjectHolder("more_ores_and_armour:charged_coal")
+public class BleedingEnchantItemItem extends MoreOresAndArmourModElements.ModElement {
+	@ObjectHolder("more_ores_and_armour:bleeding_enchant_item")
 	public static final Item block = null;
-	public ChargedCoalItem(MoreOresAndArmourModElements instance) {
-		super(instance, 301);
+	public BleedingEnchantItemItem(MoreOresAndArmourModElements instance) {
+		super(instance, 306);
 	}
 
 	@Override
@@ -26,8 +25,8 @@ public class ChargedCoalItem extends MoreOresAndArmourModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64));
-			setRegistryName("charged_coal");
+			super(new Item.Properties().group(null).maxStackSize(64));
+			setRegistryName("bleeding_enchant_item");
 		}
 
 		@Override

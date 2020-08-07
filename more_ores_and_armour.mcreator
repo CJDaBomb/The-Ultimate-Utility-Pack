@@ -1375,7 +1375,24 @@
       "ids": {},
       "registry_name": "chorus_salad_food_eaten",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -4033,7 +4050,7 @@
       "name": "StrippedWood",
       "type": "procedure",
       "sortid": 290,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "stripped_wood",
@@ -4501,7 +4518,7 @@
       "name": "StrippedLogs",
       "type": "procedure",
       "sortid": 289,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "stripped_logs",
@@ -4718,21 +4735,68 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "bloody_fang"
+    },
+    {
+      "name": "BleedingEnchantItem",
+      "type": "item",
+      "sortid": 306,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bleeding_enchant_item"
+    },
+    {
+      "name": "BleedingEnchantApplied",
+      "type": "procedure",
+      "sortid": 307,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bleeding_enchant_applied",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BleedingEnchantItemItemIsCraftedsmelted",
+      "type": "procedure",
+      "sortid": 306,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bleeding_enchant_item_item_is_craftedsmelted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.more_ores_and_armour.aluminum_armour_helmet": "Aluminum  Helmet",
       "item.more_ores_and_armour.ruby_armourbody": "Ruby Chestplate",
+      "item.more_ores_and_armour.aluminum_armour_helmet": "Aluminum  Helmet",
       "item.more_ores_and_armour.aluminum_shovel": "Aluminum Shovel",
       "item.more_ores_and_armour.turquoise_shovel": "Turquoise Shovel",
       "item.more_ores_and_armour.bedrock_armourhelmet": "Shadowrock Helmet",
-      "block.more_ores_and_armour.lemon_log": "Lemon Log",
       "item.more_ores_and_armour.sapphire_armourhelmet": "Sapphire Helmet",
-      "block.more_ores_and_armour.alexandrite_ore": "Alexandrite Ore",
+      "block.more_ores_and_armour.lemon_log": "Lemon Log",
       "item.more_ores_and_armour.shadow_armourhelmet": "Shadow  Helmet",
+      "block.more_ores_and_armour.alexandrite_ore": "Alexandrite Ore",
       "block.more_ores_and_armour.blueberry_trapdoor": "Blueberry Trapdoor",
       "block.more_ores_and_armour.shadow_block": "Shadow Block",
       "block.more_ores_and_armour.lemon_leaves": "Lemon Leaves",
@@ -4743,13 +4807,13 @@
       "block.more_ores_and_armour.smooth_shadow_rock_fence": "Smooth Shadow Rock Wall",
       "item.more_ores_and_armour.sapphire_armour_helmet": "Sapphire Helmet",
       "item.more_ores_and_armour.shadow_armour_boots": "Shadow Armour Boots",
-      "item.more_ores_and_armour.copper_armor_leggings": "Copper Leggings",
       "block.more_ores_and_armour.electric_furnace_on": "Electric Furnace",
+      "item.more_ores_and_armour.copper_armor_leggings": "Copper Leggings",
       "item.minecraft.lingering_potion.effect.bleeding": "Lingering Bleeding",
       "block.more_ores_and_armour.cherry_trapdoor": "Cherry Trapdoor",
-      "block.more_ores_and_armour.bluestone_leaves": "Bluestone Leaves",
-      "block.more_ores_and_armour.copper_block": "Copper Block",
       "item.more_ores_and_armour.loot_creeper": "Loot Creeper Spawn Egg",
+      "block.more_ores_and_armour.copper_block": "Copper Block",
+      "block.more_ores_and_armour.bluestone_leaves": "Bluestone Leaves",
       "block.more_ores_and_armour.stripped_blueberry_wood": "Stripped Blueberry Wood",
       "block.more_ores_and_armour.nightmare_planks": "Nightmare Planks",
       "item.more_ores_and_armour.alexandrite_armourboots": "Alexandrite Armour Boots",
@@ -4762,8 +4826,8 @@
       "block.more_ores_and_armour.carbon_ore": "Carbon Ore",
       "item.more_ores_and_armour.aluminum_armour_leggings": "Aluminum Leggings",
       "item.more_ores_and_armour.sapphire": "Sapphire",
-      "advancements.shiny_metal.descr": "Find Some Wonderful Aluminum",
       "block.more_ores_and_armour.grape_planks": "Grape Planks",
+      "advancements.shiny_metal.descr": "Find Some Wonderful Aluminum",
       "item.more_ores_and_armour.copper_armorlegs": "Copper Leggings",
       "block.more_ores_and_armour.lemon_wood": "Lemon Wood",
       "block.more_ores_and_armour.golden_apple_block": "Golden Apple Block",
@@ -4779,12 +4843,13 @@
       "item.more_ores_and_armour.aluminum_armour_chestplate": "Aluminum Chestplate",
       "itemGroup.tabcustom_ore_mod": "Custom Ore Mod",
       "entity.more_ores_and_armour.goblin": "Goblin",
-      "block.more_ores_and_armour.dark_stone": "Dark Stone",
       "block.more_ores_and_armour.grape_leaves": "Grape Leaves",
+      "block.more_ores_and_armour.dark_stone": "Dark Stone",
       "item.more_ores_and_armour.bedrock_armour_chestplate": "Shadowrock Chestplate",
       "block.more_ores_and_armour.nightmare_stone": "Nightmare Stone",
       "block.more_ores_and_armour.carbon_block": "Carbon Block",
       "block.more_ores_and_armour.cherry_leaves": "Cherry Leaves",
+      "item.more_ores_and_armour.charged_wither_bones": "Charged Wither Bones",
       "item.more_ores_and_armour.sapphire_pickaxe": "Sapphire Pickaxe",
       "block.more_ores_and_armour.blueberry_fence": "Blueberry Fence",
       "block.more_ores_and_armour.bluestone_bricks": "Bluestone Bricks",
@@ -4811,6 +4876,7 @@
       "item.more_ores_and_armour.aluminum_armour_boots": "Aluminum Boots",
       "effect.bleeding": "Bleeding",
       "block.more_ores_and_armour.infused_iron": "Infused Iron",
+      "enchantment.more_ores_and_armour.bleeding_enchant": "Bleeding ",
       "block.more_ores_and_armour.powered_copper_wire": "Powered Copper Wire",
       "item.more_ores_and_armour.bedrock_armour_helmet": "Shadowrock Helmet",
       "block.more_ores_and_armour.aluminum_ore": "Aluminum Ore",
@@ -4858,6 +4924,7 @@
       "item.more_ores_and_armour.aluminum_armourlegs": "Aluminum Leggings",
       "item.more_ores_and_armour.emerald_crystal": "Emerald Crystal",
       "item.more_ores_and_armour.shadow_armourboots": "Shadow Armour Boots",
+      "item.more_ores_and_armour.bleeding_enchant_item": "Bleeding",
       "block.more_ores_and_armour.cherry_fence": "Cherry Fence",
       "advancements.shiny_metal.title": "Shiny Metal",
       "item.more_ores_and_armour.shadow_armour_leggings": "Shadow Armour Leggings",
@@ -4896,6 +4963,7 @@
       "item.more_ores_and_armour.ruby_armour_boots": "Ruby Boots",
       "item.more_ores_and_armour.shadow_ingot": "Shadow Ingot",
       "block.more_ores_and_armour.lemon_door": "Lemon Door",
+      "item.more_ores_and_armour.charged_coal": "Charged Coal",
       "block.more_ores_and_armour.blueberry_leaves": "Blueberry Leaves",
       "item.more_ores_and_armour.bedrock_armour_leggings": "Shadowrock Leggings",
       "block.more_ores_and_armour.blue_stone_wood_slab": "Bluestone Wood Slab",
@@ -4990,7 +5058,8 @@
       "block.more_ores_and_armour.bluecobblestone_wall": "Bluecobblestone Wall",
       "item.minecraft.splash_potion.effect.bleeding": "Splash Bleeding",
       "item.minecraft.tipped_arrow.effect.wither_potion": "Arrow of Wither",
-      "item.more_ores_and_armour.ruby_armour_leggings": "Ruby Leggings"
+      "item.more_ores_and_armour.ruby_armour_leggings": "Ruby Leggings",
+      "item.more_ores_and_armour.bloody_fang": "Bloody Fang"
     }
   },
   "workspaceSettings": {
