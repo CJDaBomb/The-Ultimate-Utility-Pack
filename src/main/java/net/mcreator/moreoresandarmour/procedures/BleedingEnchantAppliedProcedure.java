@@ -38,22 +38,22 @@ public class BleedingEnchantAppliedProcedure extends MoreOresAndArmourModElement
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		if (((EnchantmentHelper.getEnchantmentLevel(BleedingEnchantEnchantment.enchantment,
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 1)) {
-			sourceentity.getPersistentData().putDouble("bleedingEffectRandomChance", Math.round((Math.random() * 4)));
-			if (((sourceentity.getPersistentData().getDouble("bleedingEffectRandomChance")) == 0)) {
+			sourceentity.getPersistentData().putDouble("bleedingEffectRandomChance", Math.round((Math.random() * 5)));
+			if (((sourceentity.getPersistentData().getDouble("bleedingEffectRandomChance")) == 1)) {
 				if (entity instanceof LivingEntity)
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 60, (int) 1));
 			}
 		} else if (((EnchantmentHelper.getEnchantmentLevel(BleedingEnchantEnchantment.enchantment,
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 2)) {
-			sourceentity.getPersistentData().putDouble("bleedingEffectRandomChance", Math.round((Math.random() * 3)));
-			if (((sourceentity.getPersistentData().getDouble("bleedingEffectRandomChance")) == 0)) {
+			sourceentity.getPersistentData().putDouble("bleedingEffectRandomChance", Math.round((Math.random() * 4)));
+			if (((sourceentity.getPersistentData().getDouble("bleedingEffectRandomChance")) == 1)) {
 				if (entity instanceof LivingEntity)
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 60, (int) 1));
 			}
 		} else if (((EnchantmentHelper.getEnchantmentLevel(BleedingEnchantEnchantment.enchantment,
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 3)) {
-			sourceentity.getPersistentData().putDouble("bleedingEffectRandomChance", Math.round((Math.random() * 2)));
-			if (((sourceentity.getPersistentData().getDouble("bleedingEffectRandomChance")) == 0)) {
+			sourceentity.getPersistentData().putDouble("bleedingEffectRandomChance", Math.round((Math.random() * 3)));
+			if (((sourceentity.getPersistentData().getDouble("bleedingEffectRandomChance")) == 1)) {
 				if (entity instanceof LivingEntity)
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 60, (int) 1));
 			}

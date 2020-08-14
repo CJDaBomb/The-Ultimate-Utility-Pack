@@ -4171,27 +4171,6 @@
       }
     },
     {
-      "name": "ChargedWitherSkeletonOnInitialEntitySpawn",
-      "type": "procedure",
-      "sortid": 300,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "charged_wither_skeleton_on_initial_entity_spawn",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "CarbonOreBlockDestroyedByExplosion",
       "type": "procedure",
       "sortid": 292,
@@ -4782,6 +4761,137 @@
           }
         ]
       }
+    },
+    {
+      "name": "Bezoar",
+      "type": "item",
+      "sortid": 308,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bezoar"
+    },
+    {
+      "name": "CureTheBleedingEffect",
+      "type": "achievement",
+      "sortid": 309,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cure_the_bleeding_effect"
+    },
+    {
+      "name": "BezoarAmuletRightClickedInAir",
+      "type": "procedure",
+      "sortid": 309,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bezoar_amulet_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BezoarAmulet",
+      "type": "item",
+      "sortid": 309,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bezoar_amulet"
+    },
+    {
+      "name": "BezoarAmuletRecipe",
+      "type": "recipe",
+      "sortid": 310,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bezoar_amulet_recipe"
+    },
+    {
+      "name": "BlueStoneBlockDestroyedByExplosion",
+      "type": "procedure",
+      "sortid": 311,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blue_stone_block_destroyed_by_explosion",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlueStoneBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 311,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blue_stone_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -4863,6 +4973,7 @@
       "item.more_ores_and_armour.bedrock_armourbody": "Shadowrock Chestplate",
       "block.more_ores_and_armour.blue_stone_tapdoor": "Bluestone Wood Tapdoor",
       "item.more_ores_and_armour.copper_armor_chestplate": "Copper Chestplate",
+      "item.more_ores_and_armour.bezoar": "Bezoar",
       "item.more_ores_and_armour.aluminum_armourboots": "Aluminum Boots",
       "block.more_ores_and_armour.bluesandstone": "Blue Sandstone",
       "item.more_ores_and_armour.alexandrite_armour_chestplate": "Alexandrite Chestplate",
@@ -4930,6 +5041,7 @@
       "item.more_ores_and_armour.shadow_armour_leggings": "Shadow Armour Leggings",
       "item.more_ores_and_armour.alexandrite_armour_helmet": "Alexandrite Helmet",
       "block.more_ores_and_armour.smooth_shadow_rock": "Smooth Shadow Rock",
+      "advancements.cure_the_bleeding_effect.title": "Cure The Bleeding Effect",
       "block.more_ores_and_armour.infused_stone": "Infused Stone",
       "block.more_ores_and_armour.blue_stone": "Bluestone",
       "block.more_ores_and_armour.lemon_stairs": "Lemon Stairs",
@@ -4943,6 +5055,7 @@
       "block.more_ores_and_armour.stripped_lemon_wood": "Stripped Lemon Wood",
       "hey": "",
       "item.more_ores_and_armour.amuletof_levitation": "Amulet of Levitation",
+      "item.more_ores_and_armour.bezoar_amulet": "Bezoar Amulet",
       "item.more_ores_and_armour.ruby_armour_chestplate": "Ruby Chestplate",
       "item.more_ores_and_armour.shadow_armourlegs": "Shadow Armour Leggings",
       "item.more_ores_and_armour.sapphire_armourlegs": "Sapphire Leggings",
@@ -5011,6 +5124,7 @@
       "block.more_ores_and_armour.stripped_bluestone_wood": "Stripped Bluestone Wood",
       "item.more_ores_and_armour.shadow_armourbody": "Shadow Armour Body",
       "item.more_ores_and_armour.diamond_apple": "Diamond Apple",
+      "advancements.cure_the_bleeding_effect.descr": "Cured Yourself From A Deadly Disease",
       "block.more_ores_and_armour.grape_stairs": "Grape Stairs",
       "item.more_ores_and_armour.copper_armorbody": "Copper Chestplate",
       "block.more_ores_and_armour.nightmare_sand": "Nightmare Sand",
