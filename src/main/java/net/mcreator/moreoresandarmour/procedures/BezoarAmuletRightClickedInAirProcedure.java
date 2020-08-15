@@ -77,7 +77,7 @@ public class BezoarAmuletRightClickedInAirProcedure extends MoreOresAndArmourMod
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).clearActivePotions();
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 60, (int) 1));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 1200, (int) 1));
 			if (entity instanceof ServerPlayerEntity) {
 				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 						.getAdvancement(new ResourceLocation("more_ores_and_armour:cure_the_bleeding_effect"));

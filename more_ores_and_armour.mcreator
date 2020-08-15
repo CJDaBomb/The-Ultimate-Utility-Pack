@@ -2868,48 +2868,6 @@
       }
     },
     {
-      "name": "GoldenAppleSeeds",
-      "type": "item",
-      "sortid": 206,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "golden_apple_seeds"
-    },
-    {
-      "name": "GoldenAppleSeedsRightClickedOnBlock",
-      "type": "procedure",
-      "sortid": 208,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "golden_apple_seeds_right_clicked_on_block",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "NightmareFenceRecipe",
       "type": "recipe",
       "sortid": 233,
@@ -4892,21 +4850,83 @@
           }
         ]
       }
+    },
+    {
+      "name": "EnchantedGoldenAppleBlockBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 312,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "enchanted_golden_apple_block_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnchantedGoldenAppleBlockBlockDestroyedByExplosion",
+      "type": "procedure",
+      "sortid": 313,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "enchanted_golden_apple_block_block_destroyed_by_explosion",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.more_ores_and_armour.aluminum_armour_helmet": "Aluminum  Helmet",
       "item.more_ores_and_armour.ruby_armourbody": "Ruby Chestplate",
+      "item.more_ores_and_armour.aluminum_armour_helmet": "Aluminum  Helmet",
       "item.more_ores_and_armour.aluminum_shovel": "Aluminum Shovel",
       "item.more_ores_and_armour.turquoise_shovel": "Turquoise Shovel",
       "item.more_ores_and_armour.bedrock_armourhelmet": "Shadowrock Helmet",
-      "block.more_ores_and_armour.lemon_log": "Lemon Log",
       "item.more_ores_and_armour.sapphire_armourhelmet": "Sapphire Helmet",
-      "block.more_ores_and_armour.alexandrite_ore": "Alexandrite Ore",
+      "block.more_ores_and_armour.lemon_log": "Lemon Log",
       "item.more_ores_and_armour.shadow_armourhelmet": "Shadow  Helmet",
+      "block.more_ores_and_armour.alexandrite_ore": "Alexandrite Ore",
       "block.more_ores_and_armour.blueberry_trapdoor": "Blueberry Trapdoor",
       "block.more_ores_and_armour.shadow_block": "Shadow Block",
       "block.more_ores_and_armour.lemon_leaves": "Lemon Leaves",
@@ -4917,13 +4937,13 @@
       "block.more_ores_and_armour.smooth_shadow_rock_fence": "Smooth Shadow Rock Wall",
       "item.more_ores_and_armour.sapphire_armour_helmet": "Sapphire Helmet",
       "item.more_ores_and_armour.shadow_armour_boots": "Shadow Armour Boots",
-      "item.more_ores_and_armour.copper_armor_leggings": "Copper Leggings",
       "block.more_ores_and_armour.electric_furnace_on": "Electric Furnace",
+      "item.more_ores_and_armour.copper_armor_leggings": "Copper Leggings",
       "item.minecraft.lingering_potion.effect.bleeding": "Lingering Bleeding",
       "block.more_ores_and_armour.cherry_trapdoor": "Cherry Trapdoor",
-      "block.more_ores_and_armour.bluestone_leaves": "Bluestone Leaves",
-      "block.more_ores_and_armour.copper_block": "Copper Block",
       "item.more_ores_and_armour.loot_creeper": "Loot Creeper Spawn Egg",
+      "block.more_ores_and_armour.copper_block": "Copper Block",
+      "block.more_ores_and_armour.bluestone_leaves": "Bluestone Leaves",
       "block.more_ores_and_armour.stripped_blueberry_wood": "Stripped Blueberry Wood",
       "block.more_ores_and_armour.nightmare_planks": "Nightmare Planks",
       "item.more_ores_and_armour.alexandrite_armourboots": "Alexandrite Armour Boots",
@@ -4936,11 +4956,11 @@
       "block.more_ores_and_armour.carbon_ore": "Carbon Ore",
       "item.more_ores_and_armour.aluminum_armour_leggings": "Aluminum Leggings",
       "item.more_ores_and_armour.sapphire": "Sapphire",
-      "advancements.shiny_metal.descr": "Find Some Wonderful Aluminum",
       "block.more_ores_and_armour.grape_planks": "Grape Planks",
+      "advancements.shiny_metal.descr": "Find Some Wonderful Aluminum",
       "item.more_ores_and_armour.copper_armorlegs": "Copper Leggings",
       "block.more_ores_and_armour.lemon_wood": "Lemon Wood",
-      "block.more_ores_and_armour.golden_apple_block": "Golden Apple Block",
+      "block.more_ores_and_armour.golden_apple_block": "Golden Apple",
       "block.more_ores_and_armour.cherry_planks": "Cherry Planks",
       "block.more_ores_and_armour.larger_golden_apple_block": "Enchanted Golden Apple Block",
       "item.more_ores_and_armour.shadow_armour_chestplate": "Shadow Armour Body",
@@ -4953,8 +4973,8 @@
       "item.more_ores_and_armour.aluminum_armour_chestplate": "Aluminum Chestplate",
       "itemGroup.tabcustom_ore_mod": "Custom Ore Mod",
       "entity.more_ores_and_armour.goblin": "Goblin",
-      "block.more_ores_and_armour.dark_stone": "Dark Stone",
       "block.more_ores_and_armour.grape_leaves": "Grape Leaves",
+      "block.more_ores_and_armour.dark_stone": "Dark Stone",
       "item.more_ores_and_armour.bedrock_armour_chestplate": "Shadowrock Chestplate",
       "block.more_ores_and_armour.nightmare_stone": "Nightmare Stone",
       "block.more_ores_and_armour.carbon_block": "Carbon Block",
@@ -5093,7 +5113,6 @@
       "block.more_ores_and_armour.grape_fence": "Grape Fence",
       "block.more_ores_and_armour.bluestone_wood_fence": "Bluestone Wood Fence",
       "item.more_ores_and_armour.carbon": "Carbon",
-      "item.more_ores_and_armour.golden_apple_seeds": "Golden Apple Seeds",
       "block.more_ores_and_armour.sapphire_ore": "Sapphire Ore",
       "block.more_ores_and_armour.smooth_shadow_rock_stairs": "Smooth Shadow Rock Stairs",
       "block.more_ores_and_armour.lemon_planks": "Lemon Planks",

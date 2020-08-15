@@ -3,7 +3,7 @@
   "_type": "gun",
   "definition": {
     "renderType": 0,
-    "texture": "bow",
+    "texture": "electric_bow",
     "customModelName": "Normal",
     "name": "Electric Bow",
     "specialInfo": [],
