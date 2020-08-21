@@ -2,7 +2,7 @@ modLoader="javafml"
 loaderVersion="[31,)"
 
 [[mods]]
-modId="more_ores_and_armour"
+modId="ultimate_utility"
 version="1.0.0"
 displayName="More Ores and Armour"
 credits="Created by CJDabomb"
@@ -13,14 +13,14 @@ description='''
 This mod adds new ores from the real world into minecraft
 '''
 
-[[dependencies.more_ores_and_armour]]
+[[dependencies.ultimate_utility]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.15.2]"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.more_ores_and_armour]]
+[[dependencies.ultimate_utility]]
     modId="forge"
     mandatory=true
     versionRange="[31.2.0]"
