@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "more_ores_and_armour:items/bow"
+    "layer0": "more_ores_and_armour:items/electric_bow"
   },
   "display": {
     "thirdperson_righthand": {

@@ -52,6 +52,12 @@ public class GoldenAppleBlockBlock extends MoreOresAndArmourModElements.ModEleme
 			setRegistryName("golden_apple_block");
 		}
 
+		@OnlyIn(Dist.CLIENT)
+		@Override
+		public boolean isEmissiveRendering(BlockState blockState) {
+			return true;
+		}
+
 		@Override
 		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
 			return false;

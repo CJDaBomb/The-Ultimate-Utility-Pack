@@ -22,6 +22,6 @@ public class BloodSpiderPlayerCollidesWithThisEntityProcedure extends MoreOresAn
 		}
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		if (sourceentity instanceof LivingEntity)
-			((LivingEntity) sourceentity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 20, (int) 1));
+			((LivingEntity) sourceentity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) Double.POSITIVE_INFINITY, (int) 1));
 	}
 }
