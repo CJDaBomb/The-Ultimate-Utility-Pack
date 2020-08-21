@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ultimate_utility:oil",
-    "ultimate_utility:oil_flowing"
+    "more_ores_and_armour:oil",
+    "more_ores_and_armour:oil_flowing"
   ]
 }
