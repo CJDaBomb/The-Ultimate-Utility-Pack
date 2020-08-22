@@ -1,0 +1,12 @@
+{
+  "_fv": 10,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [],
+    "baseTexture": "oil_overlay.png",
+    "displayCondition": {
+      "name": "OilOverlayDisplayOverlayIngame"
+    }
+  }
+}

@@ -2494,6 +2494,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -4930,6 +4934,108 @@
       "locked_code": true,
       "ids": {},
       "registry_name": "wanderer_trade_adder"
+    },
+    {
+      "name": "InfusedCoal",
+      "type": "block",
+      "sortid": 316,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_coal"
+    },
+    {
+      "name": "InfusedLapisLazuli",
+      "type": "block",
+      "sortid": 317,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_lapis_lazuli"
+    },
+    {
+      "name": "InfusedRedstone",
+      "type": "block",
+      "sortid": 318,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_redstone"
+    },
+    {
+      "name": "InfusedGold",
+      "type": "block",
+      "sortid": 319,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_gold"
+    },
+    {
+      "name": "InfusedDiamond",
+      "type": "block",
+      "sortid": 319,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_diamond"
+    },
+    {
+      "name": "InfusedCopper",
+      "type": "block",
+      "sortid": 319,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_copper"
+    },
+    {
+      "name": "InfusedAluminum",
+      "type": "block",
+      "sortid": 319,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_aluminum"
+    },
+    {
+      "name": "OilOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 320,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oil_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OilOverlay",
+      "type": "overlay",
+      "sortid": 320,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oil_overlay"
     }
   ],
   "variable_elements": [],
@@ -4954,6 +5060,7 @@
       "item.more_ores_and_armour.cracked_end_roots": "Cracked End Roots",
       "block.more_ores_and_armour.smooth_shadow_rock_fence": "Smooth Shadow Rock Wall",
       "item.more_ores_and_armour.sapphire_armour_helmet": "Sapphire Helmet",
+      "block.more_ores_and_armour.infused_redstone": "Infused Redstone",
       "item.more_ores_and_armour.shadow_armour_boots": "Shadow Armour Boots",
       "block.more_ores_and_armour.electric_furnace_on": "Electric Furnace",
       "item.more_ores_and_armour.copper_armor_leggings": "Copper Leggings",
@@ -5007,14 +5114,17 @@
       "item.more_ores_and_armour.chorus_salad": "Chorus Salad",
       "block.more_ores_and_armour.stripped_nightmare_log": "Stripped Nightmare Log",
       "item.more_ores_and_armour.shadow_armour_helmet": "Shadow  Helmet",
+      "block.more_ores_and_armour.infused_diamond": "Infused Diamond",
       "block.more_ores_and_armour.cherry_slab": "Cherry Slab",
       "item.more_ores_and_armour.bedrock_armourbody": "Shadowrock Chestplate",
-      "block.more_ores_and_armour.blue_stone_tapdoor": "Bluestone Wood Tapdoor",
+      "block.more_ores_and_armour.blue_stone_tapdoor": "Bluestone Wood Trapdoor",
       "item.more_ores_and_armour.copper_armor_chestplate": "Copper Chestplate",
       "item.more_ores_and_armour.bezoar": "Bezoar",
+      "block.more_ores_and_armour.infused_lapis_lazuli": "Infused Lapis Lazuli",
       "item.more_ores_and_armour.aluminum_armourboots": "Aluminum Boots",
       "block.more_ores_and_armour.bluesandstone": "Blue Sandstone",
       "item.more_ores_and_armour.alexandrite_armour_chestplate": "Alexandrite Chestplate",
+      "block.more_ores_and_armour.infused_gold": "Infused Gold",
       "block.more_ores_and_armour.emerald_infused_stone": "Emerald Infused Stone",
       "item.more_ores_and_armour.aluminum_armourbody": "Aluminum Chestplate",
       "block.more_ores_and_armour.turquoise_block": "Turquoise Block",
@@ -5142,6 +5252,7 @@
       "block.more_ores_and_armour.aluminum_block": "Aluminum Block",
       "item.minecraft.tipped_arrow.effect.absorbsion": "Arrow of Absorbsion",
       "item.more_ores_and_armour.sapphire_armour_leggings": "Sapphire Leggings",
+      "block.more_ores_and_armour.infused_aluminum": "Infused Aluminum",
       "block.more_ores_and_armour.stripped_cherry_wood": "Stripped Cherry Wood",
       "block.more_ores_and_armour.stripped_lemon_log": "Stripped Lemon Log",
       "block.more_ores_and_armour.blue_stone_door": "Bluestone Wood Door",
@@ -5161,6 +5272,7 @@
       "block.more_ores_and_armour.stripped_bluestone_wood": "Stripped Bluestone Wood",
       "item.more_ores_and_armour.shadow_armourbody": "Shadow Armour Body",
       "item.more_ores_and_armour.diamond_apple": "Diamond Apple",
+      "block.more_ores_and_armour.infused_coal": "Infused Coal",
       "advancements.cure_the_bleeding_effect.descr": "Cured Yourself From A Deadly Disease",
       "block.more_ores_and_armour.grape_stairs": "Grape Stairs",
       "item.more_ores_and_armour.copper_armorbody": "Copper Chestplate",
@@ -5181,6 +5293,7 @@
       "item.more_ores_and_armour.ground_end_roots": "Ground End Roots",
       "item.more_ores_and_armour.blood_spider": "Blood Spider Spawn Egg",
       "item.more_ores_and_armour.shadow_apple": "Shadow Apple",
+      "block.more_ores_and_armour.infused_copper": "Infused Copper",
       "block.more_ores_and_armour.evoker_sand": "Evoker Sand",
       "block.more_ores_and_armour.grape_log": "Grape Log",
       "block.more_ores_and_armour.oil_barrel": "Oil Barrel",

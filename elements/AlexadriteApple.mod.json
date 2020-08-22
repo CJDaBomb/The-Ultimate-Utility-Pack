@@ -8,7 +8,7 @@
     "name": "Alexandrite Apple",
     "specialInfo": [],
     "creativeTab": {
-      "value": "FOOD"
+      "value": "CUSTOM:CustomOreMod"
     },
     "stackSize": 64,
     "nutritionalValue": 4,

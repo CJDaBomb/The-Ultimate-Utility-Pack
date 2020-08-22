@@ -11,7 +11,7 @@
     "enableBoots": true,
     "textureBoots": "copper_boots",
     "creativeTab": {
-      "value": "COMBAT"
+      "value": "CUSTOM:CustomOreMod"
     },
     "armorTextureFile": "copper_",
     "helmetName": "Copper Helmet",
@@ -46,7 +46,7 @@
     "enchantability": 9,
     "toughness": 0.0,
     "equipSound": {
-      "value": ""
+      "value": "item.armor.equip_diamond"
     },
     "repairItems": [
       {

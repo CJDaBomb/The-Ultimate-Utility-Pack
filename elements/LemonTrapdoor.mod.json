@@ -15,7 +15,7 @@
     "itemTexture": "",
     "blockBase": "TrapDoor",
     "hasTransparency": true,
-    "connectedSides": false,
+    "connectedSides": true,
     "transparencyType": "SOLID",
     "mx": 0.0,
     "my": 0.0,
