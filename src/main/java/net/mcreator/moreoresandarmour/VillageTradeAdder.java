@@ -29,8 +29,5 @@ public class VillageTradeAdder extends MoreOresAndArmourModElements.ModElement {
 		super(instance, 314);
 	}
 
-	@SubscribeEvent 
-    public class RandomTrade implements ITrade() {
-    	
-    }
+	
 }
