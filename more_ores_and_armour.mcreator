@@ -4930,6 +4930,270 @@
       "locked_code": true,
       "ids": {},
       "registry_name": "wanderer_trade_adder"
+    },
+    {
+      "name": "InfusedAluminum",
+      "type": "block",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_aluminum"
+    },
+    {
+      "name": "LapisApple",
+      "type": "food",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_apple"
+    },
+    {
+      "name": "InfusedRedstone",
+      "type": "block",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_redstone"
+    },
+    {
+      "name": "UltimateUtilityTools",
+      "type": "tab",
+      "sortid": 447,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ultimate_utility_tools"
+    },
+    {
+      "name": "InfusedSapphire",
+      "type": "block",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_sapphire"
+    },
+    {
+      "name": "InfusedCarbon",
+      "type": "block",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_carbon"
+    },
+    {
+      "name": "InfusedShadow",
+      "type": "block",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_shadow"
+    },
+    {
+      "name": "InfusedLapisLazuli",
+      "type": "block",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_lapis_lazuli"
+    },
+    {
+      "name": "UltimateUtlityDecor",
+      "type": "tab",
+      "sortid": 449,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ultimate_utlity_decor"
+    },
+    {
+      "name": "SapphireApple",
+      "type": "food",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sapphire_apple"
+    },
+    {
+      "name": "OilOverlay",
+      "type": "overlay",
+      "sortid": 446,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oil_overlay"
+    },
+    {
+      "name": "InfusedRuby",
+      "type": "block",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_ruby"
+    },
+    {
+      "name": "InfusedDiamond",
+      "type": "block",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_diamond"
+    },
+    {
+      "name": "OilOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 445,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oil_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CarbonApple",
+      "type": "food",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "carbon_apple"
+    },
+    {
+      "name": "InfusedGold",
+      "type": "block",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_gold"
+    },
+    {
+      "name": "EmeraldApple",
+      "type": "food",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_apple"
+    },
+    {
+      "name": "UltimateUtilityBuildingBlocks",
+      "type": "tab",
+      "sortid": 451,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ultimate_utility_building_blocks"
+    },
+    {
+      "name": "CopperApple",
+      "type": "food",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_apple"
+    },
+    {
+      "name": "InfusedCoal",
+      "type": "block",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_coal"
+    },
+    {
+      "name": "RedstoneApple",
+      "type": "food",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "redstone_apple"
+    },
+    {
+      "name": "InfusedAlexandrite",
+      "type": "block",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_alexandrite"
+    },
+    {
+      "name": "InfusedTurquoise",
+      "type": "block",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_turquoise"
+    },
+    {
+      "name": "UltimateUtilityCombat",
+      "type": "tab",
+      "sortid": 448,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ultimate_utility_combat"
+    },
+    {
+      "name": "CoalApple",
+      "type": "food",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "coal_apple"
+    },
+    {
+      "name": "InfusedCopper",
+      "type": "block",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infused_copper"
+    },
+    {
+      "name": "UltimateUtilityFood",
+      "type": "tab",
+      "sortid": 450,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ultimate_utility_food"
     }
   ],
   "variable_elements": [],

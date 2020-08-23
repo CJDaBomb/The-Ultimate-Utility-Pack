@@ -22,7 +22,7 @@ import java.util.HashMap;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ChorusSaladFoodEatenProcedure extends MoreOresAndArmourModElements.ModElement {
 	public ChorusSaladFoodEatenProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 111);
+		super(instance, 287);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

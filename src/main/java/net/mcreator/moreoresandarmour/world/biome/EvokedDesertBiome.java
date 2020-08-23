@@ -24,7 +24,7 @@ public class EvokedDesertBiome extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:evoked_desert")
 	public static final CustomBiome biome = null;
 	public EvokedDesertBiome(MoreOresAndArmourModElements instance) {
-		super(instance, 178);
+		super(instance, 341);
 	}
 
 	@Override

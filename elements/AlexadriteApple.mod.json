@@ -8,7 +8,7 @@
     "name": "Alexandrite Apple",
     "specialInfo": [],
     "creativeTab": {
-      "value": "FOOD"
+      "value": "CUSTOM:UltimateUtilityFood"
     },
     "stackSize": 64,
     "nutritionalValue": 4,
@@ -17,6 +17,6 @@
     "forDogs": false,
     "isAlwaysEdible": true,
     "animation": "eat",
-    "hasGlow": false
+    "hasGlow": true
   }
 }

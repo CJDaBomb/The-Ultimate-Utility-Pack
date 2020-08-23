@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityToolsItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 @MoreOresAndArmourModElements.ModElement.Tag
@@ -17,7 +17,7 @@ public class TurquoisePickaxeItem extends MoreOresAndArmourModElements.ModElemen
 	@ObjectHolder("more_ores_and_armour:turquoise_pickaxe")
 	public static final Item block = null;
 	public TurquoisePickaxeItem(MoreOresAndArmourModElements instance) {
-		super(instance, 128);
+		super(instance, 191);
 	}
 
 	@Override
@@ -46,7 +46,7 @@ public class TurquoisePickaxeItem extends MoreOresAndArmourModElements.ModElemen
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(TurquoiseItem.block, (int) (1)));
 			}
-		}, 1, -2.7999999999999998f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
+		}, 1, -2.7999999999999998f, new Item.Properties().group(UltimateUtilityToolsItemGroup.tab)) {
 		}.setRegistryName("turquoise_pickaxe"));
 	}
 }

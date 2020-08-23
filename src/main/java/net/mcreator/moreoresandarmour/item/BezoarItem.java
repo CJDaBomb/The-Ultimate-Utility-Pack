@@ -6,10 +6,10 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 @MoreOresAndArmourModElements.ModElement.Tag
@@ -17,7 +17,7 @@ public class BezoarItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:bezoar")
 	public static final Item block = null;
 	public BezoarItem(MoreOresAndArmourModElements instance) {
-		super(instance, 308);
+		super(instance, 24);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class BezoarItem extends MoreOresAndArmourModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64));
+			super(new Item.Properties().group(CustomOreModItemGroup.tab).maxStackSize(64));
 			setRegistryName("bezoar");
 		}
 

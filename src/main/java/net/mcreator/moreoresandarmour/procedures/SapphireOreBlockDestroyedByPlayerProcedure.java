@@ -17,7 +17,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class SapphireOreBlockDestroyedByPlayerProcedure extends MoreOresAndArmourModElements.ModElement {
 	public SapphireOreBlockDestroyedByPlayerProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 296);
+		super(instance, 411);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

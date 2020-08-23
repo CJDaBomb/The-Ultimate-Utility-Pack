@@ -13,7 +13,7 @@ import net.minecraft.item.Food;
 import net.minecraft.entity.LivingEntity;
 
 import net.mcreator.moreoresandarmour.procedures.EnchantedTotemFoodEatenProcedure;
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityFoodItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Map;
@@ -24,7 +24,7 @@ public class EnchantedTotemItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:enchanted_totem")
 	public static final Item block = null;
 	public EnchantedTotemItem(MoreOresAndArmourModElements instance) {
-		super(instance, 4);
+		super(instance, 210);
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class EnchantedTotemItem extends MoreOresAndArmourModElements.ModElement 
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(CustomOreModItemGroup.tab).maxStackSize(16)
+			super(new Item.Properties().group(UltimateUtilityFoodItemGroup.tab).maxStackSize(16)
 					.food((new Food.Builder()).hunger(20).saturation(0.3f).setAlwaysEdible().build()));
 			setRegistryName("enchanted_totem");
 		}

@@ -6,10 +6,10 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 @MoreOresAndArmourModElements.ModElement.Tag
@@ -17,7 +17,7 @@ public class ChargedWitherBonesItem extends MoreOresAndArmourModElements.ModElem
 	@ObjectHolder("more_ores_and_armour:charged_wither_bones")
 	public static final Item block = null;
 	public ChargedWitherBonesItem(MoreOresAndArmourModElements instance) {
-		super(instance, 301);
+		super(instance, 16);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class ChargedWitherBonesItem extends MoreOresAndArmourModElements.ModElem
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64));
+			super(new Item.Properties().group(CustomOreModItemGroup.tab).maxStackSize(64));
 			setRegistryName("charged_wither_bones");
 		}
 

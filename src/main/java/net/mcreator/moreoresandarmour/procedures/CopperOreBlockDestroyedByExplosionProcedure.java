@@ -12,7 +12,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class CopperOreBlockDestroyedByExplosionProcedure extends MoreOresAndArmourModElements.ModElement {
 	public CopperOreBlockDestroyedByExplosionProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 294);
+		super(instance, 419);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

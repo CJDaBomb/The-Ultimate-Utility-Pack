@@ -33,7 +33,7 @@ import java.util.Random;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class EndCity2Structure extends MoreOresAndArmourModElements.ModElement {
 	public EndCity2Structure(MoreOresAndArmourModElements instance) {
-		super(instance, 101);
+		super(instance, 272);
 	}
 
 	@Override

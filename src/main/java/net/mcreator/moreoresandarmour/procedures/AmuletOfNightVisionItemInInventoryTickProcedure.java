@@ -12,7 +12,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class AmuletOfNightVisionItemInInventoryTickProcedure extends MoreOresAndArmourModElements.ModElement {
 	public AmuletOfNightVisionItemInInventoryTickProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 77);
+		super(instance, 253);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

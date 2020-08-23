@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Bezoar Amulet",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:CustomOreMod"
     },
     "stackSize": 64,
     "enchantability": 0,

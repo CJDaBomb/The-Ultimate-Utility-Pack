@@ -14,7 +14,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtlityDecorItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.List;
@@ -25,14 +25,14 @@ public class BluecobblestoneStairsBlock extends MoreOresAndArmourModElements.Mod
 	@ObjectHolder("more_ores_and_armour:bluecobblestone_stairs")
 	public static final Block block = null;
 	public BluecobblestoneStairsBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 246);
+		super(instance, 128);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(CustomOreModItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(
+				() -> new BlockItem(block, new Item.Properties().group(UltimateUtlityDecorItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {

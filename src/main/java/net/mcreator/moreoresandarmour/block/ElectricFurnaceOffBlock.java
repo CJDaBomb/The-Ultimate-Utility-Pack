@@ -53,7 +53,7 @@ import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtlityDecorItemGroup;
 import net.mcreator.moreoresandarmour.gui.ElectricFurnaceGui;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
@@ -72,15 +72,15 @@ public class ElectricFurnaceOffBlock extends MoreOresAndArmourModElements.ModEle
 	@ObjectHolder("more_ores_and_armour:electric_furnace_off")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public ElectricFurnaceOffBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 142);
+		super(instance, 101);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(CustomOreModItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(
+				() -> new BlockItem(block, new Item.Properties().group(UltimateUtlityDecorItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@SubscribeEvent

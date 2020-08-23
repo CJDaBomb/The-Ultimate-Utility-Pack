@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityToolsItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 @MoreOresAndArmourModElements.ModElement.Tag
@@ -19,7 +19,7 @@ public class RubyShovelItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:ruby_shovel")
 	public static final Item block = null;
 	public RubyShovelItem(MoreOresAndArmourModElements instance) {
-		super(instance, 8);
+		super(instance, 183);
 	}
 
 	@Override
@@ -48,7 +48,7 @@ public class RubyShovelItem extends MoreOresAndArmourModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(RubyItem.block, (int) (1)));
 			}
-		}, 1, -3f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
+		}, 1, -3f, new Item.Properties().group(UltimateUtilityToolsItemGroup.tab)) {
 			@Override
 			@OnlyIn(Dist.CLIENT)
 			public boolean hasEffect(ItemStack itemstack) {

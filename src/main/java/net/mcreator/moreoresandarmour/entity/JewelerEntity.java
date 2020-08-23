@@ -60,7 +60,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class JewelerEntity extends MoreOresAndArmourModElements.ModElement {
 	public static EntityType entity = null;
 	public JewelerEntity(MoreOresAndArmourModElements instance) {
-		super(instance, 165);
+		super(instance, 29);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

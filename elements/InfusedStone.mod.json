@@ -28,7 +28,7 @@
     "resistance": 10.0,
     "hasGravity": false,
     "creativeTab": {
-      "value": "CUSTOM:CustomOreMod"
+      "value": "CUSTOM:UltimateUtilityBuildingBlocks"
     },
     "destroyTool": "pickaxe",
     "customDrop": {
@@ -88,15 +88,21 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "spawnWorldTypes": [],
+    "spawnWorldTypes": [
+      "CUSTOM:OtherWorld",
+      "CUSTOM:BedrockZone"
+    ],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "CUSTOM:DarkStone"
+      },
+      {
+        "value": "Blocks.STONE#0"
       }
     ],
-    "frequencyPerChunks": 12,
-    "frequencyOnChunk": 24,
+    "frequencyPerChunks": 20,
+    "frequencyOnChunk": 30,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64
   }

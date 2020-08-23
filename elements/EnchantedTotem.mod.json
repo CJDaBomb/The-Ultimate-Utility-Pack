@@ -8,7 +8,7 @@
     "name": "Enchanted Totem",
     "specialInfo": [],
     "creativeTab": {
-      "value": "CUSTOM:CustomOreMod"
+      "value": "CUSTOM:UltimateUtilityFood"
     },
     "stackSize": 16,
     "nutritionalValue": 20,

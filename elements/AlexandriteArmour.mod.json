@@ -11,7 +11,7 @@
     "enableBoots": true,
     "textureBoots": "alexandrite2_boots",
     "creativeTab": {
-      "value": "CUSTOM:CustomOreMod"
+      "value": "CUSTOM:UltimateUtilityCombat"
     },
     "armorTextureFile": "alexandrite2_",
     "helmetName": "Alexandrite Helmet",

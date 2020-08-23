@@ -8,7 +8,7 @@
     "name": "Shadow Apple",
     "specialInfo": [],
     "creativeTab": {
-      "value": "CUSTOM:CustomOreMod"
+      "value": "CUSTOM:UltimateUtilityFood"
     },
     "stackSize": 64,
     "nutritionalValue": 10,
@@ -17,7 +17,7 @@
     "forDogs": false,
     "isAlwaysEdible": true,
     "animation": "eat",
-    "hasGlow": false,
+    "hasGlow": true,
     "onEaten": {
       "name": "ShadowAppleFoodEaten"
     }

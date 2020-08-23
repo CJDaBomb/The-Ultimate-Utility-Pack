@@ -13,7 +13,7 @@ import net.minecraft.item.Food;
 import net.minecraft.entity.LivingEntity;
 
 import net.mcreator.moreoresandarmour.procedures.ChorusSaladFoodEatenProcedure;
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityFoodItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Map;
@@ -24,7 +24,7 @@ public class ChorusSaladItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:chorus_salad")
 	public static final Item block = null;
 	public ChorusSaladItem(MoreOresAndArmourModElements instance) {
-		super(instance, 111);
+		super(instance, 209);
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class ChorusSaladItem extends MoreOresAndArmourModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(CustomOreModItemGroup.tab).maxStackSize(64)
+			super(new Item.Properties().group(UltimateUtilityFoodItemGroup.tab).maxStackSize(64)
 					.food((new Food.Builder()).hunger(6).saturation(2.8000000000000003f).build()));
 			setRegistryName("chorus_salad");
 		}

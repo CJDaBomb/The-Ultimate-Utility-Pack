@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityToolsItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 @MoreOresAndArmourModElements.ModElement.Tag
@@ -17,7 +17,7 @@ public class SapphireAxeItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:sapphire_axe")
 	public static final Item block = null;
 	public SapphireAxeItem(MoreOresAndArmourModElements instance) {
-		super(instance, 126);
+		super(instance, 187);
 	}
 
 	@Override
@@ -46,7 +46,7 @@ public class SapphireAxeItem extends MoreOresAndArmourModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(SapphireItem.block, (int) (1)));
 			}
-		}, 1, -3f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
+		}, 1, -3f, new Item.Properties().group(UltimateUtilityToolsItemGroup.tab)) {
 		}.setRegistryName("sapphire_axe"));
 	}
 }

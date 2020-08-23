@@ -21,7 +21,7 @@ import java.util.HashMap;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BleedingEnchantAppliedProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BleedingEnchantAppliedProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 307);
+		super(instance, 434);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

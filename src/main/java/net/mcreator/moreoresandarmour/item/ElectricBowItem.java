@@ -34,7 +34,7 @@ import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.moreoresandarmour.procedures.ElectricArrowLivingEntityIsHitWithItemProcedure;
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityCombatItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Random;
@@ -48,7 +48,7 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:entitybulletelectric_bow")
 	public static final EntityType arrow = null;
 	public ElectricBowItem(MoreOresAndArmourModElements instance) {
-		super(instance, 74);
+		super(instance, 168);
 	}
 
 	@Override
@@ -67,7 +67,7 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(CustomOreModItemGroup.tab).maxDamage(384));
+			super(new Item.Properties().group(UltimateUtilityCombatItemGroup.tab).maxDamage(384));
 			setRegistryName("electric_bow");
 		}
 

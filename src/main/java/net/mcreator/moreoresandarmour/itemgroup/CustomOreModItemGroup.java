@@ -13,7 +13,7 @@ import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class CustomOreModItemGroup extends MoreOresAndArmourModElements.ModElement {
 	public CustomOreModItemGroup(MoreOresAndArmourModElements instance) {
-		super(instance, 18);
+		super(instance, 213);
 	}
 
 	@Override
@@ -27,9 +27,9 @@ public class CustomOreModItemGroup extends MoreOresAndArmourModElements.ModEleme
 
 			@OnlyIn(Dist.CLIENT)
 			public boolean hasSearchBar() {
-				return true;
+				return false;
 			}
-		}.setBackgroundImageName("item_search.png");
+		};
 	}
 	public static ItemGroup tab;
 }

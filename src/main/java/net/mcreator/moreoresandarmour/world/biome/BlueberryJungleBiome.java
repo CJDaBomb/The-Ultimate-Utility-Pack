@@ -45,7 +45,7 @@ public class BlueberryJungleBiome extends MoreOresAndArmourModElements.ModElemen
 	@ObjectHolder("more_ores_and_armour:blueberry_jungle")
 	public static final CustomBiome biome = null;
 	public BlueberryJungleBiome(MoreOresAndArmourModElements instance) {
-		super(instance, 187);
+		super(instance, 344);
 	}
 
 	@Override

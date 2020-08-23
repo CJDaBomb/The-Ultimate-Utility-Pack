@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityCombatItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 @MoreOresAndArmourModElements.ModElement.Tag
@@ -19,7 +19,7 @@ public class RubySwordItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:ruby_sword")
 	public static final Item block = null;
 	public RubySwordItem(MoreOresAndArmourModElements instance) {
-		super(instance, 9);
+		super(instance, 171);
 	}
 
 	@Override
@@ -48,7 +48,7 @@ public class RubySwordItem extends MoreOresAndArmourModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(RubyItem.block, (int) (1)));
 			}
-		}, 3, -2.4f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
+		}, 3, -2.4f, new Item.Properties().group(UltimateUtilityCombatItemGroup.tab)) {
 			@Override
 			@OnlyIn(Dist.CLIENT)
 			public boolean hasEffect(ItemStack itemstack) {

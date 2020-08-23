@@ -26,7 +26,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class RubyAppleFoodEatenProcedure extends MoreOresAndArmourModElements.ModElement {
 	public RubyAppleFoodEatenProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 41);
+		super(instance, 231);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
