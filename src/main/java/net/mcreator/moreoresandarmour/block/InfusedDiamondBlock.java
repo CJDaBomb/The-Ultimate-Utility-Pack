@@ -13,7 +13,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityBuildingBlocksItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.List;
@@ -24,14 +24,14 @@ public class InfusedDiamondBlock extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:infused_diamond")
 	public static final Block block = null;
 	public InfusedDiamondBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 319);
+		super(instance, 78);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(CustomOreModItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(UltimateUtilityBuildingBlocksItemGroup.tab))
+				.setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {

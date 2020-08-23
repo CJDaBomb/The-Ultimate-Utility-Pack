@@ -11,7 +11,7 @@
     "enableBoots": true,
     "textureBoots": "sapphire2_boots",
     "creativeTab": {
-      "value": "CUSTOM:CustomOreMod"
+      "value": "CUSTOM:UltimateUtilityCombat"
     },
     "armorTextureFile": "sapphire2_",
     "helmetName": "Sapphire Helmet",

@@ -22,7 +22,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class EnchantedTotemFoodEatenProcedure extends MoreOresAndArmourModElements.ModElement {
 	public EnchantedTotemFoodEatenProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 19);
+		super(instance, 214);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

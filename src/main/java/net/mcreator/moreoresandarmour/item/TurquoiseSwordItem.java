@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityCombatItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 @MoreOresAndArmourModElements.ModElement.Tag
@@ -17,7 +17,7 @@ public class TurquoiseSwordItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:turquoise_sword")
 	public static final Item block = null;
 	public TurquoiseSwordItem(MoreOresAndArmourModElements instance) {
-		super(instance, 128);
+		super(instance, 173);
 	}
 
 	@Override
@@ -46,7 +46,7 @@ public class TurquoiseSwordItem extends MoreOresAndArmourModElements.ModElement 
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(TurquoiseItem.block, (int) (1)));
 			}
-		}, 3, -2.4f, new Item.Properties().group(CustomOreModItemGroup.tab)) {
+		}, 3, -2.4f, new Item.Properties().group(UltimateUtilityCombatItemGroup.tab)) {
 		}.setRegistryName("turquoise_sword"));
 	}
 }

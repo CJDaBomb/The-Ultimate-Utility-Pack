@@ -28,7 +28,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class JewelerRightClickedOnEntity2Procedure extends MoreOresAndArmourModElements.ModElement {
 	public JewelerRightClickedOnEntity2Procedure(MoreOresAndArmourModElements instance) {
-		super(instance, 287);
+		super(instance, 423);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

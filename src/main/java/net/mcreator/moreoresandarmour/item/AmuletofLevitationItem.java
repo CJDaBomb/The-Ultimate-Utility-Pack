@@ -15,7 +15,7 @@ public class AmuletofLevitationItem extends MoreOresAndArmourModElements.ModElem
 	@ObjectHolder("more_ores_and_armour:amuletof_levitation")
 	public static final Item block = null;
 	public AmuletofLevitationItem(MoreOresAndArmourModElements instance) {
-		super(instance, 100);
+		super(instance, 12);
 	}
 
 	@Override

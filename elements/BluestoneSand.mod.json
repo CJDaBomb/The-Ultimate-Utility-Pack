@@ -28,7 +28,7 @@
     "resistance": 10.0,
     "hasGravity": true,
     "creativeTab": {
-      "value": "CUSTOM:CustomOreMod"
+      "value": "CUSTOM:UltimateUtilityBuildingBlocks"
     },
     "destroyTool": "Not specified",
     "customDrop": {

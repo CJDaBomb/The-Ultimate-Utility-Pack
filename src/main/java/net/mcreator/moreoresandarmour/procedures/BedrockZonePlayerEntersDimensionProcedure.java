@@ -15,7 +15,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BedrockZonePlayerEntersDimensionProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BedrockZonePlayerEntersDimensionProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 117);
+		super(instance, 290);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

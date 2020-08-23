@@ -29,7 +29,7 @@
     "resistance": 0.8,
     "hasGravity": false,
     "creativeTab": {
-      "value": "CUSTOM:CustomOreMod"
+      "value": "CUSTOM:UltimateUtlityDecor"
     },
     "destroyTool": "pickaxe",
     "customDrop": {

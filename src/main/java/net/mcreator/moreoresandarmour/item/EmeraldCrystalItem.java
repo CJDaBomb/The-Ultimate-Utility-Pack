@@ -17,7 +17,7 @@ public class EmeraldCrystalItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:emerald_crystal")
 	public static final Item block = null;
 	public EmeraldCrystalItem(MoreOresAndArmourModElements instance) {
-		super(instance, 170);
+		super(instance, 9);
 	}
 
 	@Override

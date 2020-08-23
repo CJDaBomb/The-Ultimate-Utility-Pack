@@ -16,7 +16,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityBuildingBlocksItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.List;
@@ -27,14 +27,14 @@ public class GrapePlanksBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:grape_planks")
 	public static final Block block = null;
 	public GrapePlanksBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 273);
+		super(instance, 71);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(CustomOreModItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(UltimateUtilityBuildingBlocksItemGroup.tab))
+				.setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {

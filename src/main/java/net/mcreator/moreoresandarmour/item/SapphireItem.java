@@ -15,7 +15,7 @@ public class SapphireItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:sapphire")
 	public static final Item block = null;
 	public SapphireItem(MoreOresAndArmourModElements instance) {
-		super(instance, 51);
+		super(instance, 6);
 	}
 
 	@Override

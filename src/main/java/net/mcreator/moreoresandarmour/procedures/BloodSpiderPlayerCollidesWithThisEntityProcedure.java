@@ -12,7 +12,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BloodSpiderPlayerCollidesWithThisEntityProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BloodSpiderPlayerCollidesWithThisEntityProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 161);
+		super(instance, 328);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

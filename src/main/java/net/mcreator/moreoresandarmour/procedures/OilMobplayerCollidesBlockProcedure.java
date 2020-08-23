@@ -10,7 +10,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class OilMobplayerCollidesBlockProcedure extends MoreOresAndArmourModElements.ModElement {
 	public OilMobplayerCollidesBlockProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 49);
+		super(instance, 236);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -23,7 +23,7 @@ public class BezoarAmuletItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:bezoar_amulet")
 	public static final Item block = null;
 	public BezoarAmuletItem(MoreOresAndArmourModElements instance) {
-		super(instance, 309);
+		super(instance, 25);
 	}
 
 	@Override
