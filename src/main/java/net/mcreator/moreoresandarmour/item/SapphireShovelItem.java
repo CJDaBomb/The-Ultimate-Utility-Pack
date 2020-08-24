@@ -17,7 +17,7 @@ public class SapphireShovelItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:sapphire_shovel")
 	public static final Item block = null;
 	public SapphireShovelItem(MoreOresAndArmourModElements instance) {
-		super(instance, 189);
+		super(instance, 203);
 	}
 
 	@Override

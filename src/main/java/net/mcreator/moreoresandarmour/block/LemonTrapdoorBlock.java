@@ -33,7 +33,7 @@ public class LemonTrapdoorBlock extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:lemon_trapdoor")
 	public static final Block block = null;
 	public LemonTrapdoorBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 137);
+		super(instance, 149);
 	}
 
 	@Override

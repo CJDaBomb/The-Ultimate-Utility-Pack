@@ -40,7 +40,7 @@ public class BluestoneLogBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:bluestone_log")
 	public static final Block block = null;
 	public BluestoneLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 41);
+		super(instance, 66);
 	}
 
 	@Override

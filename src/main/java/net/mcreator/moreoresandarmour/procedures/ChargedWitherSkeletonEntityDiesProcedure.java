@@ -18,7 +18,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ChargedWitherSkeletonEntityDiesProcedure extends MoreOresAndArmourModElements.ModElement {
 	public ChargedWitherSkeletonEntityDiesProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 429);
+		super(instance, 441);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

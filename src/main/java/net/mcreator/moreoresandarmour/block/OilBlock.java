@@ -56,7 +56,7 @@ public class OilBlock extends MoreOresAndArmourModElements.ModElement {
 	public static FlowingFluid still = null;
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 	public OilBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 31);
+		super(instance, 41);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

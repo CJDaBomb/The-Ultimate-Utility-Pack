@@ -32,7 +32,7 @@ public class StrippedGrapeLogBlock extends MoreOresAndArmourModElements.ModEleme
 	@ObjectHolder("more_ores_and_armour:stripped_grape_log")
 	public static final Block block = null;
 	public StrippedGrapeLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 64);
+		super(instance, 89);
 	}
 
 	@Override

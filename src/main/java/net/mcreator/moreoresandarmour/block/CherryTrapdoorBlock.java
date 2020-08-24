@@ -32,7 +32,7 @@ public class CherryTrapdoorBlock extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:cherry_trapdoor")
 	public static final Block block = null;
 	public CherryTrapdoorBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 142);
+		super(instance, 154);
 	}
 
 	@Override

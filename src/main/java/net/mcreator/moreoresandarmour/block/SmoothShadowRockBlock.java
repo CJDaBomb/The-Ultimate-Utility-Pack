@@ -24,7 +24,7 @@ public class SmoothShadowRockBlock extends MoreOresAndArmourModElements.ModEleme
 	@ObjectHolder("more_ores_and_armour:smooth_shadow_rock")
 	public static final Block block = null;
 	public SmoothShadowRockBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 117);
+		super(instance, 129);
 	}
 
 	@Override

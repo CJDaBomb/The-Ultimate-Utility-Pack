@@ -24,7 +24,7 @@ public class DarkStoneBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:dark_stone")
 	public static final Block block = null;
 	public DarkStoneBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 51);
+		super(instance, 76);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class AlexandritePickaxeItem extends MoreOresAndArmourModElements.ModElem
 	@ObjectHolder("more_ores_and_armour:alexandrite_pickaxe")
 	public static final Item block = null;
 	public AlexandritePickaxeItem(MoreOresAndArmourModElements instance) {
-		super(instance, 194);
+		super(instance, 208);
 	}
 
 	@Override

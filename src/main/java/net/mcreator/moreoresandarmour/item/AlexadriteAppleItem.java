@@ -18,7 +18,7 @@ public class AlexadriteAppleItem extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:alexadrite_apple")
 	public static final Item block = null;
 	public AlexadriteAppleItem(MoreOresAndArmourModElements instance) {
-		super(instance, 196);
+		super(instance, 180);
 	}
 
 	@Override

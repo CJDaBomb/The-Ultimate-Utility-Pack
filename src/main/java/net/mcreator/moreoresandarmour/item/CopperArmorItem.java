@@ -36,7 +36,7 @@ public class CopperArmorItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:copper_armor_boots")
 	public static final Item boots = null;
 	public CopperArmorItem(MoreOresAndArmourModElements instance) {
-		super(instance, 176);
+		super(instance, 217);
 	}
 
 	@Override

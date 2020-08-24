@@ -9,7 +9,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BleedingPotionStartedappliedProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BleedingPotionStartedappliedProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 431);
+		super(instance, 443);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

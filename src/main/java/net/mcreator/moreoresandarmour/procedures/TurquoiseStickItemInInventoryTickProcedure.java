@@ -15,7 +15,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class TurquoiseStickItemInInventoryTickProcedure extends MoreOresAndArmourModElements.ModElement {
 	public TurquoiseStickItemInInventoryTickProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 302);
+		super(instance, 314);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

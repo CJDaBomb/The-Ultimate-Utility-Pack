@@ -15,7 +15,7 @@ public class CrackedEndRootsItem extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:cracked_end_roots")
 	public static final Item block = null;
 	public CrackedEndRootsItem(MoreOresAndArmourModElements instance) {
-		super(instance, 17);
+		super(instance, 37);
 	}
 
 	@Override

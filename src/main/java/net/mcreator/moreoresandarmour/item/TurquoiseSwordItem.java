@@ -17,7 +17,7 @@ public class TurquoiseSwordItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:turquoise_sword")
 	public static final Item block = null;
 	public TurquoiseSwordItem(MoreOresAndArmourModElements instance) {
-		super(instance, 173);
+		super(instance, 214);
 	}
 
 	@Override

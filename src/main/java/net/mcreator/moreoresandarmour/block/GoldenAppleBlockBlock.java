@@ -30,7 +30,7 @@ public class GoldenAppleBlockBlock extends MoreOresAndArmourModElements.ModEleme
 	@ObjectHolder("more_ores_and_armour:golden_apple_block")
 	public static final Block block = null;
 	public GoldenAppleBlockBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 114);
+		super(instance, 126);
 	}
 
 	@Override

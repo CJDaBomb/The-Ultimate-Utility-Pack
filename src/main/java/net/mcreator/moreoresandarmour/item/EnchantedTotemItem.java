@@ -24,7 +24,7 @@ public class EnchantedTotemItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:enchanted_totem")
 	public static final Item block = null;
 	public EnchantedTotemItem(MoreOresAndArmourModElements instance) {
-		super(instance, 210);
+		super(instance, 194);
 	}
 
 	@Override

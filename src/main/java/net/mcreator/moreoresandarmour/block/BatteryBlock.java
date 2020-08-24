@@ -24,7 +24,7 @@ public class BatteryBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:battery")
 	public static final Block block = null;
 	public BatteryBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 88);
+		super(instance, 100);
 	}
 
 	@Override

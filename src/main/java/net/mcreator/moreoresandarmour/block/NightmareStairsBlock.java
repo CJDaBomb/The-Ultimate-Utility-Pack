@@ -28,7 +28,7 @@ public class NightmareStairsBlock extends MoreOresAndArmourModElements.ModElemen
 	@ObjectHolder("more_ores_and_armour:nightmare_stairs")
 	public static final Block block = null;
 	public NightmareStairsBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 105);
+		super(instance, 117);
 	}
 
 	@Override

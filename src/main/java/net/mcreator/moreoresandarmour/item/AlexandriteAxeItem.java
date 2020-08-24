@@ -17,7 +17,7 @@ public class AlexandriteAxeItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:alexandrite_axe")
 	public static final Item block = null;
 	public AlexandriteAxeItem(MoreOresAndArmourModElements instance) {
-		super(instance, 193);
+		super(instance, 207);
 	}
 
 	@Override

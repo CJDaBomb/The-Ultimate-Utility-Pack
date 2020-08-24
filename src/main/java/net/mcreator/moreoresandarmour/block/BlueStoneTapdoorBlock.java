@@ -32,7 +32,7 @@ public class BlueStoneTapdoorBlock extends MoreOresAndArmourModElements.ModEleme
 	@ObjectHolder("more_ores_and_armour:blue_stone_tapdoor")
 	public static final Block block = null;
 	public BlueStoneTapdoorBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 126);
+		super(instance, 138);
 	}
 
 	@Override

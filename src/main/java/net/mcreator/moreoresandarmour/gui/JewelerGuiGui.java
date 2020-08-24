@@ -51,7 +51,7 @@ public class JewelerGuiGui extends MoreOresAndArmourModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public JewelerGuiGui(MoreOresAndArmourModElements instance) {
-		super(instance, 333);
+		super(instance, 345);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

@@ -45,7 +45,7 @@ public class LemonHillsBiome extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:lemon_hills")
 	public static final CustomBiome biome = null;
 	public LemonHillsBiome(MoreOresAndArmourModElements instance) {
-		super(instance, 343);
+		super(instance, 355);
 	}
 
 	@Override

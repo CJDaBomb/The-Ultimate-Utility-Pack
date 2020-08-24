@@ -24,7 +24,7 @@ public class ChorusSaladItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:chorus_salad")
 	public static final Item block = null;
 	public ChorusSaladItem(MoreOresAndArmourModElements instance) {
-		super(instance, 209);
+		super(instance, 193);
 	}
 
 	@Override

@@ -58,7 +58,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class BloodSpiderEntity extends MoreOresAndArmourModElements.ModElement {
 	public static EntityType entity = null;
 	public BloodSpiderEntity(MoreOresAndArmourModElements instance) {
-		super(instance, 26);
+		super(instance, 27);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

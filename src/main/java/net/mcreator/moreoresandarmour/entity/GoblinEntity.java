@@ -49,7 +49,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class GoblinEntity extends MoreOresAndArmourModElements.ModElement {
 	public static EntityType entity = null;
 	public GoblinEntity(MoreOresAndArmourModElements instance) {
-		super(instance, 28);
+		super(instance, 29);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

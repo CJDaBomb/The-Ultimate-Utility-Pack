@@ -29,7 +29,7 @@ public class GrapeSlabBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:grape_slab")
 	public static final Block block = null;
 	public GrapeSlabBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 158);
+		super(instance, 170);
 	}
 
 	@Override

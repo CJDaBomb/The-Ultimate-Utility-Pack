@@ -13,7 +13,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class EmeraldCrsytalRemoveFromSlotProcedure extends MoreOresAndArmourModElements.ModElement {
 	public EmeraldCrsytalRemoveFromSlotProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 335);
+		super(instance, 347);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

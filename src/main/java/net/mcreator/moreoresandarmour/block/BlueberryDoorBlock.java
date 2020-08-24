@@ -34,7 +34,7 @@ public class BlueberryDoorBlock extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:blueberry_door")
 	public static final Block block = null;
 	public BlueberryDoorBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 150);
+		super(instance, 162);
 	}
 
 	@Override

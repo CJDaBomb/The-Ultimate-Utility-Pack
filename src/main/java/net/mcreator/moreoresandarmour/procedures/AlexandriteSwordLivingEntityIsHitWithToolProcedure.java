@@ -12,7 +12,7 @@ import java.util.Collections;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class AlexandriteSwordLivingEntityIsHitWithToolProcedure extends MoreOresAndArmourModElements.ModElement {
 	public AlexandriteSwordLivingEntityIsHitWithToolProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 313);
+		super(instance, 325);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

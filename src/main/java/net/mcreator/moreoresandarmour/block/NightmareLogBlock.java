@@ -40,7 +40,7 @@ public class NightmareLogBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:nightmare_log")
 	public static final Block block = null;
 	public NightmareLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 42);
+		super(instance, 67);
 	}
 
 	@Override

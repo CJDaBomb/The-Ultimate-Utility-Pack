@@ -37,7 +37,7 @@ public class BedrockArmourItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:bedrock_armour_boots")
 	public static final Item boots = null;
 	public BedrockArmourItem(MoreOresAndArmourModElements instance) {
-		super(instance, 180);
+		super(instance, 221);
 	}
 
 	@Override

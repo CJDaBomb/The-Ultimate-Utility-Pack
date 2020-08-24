@@ -33,7 +33,7 @@ import java.util.Collection;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BezoarAmuletRightClickedInAirProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BezoarAmuletRightClickedInAirProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 437);
+		super(instance, 449);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
