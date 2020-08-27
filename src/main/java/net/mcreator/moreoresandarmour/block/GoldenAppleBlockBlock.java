@@ -19,7 +19,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtlityDecorItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.List;
@@ -30,14 +30,14 @@ public class GoldenAppleBlockBlock extends MoreOresAndArmourModElements.ModEleme
 	@ObjectHolder("more_ores_and_armour:golden_apple_block")
 	public static final Block block = null;
 	public GoldenAppleBlockBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 205);
+		super(instance, 126);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(CustomOreModItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(
+				() -> new BlockItem(block, new Item.Properties().group(UltimateUtlityDecorItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override
@@ -50,6 +50,12 @@ public class GoldenAppleBlockBlock extends MoreOresAndArmourModElements.ModEleme
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement()
 					.notSolid());
 			setRegistryName("golden_apple_block");
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		@Override
+		public boolean isEmissiveRendering(BlockState blockState) {
+			return true;
 		}
 
 		@Override

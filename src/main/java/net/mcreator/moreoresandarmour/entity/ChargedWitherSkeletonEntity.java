@@ -16,16 +16,15 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.DifficultyInstance;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
-import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.monster.SkeletonEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
@@ -33,9 +32,7 @@ import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
-import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
@@ -46,9 +43,11 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.moreoresandarmour.procedures.ChargedWitherSkeletonOnInitialEntitySpawnProcedure;
 import net.mcreator.moreoresandarmour.procedures.ChargedWitherSkeletonEntityDiesProcedure;
 import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.item.RubySwordItem;
+import net.mcreator.moreoresandarmour.item.RubyArmourItem;
+import net.mcreator.moreoresandarmour.item.AlexandriteSwordItem;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Map;
@@ -61,7 +60,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.ModElement {
 	public static EntityType entity = null;
 	public ChargedWitherSkeletonEntity(MoreOresAndArmourModElements instance) {
-		super(instance, 164);
+		super(instance, 28);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -113,6 +112,12 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 			super(type, world);
 			experienceValue = 0;
 			setNoAI(false);
+			this.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(RubySwordItem.block, (int) (1)));
+			this.setItemStackToSlot(EquipmentSlotType.OFFHAND, new ItemStack(AlexandriteSwordItem.block, (int) (1)));
+			this.setItemStackToSlot(EquipmentSlotType.HEAD, new ItemStack(RubyArmourItem.helmet, (int) (1)));
+			this.setItemStackToSlot(EquipmentSlotType.CHEST, new ItemStack(RubyArmourItem.body, (int) (1)));
+			this.setItemStackToSlot(EquipmentSlotType.LEGS, new ItemStack(RubyArmourItem.legs, (int) (1)));
+			this.setItemStackToSlot(EquipmentSlotType.FEET, new ItemStack(RubyArmourItem.boots, (int) (1)));
 		}
 
 		@Override
@@ -179,23 +184,6 @@ public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.Mo
 				$_dependencies.put("world", world);
 				ChargedWitherSkeletonEntityDiesProcedure.executeProcedure($_dependencies);
 			}
-		}
-
-		@Override
-		public ILivingEntityData onInitialSpawn(IWorld world, DifficultyInstance difficulty, SpawnReason reason, ILivingEntityData livingdata,
-				CompoundNBT tag) {
-			ILivingEntityData retval = super.onInitialSpawn(world, difficulty, reason, livingdata, tag);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				ChargedWitherSkeletonOnInitialEntitySpawnProcedure.executeProcedure($_dependencies);
-			}
-			return retval;
 		}
 
 		@Override

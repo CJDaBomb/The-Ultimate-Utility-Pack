@@ -10,9 +10,8 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.block.Blocks;
 
-import net.mcreator.moreoresandarmour.item.ChargedWitherBonesItem;
-import net.mcreator.moreoresandarmour.item.ChargedCoalItem;
 import net.mcreator.moreoresandarmour.item.BloodyFangItem;
+import net.mcreator.moreoresandarmour.item.BezoarItem;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Map;
@@ -20,7 +19,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BloodSpiderDiesProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BloodSpiderDiesProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 302);
+		super(instance, 442);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -57,41 +56,117 @@ public class BloodSpiderDiesProcedure extends MoreOresAndArmourModElements.ModEl
 		if (((EnchantmentHelper.getEnchantmentLevel(Enchantments.LOOTING,
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 0)) {
 			for (int index0 = 0; index0 < (int) ((Math.round(Math.random()) + 1)); index0++) {
-				entity.getPersistentData().putDouble("chargedWitherSkellyDrops", Math.random());
-				if (((entity.getPersistentData().getDouble("chargedWitherSkellyDrops")) >= 0.7)) {
+				entity.getPersistentData().putDouble("bloodSpiderDrops", Math.random());
+				if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.6)) {
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-				} else if (((entity.getPersistentData().getDouble("chargedWitherSkellyDrops")) >= 0.4)) {
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.35)) {
 					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ChargedWitherBonesItem.block, (int) (1)));
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.SPIDER_EYE, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-					if ((Math.random() > 0.9)) {
+					if ((Math.random() > 0.8)) {
 						if (!world.getWorld().isRemote) {
-							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z,
-									new ItemStack(ChargedWitherBonesItem.block, (int) (1)));
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.SPIDER_EYE, (int) (1)));
 							entityToSpawn.setPickupDelay(10);
 							world.addEntity(entityToSpawn);
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("chargedWitherSkellyDrops")) > 0.1)) {
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.1)) {
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.STRING, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-					if ((Math.random() > 0.9)) {
+					if ((Math.random() > 0.8)) {
 						if (!world.getWorld().isRemote) {
 							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.STRING, (int) (1)));
 							entityToSpawn.setPickupDelay(10);
 							world.addEntity(entityToSpawn);
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("chargedWitherSkellyDrops")) >= 0)) {
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.05)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BezoarItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+					if ((Math.random() > 0.95)) {
+						if (!world.getWorld().isRemote) {
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BezoarItem.block, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.addEntity(entityToSpawn);
+						}
+					}
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) >= 0)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BloodyFangItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+					if ((Math.random() > 0.95)) {
+						if (!world.getWorld().isRemote) {
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BloodyFangItem.block, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.addEntity(entityToSpawn);
+						}
+					}
+				}
+			}
+		} else if (((EnchantmentHelper.getEnchantmentLevel(Enchantments.LOOTING,
+				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 1)) {
+			for (int index1 = 0; index1 < (int) ((Math.round(Math.random()) + 1)); index1++) {
+				entity.getPersistentData().putDouble("bloodSpiderDrops", Math.random());
+				if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.7)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.4)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.SPIDER_EYE, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+					if ((Math.random() > 0.7)) {
+						if (!world.getWorld().isRemote) {
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.SPIDER_EYE, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.addEntity(entityToSpawn);
+						}
+					}
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.1)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.STRING, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+					if ((Math.random() > 0.7)) {
+						if (!world.getWorld().isRemote) {
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.STRING, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.addEntity(entityToSpawn);
+						}
+					}
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.05)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BezoarItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+					if ((Math.random() > 0.9)) {
+						if (!world.getWorld().isRemote) {
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BezoarItem.block, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.addEntity(entityToSpawn);
+						}
+					}
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) >= 0)) {
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BloodyFangItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
@@ -107,77 +182,63 @@ public class BloodSpiderDiesProcedure extends MoreOresAndArmourModElements.ModEl
 				}
 			}
 		} else if (((EnchantmentHelper.getEnchantmentLevel(Enchantments.LOOTING,
-				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 1)) {
-			for (int index1 = 0; index1 < (int) ((Math.round(Math.random()) + 1)); index1++) {
-				entity.getPersistentData().putDouble("chargedWitherSkellyDrops", Math.random());
-				if (((entity.getPersistentData().getDouble("chargedWitherSkellyDrops")) >= 0.75)) {
-					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
-						entityToSpawn.setPickupDelay(10);
-						world.addEntity(entityToSpawn);
-					}
-				} else if (((entity.getPersistentData().getDouble("chargedWitherSkellyDrops")) >= 0.39)) {
-					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ChargedCoalItem.block, (int) (1)));
-						entityToSpawn.setPickupDelay(10);
-						world.addEntity(entityToSpawn);
-					}
-					if ((Math.random() > 0.8)) {
-						if (!world.getWorld().isRemote) {
-							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ChargedCoalItem.block, (int) (1)));
-							entityToSpawn.setPickupDelay(10);
-							world.addEntity(entityToSpawn);
-						}
-					}
-				} else if (((entity.getPersistentData().getDouble("chargedWitherSkellyDrops")) >= 0)) {
-					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ChargedWitherBonesItem.block, (int) (1)));
-						entityToSpawn.setPickupDelay(10);
-						world.addEntity(entityToSpawn);
-					}
-					if ((Math.random() > 0.8)) {
-						if (!world.getWorld().isRemote) {
-							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z,
-									new ItemStack(ChargedWitherBonesItem.block, (int) (1)));
-							entityToSpawn.setPickupDelay(10);
-							world.addEntity(entityToSpawn);
-						}
-					}
-				}
-			}
-		} else if (((EnchantmentHelper.getEnchantmentLevel(Enchantments.LOOTING,
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 2)) {
-			for (int index2 = 0; index2 < (int) ((Math.round(Math.random()) + 1)); index2++) {
-				entity.getPersistentData().putDouble("chargedWitherSkellyDrops", Math.random());
-				if (((entity.getPersistentData().getDouble("chargedWitherSkellyDrops")) >= 0.75)) {
+			for (int index2 = 0; index2 < (int) ((Math.round(Math.random()) + (Math.round(Math.random()) + 1))); index2++) {
+				entity.getPersistentData().putDouble("bloodSpiderDrops", Math.random());
+				if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.8)) {
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-				} else if (((entity.getPersistentData().getDouble("chargedWitherSkellyDrops")) >= 0.39)) {
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.45)) {
 					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ChargedCoalItem.block, (int) (1)));
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.SPIDER_EYE, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-					if ((Math.random() > 0.65)) {
+					if ((Math.random() > 0.6)) {
 						if (!world.getWorld().isRemote) {
-							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ChargedCoalItem.block, (int) (1)));
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.SPIDER_EYE, (int) (1)));
 							entityToSpawn.setPickupDelay(10);
 							world.addEntity(entityToSpawn);
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("chargedWitherSkellyDrops")) >= 0)) {
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.1)) {
 					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ChargedWitherBonesItem.block, (int) (1)));
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.STRING, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-					if ((Math.random() > 0.65)) {
+					if ((Math.random() > 0.6)) {
 						if (!world.getWorld().isRemote) {
-							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z,
-									new ItemStack(ChargedWitherBonesItem.block, (int) (1)));
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.STRING, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.addEntity(entityToSpawn);
+						}
+					}
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.05)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BezoarItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+					if ((Math.random() > 0.89)) {
+						if (!world.getWorld().isRemote) {
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BezoarItem.block, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.addEntity(entityToSpawn);
+						}
+					}
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) >= 0)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BloodyFangItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+					if ((Math.random() > 0.89)) {
+						if (!world.getWorld().isRemote) {
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BloodyFangItem.block, (int) (1)));
 							entityToSpawn.setPickupDelay(10);
 							world.addEntity(entityToSpawn);
 						}
@@ -187,36 +248,61 @@ public class BloodSpiderDiesProcedure extends MoreOresAndArmourModElements.ModEl
 		} else if (((EnchantmentHelper.getEnchantmentLevel(Enchantments.LOOTING,
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 3)) {
 			for (int index3 = 0; index3 < (int) ((Math.round(Math.random()) + 2)); index3++) {
-				entity.getPersistentData().putDouble("chargedWitherSkellyDrops", Math.random());
-				if (((entity.getPersistentData().getDouble("chargedWitherSkellyDrops")) >= 0.8)) {
+				entity.getPersistentData().putDouble("bloodSpiderDrops", Math.random());
+				if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.85)) {
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Blocks.AIR, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-				} else if (((entity.getPersistentData().getDouble("chargedWitherSkellyDrops")) >= 0.4)) {
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.5)) {
 					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ChargedCoalItem.block, (int) (1)));
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.SPIDER_EYE, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-					if ((Math.random() > 0.5)) {
+					if ((Math.random() > 0.55)) {
 						if (!world.getWorld().isRemote) {
-							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ChargedCoalItem.block, (int) (1)));
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.SPIDER_EYE, (int) (1)));
 							entityToSpawn.setPickupDelay(10);
 							world.addEntity(entityToSpawn);
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("chargedWitherSkellyDrops")) >= 0)) {
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.15)) {
 					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ChargedWitherBonesItem.block, (int) (1)));
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.STRING, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.addEntity(entityToSpawn);
 					}
-					if ((Math.random() > 0.5)) {
+					if ((Math.random() > 0.55)) {
 						if (!world.getWorld().isRemote) {
-							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z,
-									new ItemStack(ChargedWitherBonesItem.block, (int) (1)));
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.STRING, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.addEntity(entityToSpawn);
+						}
+					}
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) > 0.075)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BezoarItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+					if ((Math.random() > 0.75)) {
+						if (!world.getWorld().isRemote) {
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BezoarItem.block, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.addEntity(entityToSpawn);
+						}
+					}
+				} else if (((entity.getPersistentData().getDouble("bloodSpiderDrops")) >= 0)) {
+					if (!world.getWorld().isRemote) {
+						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BloodyFangItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.addEntity(entityToSpawn);
+					}
+					if ((Math.random() > 0.75)) {
+						if (!world.getWorld().isRemote) {
+							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BloodyFangItem.block, (int) (1)));
 							entityToSpawn.setPickupDelay(10);
 							world.addEntity(entityToSpawn);
 						}

@@ -24,7 +24,7 @@ import io.netty.buffer.Unpooled;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class JewelerRightClickedOnEntityProcedure extends MoreOresAndArmourModElements.ModElement {
 	public JewelerRightClickedOnEntityProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 166);
+		super(instance, 343);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

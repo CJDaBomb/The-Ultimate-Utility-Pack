@@ -23,7 +23,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.moreoresandarmour.procedures.EvokerSandUpdateProcedure;
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityBuildingBlocksItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Random;
@@ -37,14 +37,14 @@ public class EvokerSandBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:evoker_sand")
 	public static final Block block = null;
 	public EvokerSandBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 176);
+		super(instance, 75);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(CustomOreModItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(UltimateUtilityBuildingBlocksItemGroup.tab))
+				.setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends FallingBlock {
 		public CustomBlock() {
@@ -90,6 +90,7 @@ public class EvokerSandBlock extends MoreOresAndArmourModElements.ModElement {
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);

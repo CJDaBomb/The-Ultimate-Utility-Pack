@@ -15,7 +15,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BleedingEnchantItemItemIsCraftedsmeltedProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BleedingEnchantItemItemIsCraftedsmeltedProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 306);
+		super(instance, 447);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

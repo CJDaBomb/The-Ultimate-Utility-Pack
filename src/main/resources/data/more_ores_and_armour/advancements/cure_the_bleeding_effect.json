@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "more_ores_and_armour:bloody_fang"
+    },
+    "title": {
+      "translate": "advancements.cure_the_bleeding_effect.title"
+    },
+    "description": {
+      "translate": "advancements.cure_the_bleeding_effect.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "cure_the_bleeding_effect": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 9
+  },
+  "parent": "more_ores_and_armour:gem_of_fire"
+}

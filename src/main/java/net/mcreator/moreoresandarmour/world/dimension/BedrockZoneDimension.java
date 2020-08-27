@@ -103,7 +103,7 @@ public class BedrockZoneDimension extends MoreOresAndArmourModElements.ModElemen
 	public static DimensionType type = null;
 	private static Biome[] dimensionBiomes;
 	public BedrockZoneDimension(MoreOresAndArmourModElements instance) {
-		super(instance, 113);
+		super(instance, 32);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

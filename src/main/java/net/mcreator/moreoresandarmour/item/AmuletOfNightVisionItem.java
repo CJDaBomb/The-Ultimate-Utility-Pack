@@ -23,7 +23,7 @@ public class AmuletOfNightVisionItem extends MoreOresAndArmourModElements.ModEle
 	@ObjectHolder("more_ores_and_armour:amulet_of_night_vision")
 	public static final Item block = null;
 	public AmuletOfNightVisionItem(MoreOresAndArmourModElements instance) {
-		super(instance, 77);
+		super(instance, 25);
 	}
 
 	@Override

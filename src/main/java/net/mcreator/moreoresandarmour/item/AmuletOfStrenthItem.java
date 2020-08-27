@@ -23,7 +23,7 @@ public class AmuletOfStrenthItem extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:amulet_of_strenth")
 	public static final Item block = null;
 	public AmuletOfStrenthItem(MoreOresAndArmourModElements instance) {
-		super(instance, 96);
+		super(instance, 26);
 	}
 
 	@Override

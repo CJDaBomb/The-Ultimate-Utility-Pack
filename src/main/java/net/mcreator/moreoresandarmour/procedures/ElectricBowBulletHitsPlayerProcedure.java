@@ -22,7 +22,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ElectricBowBulletHitsPlayerProcedure extends MoreOresAndArmourModElements.ModElement {
 	public ElectricBowBulletHitsPlayerProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 133);
+		super(instance, 324);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

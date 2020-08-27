@@ -9,7 +9,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.ArmorItem;
@@ -20,6 +19,7 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityCombatItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -36,7 +36,7 @@ public class CopperArmorItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:copper_armor_boots")
 	public static final Item boots = null;
 	public CopperArmorItem(MoreOresAndArmourModElements instance) {
-		super(instance, 207);
+		super(instance, 217);
 	}
 
 	@Override
@@ -55,7 +55,7 @@ public class CopperArmorItem extends MoreOresAndArmourModElements.ModElement {
 			}
 
 			public net.minecraft.util.SoundEvent getSoundEvent() {
-				return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+				return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.armor.equip_diamond"));
 			}
 
 			public Ingredient getRepairMaterial() {
@@ -71,41 +71,45 @@ public class CopperArmorItem extends MoreOresAndArmourModElements.ModElement {
 				return 0f;
 			}
 		};
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)) {
-			@Override
-			@OnlyIn(Dist.CLIENT)
-			public BipedModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlotType slot, BipedModel defaultModel) {
-				BipedModel armorModel = new BipedModel(1);
-				armorModel.bipedHead = new ModelCopper_Helmet().capacete;
-				armorModel.isSneak = living.isSneaking();
-				armorModel.isSitting = defaultModel.isSitting;
-				armorModel.isChild = living.isChild();
-				return armorModel;
-			}
+		elements.items
+				.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(UltimateUtilityCombatItemGroup.tab)) {
+					@Override
+					@OnlyIn(Dist.CLIENT)
+					public BipedModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlotType slot, BipedModel defaultModel) {
+						BipedModel armorModel = new BipedModel(1);
+						armorModel.bipedHead = new ModelCopper_Helmet().capacete;
+						armorModel.isSneak = living.isSneaking();
+						armorModel.isSitting = defaultModel.isSitting;
+						armorModel.isChild = living.isChild();
+						return armorModel;
+					}
 
-			@Override
-			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "more_ores_and_armour:textures/copper_helmet_.png";
-			}
-		}.setRegistryName("copper_armor_helmet"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)) {
-			@Override
-			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "more_ores_and_armour:textures/models/armor/copper__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
-			}
-		}.setRegistryName("copper_armor_chestplate"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)) {
-			@Override
-			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "more_ores_and_armour:textures/models/armor/copper__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
-			}
-		}.setRegistryName("copper_armor_leggings"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)) {
-			@Override
-			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "more_ores_and_armour:textures/models/armor/copper__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
-			}
-		}.setRegistryName("copper_armor_boots"));
+					@Override
+					public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+						return "more_ores_and_armour:textures/copper_helmet_.png";
+					}
+				}.setRegistryName("copper_armor_helmet"));
+		elements.items
+				.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(UltimateUtilityCombatItemGroup.tab)) {
+					@Override
+					public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+						return "more_ores_and_armour:textures/models/armor/copper__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+					}
+				}.setRegistryName("copper_armor_chestplate"));
+		elements.items
+				.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(UltimateUtilityCombatItemGroup.tab)) {
+					@Override
+					public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+						return "more_ores_and_armour:textures/models/armor/copper__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+					}
+				}.setRegistryName("copper_armor_leggings"));
+		elements.items
+				.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(UltimateUtilityCombatItemGroup.tab)) {
+					@Override
+					public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+						return "more_ores_and_armour:textures/models/armor/copper__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+					}
+				}.setRegistryName("copper_armor_boots"));
 	}
 	// Made with Blockbench 3.6.3
 	// Exported for Minecraft version 1.15

@@ -41,7 +41,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class SetTradeItemAmountProcedure extends MoreOresAndArmourModElements.ModElement {
 	public SetTradeItemAmountProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 167);
+		super(instance, 344);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

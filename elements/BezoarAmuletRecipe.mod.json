@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Bezoar"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Bezoar"
+      },
+      {
+        "value": "Items.GOLDEN_APPLE#0"
+      },
+      {
+        "value": "CUSTOM:Bezoar"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Bezoar"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:BezoarAmulet"
+    },
+    "name": "bezoar_amulet",
+    "namespace": "mod"
+  }
+}

@@ -15,7 +15,7 @@ public class GroundEndRootsItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:ground_end_roots")
 	public static final Item block = null;
 	public GroundEndRootsItem(MoreOresAndArmourModElements instance) {
-		super(instance, 106);
+		super(instance, 39);
 	}
 
 	@Override

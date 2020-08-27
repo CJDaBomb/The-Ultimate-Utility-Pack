@@ -11,7 +11,7 @@
     "enableBoots": true,
     "textureBoots": "bedrock2_boots",
     "creativeTab": {
-      "value": "CUSTOM:CustomOreMod"
+      "value": "CUSTOM:UltimateUtilityCombat"
     },
     "armorTextureFile": "bedrock2_",
     "helmetName": "Shadowrock Helmet",

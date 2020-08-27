@@ -1,0 +1,22 @@
+{
+  "_fv": 10,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "copper_apple",
+    "customModelName": "Normal",
+    "name": "Copper Apple",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:UltimateUtilityFood"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatingSpeed": 32,
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": true
+  }
+}

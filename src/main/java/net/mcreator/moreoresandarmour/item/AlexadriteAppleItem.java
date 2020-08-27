@@ -2,13 +2,15 @@
 package net.mcreator.moreoresandarmour.item;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.item.UseAction;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityFoodItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 @MoreOresAndArmourModElements.ModElement.Tag
@@ -16,7 +18,7 @@ public class AlexadriteAppleItem extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:alexadrite_apple")
 	public static final Item block = null;
 	public AlexadriteAppleItem(MoreOresAndArmourModElements instance) {
-		super(instance, 169);
+		super(instance, 180);
 	}
 
 	@Override
@@ -25,9 +27,15 @@ public class AlexadriteAppleItem extends MoreOresAndArmourModElements.ModElement
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(64)
+			super(new Item.Properties().group(UltimateUtilityFoodItemGroup.tab).maxStackSize(64)
 					.food((new Food.Builder()).hunger(4).saturation(0.3f).setAlwaysEdible().build()));
 			setRegistryName("alexadrite_apple");
+		}
+
+		@Override
+		@OnlyIn(Dist.CLIENT)
+		public boolean hasEffect(ItemStack itemstack) {
+			return true;
 		}
 
 		@Override

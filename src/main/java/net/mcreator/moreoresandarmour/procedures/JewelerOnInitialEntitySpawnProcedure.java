@@ -10,7 +10,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class JewelerOnInitialEntitySpawnProcedure extends MoreOresAndArmourModElements.ModElement {
 	public JewelerOnInitialEntitySpawnProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 165);
+		super(instance, 342);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

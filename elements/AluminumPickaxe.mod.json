@@ -8,7 +8,7 @@
     "name": "Aluminum Pickaxe",
     "specialInfo": [],
     "creativeTab": {
-      "value": "CUSTOM:CustomOreMod"
+      "value": "CUSTOM:UltimateUtilityTools"
     },
     "toolType": "Pickaxe",
     "harvestLevel": 2,

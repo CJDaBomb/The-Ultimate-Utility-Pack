@@ -12,7 +12,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BloodSpiderPlayerCollidesWithThisEntityProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BloodSpiderPlayerCollidesWithThisEntityProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 161);
+		super(instance, 340);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -22,6 +22,6 @@ public class BloodSpiderPlayerCollidesWithThisEntityProcedure extends MoreOresAn
 		}
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		if (sourceentity instanceof LivingEntity)
-			((LivingEntity) sourceentity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 20, (int) 1));
+			((LivingEntity) sourceentity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) Double.POSITIVE_INFINITY, (int) 1));
 	}
 }

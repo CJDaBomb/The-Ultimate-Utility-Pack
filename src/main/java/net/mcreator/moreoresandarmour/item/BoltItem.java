@@ -17,7 +17,7 @@ public class BoltItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:bolt")
 	public static final Item block = null;
 	public BoltItem(MoreOresAndArmourModElements instance) {
-		super(instance, 68);
+		super(instance, 34);
 	}
 
 	@Override

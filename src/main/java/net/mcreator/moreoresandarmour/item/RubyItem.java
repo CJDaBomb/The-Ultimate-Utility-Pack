@@ -17,7 +17,7 @@ public class RubyItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:ruby")
 	public static final Item block = null;
 	public RubyItem(MoreOresAndArmourModElements instance) {
-		super(instance, 1);
+		super(instance, 7);
 	}
 
 	@Override

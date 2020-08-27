@@ -15,7 +15,7 @@ public class ShadowIngotItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:shadow_ingot")
 	public static final Item block = null;
 	public ShadowIngotItem(MoreOresAndArmourModElements instance) {
-		super(instance, 94);
+		super(instance, 9);
 	}
 
 	@Override

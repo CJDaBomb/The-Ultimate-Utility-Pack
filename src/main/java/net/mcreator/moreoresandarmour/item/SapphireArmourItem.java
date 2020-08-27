@@ -19,7 +19,7 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
+import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityCombatItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -36,7 +36,7 @@ public class SapphireArmourItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:sapphire_armour_boots")
 	public static final Item boots = null;
 	public SapphireArmourItem(MoreOresAndArmourModElements instance) {
-		super(instance, 97);
+		super(instance, 219);
 	}
 
 	@Override
@@ -71,41 +71,45 @@ public class SapphireArmourItem extends MoreOresAndArmourModElements.ModElement 
 				return 2.6f;
 			}
 		};
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(CustomOreModItemGroup.tab)) {
-			@Override
-			@OnlyIn(Dist.CLIENT)
-			public BipedModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlotType slot, BipedModel defaultModel) {
-				BipedModel armorModel = new BipedModel(1);
-				armorModel.bipedHead = new ModelSapphire_Helmet().capacete;
-				armorModel.isSneak = living.isSneaking();
-				armorModel.isSitting = defaultModel.isSitting;
-				armorModel.isChild = living.isChild();
-				return armorModel;
-			}
+		elements.items
+				.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(UltimateUtilityCombatItemGroup.tab)) {
+					@Override
+					@OnlyIn(Dist.CLIENT)
+					public BipedModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlotType slot, BipedModel defaultModel) {
+						BipedModel armorModel = new BipedModel(1);
+						armorModel.bipedHead = new ModelSapphire_Helmet().capacete;
+						armorModel.isSneak = living.isSneaking();
+						armorModel.isSitting = defaultModel.isSitting;
+						armorModel.isChild = living.isChild();
+						return armorModel;
+					}
 
-			@Override
-			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "more_ores_and_armour:textures/saphirehelmettexture.png";
-			}
-		}.setRegistryName("sapphire_armour_helmet"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(CustomOreModItemGroup.tab)) {
-			@Override
-			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "more_ores_and_armour:textures/models/armor/sapphire2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
-			}
-		}.setRegistryName("sapphire_armour_chestplate"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(CustomOreModItemGroup.tab)) {
-			@Override
-			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "more_ores_and_armour:textures/models/armor/sapphire2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
-			}
-		}.setRegistryName("sapphire_armour_leggings"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(CustomOreModItemGroup.tab)) {
-			@Override
-			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "more_ores_and_armour:textures/models/armor/sapphire2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
-			}
-		}.setRegistryName("sapphire_armour_boots"));
+					@Override
+					public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+						return "more_ores_and_armour:textures/saphirehelmettexture.png";
+					}
+				}.setRegistryName("sapphire_armour_helmet"));
+		elements.items
+				.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(UltimateUtilityCombatItemGroup.tab)) {
+					@Override
+					public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+						return "more_ores_and_armour:textures/models/armor/sapphire2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+					}
+				}.setRegistryName("sapphire_armour_chestplate"));
+		elements.items
+				.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(UltimateUtilityCombatItemGroup.tab)) {
+					@Override
+					public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+						return "more_ores_and_armour:textures/models/armor/sapphire2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+					}
+				}.setRegistryName("sapphire_armour_leggings"));
+		elements.items
+				.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(UltimateUtilityCombatItemGroup.tab)) {
+					@Override
+					public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+						return "more_ores_and_armour:textures/models/armor/sapphire2__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+					}
+				}.setRegistryName("sapphire_armour_boots"));
 	}
 	// Made with Blockbench 3.6.3
 	// Exported for Minecraft version 1.15

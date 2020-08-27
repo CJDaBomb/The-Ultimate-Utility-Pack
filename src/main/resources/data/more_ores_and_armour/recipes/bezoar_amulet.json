@@ -1,0 +1,30 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "more_ores_and_armour:unknown_element"
+    },
+    "3": {
+      "item": "more_ores_and_armour:unknown_element"
+    },
+    "4": {
+      "item": "minecraft:golden_apple"
+    },
+    "5": {
+      "item": "more_ores_and_armour:unknown_element"
+    },
+    "7": {
+      "item": "more_ores_and_armour:unknown_element"
+    }
+  },
+  "result": {
+    "item": "more_ores_and_armour:bezoar_amulet",
+    "count": 1
+  }
+}

@@ -11,7 +11,7 @@ import java.util.HashMap;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BleedingOnPotionActiveTickProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BleedingOnPotionActiveTickProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 200);
+		super(instance, 359);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

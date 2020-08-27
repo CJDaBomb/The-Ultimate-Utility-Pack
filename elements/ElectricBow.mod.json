@@ -3,12 +3,12 @@
   "_type": "gun",
   "definition": {
     "renderType": 0,
-    "texture": "bow",
+    "texture": "electric_bow",
     "customModelName": "Normal",
     "name": "Electric Bow",
     "specialInfo": [],
     "creativeTab": {
-      "value": "CUSTOM:CustomOreMod"
+      "value": "CUSTOM:UltimateUtilityCombat"
     },
     "stackSize": 1,
     "ammoItem": {
