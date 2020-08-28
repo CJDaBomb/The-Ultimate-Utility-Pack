@@ -1,4 +1,78 @@
 {
   "type": "minecraft:generic",
-  "pools": []
+  "pools": [
+    {
+      "rolls": {
+        "min": 0,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:ruby_apple",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:shadow_apple",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:aluminum_apple",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:diamond_apple",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:turquoise_apple",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:alexadrite_apple",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:lapis_apple",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:sapphire_apple",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:carbon_apple",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:emerald_apple",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:copper_apple",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:redstone_apple",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:coal_apple",
+          "weight": 1
+        }
+      ]
+    }
+  ]
 }

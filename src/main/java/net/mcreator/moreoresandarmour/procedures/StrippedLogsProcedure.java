@@ -3,6 +3,7 @@ package net.mcreator.moreoresandarmour.procedures;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.IWorld;
+import net.minecraft.world.GameType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
@@ -10,8 +11,13 @@ import net.minecraft.util.Direction;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.AxeItem;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.client.network.play.NetworkPlayerInfo;
+import net.minecraft.client.entity.player.ClientPlayerEntity;
+import net.minecraft.client.Minecraft;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.moreoresandarmour.block.StrippedNightmareLogBlock;
@@ -127,18 +133,31 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 				}
 				if (!world.getWorld().isRemote) {
 					world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.axe.strip")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundCategory.NEUTRAL,
+							(float) 1, (float) 1);
 				} else {
 					world.getWorld().playSound(x, y, z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.axe.strip")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundCategory.NEUTRAL,
+							(float) 1, (float) 1, false);
 				}
-				{
-					ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
-					if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
-						_ist.shrink(1);
-						_ist.setDamage(0);
+				if ((new Object() {
+					public boolean checkGamemode(Entity _ent) {
+						if (_ent instanceof ServerPlayerEntity) {
+							return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
+						} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
+							NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
+									.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
+							return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
+						}
+						return false;
+					}
+				}.checkGamemode(entity))) {
+					{
+						ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
+						if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
+							_ist.shrink(1);
+							_ist.setDamage(0);
+						}
 					}
 				}
 			}
@@ -211,11 +230,24 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.axe.strip")),
 							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
-				{
-					ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
-					if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
-						_ist.shrink(1);
-						_ist.setDamage(0);
+				if ((new Object() {
+					public boolean checkGamemode(Entity _ent) {
+						if (_ent instanceof ServerPlayerEntity) {
+							return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
+						} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
+							NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
+									.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
+							return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
+						}
+						return false;
+					}
+				}.checkGamemode(entity))) {
+					{
+						ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
+						if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
+							_ist.shrink(1);
+							_ist.setDamage(0);
+						}
 					}
 				}
 			}
@@ -288,11 +320,24 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.axe.strip")),
 							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
-				{
-					ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
-					if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
-						_ist.shrink(1);
-						_ist.setDamage(0);
+				if ((new Object() {
+					public boolean checkGamemode(Entity _ent) {
+						if (_ent instanceof ServerPlayerEntity) {
+							return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
+						} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
+							NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
+									.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
+							return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
+						}
+						return false;
+					}
+				}.checkGamemode(entity))) {
+					{
+						ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
+						if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
+							_ist.shrink(1);
+							_ist.setDamage(0);
+						}
 					}
 				}
 			}
@@ -365,11 +410,24 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.cave")),
 							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
-				{
-					ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
-					if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
-						_ist.shrink(1);
-						_ist.setDamage(0);
+				if ((new Object() {
+					public boolean checkGamemode(Entity _ent) {
+						if (_ent instanceof ServerPlayerEntity) {
+							return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
+						} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
+							NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
+									.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
+							return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
+						}
+						return false;
+					}
+				}.checkGamemode(entity))) {
+					{
+						ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
+						if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
+							_ist.shrink(1);
+							_ist.setDamage(0);
+						}
 					}
 				}
 			}
@@ -442,11 +500,24 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.axe.strip")),
 							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
-				{
-					ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
-					if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
-						_ist.shrink(1);
-						_ist.setDamage(0);
+				if ((new Object() {
+					public boolean checkGamemode(Entity _ent) {
+						if (_ent instanceof ServerPlayerEntity) {
+							return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
+						} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
+							NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
+									.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
+							return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
+						}
+						return false;
+					}
+				}.checkGamemode(entity))) {
+					{
+						ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
+						if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
+							_ist.shrink(1);
+							_ist.setDamage(0);
+						}
 					}
 				}
 			}
@@ -519,14 +590,29 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.axe.strip")),
 							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
-				{
-					ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
-					if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
-						_ist.shrink(1);
-						_ist.setDamage(0);
+				if ((new Object() {
+					public boolean checkGamemode(Entity _ent) {
+						if (_ent instanceof ServerPlayerEntity) {
+							return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
+						} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
+							NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
+									.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
+							return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
+						}
+						return false;
+					}
+				}.checkGamemode(entity))) {
+					{
+						ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
+						if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
+							_ist.shrink(1);
+							_ist.setDamage(0);
+						}
 					}
 				}
 			}
+		} else {
+			return;
 		}
 	}
 }

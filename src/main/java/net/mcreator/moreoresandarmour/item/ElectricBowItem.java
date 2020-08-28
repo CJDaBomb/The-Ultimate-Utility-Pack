@@ -20,11 +20,15 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.UseAction;
 import net.minecraft.item.ShootableItem;
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.IRendersAsItem;
 import net.minecraft.entity.EntityType;
@@ -40,6 +44,8 @@ import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
+
+import com.google.common.collect.Multimap;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
@@ -94,6 +100,18 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 		}
 
 		@Override
+		public Multimap<String, AttributeModifier> getAttributeModifiers(EquipmentSlotType slot) {
+			Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(slot);
+			if (slot == EquipmentSlotType.MAINHAND) {
+				multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(),
+						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "ranged_item_damage", (double) -2, AttributeModifier.Operation.ADDITION));
+				multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(),
+						new AttributeModifier(ATTACK_SPEED_MODIFIER, "ranged_item_attack_speed", -2.4, AttributeModifier.Operation.ADDITION));
+			}
+			return multimap;
+		}
+
+		@Override
 		public void onPlayerStoppedUsing(ItemStack itemstack, World world, LivingEntity entityLiving, int timeLeft) {
 			if (!world.isRemote && entityLiving instanceof ServerPlayerEntity) {
 				ServerPlayerEntity entity = (ServerPlayerEntity) entityLiving;
@@ -101,12 +119,11 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
 				if (true) {
-					ItemStack stack = ShootableItem.getHeldAmmo(entity,
-							e -> e.getItem() == new ItemStack(ElectricArrowItem.block, (int) (1)).getItem());
+					ItemStack stack = ShootableItem.getHeldAmmo(entity, e -> e.getItem() == new ItemStack(Items.ARROW, (int) (1)).getItem());
 					if (stack == ItemStack.EMPTY) {
 						for (int i = 0; i < entity.inventory.mainInventory.size(); i++) {
 							ItemStack teststack = entity.inventory.mainInventory.get(i);
-							if (teststack != null && teststack.getItem() == new ItemStack(ElectricArrowItem.block, (int) (1)).getItem()) {
+							if (teststack != null && teststack.getItem() == new ItemStack(Items.ARROW, (int) (1)).getItem()) {
 								stack = teststack;
 								break;
 							}
@@ -118,7 +135,7 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 						if (entity.abilities.isCreativeMode) {
 							entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
 						} else {
-							if (new ItemStack(ElectricArrowItem.block, (int) (1)).isDamageable()) {
+							if (new ItemStack(Items.ARROW, (int) (1)).isDamageable()) {
 								if (stack.attemptDamageItem(1, random, entity)) {
 									stack.shrink(1);
 									stack.setDamage(0);
@@ -168,7 +185,7 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return new ItemStack(ElectricArrowItem.block, (int) (1));
+			return new ItemStack(Items.ARROW, (int) (1));
 		}
 
 		@Override
@@ -181,7 +198,6 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 			World world = this.world;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -201,7 +217,6 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 			World world = this.world;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -221,7 +236,6 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 			if (this.inGround) {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);

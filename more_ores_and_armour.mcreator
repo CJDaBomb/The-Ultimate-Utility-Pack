@@ -117,15 +117,6 @@
       "registry_name": "ruby_pickaxe"
     },
     {
-      "name": "SuperOverpowered",
-      "type": "loottable",
-      "sortid": 229,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {},
-      "registry_name": "super_overpowered"
-    },
-    {
       "name": "RubyAxe",
       "type": "tool",
       "sortid": 195,
@@ -549,6 +540,10 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -773,10 +768,6 @@
       "registry_name": "electric_arrow_living_entity_is_hit_with_item",
       "metadata": {
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "x",
             "type": "number"
@@ -2766,15 +2757,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "PoweredCopperWire",
-      "type": "block",
-      "sortid": 124,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "powered_copper_wire"
     },
     {
       "name": "BleedingOnPotionActiveTick",
@@ -5306,22 +5288,191 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "alexandrite_crystal"
+    },
+    {
+      "name": "GoldenAppleBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 464,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "golden_apple_block_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GoldenAppleBlockBlockAdded",
+      "type": "procedure",
+      "sortid": 464,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "golden_apple_block_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GoldenAppleBlockOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 465,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "golden_apple_block_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BatteryBlockAdded",
+      "type": "procedure",
+      "sortid": 466,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "battery_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BatteryClientDisplayRandomTick",
+      "type": "procedure",
+      "sortid": 466,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "battery_client_display_random_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SuperOverpowered",
+      "type": "loottable",
+      "sortid": 467,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "super_overpowered"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "bleedingTicks",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
       "item.more_ores_and_armour.ruby_armourbody": "Ruby Chestplate",
       "item.more_ores_and_armour.aluminum_armour_helmet": "Aluminum  Helmet",
       "item.more_ores_and_armour.aluminum_shovel": "Aluminum Shovel",
-      "item.more_ores_and_armour.turquoise_shovel": "Turquoise Shovel",
       "item.more_ores_and_armour.bedrock_armourhelmet": "Shadowrock Helmet",
+      "item.more_ores_and_armour.turquoise_shovel": "Turquoise Shovel",
       "item.more_ores_and_armour.sapphire_armourhelmet": "Sapphire Helmet",
       "block.more_ores_and_armour.lemon_log": "Lemon Log",
-      "item.more_ores_and_armour.shadow_armourhelmet": "Shadow  Helmet",
-      "block.more_ores_and_armour.alexandrite_ore": "Alexandrite Ore",
       "item.more_ores_and_armour.coal_apple": "Coal Apple",
+      "block.more_ores_and_armour.alexandrite_ore": "Alexandrite Ore",
+      "item.more_ores_and_armour.shadow_armourhelmet": "Shadow  Helmet",
       "block.more_ores_and_armour.blueberry_trapdoor": "Blueberry Trapdoor",
       "block.more_ores_and_armour.shadow_block": "Shadow Block",
       "block.more_ores_and_armour.lemon_leaves": "Lemon Leaves",
@@ -5332,18 +5483,18 @@
       "item.more_ores_and_armour.cracked_end_roots": "Cracked End Roots",
       "block.more_ores_and_armour.smooth_shadow_rock_fence": "Smooth Shadow Rock Wall",
       "item.more_ores_and_armour.sapphire_armour_helmet": "Sapphire Helmet",
-      "block.more_ores_and_armour.infused_redstone": "Infused Redstone",
       "itemGroup.tabultimate_utility_building_blocks": "Ultimate Utility Building Blocks",
+      "block.more_ores_and_armour.infused_redstone": "Infused Redstone",
       "item.more_ores_and_armour.gold_crystal": "Gold Crystal",
       "item.more_ores_and_armour.coal_crystal": "Coal Crystal",
       "item.more_ores_and_armour.shadow_armour_boots": "Shadow Armour Boots",
-      "block.more_ores_and_armour.electric_furnace_on": "Electric Furnace",
       "item.more_ores_and_armour.copper_armor_leggings": "Copper Leggings",
+      "block.more_ores_and_armour.electric_furnace_on": "Electric Furnace",
       "item.minecraft.lingering_potion.effect.bleeding": "Lingering Bleeding",
       "block.more_ores_and_armour.cherry_trapdoor": "Cherry Trapdoor",
-      "item.more_ores_and_armour.loot_creeper": "Loot Creeper Spawn Egg",
-      "block.more_ores_and_armour.copper_block": "Copper Block",
       "block.more_ores_and_armour.bluestone_leaves": "Bluestone Leaves",
+      "block.more_ores_and_armour.copper_block": "Copper Block",
+      "item.more_ores_and_armour.loot_creeper": "Loot Creeper Spawn Egg",
       "block.more_ores_and_armour.stripped_blueberry_wood": "Stripped Blueberry Wood",
       "block.more_ores_and_armour.nightmare_planks": "Nightmare Planks",
       "item.more_ores_and_armour.alexandrite_armourboots": "Alexandrite Armour Boots",
@@ -5418,7 +5569,6 @@
       "effect.bleeding": "Bleeding",
       "block.more_ores_and_armour.infused_iron": "Infused Iron",
       "enchantment.more_ores_and_armour.bleeding_enchant": "Bleeding ",
-      "block.more_ores_and_armour.powered_copper_wire": "Powered Copper Wire",
       "item.more_ores_and_armour.bedrock_armour_helmet": "Shadowrock Helmet",
       "itemGroup.tabultimate_utility_combat": "Ultimate Utility Combat",
       "block.more_ores_and_armour.aluminum_ore": "Aluminum Ore",
@@ -5641,7 +5791,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.15.2",
-    "credits": "Created by CJDabomb",
+    "credits": "Created by The Ultimate Utility Mod Team: CJDaBomb, CandianGamer,  Aquele Pedro, and TheJosephC",
     "modElementsPackage": "net.mcreator.moreoresandarmour",
     "lockBaseModFiles": false
   },

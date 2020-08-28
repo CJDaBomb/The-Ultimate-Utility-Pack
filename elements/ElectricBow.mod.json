@@ -12,7 +12,7 @@
     },
     "stackSize": 1,
     "ammoItem": {
-      "value": "CUSTOM:ElectricArrow"
+      "value": "Items.ARROW"
     },
     "shootConstantly": false,
     "usageCount": 384,
@@ -20,7 +20,7 @@
       "value": "entity.arrow.shoot"
     },
     "hasGlow": true,
-    "enableMeleeDamage": false,
+    "enableMeleeDamage": true,
     "damageVsEntity": 0.0,
     "bulletPower": 1.0,
     "bulletDamage": 5.0,

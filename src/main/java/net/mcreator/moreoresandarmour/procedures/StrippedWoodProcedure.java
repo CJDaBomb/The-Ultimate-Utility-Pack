@@ -179,6 +179,8 @@ public class StrippedWoodProcedure extends MoreOresAndArmourModElements.ModEleme
 					}
 				}
 			}
+		} else {
+			return;
 		}
 	}
 }

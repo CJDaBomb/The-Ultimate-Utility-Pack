@@ -3,10 +3,10 @@ package net.mcreator.moreoresandarmour.procedures;
 import net.minecraft.util.DamageSource;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.moreoresandarmour.MoreOresAndArmourModVariables;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Map;
-import java.util.HashMap;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BleedingOnPotionActiveTickProcedure extends MoreOresAndArmourModElements.ModElement {
@@ -21,15 +21,23 @@ public class BleedingOnPotionActiveTickProcedure extends MoreOresAndArmourModEle
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		{
-			Map<String, Object> $_dependencies = new HashMap<>();
-			$_dependencies.put("entity", entity);
-			BleedingPotionStartedappliedProcedure.executeProcedure($_dependencies);
+			double _setval = (double) (((entity.getCapability(MoreOresAndArmourModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new MoreOresAndArmourModVariables.PlayerVariables())).bleedingTicks) + 1);
+			entity.getCapability(MoreOresAndArmourModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.bleedingTicks = _setval;
+				capability.syncPlayerVariables(entity);
+			});
 		}
-		if (((entity.getPersistentData().getDouble("bleedingEffect")) > 80)) {
+		if ((((entity.getCapability(MoreOresAndArmourModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new MoreOresAndArmourModVariables.PlayerVariables())).bleedingTicks) == 80)) {
 			entity.attackEntityFrom(DamageSource.GENERIC, (float) 2);
-			entity.getPersistentData().putDouble("bleedingEffect", 0);
-		} else if (((entity.getPersistentData().getDouble("bleedingEffect")) < 80)) {
-			entity.getPersistentData().putDouble("bleedingEffect", ((entity.getPersistentData().getDouble("bleedingEffect")) + 1));
+			{
+				double _setval = (double) 0;
+				entity.getCapability(MoreOresAndArmourModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.bleedingTicks = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

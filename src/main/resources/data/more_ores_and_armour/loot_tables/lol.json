@@ -1,4 +1,28 @@
 {
   "type": "minecraft:chest",
-  "pools": []
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 6
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:ruby_block",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:ruby",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:turquoise_block",
+          "weight": 1
+        }
+      ]
+    }
+  ]
 }

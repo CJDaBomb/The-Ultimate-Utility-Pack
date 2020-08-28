@@ -102,7 +102,8 @@ public class BezoarAmuletRightClickedInAirProcedure extends MoreOresAndArmourMod
 			{
 				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 				if (mcserv != null)
-					mcserv.getPlayerList().sendMessage(new StringTextComponent("A Player Has Been Cured of the Deadly Bleeding Disease"));
+					mcserv.getPlayerList().sendMessage(new StringTextComponent(
+							(((entity.getDisplayName().getString())) + "" + ("Has Been Cured of the Deadly Bleeding Disease"))));
 			}
 			if ((new Object() {
 				public boolean checkGamemode(Entity _ent) {

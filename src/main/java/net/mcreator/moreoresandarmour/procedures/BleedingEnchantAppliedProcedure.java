@@ -1,7 +1,7 @@
 package net.mcreator.moreoresandarmour.procedures;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.World;
@@ -38,30 +38,27 @@ public class BleedingEnchantAppliedProcedure extends MoreOresAndArmourModElement
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		if (((EnchantmentHelper.getEnchantmentLevel(BleedingEnchantEnchantment.enchantment,
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 1)) {
-			sourceentity.getPersistentData().putDouble("bleedingEffectRandomChance", Math.round((Math.random() * 5)));
-			if (((sourceentity.getPersistentData().getDouble("bleedingEffectRandomChance")) == 1)) {
+			if ((((new java.util.Random()).nextInt((int) 4 + 1)) == 1)) {
 				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 60, (int) 1));
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 600, (int) 1));
 			}
 		} else if (((EnchantmentHelper.getEnchantmentLevel(BleedingEnchantEnchantment.enchantment,
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 2)) {
-			sourceentity.getPersistentData().putDouble("bleedingEffectRandomChance", Math.round((Math.random() * 4)));
-			if (((sourceentity.getPersistentData().getDouble("bleedingEffectRandomChance")) == 1)) {
+			if ((((new java.util.Random()).nextInt((int) 3 + 1)) == 1)) {
 				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 60, (int) 1));
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 700, (int) 1));
 			}
 		} else if (((EnchantmentHelper.getEnchantmentLevel(BleedingEnchantEnchantment.enchantment,
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 3)) {
-			sourceentity.getPersistentData().putDouble("bleedingEffectRandomChance", Math.round((Math.random() * 3)));
-			if (((sourceentity.getPersistentData().getDouble("bleedingEffectRandomChance")) == 1)) {
+			if ((((new java.util.Random()).nextInt((int) 2 + 1)) == 1)) {
 				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 60, (int) 1));
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 800, (int) 1));
 			}
 		}
 	}
 
 	@SubscribeEvent
-	public void onEntityAttacked(LivingAttackEvent event) {
+	public void onEntityAttacked(LivingHurtEvent event) {
 		if (event != null && event.getEntity() != null) {
 			Entity entity = event.getEntity();
 			Entity sourceentity = event.getSource().getTrueSource();
