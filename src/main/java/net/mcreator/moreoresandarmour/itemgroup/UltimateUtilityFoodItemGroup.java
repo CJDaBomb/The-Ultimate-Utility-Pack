@@ -1,17 +1,9 @@
 
 package net.mcreator.moreoresandarmour.itemgroup;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-
-import net.mcreator.moreoresandarmour.item.RubyAppleItem;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class UltimateUtilityFoodItemGroup extends MoreOresAndArmourModElements.ModElement {
+
 	public UltimateUtilityFoodItemGroup(MoreOresAndArmourModElements instance) {
 		super(instance, 463);
 	}
@@ -31,5 +23,7 @@ public class UltimateUtilityFoodItemGroup extends MoreOresAndArmourModElements.M
 			}
 		};
 	}
+
 	public static ItemGroup tab;
+
 }

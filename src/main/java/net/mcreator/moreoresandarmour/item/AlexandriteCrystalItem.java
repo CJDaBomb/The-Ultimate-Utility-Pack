@@ -1,19 +1,12 @@
 
 package net.mcreator.moreoresandarmour.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.block.BlockState;
-
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class AlexandriteCrystalItem extends MoreOresAndArmourModElements.ModElement {
+
 	@ObjectHolder("more_ores_and_armour:alexandrite_crystal")
 	public static final Item block = null;
+
 	public AlexandriteCrystalItem(MoreOresAndArmourModElements instance) {
 		super(instance, 11);
 	}
@@ -22,7 +15,9 @@ public class AlexandriteCrystalItem extends MoreOresAndArmourModElements.ModElem
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
+
 		public ItemCustom() {
 			super(new Item.Properties().group(CustomOreModItemGroup.tab).maxStackSize(64));
 			setRegistryName("alexandrite_crystal");
@@ -42,5 +37,7 @@ public class AlexandriteCrystalItem extends MoreOresAndArmourModElements.ModElem
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 			return 1F;
 		}
+
 	}
+
 }

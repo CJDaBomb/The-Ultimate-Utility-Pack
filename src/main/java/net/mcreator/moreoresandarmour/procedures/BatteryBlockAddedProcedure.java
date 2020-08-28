@@ -1,26 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BlockEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.state.IntegerProperty;
-import net.minecraft.entity.Entity;
-import net.minecraft.block.BlockState;
-
-import net.mcreator.moreoresandarmour.block.BatteryBlock;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BatteryBlockAddedProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public BatteryBlockAddedProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 466);
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -41,10 +26,12 @@ public class BatteryBlockAddedProcedure extends MoreOresAndArmourModElements.Mod
 			System.err.println("Failed to load dependency world for procedure BatteryBlockAdded!");
 			return;
 		}
+
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BatteryBlock.block.getDefaultState().getBlock())) {
 			if (!world.getWorld().isRemote) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
@@ -62,9 +49,11 @@ public class BatteryBlockAddedProcedure extends MoreOresAndArmourModElements.Mod
 							}
 						}
 					}.getValue(new BlockPos((int) x, (int) y, (int) z)))));
+
 				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
+
 	}
 
 	@SubscribeEvent
@@ -82,4 +71,5 @@ public class BatteryBlockAddedProcedure extends MoreOresAndArmourModElements.Mod
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}
+
 }

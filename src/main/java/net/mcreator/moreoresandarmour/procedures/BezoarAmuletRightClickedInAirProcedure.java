@@ -1,39 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraftforge.fml.server.ServerLifecycleHooks;
-
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.GameType;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.particles.ParticleTypes;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.client.network.play.NetworkPlayerInfo;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.client.Minecraft;
-import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.Advancement;
-
-import net.mcreator.moreoresandarmour.potion.BleedingPotion;
-import net.mcreator.moreoresandarmour.item.BezoarAmuletItem;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-import java.util.Iterator;
-import java.util.Collection;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BezoarAmuletRightClickedInAirProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public BezoarAmuletRightClickedInAirProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 449);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -57,11 +29,13 @@ public class BezoarAmuletRightClickedInAirProcedure extends MoreOresAndArmourMod
 			System.err.println("Failed to load dependency world for procedure BezoarAmuletRightClickedInAir!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		if ((new Object() {
 			boolean check(LivingEntity _entity) {
 				if (_entity instanceof LivingEntity) {
@@ -80,7 +54,7 @@ public class BezoarAmuletRightClickedInAirProcedure extends MoreOresAndArmourMod
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 1200, (int) 1));
 			if (entity instanceof ServerPlayerEntity) {
 				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
-						.getAdvancement(new ResourceLocation("more_ores_and_armour:cure_the_bleeding_effect"));
+						.getAdvancement(new ResourceLocation("more_ores_and_armour:@registryname"));
 				AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
 				if (!_ap.isDone()) {
 					Iterator _iterator = _ap.getRemaningCriteria().iterator();
@@ -122,5 +96,7 @@ public class BezoarAmuletRightClickedInAirProcedure extends MoreOresAndArmourMod
 							.clearMatchingItems(p -> new ItemStack(BezoarAmuletItem.block, (int) (1)).getItem() == p.getItem(), (int) 1);
 			}
 		}
+
 	}
+
 }
