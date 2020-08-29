@@ -1,9 +1,17 @@
 
 package net.mcreator.moreoresandarmour.itemgroup;
 
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
+
+import net.mcreator.moreoresandarmour.item.RubySwordItem;
+import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
+
 @MoreOresAndArmourModElements.ModElement.Tag
 public class UltimateUtilityCombatItemGroup extends MoreOresAndArmourModElements.ModElement {
-
 	public UltimateUtilityCombatItemGroup(MoreOresAndArmourModElements instance) {
 		super(instance, 462);
 	}
@@ -23,7 +31,5 @@ public class UltimateUtilityCombatItemGroup extends MoreOresAndArmourModElements
 			}
 		};
 	}
-
 	public static ItemGroup tab;
-
 }

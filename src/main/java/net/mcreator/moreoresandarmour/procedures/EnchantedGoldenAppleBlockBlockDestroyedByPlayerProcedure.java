@@ -1,11 +1,25 @@
 package net.mcreator.moreoresandarmour.procedures;
 
+import net.minecraft.world.IWorld;
+import net.minecraft.world.GameType;
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.client.network.play.NetworkPlayerInfo;
+import net.minecraft.client.entity.player.ClientPlayerEntity;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
+
+import java.util.Map;
+
 @MoreOresAndArmourModElements.ModElement.Tag
 public class EnchantedGoldenAppleBlockBlockDestroyedByPlayerProcedure extends MoreOresAndArmourModElements.ModElement {
-
 	public EnchantedGoldenAppleBlockBlockDestroyedByPlayerProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 453);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -29,13 +43,11 @@ public class EnchantedGoldenAppleBlockBlockDestroyedByPlayerProcedure extends Mo
 			System.err.println("Failed to load dependency world for procedure EnchantedGoldenAppleBlockBlockDestroyedByPlayer!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if ((new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
@@ -77,7 +89,5 @@ public class EnchantedGoldenAppleBlockBlockDestroyedByPlayerProcedure extends Mo
 				}
 			}
 		}
-
 	}
-
 }

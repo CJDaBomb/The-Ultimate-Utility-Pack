@@ -1,11 +1,21 @@
 package net.mcreator.moreoresandarmour.procedures;
 
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.state.BooleanProperty;
+import net.minecraft.particles.ParticleTypes;
+import net.minecraft.block.BlockState;
+
+import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
+
+import java.util.Map;
+
 @MoreOresAndArmourModElements.ModElement.Tag
 public class CopperWireRedstoneOnProcedure extends MoreOresAndArmourModElements.ModElement {
-
 	public CopperWireRedstoneOnProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 309);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -25,12 +35,10 @@ public class CopperWireRedstoneOnProcedure extends MoreOresAndArmourModElements.
 			System.err.println("Failed to load dependency world for procedure CopperWireRedstoneOn!");
 			return;
 		}
-
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if (((new Object() {
 			public boolean getValue(BlockPos pos) {
 				try {
@@ -48,14 +56,11 @@ public class CopperWireRedstoneOnProcedure extends MoreOresAndArmourModElements.
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putBoolean("copperWireIsPowered", (true));
-
 				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (world instanceof ServerWorld) {
 				((ServerWorld) world).spawnParticle(ParticleTypes.EXPLOSION, x, y, z, (int) 5, 3, 3, 3, 1);
 			}
 		}
-
 	}
-
 }
