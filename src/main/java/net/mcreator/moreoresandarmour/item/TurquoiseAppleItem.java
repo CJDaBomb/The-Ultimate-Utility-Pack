@@ -18,7 +18,7 @@ public class TurquoiseAppleItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:turquoise_apple")
 	public static final Item block = null;
 	public TurquoiseAppleItem(MoreOresAndArmourModElements instance) {
-		super(instance, 208);
+		super(instance, 192);
 	}
 
 	@Override

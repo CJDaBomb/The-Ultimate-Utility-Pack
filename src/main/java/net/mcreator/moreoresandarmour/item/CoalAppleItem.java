@@ -18,7 +18,7 @@ public class CoalAppleItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:coal_apple")
 	public static final Item block = null;
 	public CoalAppleItem(MoreOresAndArmourModElements instance) {
-		super(instance, 199);
+		super(instance, 183);
 	}
 
 	@Override

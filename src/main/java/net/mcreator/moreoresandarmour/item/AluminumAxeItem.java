@@ -17,7 +17,7 @@ public class AluminumAxeItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:aluminum_axe")
 	public static final Item block = null;
 	public AluminumAxeItem(MoreOresAndArmourModElements instance) {
-		super(instance, 184);
+		super(instance, 198);
 	}
 
 	@Override

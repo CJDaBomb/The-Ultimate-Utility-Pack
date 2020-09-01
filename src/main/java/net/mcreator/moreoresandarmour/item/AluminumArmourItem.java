@@ -36,7 +36,7 @@ public class AluminumArmourItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:aluminum_armour_boots")
 	public static final Item boots = null;
 	public AluminumArmourItem(MoreOresAndArmourModElements instance) {
-		super(instance, 175);
+		super(instance, 216);
 	}
 
 	@Override

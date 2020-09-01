@@ -36,7 +36,7 @@ public class RubyArmourItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:ruby_armour_boots")
 	public static final Item boots = null;
 	public RubyArmourItem(MoreOresAndArmourModElements instance) {
-		super(instance, 177);
+		super(instance, 218);
 	}
 
 	@Override

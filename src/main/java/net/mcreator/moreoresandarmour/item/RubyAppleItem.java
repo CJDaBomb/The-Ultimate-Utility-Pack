@@ -24,7 +24,7 @@ public class RubyAppleItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:ruby_apple")
 	public static final Item block = null;
 	public RubyAppleItem(MoreOresAndArmourModElements instance) {
-		super(instance, 205);
+		super(instance, 189);
 	}
 
 	@Override

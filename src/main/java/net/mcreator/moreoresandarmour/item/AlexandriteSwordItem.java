@@ -17,7 +17,7 @@ public class AlexandriteSwordItem extends MoreOresAndArmourModElements.ModElemen
 	@ObjectHolder("more_ores_and_armour:alexandrite_sword")
 	public static final Item block = null;
 	public AlexandriteSwordItem(MoreOresAndArmourModElements instance) {
-		super(instance, 169);
+		super(instance, 210);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class SapphirePickaxeItem extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:sapphire_pickaxe")
 	public static final Item block = null;
 	public SapphirePickaxeItem(MoreOresAndArmourModElements instance) {
-		super(instance, 188);
+		super(instance, 202);
 	}
 
 	@Override

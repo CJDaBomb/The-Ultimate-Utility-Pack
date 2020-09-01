@@ -9,7 +9,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class PlayerTradePageProcedure extends MoreOresAndArmourModElements.ModElement {
 	public PlayerTradePageProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 334);
+		super(instance, 346);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

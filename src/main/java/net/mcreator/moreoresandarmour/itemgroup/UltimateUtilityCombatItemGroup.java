@@ -13,7 +13,7 @@ import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class UltimateUtilityCombatItemGroup extends MoreOresAndArmourModElements.ModElement {
 	public UltimateUtilityCombatItemGroup(MoreOresAndArmourModElements instance) {
-		super(instance, 448);
+		super(instance, 462);
 	}
 
 	@Override

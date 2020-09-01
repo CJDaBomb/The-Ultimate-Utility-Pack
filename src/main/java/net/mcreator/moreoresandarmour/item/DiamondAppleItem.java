@@ -18,7 +18,7 @@ public class DiamondAppleItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:diamond_apple")
 	public static final Item block = null;
 	public DiamondAppleItem(MoreOresAndArmourModElements instance) {
-		super(instance, 201);
+		super(instance, 185);
 	}
 
 	@Override

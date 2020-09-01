@@ -17,7 +17,7 @@ public class AluminumPickaxeItem extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:aluminum_pickaxe")
 	public static final Item block = null;
 	public AluminumPickaxeItem(MoreOresAndArmourModElements instance) {
-		super(instance, 185);
+		super(instance, 199);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class BloodyFangItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:bloody_fang")
 	public static final Item block = null;
 	public BloodyFangItem(MoreOresAndArmourModElements instance) {
-		super(instance, 13);
+		super(instance, 33);
 	}
 
 	@Override

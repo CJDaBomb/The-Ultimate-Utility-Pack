@@ -31,7 +31,7 @@ import java.util.Random;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class Bone1Structure extends MoreOresAndArmourModElements.ModElement {
 	public Bone1Structure(MoreOresAndArmourModElements instance) {
-		super(instance, 273);
+		super(instance, 285);
 	}
 
 	@Override

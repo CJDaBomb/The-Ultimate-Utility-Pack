@@ -39,7 +39,7 @@ public class SmoothShadowRockFenceBlock extends MoreOresAndArmourModElements.Mod
 	@ObjectHolder("more_ores_and_armour:smooth_shadow_rock_fence")
 	public static final Block block = null;
 	public SmoothShadowRockFenceBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 121);
+		super(instance, 133);
 	}
 
 	@Override

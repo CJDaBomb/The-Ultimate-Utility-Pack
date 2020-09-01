@@ -33,7 +33,7 @@ public class OilBarrelBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:oil_barrel")
 	public static final Block block = null;
 	public OilBarrelBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 113);
+		super(instance, 125);
 	}
 
 	@Override

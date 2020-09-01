@@ -16,7 +16,7 @@ public class BleedingEnchantItemItem extends MoreOresAndArmourModElements.ModEle
 	@ObjectHolder("more_ores_and_armour:bleeding_enchant_item")
 	public static final Item block = null;
 	public BleedingEnchantItemItem(MoreOresAndArmourModElements instance) {
-		super(instance, 433);
+		super(instance, 445);
 	}
 
 	@Override

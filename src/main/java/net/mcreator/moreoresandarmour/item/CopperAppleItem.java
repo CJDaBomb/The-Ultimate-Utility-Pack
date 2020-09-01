@@ -18,7 +18,7 @@ public class CopperAppleItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:copper_apple")
 	public static final Item block = null;
 	public CopperAppleItem(MoreOresAndArmourModElements instance) {
-		super(instance, 200);
+		super(instance, 184);
 	}
 
 	@Override

@@ -44,7 +44,6 @@
         },
         {
           "type": "minecraft:item",
-          "name": "more_ores_and_armour:enchanted_totem",
           "weight": 9,
           "functions": [
             {
@@ -56,11 +55,11 @@
               }
             }
           ],
+          "name": "more_ores_and_armour:enchanted_totem"
         },
         
         {
           "type": "minecraft:item",
-          "name": "more_ores_and_armour:ruby",
           "weight": 5,
           "functions": [
             {
@@ -72,6 +71,7 @@
               }
             }
           ],
+          "name": "more_ores_and_armour:ruby"
         },
         
         {

@@ -18,7 +18,7 @@ public class RedstoneAppleItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:redstone_apple")
 	public static final Item block = null;
 	public RedstoneAppleItem(MoreOresAndArmourModElements instance) {
-		super(instance, 204);
+		super(instance, 188);
 	}
 
 	@Override

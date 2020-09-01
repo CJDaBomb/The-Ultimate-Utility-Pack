@@ -46,7 +46,7 @@ public class ShadowOreBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:shadow_ore")
 	public static final Block block = null;
 	public ShadowOreBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 39);
+		super(instance, 64);
 	}
 
 	@Override

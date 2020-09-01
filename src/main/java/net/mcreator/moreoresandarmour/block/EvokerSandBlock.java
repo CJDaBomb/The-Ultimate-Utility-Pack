@@ -37,7 +37,7 @@ public class EvokerSandBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:evoker_sand")
 	public static final Block block = null;
 	public EvokerSandBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 50);
+		super(instance, 75);
 	}
 
 	@Override

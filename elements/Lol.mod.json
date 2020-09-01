@@ -3,7 +3,38 @@
   "_type": "loottable",
   "definition": {
     "type": "Chest",
-    "pools": [],
+    "pools": [
+      {
+        "minrolls": 1,
+        "maxrolls": 6,
+        "minbonusrolls": 1,
+        "maxbonusrolls": 1,
+        "hasbonusrolls": false,
+        "entries": [
+          {
+            "type": "item",
+            "item": {
+              "value": "CUSTOM:RubyBlock"
+            },
+            "weight": 8
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "CUSTOM:Ruby"
+            },
+            "weight": 1
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "CUSTOM:TurquoiseBlock"
+            },
+            "weight": 1
+          }
+        ]
+      }
+    ],
     "name": "lol",
     "namespace": "mod"
   }

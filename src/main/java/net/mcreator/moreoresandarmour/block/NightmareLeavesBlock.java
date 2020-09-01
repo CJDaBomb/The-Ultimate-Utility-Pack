@@ -60,7 +60,7 @@ public class NightmareLeavesBlock extends MoreOresAndArmourModElements.ModElemen
 	@ObjectHolder("more_ores_and_armour:nightmare_leaves")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public NightmareLeavesBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 100);
+		super(instance, 112);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

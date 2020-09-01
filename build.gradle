@@ -21,7 +21,9 @@ minecraft {
     mappings channel: 'snapshot', version: '20200514-1.15.1'
 
     runs {
-        client {
+        client { 
+
+			args '--username', 'CJDaBomb'
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'

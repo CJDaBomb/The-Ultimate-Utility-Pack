@@ -18,7 +18,7 @@ public class LapisAppleItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:lapis_apple")
 	public static final Item block = null;
 	public LapisAppleItem(MoreOresAndArmourModElements instance) {
-		super(instance, 203);
+		super(instance, 187);
 	}
 
 	@Override

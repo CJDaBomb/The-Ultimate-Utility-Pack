@@ -29,7 +29,7 @@ public class BleedingPotion extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:bleeding")
 	public static final Potion potionType = null;
 	public BleedingPotion(MoreOresAndArmourModElements instance) {
-		super(instance, 348);
+		super(instance, 360);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

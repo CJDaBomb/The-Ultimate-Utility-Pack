@@ -23,7 +23,7 @@ public class ElectricArrowItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:electric_arrow")
 	public static final Item block = null;
 	public ElectricArrowItem(MoreOresAndArmourModElements instance) {
-		super(instance, 18);
+		super(instance, 38);
 	}
 
 	@Override
@@ -66,7 +66,6 @@ public class ElectricArrowItem extends MoreOresAndArmourModElements.ModElement {
 			World world = entity.world;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);

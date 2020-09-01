@@ -27,7 +27,7 @@ public class GrapePlanksBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:grape_planks")
 	public static final Block block = null;
 	public GrapePlanksBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 71);
+		super(instance, 96);
 	}
 
 	@Override

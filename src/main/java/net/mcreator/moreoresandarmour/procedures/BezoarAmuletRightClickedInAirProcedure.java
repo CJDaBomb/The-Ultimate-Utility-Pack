@@ -33,7 +33,7 @@ import java.util.Collection;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BezoarAmuletRightClickedInAirProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BezoarAmuletRightClickedInAirProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 437);
+		super(instance, 449);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -102,7 +102,8 @@ public class BezoarAmuletRightClickedInAirProcedure extends MoreOresAndArmourMod
 			{
 				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 				if (mcserv != null)
-					mcserv.getPlayerList().sendMessage(new StringTextComponent("A Player Has Been Cured of the Deadly Bleeding Disease"));
+					mcserv.getPlayerList().sendMessage(new StringTextComponent(
+							(((entity.getDisplayName().getString())) + "" + ("Has Been Cured of the Deadly Bleeding Disease"))));
 			}
 			if ((new Object() {
 				public boolean checkGamemode(Entity _ent) {

@@ -29,7 +29,7 @@ public class CherrySlabBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:cherry_slab")
 	public static final Block block = null;
 	public CherrySlabBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 140);
+		super(instance, 152);
 	}
 
 	@Override
