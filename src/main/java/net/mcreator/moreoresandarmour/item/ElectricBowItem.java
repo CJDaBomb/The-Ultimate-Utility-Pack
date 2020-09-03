@@ -180,7 +180,7 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(ElectricArrowItem.block, (int) (1));
+			return new ItemStack(Items.ARROW, (int) (1));
 		}
 
 		@Override

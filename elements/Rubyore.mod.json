@@ -88,12 +88,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onDestroyedByPlayer": {
-      "name": "RubyoreBlockDestroyedByPlayer"
-    },
-    "onDestroyedByExplosion": {
-      "name": "RubyoreBlockDestroyedByExplosion"
-    },
     "spawnWorldTypes": [
       "Surface",
       "Nether"

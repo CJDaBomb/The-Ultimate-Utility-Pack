@@ -88,12 +88,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onDestroyedByPlayer": {
-      "name": "AluminumOreBlockDestroyedByPlayer"
-    },
-    "onDestroyedByExplosion": {
-      "name": "AluminumOreBlockDestroyedByExplosion"
-    },
     "spawnWorldTypes": [
       "Surface"
     ],

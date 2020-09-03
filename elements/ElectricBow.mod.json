@@ -28,7 +28,7 @@
     "bulletParticles": true,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
-      "value": "CUSTOM:ElectricArrow"
+      "value": "Items.ARROW"
     },
     "bulletModel": "Default",
     "customBulletModelTexture": "",

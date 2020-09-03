@@ -5,6 +5,8 @@ import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.World;
+import net.minecraft.potion.Effects;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.LivingEntity;
@@ -34,6 +36,8 @@ public class ChorusFruitEatenProcedure extends MoreOresAndArmourModElements.ModE
 				LivingEntity livingEntity = (LivingEntity) dependencies.get("entity");
 				livingEntity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(40);
 			} ;
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.LEVITATION, (int) 600, (int) 0));
 		}
 	}
 

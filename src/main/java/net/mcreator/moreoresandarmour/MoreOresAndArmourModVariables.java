@@ -68,6 +68,9 @@ public class MoreOresAndArmourModVariables {
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putDouble("bleedingTicks", instance.bleedingTicks);
+			nbt.putDouble("levitationTimer", instance.levitationTimer);
+			nbt.putBoolean("startTimer", instance.startTimer);
+			nbt.putBoolean("IsFlying", instance.IsFlying);
 			return nbt;
 		}
 
@@ -75,11 +78,17 @@ public class MoreOresAndArmourModVariables {
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.bleedingTicks = nbt.getDouble("bleedingTicks");
+			instance.levitationTimer = nbt.getDouble("levitationTimer");
+			instance.startTimer = nbt.getBoolean("startTimer");
+			instance.IsFlying = nbt.getBoolean("IsFlying");
 		}
 	}
 
 	public static class PlayerVariables {
 		public double bleedingTicks = 0;
+		public double levitationTimer = 0;
+		public boolean startTimer = false;
+		public boolean IsFlying = false;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				MoreOresAndArmourMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -115,6 +124,9 @@ public class MoreOresAndArmourModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PlayerVariables()));
 			clone.bleedingTicks = original.bleedingTicks;
+			clone.levitationTimer = original.levitationTimer;
+			clone.startTimer = original.startTimer;
+			clone.IsFlying = original.IsFlying;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -139,6 +151,9 @@ public class MoreOresAndArmourModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
 					variables.bleedingTicks = message.data.bleedingTicks;
+					variables.levitationTimer = message.data.levitationTimer;
+					variables.startTimer = message.data.startTimer;
+					variables.IsFlying = message.data.IsFlying;
 				}
 			});
 			context.setPacketHandled(true);

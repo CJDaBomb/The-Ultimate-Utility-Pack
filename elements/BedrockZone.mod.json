@@ -54,6 +54,9 @@
     "doesWaterVaporize": false,
     "sleepResult": "ALLOW",
     "hasSkyLight": true,
-    "imitateOverworldBehaviour": true
+    "imitateOverworldBehaviour": true,
+    "onPlayerEntersDimension": {
+      "name": "BedrockZonePlayerEntersDimension"
+    }
   }
 }
