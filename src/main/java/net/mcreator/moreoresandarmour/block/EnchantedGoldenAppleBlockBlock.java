@@ -51,6 +51,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.moreoresandarmour.procedures.EnchantedGoldenAppleBlockBlockDestroyedByPlayerProcedure;
 import net.mcreator.moreoresandarmour.procedures.EnchantedGoldenAppleBlockBlockDestroyedByExplosionProcedure;
+import net.mcreator.moreoresandarmour.item.GoldenAppleSeedsItem;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import javax.annotation.Nullable;
@@ -114,7 +115,7 @@ public class EnchantedGoldenAppleBlockBlock extends MoreOresAndArmourModElements
 
 		@Override
 		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
-			return new ItemStack(GoldenAppleBlockBlock.block, (int) (1));
+			return new ItemStack(GoldenAppleSeedsItem.block, (int) (1));
 		}
 
 		@Override

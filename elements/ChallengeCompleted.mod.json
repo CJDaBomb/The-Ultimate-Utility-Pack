@@ -101,6 +101,13 @@
               "value": "CUSTOM:CoalApple"
             },
             "weight": 1
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "CUSTOM:IronApple"
+            },
+            "weight": 1
           }
         ]
       }

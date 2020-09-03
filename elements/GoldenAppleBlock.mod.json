@@ -12,7 +12,7 @@
     "customModelName": "goldenapple:default",
     "rotationMode": 3,
     "emissiveRendering": true,
-    "itemTexture": "golden_apple_seeds0",
+    "itemTexture": "",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT_MIPPED",
@@ -28,7 +28,7 @@
     "resistance": 10.0,
     "hasGravity": false,
     "creativeTab": {
-      "value": "CUSTOM:UltimateUtlityDecor"
+      "value": "No creative tab entry"
     },
     "destroyTool": "Not specified",
     "customDrop": {
@@ -48,7 +48,7 @@
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
-      "value": ""
+      "value": "CUSTOM:GoldenAppleSeeds"
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
@@ -90,9 +90,6 @@
     "fluidRestrictions": [],
     "onRightClicked": {
       "name": "GoldenAppleBlockOnBlockRightClicked"
-    },
-    "onTickUpdate": {
-      "name": "GoldenAppleBlockUpdateTick"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

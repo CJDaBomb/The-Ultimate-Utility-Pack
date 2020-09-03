@@ -48,7 +48,7 @@
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
-      "value": "CUSTOM:GoldenAppleBlock"
+      "value": "CUSTOM:GoldenAppleSeeds"
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",

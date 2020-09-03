@@ -1,0 +1,10 @@
+{
+  "_fv": 10,
+  "_type": "loottable",
+  "definition": {
+    "type": "Chest",
+    "pools": [],
+    "name": "chests/igloo_chest",
+    "namespace": "minecraft"
+  }
+}

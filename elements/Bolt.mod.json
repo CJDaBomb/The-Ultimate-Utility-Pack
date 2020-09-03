@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "bolt",
+    "texture": "bolt2",
     "customModelName": "Normal",
     "name": "Bolt",
     "creativeTab": {

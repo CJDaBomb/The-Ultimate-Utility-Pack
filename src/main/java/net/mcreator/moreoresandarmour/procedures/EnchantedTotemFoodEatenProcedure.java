@@ -31,6 +31,8 @@ public class EnchantedTotemFoodEatenProcedure extends MoreOresAndArmourModElemen
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
+		Minecraft.getInstance().gameRenderer.displayItemActivation(
+				/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 10000, (int) 3));
 		if (entity instanceof LivingEntity)
@@ -43,6 +45,10 @@ public class EnchantedTotemFoodEatenProcedure extends MoreOresAndArmourModElemen
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, (int) 20000, (int) 1));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.INSTANT_HEALTH, (int) 1, (int) 3));
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HEALTH_BOOST, (int) 5000, (int) 3));
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.ABSORPTION, (int) 2000, (int) 6));
 		if ((new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {

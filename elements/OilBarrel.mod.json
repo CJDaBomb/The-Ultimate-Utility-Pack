@@ -10,8 +10,8 @@
     "textureBack": "",
     "renderType": 2,
     "customModelName": "barrel:default",
-    "rotationMode": 0,
-    "emissiveRendering": true,
+    "rotationMode": 1,
+    "emissiveRendering": false,
     "itemTexture": "",
     "hasTransparency": true,
     "connectedSides": false,
@@ -88,6 +88,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "OilBarrelOnBlockRightClicked"
+    },
+    "onNeighbourBlockChanges": {
+      "name": "OilBarrelNeighbourBlockChanges"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

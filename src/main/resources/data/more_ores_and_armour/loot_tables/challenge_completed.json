@@ -71,6 +71,11 @@
           "type": "minecraft:item",
           "name": "more_ores_and_armour:coal_apple",
           "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "more_ores_and_armour:iron_apple",
+          "weight": 1
         }
       ]
     }

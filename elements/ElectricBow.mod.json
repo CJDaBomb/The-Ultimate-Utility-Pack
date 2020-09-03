@@ -30,8 +30,8 @@
     "bulletItemTexture": {
       "value": "Items.ARROW"
     },
-    "bulletModel": "Default",
-    "customBulletModelTexture": "",
+    "bulletModel": "Modelcustom_arrow",
+    "customBulletModelTexture": "electric_arrow.png",
     "onBulletHitsBlock": {
       "name": "ElectricArrowLivingEntityIsHitWithItem"
     },

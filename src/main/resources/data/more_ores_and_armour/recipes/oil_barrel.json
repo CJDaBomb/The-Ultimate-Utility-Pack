@@ -1,0 +1,16 @@
+{
+  "group": "more_ores_and_armour",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:barrel"
+    },
+    {
+      "item": "more_ores_and_armour:oil"
+    }
+  ],
+  "result": {
+    "item": "more_ores_and_armour:oil_barrel",
+    "count": 1
+  }
+}

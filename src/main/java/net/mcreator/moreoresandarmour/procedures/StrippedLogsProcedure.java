@@ -75,9 +75,9 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem() instanceof AxeItem)) {
-			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BluestoneLogBlock.block.getDefaultState().getBlock())) {
+		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BluestoneLogBlock.block.getDefaultState().getBlock())) {
+			if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() instanceof AxeItem)) {
 				if ((((new Object() {
 					public Direction getDirection(BlockPos pos) {
 						try {
@@ -193,7 +193,10 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 					}
 				}
 			}
-			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == NightmareLogBlock.block.getDefaultState().getBlock())) {
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == NightmareLogBlock.block.getDefaultState()
+				.getBlock())) {
+			if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() instanceof AxeItem)) {
 				if ((((new Object() {
 					public Direction getDirection(BlockPos pos) {
 						try {
@@ -309,7 +312,9 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 					}
 				}
 			}
-			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CherryLogBlock.block.getDefaultState().getBlock())) {
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CherryLogBlock.block.getDefaultState().getBlock())) {
+			if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() instanceof AxeItem)) {
 				if ((((new Object() {
 					public Direction getDirection(BlockPos pos) {
 						try {
@@ -425,7 +430,9 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 					}
 				}
 			}
-			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == LemonLogBlock.block.getDefaultState().getBlock())) {
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == LemonLogBlock.block.getDefaultState().getBlock())) {
+			if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() instanceof AxeItem)) {
 				if ((((new Object() {
 					public Direction getDirection(BlockPos pos) {
 						try {
@@ -513,11 +520,11 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 				}
 				if (!world.getWorld().isRemote) {
 					world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.axe.strip")),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.cave")),
 							SoundCategory.NEUTRAL, (float) 1, (float) 1);
 				} else {
 					world.getWorld().playSound(x, y, z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.axe.strip")),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.cave")),
 							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 				if ((new Object() {
@@ -541,7 +548,10 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 					}
 				}
 			}
-			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BlueberryLogBlock.block.getDefaultState().getBlock())) {
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BlueberryLogBlock.block.getDefaultState()
+				.getBlock())) {
+			if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() instanceof AxeItem)) {
 				if ((((new Object() {
 					public Direction getDirection(BlockPos pos) {
 						try {
@@ -657,7 +667,9 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 					}
 				}
 			}
-			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == GrapeLogBlock.block.getDefaultState().getBlock())) {
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == GrapeLogBlock.block.getDefaultState().getBlock())) {
+			if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() instanceof AxeItem)) {
 				if ((((new Object() {
 					public Direction getDirection(BlockPos pos) {
 						try {
@@ -773,11 +785,13 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 					}
 				}
 			}
+		} else {
+			return;
 		}
 	}
 
 	@SubscribeEvent
-	public void onRightClickItem(PlayerInteractEvent.RightClickItem event) {
+	public void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
 		PlayerEntity entity = event.getPlayer();
 		if (event.getHand() != entity.getActiveHand())
 			return;

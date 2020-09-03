@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "more_ores_and_armour:blocks/nightmare_sapling",
+    "particle": "more_ores_and_armour:blocks/nightmare_sapling"
+  }
+}
