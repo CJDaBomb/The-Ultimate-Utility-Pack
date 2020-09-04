@@ -210,6 +210,7 @@ public class MoreOresAndArmourModVariables {
 			nbt.putDouble("levitationTimer", instance.levitationTimer);
 			nbt.putBoolean("startTimer", instance.startTimer);
 			nbt.putBoolean("IsFlying", instance.IsFlying);
+			nbt.putDouble("attack", instance.attack);
 			return nbt;
 		}
 
@@ -219,6 +220,7 @@ public class MoreOresAndArmourModVariables {
 			instance.levitationTimer = nbt.getDouble("levitationTimer");
 			instance.startTimer = nbt.getBoolean("startTimer");
 			instance.IsFlying = nbt.getBoolean("IsFlying");
+			instance.attack = nbt.getDouble("attack");
 		}
 	}
 
@@ -226,6 +228,7 @@ public class MoreOresAndArmourModVariables {
 		public double levitationTimer = 0;
 		public boolean startTimer = false;
 		public boolean IsFlying = false;
+		public double attack = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				MoreOresAndArmourMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -263,6 +266,7 @@ public class MoreOresAndArmourModVariables {
 			clone.levitationTimer = original.levitationTimer;
 			clone.startTimer = original.startTimer;
 			clone.IsFlying = original.IsFlying;
+			clone.attack = original.attack;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -289,6 +293,7 @@ public class MoreOresAndArmourModVariables {
 					variables.levitationTimer = message.data.levitationTimer;
 					variables.startTimer = message.data.startTimer;
 					variables.IsFlying = message.data.IsFlying;
+					variables.attack = message.data.attack;
 				}
 			});
 			context.setPacketHandled(true);

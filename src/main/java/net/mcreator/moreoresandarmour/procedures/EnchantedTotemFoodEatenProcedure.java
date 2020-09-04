@@ -22,7 +22,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class EnchantedTotemFoodEatenProcedure extends MoreOresAndArmourModElements.ModElement {
 	public EnchantedTotemFoodEatenProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 226);
+		super(instance, 238);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -49,6 +49,8 @@ public class EnchantedTotemFoodEatenProcedure extends MoreOresAndArmourModElemen
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HEALTH_BOOST, (int) 5000, (int) 3));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.ABSORPTION, (int) 2000, (int) 6));
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.INVISIBILITY, (int) 2000, (int) 1));
 		if ((new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
@@ -63,7 +65,7 @@ public class EnchantedTotemFoodEatenProcedure extends MoreOresAndArmourModElemen
 		}.checkGamemode(entity))) {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _setstack = new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, (int) (1));
-				_setstack.setCount((int) 1);
+				_setstack.setCount((int) (1 + ((new java.util.Random()).nextInt((int) 1 + 1))));
 				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 			}
 		}

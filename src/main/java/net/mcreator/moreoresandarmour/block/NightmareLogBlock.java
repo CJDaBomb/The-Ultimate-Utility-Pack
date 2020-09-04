@@ -68,7 +68,7 @@ public class NightmareLogBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:nightmare_log")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public NightmareLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 67);
+		super(instance, 71);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -39,7 +39,7 @@ public class AlexandriteOreBlock extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:alexandrite_ore")
 	public static final Block block = null;
 	public AlexandriteOreBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 60);
+		super(instance, 64);
 	}
 
 	@Override

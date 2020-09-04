@@ -19,7 +19,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BloodSpiderDiesProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BloodSpiderDiesProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 442);
+		super(instance, 451);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

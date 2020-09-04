@@ -16,7 +16,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BatteryClientDisplayRandomTickProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BatteryClientDisplayRandomTickProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 466);
+		super(instance, 477);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

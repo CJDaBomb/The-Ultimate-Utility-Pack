@@ -69,7 +69,7 @@ public class LemonLogBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:lemon_log")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public LemonLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 78);
+		super(instance, 82);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -15,7 +15,7 @@ public class RubyCrystalItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:ruby_crystal")
 	public static final Item block = null;
 	public RubyCrystalItem(MoreOresAndArmourModElements instance) {
-		super(instance, 21);
+		super(instance, 22);
 	}
 
 	@Override

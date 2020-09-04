@@ -1,0 +1,10 @@
+{
+  "_fv": 10,
+  "_type": "loottable",
+  "definition": {
+    "type": "Block",
+    "pools": [],
+    "name": "blocks/enchanted_golden_apple_block",
+    "namespace": "mod"
+  }
+}

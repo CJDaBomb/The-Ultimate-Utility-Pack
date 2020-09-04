@@ -12,7 +12,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class RubyoreBlockDestroyedByExplosionProcedure extends MoreOresAndArmourModElements.ModElement {
 	public RubyoreBlockDestroyedByExplosionProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 426);
+		super(instance, 436);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

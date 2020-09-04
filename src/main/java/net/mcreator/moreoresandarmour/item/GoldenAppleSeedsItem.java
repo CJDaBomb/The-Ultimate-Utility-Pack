@@ -9,12 +9,12 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.moreoresandarmour.procedures.GoldenAppleSeedsRightClickedOnBlockProcedure;
+import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Map;
@@ -25,7 +25,7 @@ public class GoldenAppleSeedsItem extends MoreOresAndArmourModElements.ModElemen
 	@ObjectHolder("more_ores_and_armour:golden_apple_seeds")
 	public static final Item block = null;
 	public GoldenAppleSeedsItem(MoreOresAndArmourModElements instance) {
-		super(instance, 486);
+		super(instance, 38);
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class GoldenAppleSeedsItem extends MoreOresAndArmourModElements.ModElemen
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64));
+			super(new Item.Properties().group(CustomOreModItemGroup.tab).maxStackSize(64));
 			setRegistryName("golden_apple_seeds");
 		}
 

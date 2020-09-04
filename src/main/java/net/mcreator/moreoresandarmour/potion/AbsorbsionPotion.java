@@ -28,7 +28,7 @@ public class AbsorbsionPotion extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:absorbsion")
 	public static final Potion potionType = null;
 	public AbsorbsionPotion(MoreOresAndArmourModElements instance) {
-		super(instance, 245);
+		super(instance, 257);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

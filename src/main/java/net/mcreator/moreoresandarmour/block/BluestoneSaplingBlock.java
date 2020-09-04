@@ -30,7 +30,7 @@ public class BluestoneSaplingBlock extends MoreOresAndArmourModElements.ModEleme
 	@ObjectHolder("more_ores_and_armour:bluestone_sapling")
 	public static final Block block = null;
 	public BluestoneSaplingBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 482);
+		super(instance, 35);
 	}
 
 	@Override

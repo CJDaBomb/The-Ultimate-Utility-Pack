@@ -17,7 +17,7 @@ public class ChargedWitherBonesItem extends MoreOresAndArmourModElements.ModElem
 	@ObjectHolder("more_ores_and_armour:charged_wither_bones")
 	public static final Item block = null;
 	public ChargedWitherBonesItem(MoreOresAndArmourModElements instance) {
-		super(instance, 36);
+		super(instance, 37);
 	}
 
 	@Override

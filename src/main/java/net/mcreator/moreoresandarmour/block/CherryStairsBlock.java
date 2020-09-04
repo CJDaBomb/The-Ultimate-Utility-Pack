@@ -28,7 +28,7 @@ public class CherryStairsBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:cherry_stairs")
 	public static final Block block = null;
 	public CherryStairsBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 150);
+		super(instance, 152);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class OilBarrelOnUpdateTickProcedure extends MoreOresAndArmourModElements.ModElement {
 	public OilBarrelOnUpdateTickProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 481);
+		super(instance, 484);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

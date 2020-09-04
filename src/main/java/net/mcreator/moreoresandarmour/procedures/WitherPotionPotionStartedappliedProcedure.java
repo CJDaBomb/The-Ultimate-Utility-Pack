@@ -16,7 +16,7 @@ import java.util.Collection;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class WitherPotionPotionStartedappliedProcedure extends MoreOresAndArmourModElements.ModElement {
 	public WitherPotionPotionStartedappliedProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 227);
+		super(instance, 239);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

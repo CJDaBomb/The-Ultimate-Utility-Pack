@@ -61,7 +61,7 @@ public class BatteryBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:battery")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BatteryBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 100);
+		super(instance, 104);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

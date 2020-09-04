@@ -15,7 +15,7 @@ public class ShadowCrystalItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:shadow_crystal")
 	public static final Item block = null;
 	public ShadowCrystalItem(MoreOresAndArmourModElements instance) {
-		super(instance, 22);
+		super(instance, 23);
 	}
 
 	@Override

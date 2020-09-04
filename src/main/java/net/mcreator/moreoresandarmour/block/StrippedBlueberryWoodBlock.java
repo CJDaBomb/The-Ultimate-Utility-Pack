@@ -62,7 +62,7 @@ public class StrippedBlueberryWoodBlock extends MoreOresAndArmourModElements.Mod
 	@ObjectHolder("more_ores_and_armour:stripped_blueberry_wood")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public StrippedBlueberryWoodBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 160);
+		super(instance, 162);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

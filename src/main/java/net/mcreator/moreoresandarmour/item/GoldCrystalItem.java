@@ -15,7 +15,7 @@ public class GoldCrystalItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:gold_crystal")
 	public static final Item block = null;
 	public GoldCrystalItem(MoreOresAndArmourModElements instance) {
-		super(instance, 17);
+		super(instance, 18);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class AluminumShovelItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:aluminum_shovel")
 	public static final Item block = null;
 	public AluminumShovelItem(MoreOresAndArmourModElements instance) {
-		super(instance, 200);
+		super(instance, 203);
 	}
 
 	@Override

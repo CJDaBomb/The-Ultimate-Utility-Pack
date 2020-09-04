@@ -20,7 +20,7 @@ import java.util.HashMap;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BatteryBlockAddedProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BatteryBlockAddedProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 466);
+		super(instance, 474);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

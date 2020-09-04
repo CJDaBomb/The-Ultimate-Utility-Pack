@@ -24,7 +24,7 @@ public class InfusedCopperBlock extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:infused_copper")
 	public static final Block block = null;
 	public InfusedCopperBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 55);
+		super(instance, 59);
 	}
 
 	@Override

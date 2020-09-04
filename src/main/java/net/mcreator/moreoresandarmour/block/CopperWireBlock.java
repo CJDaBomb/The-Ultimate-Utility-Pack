@@ -75,7 +75,7 @@ public class CopperWireBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:copper_wire")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public CopperWireBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 106);
+		super(instance, 110);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

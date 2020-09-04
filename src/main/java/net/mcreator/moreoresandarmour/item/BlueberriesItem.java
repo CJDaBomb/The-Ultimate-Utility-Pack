@@ -15,7 +15,7 @@ public class BlueberriesItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:blueberries")
 	public static final Item block = null;
 	public BlueberriesItem(MoreOresAndArmourModElements instance) {
-		super(instance, 476);
+		super(instance, 232);
 	}
 
 	@Override

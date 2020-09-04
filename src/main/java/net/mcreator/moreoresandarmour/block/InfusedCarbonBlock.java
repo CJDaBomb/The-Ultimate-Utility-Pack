@@ -38,7 +38,7 @@ public class InfusedCarbonBlock extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:infused_carbon")
 	public static final Block block = null;
 	public InfusedCarbonBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 59);
+		super(instance, 63);
 	}
 
 	@Override

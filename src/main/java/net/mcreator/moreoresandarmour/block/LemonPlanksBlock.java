@@ -27,7 +27,7 @@ public class LemonPlanksBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:lemon_planks")
 	public static final Block block = null;
 	public LemonPlanksBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 93);
+		super(instance, 97);
 	}
 
 	@Override

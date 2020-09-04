@@ -24,7 +24,7 @@ public class InfusedLapisLazuliBlock extends MoreOresAndArmourModElements.ModEle
 	@ObjectHolder("more_ores_and_armour:infused_lapis_lazuli")
 	public static final Block block = null;
 	public InfusedLapisLazuliBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 50);
+		super(instance, 54);
 	}
 
 	@Override

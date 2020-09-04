@@ -16,7 +16,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class SdaasdProcedure extends MoreOresAndArmourModElements.ModElement {
 	public SdaasdProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 358);
+		super(instance, 368);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

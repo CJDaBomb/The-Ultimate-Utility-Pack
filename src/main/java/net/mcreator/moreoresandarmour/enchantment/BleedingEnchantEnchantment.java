@@ -14,7 +14,7 @@ public class BleedingEnchantEnchantment extends MoreOresAndArmourModElements.Mod
 	@ObjectHolder("more_ores_and_armour:bleeding_enchant")
 	public static final Enchantment enchantment = null;
 	public BleedingEnchantEnchantment(MoreOresAndArmourModElements instance) {
-		super(instance, 444);
+		super(instance, 453);
 	}
 
 	@Override

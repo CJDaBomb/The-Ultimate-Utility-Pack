@@ -75,7 +75,7 @@ public class GoldenAppleBlockBlock extends MoreOresAndArmourModElements.ModEleme
 	@ObjectHolder("more_ores_and_armour:golden_apple_block")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public GoldenAppleBlockBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 126);
+		super(instance, 374);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

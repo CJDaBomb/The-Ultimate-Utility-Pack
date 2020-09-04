@@ -41,12 +41,8 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.MobRenderer;
 
-import net.mcreator.moreoresandarmour.procedures.LootCreeperEntityDiesProcedure;
 import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-import java.util.HashMap;
 
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.mojang.blaze3d.matrix.MatrixStack;
@@ -55,7 +51,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class LootCreeperEntity extends MoreOresAndArmourModElements.ModElement {
 	public static EntityType entity = null;
 	public LootCreeperEntity(MoreOresAndArmourModElements instance) {
-		super(instance, 31);
+		super(instance, 32);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -139,26 +135,6 @@ public class LootCreeperEntity extends MoreOresAndArmourModElements.ModElement {
 		@Override
 		public net.minecraft.util.SoundEvent getDeathSound() {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.creeper.death"));
-		}
-
-		@Override
-		public void onDeath(DamageSource source) {
-			super.onDeath(source);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity sourceentity = source.getTrueSource();
-			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("sourceentity", sourceentity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				LootCreeperEntityDiesProcedure.executeProcedure($_dependencies);
-			}
 		}
 
 		@Override

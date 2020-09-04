@@ -69,7 +69,7 @@ public class CherryLogBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:cherry_log")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public CherryLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 77);
+		super(instance, 81);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

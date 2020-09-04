@@ -10,9 +10,11 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
@@ -32,7 +34,7 @@ public class BlueStoneTapdoorBlock extends MoreOresAndArmourModElements.ModEleme
 	@ObjectHolder("more_ores_and_armour:blue_stone_tapdoor")
 	public static final Block block = null;
 	public BlueStoneTapdoorBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 138);
+		super(instance, 140);
 	}
 
 	@Override
@@ -62,6 +64,11 @@ public class BlueStoneTapdoorBlock extends MoreOresAndArmourModElements.ModEleme
 		@Override
 		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
 			return true;
+		}
+
+		@Override
+		public PathNodeType getAiPathNodeType(BlockState state, IBlockReader world, BlockPos pos, MobEntity entity) {
+			return PathNodeType.TRAPDOOR;
 		}
 
 		@Override

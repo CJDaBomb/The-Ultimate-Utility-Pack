@@ -69,7 +69,7 @@ public class GrapeLogBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:grape_log")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public GrapeLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 82);
+		super(instance, 86);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

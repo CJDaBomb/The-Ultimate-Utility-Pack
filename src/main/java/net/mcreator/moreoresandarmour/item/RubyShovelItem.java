@@ -19,7 +19,7 @@ public class RubyShovelItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:ruby_shovel")
 	public static final Item block = null;
 	public RubyShovelItem(MoreOresAndArmourModElements instance) {
-		super(instance, 197);
+		super(instance, 200);
 	}
 
 	@Override

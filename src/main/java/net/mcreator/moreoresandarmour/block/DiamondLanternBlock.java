@@ -31,7 +31,7 @@ public class DiamondLanternBlock extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:diamond_lantern")
 	public static final Block block = null;
 	public DiamondLanternBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 123);
+		super(instance, 127);
 	}
 
 	@Override

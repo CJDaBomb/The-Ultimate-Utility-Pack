@@ -24,7 +24,7 @@ public class InfusedAluminumBlock extends MoreOresAndArmourModElements.ModElemen
 	@ObjectHolder("more_ores_and_armour:infused_aluminum")
 	public static final Block block = null;
 	public InfusedAluminumBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 56);
+		super(instance, 60);
 	}
 
 	@Override

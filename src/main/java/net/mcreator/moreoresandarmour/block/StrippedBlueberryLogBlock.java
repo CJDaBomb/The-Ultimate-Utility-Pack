@@ -62,7 +62,7 @@ public class StrippedBlueberryLogBlock extends MoreOresAndArmourModElements.ModE
 	@ObjectHolder("more_ores_and_armour:stripped_blueberry_log")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public StrippedBlueberryLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 87);
+		super(instance, 91);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

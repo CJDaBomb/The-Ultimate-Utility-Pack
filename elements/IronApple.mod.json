@@ -8,7 +8,7 @@
     "name": "Iron Apple",
     "specialInfo": [],
     "creativeTab": {
-      "value": "FOOD"
+      "value": "CUSTOM:UltimateUtilityFood"
     },
     "stackSize": 64,
     "nutritionalValue": 4,
@@ -17,6 +17,9 @@
     "forDogs": false,
     "isAlwaysEdible": false,
     "animation": "eat",
-    "hasGlow": false
+    "hasGlow": false,
+    "onEaten": {
+      "name": "IronAppleFoodEaten"
+    }
   }
 }

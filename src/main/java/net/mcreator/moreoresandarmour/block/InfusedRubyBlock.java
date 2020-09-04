@@ -38,7 +38,7 @@ public class InfusedRubyBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:infused_ruby")
 	public static final Block block = null;
 	public InfusedRubyBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 57);
+		super(instance, 61);
 	}
 
 	@Override

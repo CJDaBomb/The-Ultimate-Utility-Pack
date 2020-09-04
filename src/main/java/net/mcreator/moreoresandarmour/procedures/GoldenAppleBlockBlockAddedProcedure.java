@@ -30,7 +30,7 @@ import java.util.HashMap;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class GoldenAppleBlockBlockAddedProcedure extends MoreOresAndArmourModElements.ModElement {
 	public GoldenAppleBlockBlockAddedProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 464);
+		super(instance, 475);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

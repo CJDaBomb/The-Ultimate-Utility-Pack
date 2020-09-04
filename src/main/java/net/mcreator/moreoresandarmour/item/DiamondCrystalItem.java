@@ -15,7 +15,7 @@ public class DiamondCrystalItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:diamond_crystal")
 	public static final Item block = null;
 	public DiamondCrystalItem(MoreOresAndArmourModElements instance) {
-		super(instance, 469);
+		super(instance, 16);
 	}
 
 	@Override

@@ -27,7 +27,7 @@ public class CarbonBlockBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:carbon_block")
 	public static final Block block = null;
 	public CarbonBlockBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 101);
+		super(instance, 105);
 	}
 
 	@Override

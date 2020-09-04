@@ -15,7 +15,7 @@ public class CherryItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:cherry")
 	public static final Item block = null;
 	public CherryItem(MoreOresAndArmourModElements instance) {
-		super(instance, 478);
+		super(instance, 234);
 	}
 
 	@Override

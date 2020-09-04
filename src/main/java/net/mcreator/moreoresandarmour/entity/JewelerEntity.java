@@ -47,6 +47,7 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.block.material.Material;
 
 import net.mcreator.moreoresandarmour.procedures.JewelerRightClickedOnEntity2Procedure;
+import net.mcreator.moreoresandarmour.procedures.JewelerOnEntityTickUpdateProcedure;
 import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
@@ -60,7 +61,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class JewelerEntity extends MoreOresAndArmourModElements.ModElement {
 	public static EntityType entity = null;
 	public JewelerEntity(MoreOresAndArmourModElements instance) {
-		super(instance, 30);
+		super(instance, 31);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -164,6 +165,7 @@ public class JewelerEntity extends MoreOresAndArmourModElements.ModElement {
 			Entity entity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("sourceentity", sourceentity);
 				$_dependencies.put("itemstack", itemstack);
 				$_dependencies.put("x", x);
@@ -173,6 +175,20 @@ public class JewelerEntity extends MoreOresAndArmourModElements.ModElement {
 				JewelerRightClickedOnEntity2Procedure.executeProcedure($_dependencies);
 			}
 			return retval;
+		}
+
+		@Override
+		public void baseTick() {
+			super.baseTick();
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				JewelerOnEntityTickUpdateProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override

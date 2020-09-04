@@ -17,7 +17,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class GoldenAppleBlockOnBlockRightClickedProcedure extends MoreOresAndArmourModElements.ModElement {
 	public GoldenAppleBlockOnBlockRightClickedProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 465);
+		super(instance, 476);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -11,7 +11,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class OilOverlayDisplayOverlayIngameProcedure extends MoreOresAndArmourModElements.ModElement {
 	public OilOverlayDisplayOverlayIngameProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 460);
+		super(instance, 469);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {

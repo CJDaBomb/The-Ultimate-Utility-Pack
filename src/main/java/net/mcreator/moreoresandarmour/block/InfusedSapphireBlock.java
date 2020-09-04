@@ -38,7 +38,7 @@ public class InfusedSapphireBlock extends MoreOresAndArmourModElements.ModElemen
 	@ObjectHolder("more_ores_and_armour:infused_sapphire")
 	public static final Block block = null;
 	public InfusedSapphireBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 58);
+		super(instance, 62);
 	}
 
 	@Override

@@ -11,7 +11,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class WhenItemTakenFromSlotProcedure extends MoreOresAndArmourModElements.ModElement {
 	public WhenItemTakenFromSlotProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 258);
+		super(instance, 269);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

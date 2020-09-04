@@ -69,7 +69,7 @@ public class GrapeWoodBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:grape_wood")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public GrapeWoodBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 178);
+		super(instance, 180);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

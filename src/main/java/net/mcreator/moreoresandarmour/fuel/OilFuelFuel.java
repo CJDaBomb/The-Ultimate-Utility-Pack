@@ -13,7 +13,7 @@ import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class OilFuelFuel extends MoreOresAndArmourModElements.ModElement {
 	public OilFuelFuel(MoreOresAndArmourModElements instance) {
-		super(instance, 249);
+		super(instance, 261);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

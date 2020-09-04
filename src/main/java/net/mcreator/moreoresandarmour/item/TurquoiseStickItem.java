@@ -23,7 +23,7 @@ public class TurquoiseStickItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:turquoise_stick")
 	public static final Item block = null;
 	public TurquoiseStickItem(MoreOresAndArmourModElements instance) {
-		super(instance, 43);
+		super(instance, 47);
 	}
 
 	@Override

@@ -69,7 +69,7 @@ public class BluestoneLogBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:bluestone_log")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BluestoneLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 66);
+		super(instance, 70);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

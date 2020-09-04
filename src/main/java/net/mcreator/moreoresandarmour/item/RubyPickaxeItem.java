@@ -19,7 +19,7 @@ public class RubyPickaxeItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:ruby_pickaxe")
 	public static final Item block = null;
 	public RubyPickaxeItem(MoreOresAndArmourModElements instance) {
-		super(instance, 196);
+		super(instance, 199);
 	}
 
 	@Override

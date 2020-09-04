@@ -19,7 +19,7 @@ public class RubyAxeItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:ruby_axe")
 	public static final Item block = null;
 	public RubyAxeItem(MoreOresAndArmourModElements instance) {
-		super(instance, 195);
+		super(instance, 198);
 	}
 
 	@Override

@@ -16,7 +16,7 @@ import java.util.Collection;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BleedingOnPotionActiveTickProcedure extends MoreOresAndArmourModElements.ModElement {
 	public BleedingOnPotionActiveTickProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 359);
+		super(instance, 369);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -24,7 +24,7 @@ public class InfusedDiamondBlock extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:infused_diamond")
 	public static final Block block = null;
 	public InfusedDiamondBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 54);
+		super(instance, 58);
 	}
 
 	@Override

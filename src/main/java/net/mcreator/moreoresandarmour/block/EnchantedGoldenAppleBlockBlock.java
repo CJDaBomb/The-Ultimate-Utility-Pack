@@ -17,7 +17,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.Explosion;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.RayTraceResult;
@@ -38,7 +37,6 @@ import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ChestContainer;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -49,17 +47,13 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.moreoresandarmour.procedures.EnchantedGoldenAppleBlockBlockDestroyedByPlayerProcedure;
-import net.mcreator.moreoresandarmour.procedures.EnchantedGoldenAppleBlockBlockDestroyedByExplosionProcedure;
 import net.mcreator.moreoresandarmour.item.GoldenAppleSeedsItem;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
 
 @MoreOresAndArmourModElements.ModElement.Tag
@@ -69,7 +63,7 @@ public class EnchantedGoldenAppleBlockBlock extends MoreOresAndArmourModElements
 	@ObjectHolder("more_ores_and_armour:enchanted_golden_apple_block")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public EnchantedGoldenAppleBlockBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 364);
+		super(instance, 375);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -124,40 +118,6 @@ public class EnchantedGoldenAppleBlockBlock extends MoreOresAndArmourModElements
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(Blocks.AIR, (int) (1)));
-		}
-
-		@Override
-		public boolean removedByPlayer(BlockState state, World world, BlockPos pos, PlayerEntity entity, boolean willHarvest, IFluidState fluid) {
-			boolean retval = super.removedByPlayer(state, world, pos, entity, willHarvest, fluid);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				EnchantedGoldenAppleBlockBlockDestroyedByPlayerProcedure.executeProcedure($_dependencies);
-			}
-			return retval;
-		}
-
-		@Override
-		public void onExplosionDestroy(World world, BlockPos pos, Explosion e) {
-			super.onExplosionDestroy(world, pos, e);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				EnchantedGoldenAppleBlockBlockDestroyedByExplosionProcedure.executeProcedure($_dependencies);
-			}
 		}
 
 		@Override

@@ -38,7 +38,7 @@ public class InfusedTurquoiseBlock extends MoreOresAndArmourModElements.ModEleme
 	@ObjectHolder("more_ores_and_armour:infused_turquoise")
 	public static final Block block = null;
 	public InfusedTurquoiseBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 63);
+		super(instance, 67);
 	}
 
 	@Override

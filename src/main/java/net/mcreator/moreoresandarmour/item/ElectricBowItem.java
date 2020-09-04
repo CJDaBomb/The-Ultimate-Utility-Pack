@@ -63,7 +63,7 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:entitybulletelectric_bow")
 	public static final EntityType arrow = null;
 	public ElectricBowItem(MoreOresAndArmourModElements instance) {
-		super(instance, 222);
+		super(instance, 225);
 	}
 
 	@Override

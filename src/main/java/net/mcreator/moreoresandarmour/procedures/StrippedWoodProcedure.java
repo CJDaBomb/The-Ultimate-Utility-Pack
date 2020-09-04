@@ -45,7 +45,7 @@ import java.util.HashMap;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class StrippedWoodProcedure extends MoreOresAndArmourModElements.ModElement {
 	public StrippedWoodProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 467);
+		super(instance, 481);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

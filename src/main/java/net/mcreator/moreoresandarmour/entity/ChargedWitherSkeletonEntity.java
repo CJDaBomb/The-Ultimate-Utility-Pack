@@ -60,7 +60,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class ChargedWitherSkeletonEntity extends MoreOresAndArmourModElements.ModElement {
 	public static EntityType entity = null;
 	public ChargedWitherSkeletonEntity(MoreOresAndArmourModElements instance) {
-		super(instance, 28);
+		super(instance, 29);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

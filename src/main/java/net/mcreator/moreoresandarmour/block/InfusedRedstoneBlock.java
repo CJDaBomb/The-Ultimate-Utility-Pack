@@ -24,7 +24,7 @@ public class InfusedRedstoneBlock extends MoreOresAndArmourModElements.ModElemen
 	@ObjectHolder("more_ores_and_armour:infused_redstone")
 	public static final Block block = null;
 	public InfusedRedstoneBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 51);
+		super(instance, 55);
 	}
 
 	@Override

@@ -38,7 +38,7 @@ public class InfusedAlexandriteBlock extends MoreOresAndArmourModElements.ModEle
 	@ObjectHolder("more_ores_and_armour:infused_alexandrite")
 	public static final Block block = null;
 	public InfusedAlexandriteBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 61);
+		super(instance, 65);
 	}
 
 	@Override

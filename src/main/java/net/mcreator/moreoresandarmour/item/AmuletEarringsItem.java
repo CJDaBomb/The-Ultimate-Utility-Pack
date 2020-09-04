@@ -15,7 +15,7 @@ public class AmuletEarringsItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:amulet_earrings")
 	public static final Item block = null;
 	public AmuletEarringsItem(MoreOresAndArmourModElements instance) {
-		super(instance, 472);
+		super(instance, 228);
 	}
 
 	@Override

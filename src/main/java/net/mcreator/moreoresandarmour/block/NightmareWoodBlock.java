@@ -69,7 +69,7 @@ public class NightmareWoodBlock extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:nightmare_wood")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public NightmareWoodBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 157);
+		super(instance, 159);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

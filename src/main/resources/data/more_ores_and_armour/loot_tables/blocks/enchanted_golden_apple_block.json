@@ -1,0 +1,51 @@
+ {
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [ 
+        {
+          "type": "minecraft:item",
+           "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                },
+           ],
+          "weight": 50,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+           "name": "minecraft:golden_apple"
+        },
+        {
+          "type": "minecraft:item",
+           "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                },
+           ],
+          "weight": 13,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+           "name": "minecraft:enchanted_golden_apple"
+        }
+      ]
+    }
+  ]
+  
+}

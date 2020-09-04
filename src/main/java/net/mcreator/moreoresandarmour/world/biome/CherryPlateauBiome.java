@@ -45,7 +45,7 @@ public class CherryPlateauBiome extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:cherry_plateau")
 	public static final CustomBiome biome = null;
 	public CherryPlateauBiome(MoreOresAndArmourModElements instance) {
-		super(instance, 354);
+		super(instance, 364);
 	}
 
 	@Override

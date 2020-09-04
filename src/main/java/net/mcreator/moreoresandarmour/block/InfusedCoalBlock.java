@@ -24,7 +24,7 @@ public class InfusedCoalBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:infused_coal")
 	public static final Block block = null;
 	public InfusedCoalBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 49);
+		super(instance, 53);
 	}
 
 	@Override

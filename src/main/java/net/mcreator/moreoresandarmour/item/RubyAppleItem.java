@@ -24,7 +24,7 @@ public class RubyAppleItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:ruby_apple")
 	public static final Item block = null;
 	public RubyAppleItem(MoreOresAndArmourModElements instance) {
-		super(instance, 189);
+		super(instance, 192);
 	}
 
 	@Override
@@ -58,10 +58,6 @@ public class RubyAppleItem extends MoreOresAndArmourModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
 				RubyAppleFoodEatenProcedure.executeProcedure($_dependencies);
 			}
 			return retval;

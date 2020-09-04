@@ -38,7 +38,7 @@ public class SapphireOreBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:sapphire_ore")
 	public static final Block block = null;
 	public SapphireOreBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 48);
+		super(instance, 52);
 	}
 
 	@Override

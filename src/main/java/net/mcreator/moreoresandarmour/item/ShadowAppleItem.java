@@ -24,7 +24,7 @@ public class ShadowAppleItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:shadow_apple")
 	public static final Item block = null;
 	public ShadowAppleItem(MoreOresAndArmourModElements instance) {
-		super(instance, 191);
+		super(instance, 194);
 	}
 
 	@Override

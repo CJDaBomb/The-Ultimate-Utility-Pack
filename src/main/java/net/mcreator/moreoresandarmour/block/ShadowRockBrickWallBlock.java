@@ -13,12 +13,14 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
+import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
@@ -39,7 +41,7 @@ public class ShadowRockBrickWallBlock extends MoreOresAndArmourModElements.ModEl
 	@ObjectHolder("more_ores_and_armour:shadow_rock_brick_wall")
 	public static final Block block = null;
 	public ShadowRockBrickWallBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 136);
+		super(instance, 138);
 	}
 
 	@Override
@@ -132,6 +134,11 @@ public class ShadowRockBrickWallBlock extends MoreOresAndArmourModElements.ModEl
 		@Override
 		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
 			return true;
+		}
+
+		@Override
+		public PathNodeType getAiPathNodeType(BlockState state, IBlockReader world, BlockPos pos, MobEntity entity) {
+			return PathNodeType.FENCE;
 		}
 
 		@Override

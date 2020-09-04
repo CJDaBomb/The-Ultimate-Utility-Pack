@@ -22,7 +22,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ShadowAppleFoodEatenProcedure extends MoreOresAndArmourModElements.ModElement {
 	public ShadowAppleFoodEatenProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 280);
+		super(instance, 291);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -35,6 +35,12 @@ public class ShadowAppleFoodEatenProcedure extends MoreOresAndArmourModElements.
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 9600, (int) 1));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.STRENGTH, (int) 9600, (int) 1));
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, (int) 9600, (int) 1));
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.INVISIBILITY, (int) 9600, (int) 1));
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HASTE, (int) 9600, (int) 1));
 		if ((new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
@@ -49,7 +55,7 @@ public class ShadowAppleFoodEatenProcedure extends MoreOresAndArmourModElements.
 		}.checkGamemode(entity))) {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _setstack = new ItemStack(ShadowIngotItem.block, (int) (1));
-				_setstack.setCount((int) 4);
+				_setstack.setCount((int) (1 + ((new java.util.Random()).nextInt((int) 3 + 1))));
 				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 			}
 		}

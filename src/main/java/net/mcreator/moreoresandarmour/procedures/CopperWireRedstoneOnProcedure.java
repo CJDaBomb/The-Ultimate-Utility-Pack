@@ -17,7 +17,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class CopperWireRedstoneOnProcedure extends MoreOresAndArmourModElements.ModElement {
 	public CopperWireRedstoneOnProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 309);
+		super(instance, 479);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

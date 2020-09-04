@@ -15,7 +15,7 @@ public class AmuletBraceletItem extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:amulet_bracelet")
 	public static final Item block = null;
 	public AmuletBraceletItem(MoreOresAndArmourModElements instance) {
-		super(instance, 470);
+		super(instance, 226);
 	}
 
 	@Override

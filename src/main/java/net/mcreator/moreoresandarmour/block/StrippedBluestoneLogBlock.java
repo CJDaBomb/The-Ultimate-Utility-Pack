@@ -61,7 +61,7 @@ public class StrippedBluestoneLogBlock extends MoreOresAndArmourModElements.ModE
 	@ObjectHolder("more_ores_and_armour:stripped_bluestone_log")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public StrippedBluestoneLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 84);
+		super(instance, 88);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

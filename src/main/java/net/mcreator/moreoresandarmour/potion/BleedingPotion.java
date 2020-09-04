@@ -29,7 +29,7 @@ public class BleedingPotion extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:bleeding")
 	public static final Potion potionType = null;
 	public BleedingPotion(MoreOresAndArmourModElements instance) {
-		super(instance, 360);
+		super(instance, 370);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -109,6 +109,7 @@ public class BleedingPotion extends MoreOresAndArmourModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
 				BleedingOnPotionActiveTickProcedure.executeProcedure($_dependencies);
 			}
 		}

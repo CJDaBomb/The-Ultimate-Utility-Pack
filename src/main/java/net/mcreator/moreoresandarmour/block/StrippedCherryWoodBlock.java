@@ -62,7 +62,7 @@ public class StrippedCherryWoodBlock extends MoreOresAndArmourModElements.ModEle
 	@ObjectHolder("more_ores_and_armour:stripped_cherry_wood")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public StrippedCherryWoodBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 175);
+		super(instance, 177);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

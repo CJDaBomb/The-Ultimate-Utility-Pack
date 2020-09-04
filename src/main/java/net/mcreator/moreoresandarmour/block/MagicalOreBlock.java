@@ -24,7 +24,7 @@ public class MagicalOreBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:magical_ore")
 	public static final Block block = null;
 	public MagicalOreBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 83);
+		super(instance, 87);
 	}
 
 	@Override

@@ -62,7 +62,7 @@ public class StrippedCherryLogBlock extends MoreOresAndArmourModElements.ModElem
 	@ObjectHolder("more_ores_and_armour:stripped_cherry_log")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public StrippedCherryLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 86);
+		super(instance, 90);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -36,7 +36,7 @@ public class AlexandriteArmourItem extends MoreOresAndArmourModElements.ModEleme
 	@ObjectHolder("more_ores_and_armour:alexandrite_armour_boots")
 	public static final Item boots = null;
 	public AlexandriteArmourItem(MoreOresAndArmourModElements instance) {
-		super(instance, 215);
+		super(instance, 218);
 	}
 
 	@Override

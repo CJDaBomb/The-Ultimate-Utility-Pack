@@ -20,7 +20,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ChorusFruitEatenProcedure extends MoreOresAndArmourModElements.ModElement {
 	public ChorusFruitEatenProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 468);
+		super(instance, 482);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

@@ -15,7 +15,7 @@ public class TurquoiseCrystalItem extends MoreOresAndArmourModElements.ModElemen
 	@ObjectHolder("more_ores_and_armour:turquoise_crystal")
 	public static final Item block = null;
 	public TurquoiseCrystalItem(MoreOresAndArmourModElements instance) {
-		super(instance, 23);
+		super(instance, 24);
 	}
 
 	@Override

@@ -24,7 +24,7 @@ public class InfusedGoldBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:infused_gold")
 	public static final Block block = null;
 	public InfusedGoldBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 52);
+		super(instance, 56);
 	}
 
 	@Override

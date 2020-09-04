@@ -23,7 +23,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class SapphireOreBlockDestroyedByPlayerProcedure extends MoreOresAndArmourModElements.ModElement {
 	public SapphireOreBlockDestroyedByPlayerProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 423);
+		super(instance, 434);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

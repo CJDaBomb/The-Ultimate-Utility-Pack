@@ -45,7 +45,7 @@ import java.util.HashMap;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModElement {
 	public StrippedLogsProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 467);
+		super(instance, 480);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

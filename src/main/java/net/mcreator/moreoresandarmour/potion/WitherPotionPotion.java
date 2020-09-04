@@ -27,7 +27,7 @@ public class WitherPotionPotion extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:wither_potion")
 	public static final Potion potionType = null;
 	public WitherPotionPotion(MoreOresAndArmourModElements instance) {
-		super(instance, 228);
+		super(instance, 240);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

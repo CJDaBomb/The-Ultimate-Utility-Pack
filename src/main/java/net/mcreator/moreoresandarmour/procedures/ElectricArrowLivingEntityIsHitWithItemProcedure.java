@@ -11,7 +11,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ElectricArrowLivingEntityIsHitWithItemProcedure extends MoreOresAndArmourModElements.ModElement {
 	public ElectricArrowLivingEntityIsHitWithItemProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 263);
+		super(instance, 274);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

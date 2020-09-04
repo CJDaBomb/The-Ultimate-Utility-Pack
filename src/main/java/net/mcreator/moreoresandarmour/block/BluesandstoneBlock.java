@@ -24,7 +24,7 @@ public class BluesandstoneBlock extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:bluesandstone")
 	public static final Block block = null;
 	public BluesandstoneBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 97);
+		super(instance, 101);
 	}
 
 	@Override

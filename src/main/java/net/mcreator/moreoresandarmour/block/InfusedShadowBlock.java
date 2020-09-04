@@ -38,7 +38,7 @@ public class InfusedShadowBlock extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:infused_shadow")
 	public static final Block block = null;
 	public InfusedShadowBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 62);
+		super(instance, 66);
 	}
 
 	@Override
