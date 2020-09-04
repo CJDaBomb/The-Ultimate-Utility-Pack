@@ -28,7 +28,7 @@ public class SapphireTickProcedure extends MoreOresAndArmourModElements.ModEleme
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((entity.getPersistentData().getBoolean("SapphireIncreased")) == (true))) {
+		if (((entity.getPersistentData().getBoolean("sapphireIncreased")) == (true))) {
 			{
 				double _setval = (double) (((entity.getCapability(MoreOresAndArmourModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new MoreOresAndArmourModVariables.PlayerVariables())).attack) + 1);
@@ -39,6 +39,7 @@ public class SapphireTickProcedure extends MoreOresAndArmourModElements.ModEleme
 			}
 			if ((((entity.getCapability(MoreOresAndArmourModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new MoreOresAndArmourModVariables.PlayerVariables())).attack) == 400)) {
+				entity.getPersistentData().putBoolean("sapphireIncreased", (false));
 				{
 					double _setval = (double) 0;
 					entity.getCapability(MoreOresAndArmourModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -46,7 +47,6 @@ public class SapphireTickProcedure extends MoreOresAndArmourModElements.ModEleme
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				entity.getPersistentData().putBoolean("SapphireIncreased", (false));
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Your 20 Seconds of Increased Strength are Over"), (false));
 				}

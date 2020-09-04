@@ -5,11 +5,17 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.World;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.moreoresandarmour.procedures.BleedingEnchantItemItemIsCraftedsmeltedProcedure;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
+
+import java.util.Map;
+import java.util.HashMap;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BleedingEnchantItemItem extends MoreOresAndArmourModElements.ModElement {
@@ -48,6 +54,19 @@ public class BleedingEnchantItemItem extends MoreOresAndArmourModElements.ModEle
 		@OnlyIn(Dist.CLIENT)
 		public boolean hasEffect(ItemStack itemstack) {
 			return true;
+		}
+
+		@Override
+		public void onCreated(ItemStack itemstack, World world, PlayerEntity entity) {
+			super.onCreated(itemstack, world, entity);
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				BleedingEnchantItemItemIsCraftedsmeltedProcedure.executeProcedure($_dependencies);
+			}
 		}
 	}
 }

@@ -6096,6 +6096,23 @@
           }
         ]
       }
+    },
+    {
+      "name": "EnchantedTotemRightClickedInAir",
+      "type": "procedure",
+      "sortid": 503,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "enchanted_totem_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -6103,12 +6120,6 @@
       "name": "bleedingTicks",
       "type": "number",
       "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "levitationTimer",
-      "type": "number",
-      "scope": "player_persistent",
       "value": "0"
     },
     {

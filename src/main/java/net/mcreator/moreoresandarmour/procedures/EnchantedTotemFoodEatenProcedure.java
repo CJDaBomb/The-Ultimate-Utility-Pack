@@ -31,8 +31,6 @@ public class EnchantedTotemFoodEatenProcedure extends MoreOresAndArmourModElemen
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		Minecraft.getInstance().gameRenderer.displayItemActivation(
-				/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 10000, (int) 3));
 		if (entity instanceof LivingEntity)
