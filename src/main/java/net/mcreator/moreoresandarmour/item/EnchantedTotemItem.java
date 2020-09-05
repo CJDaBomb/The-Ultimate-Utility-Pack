@@ -6,16 +6,12 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
-import net.minecraft.util.Hand;
-import net.minecraft.util.ActionResult;
 import net.minecraft.item.UseAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 
-import net.mcreator.moreoresandarmour.procedures.EnchantedTotemRightClickedInAirProcedure;
 import net.mcreator.moreoresandarmour.procedures.EnchantedTotemFoodEatenProcedure;
 import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityFoodItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
@@ -51,21 +47,6 @@ public class EnchantedTotemItem extends MoreOresAndArmourModElements.ModElement 
 		@Override
 		public UseAction getUseAction(ItemStack par1ItemStack) {
 			return UseAction.EAT;
-		}
-
-		@Override
-		public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
-			ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
-			ItemStack itemstack = ar.getResult();
-			double x = entity.getPosX();
-			double y = entity.getPosY();
-			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				EnchantedTotemRightClickedInAirProcedure.executeProcedure($_dependencies);
-			}
-			return ar;
 		}
 
 		@Override

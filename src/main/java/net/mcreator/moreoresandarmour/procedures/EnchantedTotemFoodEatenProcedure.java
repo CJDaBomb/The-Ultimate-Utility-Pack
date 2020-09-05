@@ -15,6 +15,8 @@ import net.minecraft.client.network.play.NetworkPlayerInfo;
 import net.minecraft.client.entity.player.ClientPlayerEntity;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.moreoresandarmour.item.EnchantedTotemItem;
+import net.mcreator.moreoresandarmour.MoreOresAndArmourModVariables;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
 import java.util.Map;
@@ -31,6 +33,14 @@ public class EnchantedTotemFoodEatenProcedure extends MoreOresAndArmourModElemen
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
+		{
+			ItemStack _setval = new ItemStack(EnchantedTotemItem.block, (int) (1));
+			entity.getCapability(MoreOresAndArmourModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.enchantedToem = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		entity.getPersistentData().putBoolean("showTotemAnimation", (true));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 10000, (int) 3));
 		if (entity instanceof LivingEntity)

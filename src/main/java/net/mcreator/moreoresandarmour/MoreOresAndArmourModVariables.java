@@ -23,6 +23,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.nbt.INBT;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
@@ -210,6 +211,7 @@ public class MoreOresAndArmourModVariables {
 			nbt.putBoolean("startTimer", instance.startTimer);
 			nbt.putBoolean("IsFlying", instance.IsFlying);
 			nbt.putDouble("attack", instance.attack);
+			nbt.put("enchantedToem", instance.enchantedToem.write(new CompoundNBT()));
 			return nbt;
 		}
 
@@ -219,6 +221,7 @@ public class MoreOresAndArmourModVariables {
 			instance.startTimer = nbt.getBoolean("startTimer");
 			instance.IsFlying = nbt.getBoolean("IsFlying");
 			instance.attack = nbt.getDouble("attack");
+			instance.enchantedToem = ItemStack.read(nbt.getCompound("enchantedToem"));
 		}
 	}
 
@@ -226,6 +229,7 @@ public class MoreOresAndArmourModVariables {
 		public boolean startTimer = false;
 		public boolean IsFlying = false;
 		public double attack = 0;
+		public ItemStack enchantedToem = ItemStack.EMPTY;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				MoreOresAndArmourMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -263,6 +267,7 @@ public class MoreOresAndArmourModVariables {
 			clone.startTimer = original.startTimer;
 			clone.IsFlying = original.IsFlying;
 			clone.attack = original.attack;
+			clone.enchantedToem = original.enchantedToem;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -289,6 +294,7 @@ public class MoreOresAndArmourModVariables {
 					variables.startTimer = message.data.startTimer;
 					variables.IsFlying = message.data.IsFlying;
 					variables.attack = message.data.attack;
+					variables.enchantedToem = message.data.enchantedToem;
 				}
 			});
 			context.setPacketHandled(true);

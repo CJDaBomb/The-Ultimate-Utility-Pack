@@ -18,9 +18,6 @@
     "isAlwaysEdible": true,
     "animation": "eat",
     "hasGlow": true,
-    "onRightClicked": {
-      "name": "EnchantedTotemRightClickedInAir"
-    },
     "onEaten": {
       "name": "EnchantedTotemFoodEaten"
     }
