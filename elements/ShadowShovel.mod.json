@@ -1,0 +1,30 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "shadow_shovel",
+    "customModelName": "Normal",
+    "name": "Shadow Shovel",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:UltimateUtilityTools"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 8,
+    "efficiency": 20.0,
+    "attackSpeed": 1.3,
+    "enchantability": 52,
+    "damageVsEntity": 4.3,
+    "usageCount": 6000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:ShadowIngot"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

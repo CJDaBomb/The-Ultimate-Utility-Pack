@@ -56,7 +56,7 @@ public class BlueberryJungleBiome extends MoreOresAndArmourModElements.ModElemen
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		BiomeManager.addSpawnBiome(biome);
-		BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(biome, 10));
+		BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(biome, 1));
 	}
 	static class CustomBiome extends Biome {
 		public CustomBiome() {

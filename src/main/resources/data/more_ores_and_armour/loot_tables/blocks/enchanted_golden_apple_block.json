@@ -9,7 +9,7 @@
            "conditions": [
                 {
                   "condition": "minecraft:survives_explosion"
-                },
+                }
            ],
           "weight": 50,
           "functions": [
@@ -29,7 +29,7 @@
            "conditions": [
                 {
                   "condition": "minecraft:survives_explosion"
-                },
+                }
            ],
           "weight": 13,
           "functions": [

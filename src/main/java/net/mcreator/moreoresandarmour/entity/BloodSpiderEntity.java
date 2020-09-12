@@ -44,7 +44,6 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.moreoresandarmour.procedures.BloodSpiderPlayerCollidesWithThisEntityProcedure;
-import net.mcreator.moreoresandarmour.procedures.BloodSpiderDiesProcedure;
 import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
@@ -164,26 +163,6 @@ public class BloodSpiderEntity extends MoreOresAndArmourModElements.ModElement {
 		}
 
 		@Override
-		public void onDeath(DamageSource source) {
-			super.onDeath(source);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity sourceentity = source.getTrueSource();
-			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("sourceentity", sourceentity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				BloodSpiderDiesProcedure.executeProcedure($_dependencies);
-			}
-		}
-
-		@Override
 		public void onCollideWithPlayer(PlayerEntity sourceentity) {
 			super.onCollideWithPlayer(sourceentity);
 			Entity entity = this;
@@ -193,6 +172,7 @@ public class BloodSpiderEntity extends MoreOresAndArmourModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("sourceentity", sourceentity);
+				$_dependencies.put("world", world);
 				BloodSpiderPlayerCollidesWithThisEntityProcedure.executeProcedure($_dependencies);
 			}
 		}

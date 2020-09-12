@@ -1,0 +1,30 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "shadow_axe",
+    "customModelName": "Normal",
+    "name": "Shadow Axe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:UltimateUtilityTools"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 8,
+    "efficiency": 19.0,
+    "attackSpeed": 1.8,
+    "enchantability": 52,
+    "damageVsEntity": 13.2,
+    "usageCount": 6000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:ShadowIngot"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

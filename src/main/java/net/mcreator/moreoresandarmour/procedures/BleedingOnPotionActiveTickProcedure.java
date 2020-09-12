@@ -88,7 +88,7 @@ public class BleedingOnPotionActiveTickProcedure extends MoreOresAndArmourModEle
 			if (((MoreOresAndArmourModVariables.MapVariables.get(world).bleedingTicks) == 20)) {
 				if (entity instanceof LivingEntity) {
 					DamageSource a = new DamageSource("cursed_blood").setDamageBypassesArmor();
-					((LivingEntity) entity).attackEntityFrom(a, (1 + ((new java.util.Random()).nextInt((int) 2 + 1))));
+					((LivingEntity) entity).attackEntityFrom(a, (1 + ((new java.util.Random()).nextInt((int) 3 + 1))));
 				}
 				MoreOresAndArmourModVariables.MapVariables.get(world).bleedingTicks = (double) 0;
 				MoreOresAndArmourModVariables.MapVariables.get(world).syncData(world);

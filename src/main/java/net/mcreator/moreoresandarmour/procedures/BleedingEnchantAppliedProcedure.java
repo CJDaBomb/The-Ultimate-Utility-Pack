@@ -46,13 +46,13 @@ public class BleedingEnchantAppliedProcedure extends MoreOresAndArmourModElement
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 2)) {
 			if ((((new java.util.Random()).nextInt((int) 3 + 1)) == 1)) {
 				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 700, (int) 1));
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 700, (int) 2));
 			}
 		} else if (((EnchantmentHelper.getEnchantmentLevel(BleedingEnchantEnchantment.enchantment,
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 3)) {
 			if ((((new java.util.Random()).nextInt((int) 2 + 1)) == 1)) {
 				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 800, (int) 1));
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 800, (int) 3));
 			}
 		}
 	}

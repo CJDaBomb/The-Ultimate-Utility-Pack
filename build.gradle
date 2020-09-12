@@ -49,6 +49,7 @@ minecraft {
             }
         }
     }
+    
 }
 
 dependencies {

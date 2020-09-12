@@ -107,6 +107,8 @@ public class MoreOresAndArmourModVariables {
 		public double bleedingTicks = 0;
 		public double oilBarrelTicks = 0;
 		public double witherTicks = 0;
+		public ItemStack sword = ItemStack.EMPTY;
+		public ItemStack bow = ItemStack.EMPTY;
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -120,6 +122,8 @@ public class MoreOresAndArmourModVariables {
 			bleedingTicks = nbt.getDouble("bleedingTicks");
 			oilBarrelTicks = nbt.getDouble("oilBarrelTicks");
 			witherTicks = nbt.getDouble("witherTicks");
+			sword = ItemStack.read(nbt.getCompound("sword"));
+			bow = ItemStack.read(nbt.getCompound("bow"));
 		}
 
 		@Override
@@ -127,6 +131,8 @@ public class MoreOresAndArmourModVariables {
 			nbt.putDouble("bleedingTicks", bleedingTicks);
 			nbt.putDouble("oilBarrelTicks", oilBarrelTicks);
 			nbt.putDouble("witherTicks", witherTicks);
+			nbt.put("sword", sword.write(new CompoundNBT()));
+			nbt.put("bow", bow.write(new CompoundNBT()));
 			return nbt;
 		}
 

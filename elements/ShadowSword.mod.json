@@ -1,0 +1,30 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "shadow2_sword",
+    "customModelName": "Normal",
+    "name": "Shadow Sword",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:UltimateUtilityCombat"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 8,
+    "efficiency": 20.0,
+    "attackSpeed": 1.7000000000000002,
+    "enchantability": 52,
+    "damageVsEntity": 15.4,
+    "usageCount": 6000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:ShadowIngot"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -2126,6 +2126,10 @@
           {
             "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -4765,15 +4769,6 @@
       }
     },
     {
-      "name": "VillageTradeAdder",
-      "type": "code",
-      "sortid": 464,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {},
-      "registry_name": "village_trade_adder"
-    },
-    {
       "name": "WandererTradeAdder",
       "type": "code",
       "sortid": 465,
@@ -5535,7 +5530,7 @@
       "type": "recipe",
       "sortid": 483,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "oil_barrel_recipe"
     },
@@ -6113,6 +6108,81 @@
           }
         ]
       }
+    },
+    {
+      "name": "WandererTradesAdder",
+      "type": "code",
+      "sortid": 507,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "wanderer_trades_adder"
+    },
+    {
+      "name": "VillagerTradeAdder",
+      "type": "code",
+      "sortid": 508,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "villager_trade_adder"
+    },
+    {
+      "name": "ChargedWitherSkeletonOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 509,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charged_wither_skeleton_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShadowSword",
+      "type": "tool",
+      "sortid": 510,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_sword"
+    },
+    {
+      "name": "ShadowPickaxe",
+      "type": "tool",
+      "sortid": 510,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_pickaxe"
+    },
+    {
+      "name": "ShadowAxe",
+      "type": "tool",
+      "sortid": 510,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_axe"
+    },
+    {
+      "name": "ShadowShovel",
+      "type": "tool",
+      "sortid": 510,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_shovel"
     }
   ],
   "variable_elements": [
@@ -6157,11 +6227,24 @@
       "type": "itemstack",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "sword",
+      "type": "itemstack",
+      "scope": "map",
+      "value": ""
+    },
+    {
+      "name": "bow",
+      "type": "itemstack",
+      "scope": "map",
+      "value": ""
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.more_ores_and_armour.shadow_shovel": "Shadow Shovel",
       "item.more_ores_and_armour.aluminum_armour_helmet": "Aluminum  Helmet",
       "item.more_ores_and_armour.ruby_armourbody": "Ruby Chestplate",
       "item.more_ores_and_armour.aluminum_shovel": "Aluminum Shovel",
@@ -6193,9 +6276,9 @@
       "block.more_ores_and_armour.electric_furnace_on": "Electric Furnace",
       "item.minecraft.lingering_potion.effect.bleeding": "Lingering Bleeding",
       "block.more_ores_and_armour.cherry_trapdoor": "Cherry Trapdoor",
-      "item.more_ores_and_armour.loot_creeper": "Loot Creeper Spawn Egg",
-      "block.more_ores_and_armour.copper_block": "Copper Block",
       "block.more_ores_and_armour.bluestone_leaves": "Bluestone Leaves",
+      "block.more_ores_and_armour.copper_block": "Copper Block",
+      "item.more_ores_and_armour.loot_creeper": "Loot Creeper Spawn Egg",
       "block.more_ores_and_armour.stripped_blueberry_wood": "Stripped Blueberry Wood",
       "block.more_ores_and_armour.nightmare_planks": "Nightmare Planks",
       "item.more_ores_and_armour.alexandrite_armourboots": "Alexandrite Armour Boots",
@@ -6378,8 +6461,10 @@
       "block.more_ores_and_armour.blue_sandstone_stairs": "Blue Sandstone Stairs",
       "block.more_ores_and_armour.blueberry_planks": "Blueberry Planks",
       "item.more_ores_and_armour.copper_armorboots": "Copper Boots",
+      "item.more_ores_and_armour.shadow_axe": "Shadow Axe",
       "block.more_ores_and_armour.alexandrite_block": "Alexandrite Block",
       "block.more_ores_and_armour.blueberry_slab": "Blueberry Slab",
+      "item.more_ores_and_armour.shadow_pickaxe": "Shadow Pickaxe",
       "item.more_ores_and_armour.alexandrite": "Alexandrite",
       "item.more_ores_and_armour.enchanted_totem": "Enchanted Totem",
       "entity.more_ores_and_armour.jeweler": "Jeweler",
@@ -6433,6 +6518,7 @@
       "item.more_ores_and_armour.copper_armor_helmet": "Copper Helmet",
       "item.more_ores_and_armour.other_world": "Other World Linker",
       "block.more_ores_and_armour.nightmare_log": "Nightmare Log",
+      "item.more_ores_and_armour.shadow_sword": "Shadow Sword",
       "item.more_ores_and_armour.amulet_of_strenth": "Amulet Of Strenth",
       "block.more_ores_and_armour.nightmare_leaves": "Nightmare Leaves",
       "block.more_ores_and_armour.shadow_rock_brick_stairs": "Shadow Rock Brick Stairs",
