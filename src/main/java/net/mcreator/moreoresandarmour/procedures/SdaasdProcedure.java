@@ -1,22 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.moreoresandarmour.item.RubyItem;
-import net.mcreator.moreoresandarmour.block.NightmarePlanksBlock;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class SdaasdProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public SdaasdProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 198);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -24,7 +13,9 @@ public class SdaasdProcedure extends MoreOresAndArmourModElements.ModElement {
 			System.err.println("Failed to load dependency sourceentity for procedure Sdaasd!");
 			return;
 		}
+
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
+
 		if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(RubyItem.block, (int) (1)).getItem())) {
 			if (sourceentity instanceof PlayerEntity) {
@@ -33,5 +24,7 @@ public class SdaasdProcedure extends MoreOresAndArmourModElements.ModElement {
 				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) sourceentity), _setstack);
 			}
 		}
+
 	}
+
 }

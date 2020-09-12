@@ -52,7 +52,7 @@
       "value": ""
     },
     "offsetType": "NONE",
-    "aiPathNodeType": "DEFAULT",
+    "aiPathNodeType": "TRAPDOOR",
     "flammability": 5,
     "fireSpreadSpeed": 0,
     "isLadder": false,

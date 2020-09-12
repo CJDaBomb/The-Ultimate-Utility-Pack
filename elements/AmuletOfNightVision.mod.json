@@ -24,7 +24,7 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onItemInInventoryTick": {
+    "onRightClickedInAir": {
       "name": "AmuletOfNightVisionItemInInventoryTick"
     }
   }

@@ -15,7 +15,7 @@ public class RedstoneCrystalItem extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:redstone_crystal")
 	public static final Item block = null;
 	public RedstoneCrystalItem(MoreOresAndArmourModElements instance) {
-		super(instance, 20);
+		super(instance, 21);
 	}
 
 	@Override

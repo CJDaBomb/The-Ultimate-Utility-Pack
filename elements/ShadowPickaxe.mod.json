@@ -1,0 +1,30 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "shadow_pickaxe",
+    "customModelName": "Normal",
+    "name": "Shadow Pickaxe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:UltimateUtilityTools"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 8,
+    "efficiency": 20.0,
+    "attackSpeed": 1.2000000000000002,
+    "enchantability": 52,
+    "damageVsEntity": 4.3,
+    "usageCount": 6000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:ShadowIngot"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

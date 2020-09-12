@@ -1,21 +1,12 @@
 
 package net.mcreator.moreoresandarmour.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
-
-import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityToolsItemGroup;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class SapphireShovelItem extends MoreOresAndArmourModElements.ModElement {
+
 	@ObjectHolder("more_ores_and_armour:sapphire_shovel")
 	public static final Item block = null;
+
 	public SapphireShovelItem(MoreOresAndArmourModElements instance) {
 		super(instance, 126);
 	}
@@ -47,6 +38,8 @@ public class SapphireShovelItem extends MoreOresAndArmourModElements.ModElement 
 				return Ingredient.fromStacks(new ItemStack(SapphireItem.block, (int) (1)));
 			}
 		}, 1, -3f, new Item.Properties().group(UltimateUtilityToolsItemGroup.tab)) {
+
 		}.setRegistryName("sapphire_shovel"));
 	}
+
 }

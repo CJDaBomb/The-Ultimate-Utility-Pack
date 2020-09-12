@@ -12,11 +12,13 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effect;
-import net.minecraft.entity.ai.attributes.AbstractAttributeMap;
 import net.minecraft.entity.LivingEntity;
 
 import net.mcreator.moreoresandarmour.procedures.WitherPotionPotionStartedappliedProcedure;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
+
+import java.util.Map;
+import java.util.HashMap;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class WitherPotionPotion extends MoreOresAndArmourModElements.ModElement {
@@ -25,7 +27,7 @@ public class WitherPotionPotion extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:wither_potion")
 	public static final Potion potionType = null;
 	public WitherPotionPotion(MoreOresAndArmourModElements instance) {
-		super(instance, 21);
+		super(instance, 240);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -54,6 +56,11 @@ public class WitherPotionPotion extends MoreOresAndArmourModElements.ModElement 
 		}
 
 		@Override
+		public String getName() {
+			return "effect.wither_potion";
+		}
+
+		@Override
 		public boolean isBeneficial() {
 			return false;
 		}
@@ -79,14 +86,15 @@ public class WitherPotionPotion extends MoreOresAndArmourModElements.ModElement 
 		}
 
 		@Override
-		public void applyAttributesModifiersToEntity(LivingEntity entity, AbstractAttributeMap attributeMapIn, int amplifier) {
+		public void performEffect(LivingEntity entity, int amplifier) {
 			World world = entity.world;
-			int x = (int) entity.getPosX();
-			int y = (int) entity.getPosY();
-			int z = (int) entity.getPosZ();
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
 			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
 				WitherPotionPotionStartedappliedProcedure.executeProcedure($_dependencies);
 			}
 		}

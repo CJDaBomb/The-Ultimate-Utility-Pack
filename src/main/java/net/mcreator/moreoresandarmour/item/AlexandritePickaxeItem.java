@@ -1,21 +1,12 @@
 
 package net.mcreator.moreoresandarmour.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
-
-import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityToolsItemGroup;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class AlexandritePickaxeItem extends MoreOresAndArmourModElements.ModElement {
+
 	@ObjectHolder("more_ores_and_armour:alexandrite_pickaxe")
 	public static final Item block = null;
+
 	public AlexandritePickaxeItem(MoreOresAndArmourModElements instance) {
 		super(instance, 128);
 	}
@@ -47,6 +38,8 @@ public class AlexandritePickaxeItem extends MoreOresAndArmourModElements.ModElem
 				return Ingredient.fromStacks(new ItemStack(AlexandriteItem.block, (int) (1)));
 			}
 		}, 1, -2.8f, new Item.Properties().group(UltimateUtilityToolsItemGroup.tab)) {
+
 		}.setRegistryName("alexandrite_pickaxe"));
 	}
+
 }

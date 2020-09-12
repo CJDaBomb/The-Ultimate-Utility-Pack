@@ -17,6 +17,9 @@
     "forDogs": false,
     "isAlwaysEdible": true,
     "animation": "eat",
-    "hasGlow": true
+    "hasGlow": true,
+    "onEaten": {
+      "name": "AlexadriteAppleFoodEaten"
+    }
   }
 }

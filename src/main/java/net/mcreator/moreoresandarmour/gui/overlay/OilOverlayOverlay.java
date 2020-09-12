@@ -24,7 +24,7 @@ import com.google.common.collect.ImmutableMap;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class OilOverlayOverlay extends MoreOresAndArmourModElements.ModElement {
 	public OilOverlayOverlay(MoreOresAndArmourModElements instance) {
-		super(instance, 459);
+		super(instance, 468);
 	}
 
 	@Override

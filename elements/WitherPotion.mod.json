@@ -2,7 +2,7 @@
   "_fv": 10,
   "_type": "potion",
   "definition": {
-    "name": "Wither",
+    "name": "Decay",
     "effectName": "Wither",
     "icon": "wither.png",
     "color": {
@@ -15,7 +15,7 @@
     "registerPotionType": true,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
-    "onStarted": {
+    "onActiveTick": {
       "name": "WitherPotionPotionStartedapplied"
     }
   }

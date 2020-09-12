@@ -1,22 +1,12 @@
 
 package net.mcreator.moreoresandarmour.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.item.UseAction;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.Food;
-
-import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityFoodItemGroup;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class CoalAppleItem extends MoreOresAndArmourModElements.ModElement {
+
 	@ObjectHolder("more_ores_and_armour:coal_apple")
 	public static final Item block = null;
+
 	public CoalAppleItem(MoreOresAndArmourModElements instance) {
 		super(instance, 183);
 	}
@@ -25,10 +15,14 @@ public class CoalAppleItem extends MoreOresAndArmourModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
+
 		public FoodItemCustom() {
 			super(new Item.Properties().group(UltimateUtilityFoodItemGroup.tab).maxStackSize(64)
-					.food((new Food.Builder()).hunger(4).saturation(0.3f).setAlwaysEdible().build()));
+					.food((new Food.Builder()).hunger(4).saturation(0.3f).setAlwaysEdible()
+
+							.build()));
 			setRegistryName("coal_apple");
 		}
 
@@ -42,5 +36,23 @@ public class CoalAppleItem extends MoreOresAndArmourModElements.ModElement {
 		public UseAction getUseAction(ItemStack par1ItemStack) {
 			return UseAction.EAT;
 		}
+
+		@Override
+		public ItemStack onItemUseFinish(ItemStack itemStack, World world, LivingEntity entity) {
+			ItemStack retval = super.onItemUseFinish(itemStack, world, entity);
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+
+				$_dependencies.put("entity", entity);
+
+				CoalAppleFoodEatenProcedure.executeProcedure($_dependencies);
+			}
+			return retval;
+		}
+
 	}
+
 }

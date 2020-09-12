@@ -1,26 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.GameType;
-import net.minecraft.world.Explosion;
-import net.minecraft.particles.ParticleTypes;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.client.network.play.NetworkPlayerInfo;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class LootCreeperPlayerCollidesWithThisEntityProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public LootCreeperPlayerCollidesWithThisEntityProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 74);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -44,11 +29,13 @@ public class LootCreeperPlayerCollidesWithThisEntityProcedure extends MoreOresAn
 			System.err.println("Failed to load dependency world for procedure LootCreeperPlayerCollidesWithThisEntity!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		if ((new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
@@ -68,5 +55,7 @@ public class LootCreeperPlayerCollidesWithThisEntityProcedure extends MoreOresAn
 				((ServerWorld) world).spawnParticle(ParticleTypes.EXPLOSION, x, y, z, (int) 5, 3, 3, 3, 1);
 			}
 		}
+
 	}
+
 }

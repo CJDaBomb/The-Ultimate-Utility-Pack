@@ -18,6 +18,9 @@ import net.minecraft.entity.LivingEntity;
 import net.mcreator.moreoresandarmour.procedures.AbsorbsionPotionStartedappliedProcedure;
 import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 
+import java.util.Map;
+import java.util.HashMap;
+
 @MoreOresAndArmourModElements.ModElement.Tag
 public class AbsorbsionPotion extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:absorbsion")
@@ -25,7 +28,7 @@ public class AbsorbsionPotion extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:absorbsion")
 	public static final Potion potionType = null;
 	public AbsorbsionPotion(MoreOresAndArmourModElements instance) {
-		super(instance, 43);
+		super(instance, 257);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -54,6 +57,11 @@ public class AbsorbsionPotion extends MoreOresAndArmourModElements.ModElement {
 		}
 
 		@Override
+		public String getName() {
+			return "effect.absorbsion";
+		}
+
+		@Override
 		public boolean isBeneficial() {
 			return true;
 		}
@@ -65,27 +73,27 @@ public class AbsorbsionPotion extends MoreOresAndArmourModElements.ModElement {
 
 		@Override
 		public boolean shouldRenderInvText(EffectInstance effect) {
-			return true;
+			return false;
 		}
 
 		@Override
 		public boolean shouldRender(EffectInstance effect) {
-			return true;
+			return false;
 		}
 
 		@Override
 		public boolean shouldRenderHUD(EffectInstance effect) {
-			return true;
+			return false;
 		}
 
 		@Override
 		public void applyAttributesModifiersToEntity(LivingEntity entity, AbstractAttributeMap attributeMapIn, int amplifier) {
 			World world = entity.world;
-			int x = (int) entity.getPosX();
-			int y = (int) entity.getPosY();
-			int z = (int) entity.getPosZ();
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
 			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				AbsorbsionPotionStartedappliedProcedure.executeProcedure($_dependencies);
 			}

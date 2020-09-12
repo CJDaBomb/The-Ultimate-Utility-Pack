@@ -1,16 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class JewelerOnInitialEntitySpawnProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public JewelerOnInitialEntitySpawnProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 165);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -22,8 +17,10 @@ public class JewelerOnInitialEntitySpawnProcedure extends MoreOresAndArmourModEl
 			System.err.println("Failed to load dependency world for procedure JewelerOnInitialEntitySpawn!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		if ((!(world.getWorld().isRemote))) {
 			entity.getPersistentData().putDouble("randomTradeItem1", Math.random());
 			if (((entity.getPersistentData().getDouble("randomTradeItem1")) >= 0.917)) {
@@ -136,5 +133,7 @@ public class JewelerOnInitialEntitySpawnProcedure extends MoreOresAndArmourModEl
 				entity.getPersistentData().putDouble("tradeCount6", 1);
 			}
 		}
+
 	}
+
 }

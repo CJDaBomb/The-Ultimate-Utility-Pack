@@ -15,7 +15,7 @@ public class LapisCrystalItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:lapis_crystal")
 	public static final Item block = null;
 	public LapisCrystalItem(MoreOresAndArmourModElements instance) {
-		super(instance, 19);
+		super(instance, 20);
 	}
 
 	@Override

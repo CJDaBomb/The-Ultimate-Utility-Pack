@@ -13,8 +13,8 @@
     "isBad": false,
     "isBenefitical": true,
     "registerPotionType": true,
-    "renderStatusInInventory": true,
-    "renderStatusInHUD": true,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
     "onStarted": {
       "name": "AbsorbsionPotionStartedapplied"
     }

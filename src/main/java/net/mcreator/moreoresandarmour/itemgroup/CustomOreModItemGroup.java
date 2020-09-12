@@ -1,17 +1,9 @@
 
 package net.mcreator.moreoresandarmour.itemgroup;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-
-import net.mcreator.moreoresandarmour.item.RubyItem;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class CustomOreModItemGroup extends MoreOresAndArmourModElements.ModElement {
+
 	public CustomOreModItemGroup(MoreOresAndArmourModElements instance) {
 		super(instance, 18);
 	}
@@ -31,5 +23,7 @@ public class CustomOreModItemGroup extends MoreOresAndArmourModElements.ModEleme
 			}
 		};
 	}
+
 	public static ItemGroup tab;
+
 }

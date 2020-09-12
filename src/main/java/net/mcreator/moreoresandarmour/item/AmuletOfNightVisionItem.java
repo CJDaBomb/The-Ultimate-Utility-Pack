@@ -1,27 +1,12 @@
 
 package net.mcreator.moreoresandarmour.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.World;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.entity.Entity;
-import net.minecraft.block.BlockState;
-
-import net.mcreator.moreoresandarmour.procedures.AmuletOfNightVisionItemInInventoryTickProcedure;
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class AmuletOfNightVisionItem extends MoreOresAndArmourModElements.ModElement {
+
 	@ObjectHolder("more_ores_and_armour:amulet_of_night_vision")
 	public static final Item block = null;
+
 	public AmuletOfNightVisionItem(MoreOresAndArmourModElements instance) {
 		super(instance, 77);
 	}
@@ -30,7 +15,9 @@ public class AmuletOfNightVisionItem extends MoreOresAndArmourModElements.ModEle
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
+
 		public ItemCustom() {
 			super(new Item.Properties().group(CustomOreModItemGroup.tab).maxStackSize(1));
 			setRegistryName("amulet_of_night_vision");
@@ -58,16 +45,23 @@ public class AmuletOfNightVisionItem extends MoreOresAndArmourModElements.ModEle
 		}
 
 		@Override
-		public void inventoryTick(ItemStack itemstack, World world, Entity entity, int slot, boolean selected) {
-			super.inventoryTick(itemstack, world, entity, slot, selected);
+		public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
+			ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
+			ItemStack itemstack = ar.getResult();
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
+
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("entity", entity);
+
 				AmuletOfNightVisionItemInInventoryTickProcedure.executeProcedure($_dependencies);
 			}
+			return ar;
 		}
+
 	}
+
 }

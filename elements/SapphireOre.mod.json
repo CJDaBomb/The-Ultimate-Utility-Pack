@@ -88,12 +88,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onDestroyedByPlayer": {
-      "name": "SapphireOreBlockDestroyedByPlayer"
-    },
-    "onDestroyedByExplosion": {
-      "name": "SapphireOreBlockDestroyedByExplosion"
-    },
     "spawnWorldTypes": [
       "Surface"
     ],

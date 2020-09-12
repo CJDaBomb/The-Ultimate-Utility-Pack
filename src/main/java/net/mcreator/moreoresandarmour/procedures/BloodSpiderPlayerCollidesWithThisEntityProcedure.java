@@ -1,18 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.moreoresandarmour.potion.BleedingPotion;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BloodSpiderPlayerCollidesWithThisEntityProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public BloodSpiderPlayerCollidesWithThisEntityProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 161);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -20,8 +13,34 @@ public class BloodSpiderPlayerCollidesWithThisEntityProcedure extends MoreOresAn
 			System.err.println("Failed to load dependency sourceentity for procedure BloodSpiderPlayerCollidesWithThisEntity!");
 			return;
 		}
+		if (dependencies.get("world") == null) {
+			System.err.println("Failed to load dependency world for procedure BloodSpiderPlayerCollidesWithThisEntity!");
+			return;
+		}
+
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if (sourceentity instanceof LivingEntity)
-			((LivingEntity) sourceentity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) Double.POSITIVE_INFINITY, (int) 1));
+		IWorld world = (IWorld) dependencies.get("world");
+
+		if ((world.getDifficulty() == Difficulty.EASY)) {
+			if ((Math.random() <= 0.6)) {
+				if (sourceentity instanceof LivingEntity)
+					((LivingEntity) sourceentity).addPotionEffect(new EffectInstance(BleedingPotion.potion,
+							(int) (999999 + ((new java.util.Random()).nextInt((int) 999999 + 1))), (int) 1));
+			}
+		} else if ((world.getDifficulty() == Difficulty.NORMAL)) {
+			if ((Math.random() == 0.2)) {
+				if (sourceentity instanceof LivingEntity)
+					((LivingEntity) sourceentity).addPotionEffect(
+							new EffectInstance(BleedingPotion.potion, (int) (999999 + ((new java.util.Random()).nextInt((int) 999999 + 1))),
+									(int) (1 + ((new java.util.Random()).nextInt((int) 1 + 1)))));
+			}
+		} else if ((world.getDifficulty() == Difficulty.HARD)) {
+			if (sourceentity instanceof LivingEntity)
+				((LivingEntity) sourceentity).addPotionEffect(
+						new EffectInstance(BleedingPotion.potion, (int) (999999 + ((new java.util.Random()).nextInt((int) 999999 + 1))),
+								(int) (1 + ((new java.util.Random()).nextInt((int) 2 + 1)))));
+		}
+
 	}
+
 }
