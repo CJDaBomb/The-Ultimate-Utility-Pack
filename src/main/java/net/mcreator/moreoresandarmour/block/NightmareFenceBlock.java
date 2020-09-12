@@ -34,7 +34,7 @@ public class NightmareFenceBlock extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:nightmare_fence")
 	public static final Block block = null;
 	public NightmareFenceBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 116);
+		super(instance, 151);
 	}
 
 	@Override

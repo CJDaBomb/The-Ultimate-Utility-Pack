@@ -17,7 +17,7 @@ public class TurquoisePickaxeItem extends MoreOresAndArmourModElements.ModElemen
 	@ObjectHolder("more_ores_and_armour:turquoise_pickaxe")
 	public static final Item block = null;
 	public TurquoisePickaxeItem(MoreOresAndArmourModElements instance) {
-		super(instance, 205);
+		super(instance, 128);
 	}
 
 	@Override

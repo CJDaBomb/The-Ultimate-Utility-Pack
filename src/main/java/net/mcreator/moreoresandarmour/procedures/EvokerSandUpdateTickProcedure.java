@@ -25,7 +25,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class EvokerSandUpdateTickProcedure extends MoreOresAndArmourModElements.ModElement {
 	public EvokerSandUpdateTickProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 351);
+		super(instance, 175);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

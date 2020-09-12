@@ -41,7 +41,7 @@ public class BlueberryLogBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:blueberry_log")
 	public static final Block block = null;
 	public BlueberryLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 81);
+		super(instance, 183);
 	}
 
 	@Override

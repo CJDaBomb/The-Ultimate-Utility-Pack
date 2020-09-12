@@ -38,7 +38,7 @@ public class CopperWireBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:copper_wire")
 	public static final Block block = null;
 	public CopperWireBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 106);
+		super(instance, 67);
 	}
 
 	@Override

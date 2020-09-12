@@ -33,7 +33,7 @@ public class StrippedBlueberryWoodBlock extends MoreOresAndArmourModElements.Mod
 	@ObjectHolder("more_ores_and_armour:stripped_blueberry_wood")
 	public static final Block block = null;
 	public StrippedBlueberryWoodBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 160);
+		super(instance, 269);
 	}
 
 	@Override

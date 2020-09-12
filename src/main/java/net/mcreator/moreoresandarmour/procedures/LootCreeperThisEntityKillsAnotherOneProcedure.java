@@ -20,7 +20,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class LootCreeperThisEntityKillsAnotherOneProcedure extends MoreOresAndArmourModElements.ModElement {
 	public LootCreeperThisEntityKillsAnotherOneProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 255);
+		super(instance, 62);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -32,7 +32,7 @@ public class StrippedNightmareLogBlock extends MoreOresAndArmourModElements.ModE
 	@ObjectHolder("more_ores_and_armour:stripped_nightmare_log")
 	public static final Block block = null;
 	public StrippedNightmareLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 85);
+		super(instance, 192);
 	}
 
 	@Override

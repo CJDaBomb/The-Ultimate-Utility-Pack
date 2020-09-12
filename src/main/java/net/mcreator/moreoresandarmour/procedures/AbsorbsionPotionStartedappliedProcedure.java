@@ -12,7 +12,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class AbsorbsionPotionStartedappliedProcedure extends MoreOresAndArmourModElements.ModElement {
 	public AbsorbsionPotionStartedappliedProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 244);
+		super(instance, 42);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

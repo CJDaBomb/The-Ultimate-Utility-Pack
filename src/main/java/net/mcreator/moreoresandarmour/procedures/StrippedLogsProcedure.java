@@ -34,7 +34,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModElement {
 	public StrippedLogsProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 438);
+		super(instance, 289);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

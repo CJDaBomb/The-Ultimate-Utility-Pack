@@ -33,7 +33,7 @@ public class StrippedBlueberryLogBlock extends MoreOresAndArmourModElements.ModE
 	@ObjectHolder("more_ores_and_armour:stripped_blueberry_log")
 	public static final Block block = null;
 	public StrippedBlueberryLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 87);
+		super(instance, 194);
 	}
 
 	@Override

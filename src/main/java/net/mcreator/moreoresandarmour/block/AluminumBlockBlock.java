@@ -26,7 +26,7 @@ public class AluminumBlockBlock extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:aluminum_block")
 	public static final Block block = null;
 	public AluminumBlockBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 103);
+		super(instance, 57);
 	}
 
 	@Override

@@ -46,7 +46,7 @@ public class CopperOreBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:copper_ore")
 	public static final Block block = null;
 	public CopperOreBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 47);
+		super(instance, 60);
 	}
 
 	@Override

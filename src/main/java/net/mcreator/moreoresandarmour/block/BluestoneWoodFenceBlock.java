@@ -34,7 +34,7 @@ public class BluestoneWoodFenceBlock extends MoreOresAndArmourModElements.ModEle
 	@ObjectHolder("more_ores_and_armour:bluestone_wood_fence")
 	public static final Block block = null;
 	public BluestoneWoodFenceBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 115);
+		super(instance, 149);
 	}
 
 	@Override

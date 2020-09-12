@@ -33,7 +33,7 @@ public class StrippedNightmareWoodBlock extends MoreOresAndArmourModElements.Mod
 	@ObjectHolder("more_ores_and_armour:stripped_nightmare_wood")
 	public static final Block block = null;
 	public StrippedNightmareWoodBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 158);
+		super(instance, 268);
 	}
 
 	@Override

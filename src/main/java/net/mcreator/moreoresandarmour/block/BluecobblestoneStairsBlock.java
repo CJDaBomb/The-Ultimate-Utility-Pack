@@ -25,7 +25,7 @@ public class BluecobblestoneStairsBlock extends MoreOresAndArmourModElements.Mod
 	@ObjectHolder("more_ores_and_armour:bluecobblestone_stairs")
 	public static final Block block = null;
 	public BluecobblestoneStairsBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 140);
+		super(instance, 246);
 	}
 
 	@Override

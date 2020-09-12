@@ -36,7 +36,7 @@ public class ShadowArmourItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:shadow_armour_boots")
 	public static final Item boots = null;
 	public ShadowArmourItem(MoreOresAndArmourModElements instance) {
-		super(instance, 220);
+		super(instance, 98);
 	}
 
 	@Override

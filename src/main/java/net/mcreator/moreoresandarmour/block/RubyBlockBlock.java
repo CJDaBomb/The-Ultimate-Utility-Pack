@@ -26,7 +26,7 @@ public class RubyBlockBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:ruby_block")
 	public static final Block block = null;
 	public RubyBlockBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 99);
+		super(instance, 3);
 	}
 
 	@Override

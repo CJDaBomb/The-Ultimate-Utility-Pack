@@ -20,7 +20,7 @@ import java.util.Map;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class AmuletOfStrenthRightClickedInAirProcedure extends MoreOresAndArmourModElements.ModElement {
 	public AmuletOfStrenthRightClickedInAirProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 281);
+		super(instance, 96);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

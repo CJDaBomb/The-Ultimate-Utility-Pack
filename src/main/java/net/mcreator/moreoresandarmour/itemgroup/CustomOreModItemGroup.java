@@ -13,7 +13,7 @@ import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
 @MoreOresAndArmourModElements.ModElement.Tag
 public class CustomOreModItemGroup extends MoreOresAndArmourModElements.ModElement {
 	public CustomOreModItemGroup(MoreOresAndArmourModElements instance) {
-		super(instance, 225);
+		super(instance, 18);
 	}
 
 	@Override

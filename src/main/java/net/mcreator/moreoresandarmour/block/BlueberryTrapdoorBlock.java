@@ -32,7 +32,7 @@ public class BlueberryTrapdoorBlock extends MoreOresAndArmourModElements.ModElem
 	@ObjectHolder("more_ores_and_armour:blueberry_trapdoor")
 	public static final Block block = null;
 	public BlueberryTrapdoorBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 165);
+		super(instance, 271);
 	}
 
 	@Override

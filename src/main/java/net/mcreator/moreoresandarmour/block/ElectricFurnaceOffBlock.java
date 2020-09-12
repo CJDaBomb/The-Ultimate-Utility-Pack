@@ -72,7 +72,7 @@ public class ElectricFurnaceOffBlock extends MoreOresAndArmourModElements.ModEle
 	@ObjectHolder("more_ores_and_armour:electric_furnace_off")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public ElectricFurnaceOffBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 113);
+		super(instance, 142);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

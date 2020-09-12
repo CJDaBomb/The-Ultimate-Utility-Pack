@@ -22,6 +22,7 @@ import net.minecraft.item.UseAction;
 import net.minecraft.item.ShootableItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.item.BowItem;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -66,7 +67,8 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 				renderManager -> new SpriteRenderer(renderManager, Minecraft.getInstance().getItemRenderer()));
 	}
 	public static class ItemRanged extends Item {
-		public ItemRanged() {
+		public ItemRanged()
+            {
 			super(new Item.Properties().group(UltimateUtilityCombatItemGroup.tab).maxDamage(384));
 			setRegistryName("electric_bow");
 		}

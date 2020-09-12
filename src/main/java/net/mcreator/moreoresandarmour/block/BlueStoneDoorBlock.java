@@ -34,7 +34,7 @@ public class BlueStoneDoorBlock extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:blue_stone_door")
 	public static final Block block = null;
 	public BlueStoneDoorBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 137);
+		super(instance, 235);
 	}
 
 	@Override

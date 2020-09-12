@@ -32,7 +32,7 @@ public class StrippedBluestoneLogBlock extends MoreOresAndArmourModElements.ModE
 	@ObjectHolder("more_ores_and_armour:stripped_bluestone_log")
 	public static final Block block = null;
 	public StrippedBluestoneLogBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 84);
+		super(instance, 191);
 	}
 
 	@Override

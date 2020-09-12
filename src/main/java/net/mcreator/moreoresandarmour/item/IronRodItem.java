@@ -15,7 +15,7 @@ public class IronRodItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:iron_rod")
 	public static final Item block = null;
 	public IronRodItem(MoreOresAndArmourModElements instance) {
-		super(instance, 40);
+		super(instance, 208);
 	}
 
 	@Override

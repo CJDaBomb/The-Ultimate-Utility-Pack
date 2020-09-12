@@ -45,7 +45,7 @@ public class GrapeWoodsBiome extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:grape_woods")
 	public static final CustomBiome biome = null;
 	public GrapeWoodsBiome(MoreOresAndArmourModElements instance) {
-		super(instance, 357);
+		super(instance, 188);
 	}
 
 	@Override

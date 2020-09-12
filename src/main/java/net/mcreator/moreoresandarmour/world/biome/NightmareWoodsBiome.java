@@ -47,7 +47,7 @@ public class NightmareWoodsBiome extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:nightmare_woods")
 	public static final CustomBiome biome = null;
 	public NightmareWoodsBiome(MoreOresAndArmourModElements instance) {
-		super(instance, 305);
+		super(instance, 118);
 	}
 
 	@Override

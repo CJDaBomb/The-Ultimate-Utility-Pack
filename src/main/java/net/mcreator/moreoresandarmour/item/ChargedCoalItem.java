@@ -17,7 +17,7 @@ public class ChargedCoalItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:charged_coal")
 	public static final Item block = null;
 	public ChargedCoalItem(MoreOresAndArmourModElements instance) {
-		super(instance, 35);
+		super(instance, 301);
 	}
 
 	@Override

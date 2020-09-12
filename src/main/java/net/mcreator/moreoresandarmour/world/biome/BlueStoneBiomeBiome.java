@@ -50,7 +50,7 @@ public class BlueStoneBiomeBiome extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:blue_stone_biome")
 	public static final CustomBiome biome = null;
 	public BlueStoneBiomeBiome(MoreOresAndArmourModElements instance) {
-		super(instance, 301);
+		super(instance, 114);
 	}
 
 	@Override

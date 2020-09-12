@@ -29,7 +29,7 @@ public class BluestoneBricksSlabBlock extends MoreOresAndArmourModElements.ModEl
 	@ObjectHolder("more_ores_and_armour:bluestone_bricks_slab")
 	public static final Block block = null;
 	public BluestoneBricksSlabBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 142);
+		super(instance, 252);
 	}
 
 	@Override

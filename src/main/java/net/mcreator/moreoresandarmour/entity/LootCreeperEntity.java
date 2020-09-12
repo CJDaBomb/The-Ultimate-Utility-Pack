@@ -55,7 +55,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class LootCreeperEntity extends MoreOresAndArmourModElements.ModElement {
 	public static EntityType entity = null;
 	public LootCreeperEntity(MoreOresAndArmourModElements instance) {
-		super(instance, 31);
+		super(instance, 59);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

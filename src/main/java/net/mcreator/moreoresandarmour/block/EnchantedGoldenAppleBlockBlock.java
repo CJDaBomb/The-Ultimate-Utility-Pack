@@ -39,7 +39,7 @@ public class EnchantedGoldenAppleBlockBlock extends MoreOresAndArmourModElements
 	@ObjectHolder("more_ores_and_armour:enchanted_golden_apple_block")
 	public static final Block block = null;
 	public EnchantedGoldenAppleBlockBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 364);
+		super(instance, 206);
 	}
 
 	@Override

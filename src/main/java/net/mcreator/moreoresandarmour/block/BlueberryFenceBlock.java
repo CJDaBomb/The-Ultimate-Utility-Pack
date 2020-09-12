@@ -34,7 +34,7 @@ public class BlueberryFenceBlock extends MoreOresAndArmourModElements.ModElement
 	@ObjectHolder("more_ores_and_armour:blueberry_fence")
 	public static final Block block = null;
 	public BlueberryFenceBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 164);
+		super(instance, 271);
 	}
 
 	@Override

@@ -39,7 +39,7 @@ public class BlueSandstoneWallBlock extends MoreOresAndArmourModElements.ModElem
 	@ObjectHolder("more_ores_and_armour:blue_sandstone_wall")
 	public static final Block block = null;
 	public BlueSandstoneWallBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 173);
+		super(instance, 277);
 	}
 
 	@Override

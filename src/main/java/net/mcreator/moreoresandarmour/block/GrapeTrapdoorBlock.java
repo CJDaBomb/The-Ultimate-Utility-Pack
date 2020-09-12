@@ -32,7 +32,7 @@ public class GrapeTrapdoorBlock extends MoreOresAndArmourModElements.ModElement 
 	@ObjectHolder("more_ores_and_armour:grape_trapdoor")
 	public static final Block block = null;
 	public GrapeTrapdoorBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 167);
+		super(instance, 273);
 	}
 
 	@Override

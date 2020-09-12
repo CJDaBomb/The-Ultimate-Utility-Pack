@@ -17,7 +17,7 @@ public class TurquoiseAxeItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:turquoise_axe")
 	public static final Item block = null;
 	public TurquoiseAxeItem(MoreOresAndArmourModElements instance) {
-		super(instance, 204);
+		super(instance, 128);
 	}
 
 	@Override

@@ -40,7 +40,7 @@ public class InfusedStoneBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:infused_stone")
 	public static final Block block = null;
 	public InfusedStoneBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 79);
+		super(instance, 181);
 	}
 
 	@Override

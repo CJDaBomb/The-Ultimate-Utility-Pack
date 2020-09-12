@@ -24,7 +24,7 @@ public class ShadowRockBrickBlock extends MoreOresAndArmourModElements.ModElemen
 	@ObjectHolder("more_ores_and_armour:shadow_rock_brick")
 	public static final Block block = null;
 	public ShadowRockBrickBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 90);
+		super(instance, 215);
 	}
 
 	@Override

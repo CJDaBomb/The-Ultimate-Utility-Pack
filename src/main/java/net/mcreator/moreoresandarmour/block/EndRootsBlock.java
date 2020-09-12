@@ -49,7 +49,7 @@ public class EndRootsBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:end_roots")
 	public static final Block block = null;
 	public EndRootsBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 110);
+		super(instance, 99);
 	}
 
 	@Override

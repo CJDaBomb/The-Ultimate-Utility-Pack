@@ -32,7 +32,7 @@ public class InfusedIronBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:infused_iron")
 	public static final Block block = null;
 	public InfusedIronBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 98);
+		super(instance, 287);
 	}
 
 	@Override

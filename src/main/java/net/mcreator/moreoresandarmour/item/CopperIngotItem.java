@@ -15,7 +15,7 @@ public class CopperIngotItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:copper_ingot")
 	public static final Item block = null;
 	public CopperIngotItem(MoreOresAndArmourModElements instance) {
-		super(instance, 6);
+		super(instance, 50);
 	}
 
 	@Override

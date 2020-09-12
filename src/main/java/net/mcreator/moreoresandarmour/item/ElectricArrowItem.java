@@ -23,7 +23,7 @@ public class ElectricArrowItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:electric_arrow")
 	public static final Item block = null;
 	public ElectricArrowItem(MoreOresAndArmourModElements instance) {
-		super(instance, 38);
+		super(instance, 74);
 	}
 
 	@Override

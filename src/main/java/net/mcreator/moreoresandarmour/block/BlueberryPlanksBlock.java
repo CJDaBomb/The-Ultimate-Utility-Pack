@@ -27,7 +27,7 @@ public class BlueberryPlanksBlock extends MoreOresAndArmourModElements.ModElemen
 	@ObjectHolder("more_ores_and_armour:blueberry_planks")
 	public static final Block block = null;
 	public BlueberryPlanksBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 95);
+		super(instance, 271);
 	}
 
 	@Override

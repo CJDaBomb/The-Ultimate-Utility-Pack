@@ -104,7 +104,7 @@ public class OtherWorldDimension extends MoreOresAndArmourModElements.ModElement
 	public static DimensionType type = null;
 	private static Biome[] dimensionBiomes;
 	public OtherWorldDimension(MoreOresAndArmourModElements instance) {
-		super(instance, 42);
+		super(instance, 189);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

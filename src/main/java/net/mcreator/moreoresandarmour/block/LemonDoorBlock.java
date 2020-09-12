@@ -34,7 +34,7 @@ public class LemonDoorBlock extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:lemon_door")
 	public static final Block block = null;
 	public LemonDoorBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 145);
+		super(instance, 258);
 	}
 
 	@Override
