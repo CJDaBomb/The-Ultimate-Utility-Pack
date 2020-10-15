@@ -20,28 +20,19 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.UseAction;
 import net.minecraft.item.ShootableItem;
-import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
-import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.BowItem;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.IRendersAsItem;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
-import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraft.client.renderer.entity.model.EntityModel;
-import net.minecraft.client.renderer.entity.EntityRendererManager;
-import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.client.renderer.Vector3f;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.IRenderTypeBuffer;
+import net.minecraft.client.renderer.entity.SpriteRenderer;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.moreoresandarmour.procedures.ElectricArrowLivingEntityIsHitWithItemProcedure;
 import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityCombatItemGroup;
@@ -51,11 +42,6 @@ import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 
-import com.mojang.blaze3d.vertex.IVertexBuilder;
-import com.mojang.blaze3d.matrix.MatrixStack;
-
-import com.google.common.collect.Multimap;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:electric_bow")
@@ -63,7 +49,7 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:entitybulletelectric_bow")
 	public static final EntityType arrow = null;
 	public ElectricBowItem(MoreOresAndArmourModElements instance) {
-		super(instance, 225);
+		super(instance, 222);
 	}
 
 	@Override
@@ -77,10 +63,12 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void init(FMLCommonSetupEvent event) {
-		RenderingRegistry.registerEntityRenderingHandler(arrow, renderManager -> new CustomRender(renderManager));
+		RenderingRegistry.registerEntityRenderingHandler(arrow,
+				renderManager -> new SpriteRenderer(renderManager, Minecraft.getInstance().getItemRenderer()));
 	}
 	public static class ItemRanged extends Item {
-		public ItemRanged() {
+		public ItemRanged()
+            {
 			super(new Item.Properties().group(UltimateUtilityCombatItemGroup.tab).maxDamage(384));
 			setRegistryName("electric_bow");
 		}
@@ -108,18 +96,6 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 		}
 
 		@Override
-		public Multimap<String, AttributeModifier> getAttributeModifiers(EquipmentSlotType slot) {
-			Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(slot);
-			if (slot == EquipmentSlotType.MAINHAND) {
-				multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(),
-						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "ranged_item_damage", (double) -2, AttributeModifier.Operation.ADDITION));
-				multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(),
-						new AttributeModifier(ATTACK_SPEED_MODIFIER, "ranged_item_attack_speed", -2.4, AttributeModifier.Operation.ADDITION));
-			}
-			return multimap;
-		}
-
-		@Override
 		public void onPlayerStoppedUsing(ItemStack itemstack, World world, LivingEntity entityLiving, int timeLeft) {
 			if (!world.isRemote && entityLiving instanceof ServerPlayerEntity) {
 				ServerPlayerEntity entity = (ServerPlayerEntity) entityLiving;
@@ -127,11 +103,12 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
 				if (true) {
-					ItemStack stack = ShootableItem.getHeldAmmo(entity, e -> e.getItem() == new ItemStack(Items.ARROW, (int) (1)).getItem());
+					ItemStack stack = ShootableItem.getHeldAmmo(entity,
+							e -> e.getItem() == new ItemStack(ElectricArrowItem.block, (int) (1)).getItem());
 					if (stack == ItemStack.EMPTY) {
 						for (int i = 0; i < entity.inventory.mainInventory.size(); i++) {
 							ItemStack teststack = entity.inventory.mainInventory.get(i);
-							if (teststack != null && teststack.getItem() == new ItemStack(Items.ARROW, (int) (1)).getItem()) {
+							if (teststack != null && teststack.getItem() == new ItemStack(ElectricArrowItem.block, (int) (1)).getItem()) {
 								stack = teststack;
 								break;
 							}
@@ -143,7 +120,7 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 						if (entity.abilities.isCreativeMode) {
 							entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
 						} else {
-							if (new ItemStack(Items.ARROW, (int) (1)).isDamageable()) {
+							if (new ItemStack(ElectricArrowItem.block, (int) (1)).isDamageable()) {
 								if (stack.attemptDamageItem(1, random, entity)) {
 									stack.shrink(1);
 									stack.setDamage(0);
@@ -188,12 +165,12 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(Items.ARROW, (int) (1));
+			return new ItemStack(ElectricArrowItem.block, (int) (1));
 		}
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return new ItemStack(Items.ARROW, (int) (1));
+			return new ItemStack(ElectricArrowItem.block, (int) (1));
 		}
 
 		@Override
@@ -206,6 +183,7 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 			World world = this.world;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -225,6 +203,7 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 			World world = this.world;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -244,6 +223,7 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 			if (this.inGround) {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
@@ -252,71 +232,6 @@ public class ElectricBowItem extends MoreOresAndArmourModElements.ModElement {
 				}
 				this.remove();
 			}
-		}
-	}
-
-	public static class CustomRender extends EntityRenderer<ArrowCustomEntity> {
-		private static final ResourceLocation texture = new ResourceLocation("more_ores_and_armour:textures/electric_arrow.png");
-		public CustomRender(EntityRendererManager renderManager) {
-			super(renderManager);
-		}
-
-		@Override
-		public void render(ArrowCustomEntity entityIn, float entityYaw, float partialTicks, MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn,
-				int packedLightIn) {
-			IVertexBuilder vb = bufferIn.getBuffer(RenderType.getEntityCutout(this.getEntityTexture(entityIn)));
-			matrixStackIn.push();
-			matrixStackIn.rotate(Vector3f.YP.rotationDegrees(MathHelper.lerp(partialTicks, entityIn.prevRotationYaw, entityIn.rotationYaw) - 90));
-			matrixStackIn.rotate(Vector3f.ZP.rotationDegrees(90 + MathHelper.lerp(partialTicks, entityIn.prevRotationPitch, entityIn.rotationPitch)));
-			EntityModel model = new Modelcustom_arrow();
-			model.render(matrixStackIn, vb, packedLightIn, OverlayTexture.NO_OVERLAY, 1, 1, 1, 0.0625f);
-			matrixStackIn.pop();
-			super.render(entityIn, entityYaw, partialTicks, matrixStackIn, bufferIn, packedLightIn);
-		}
-
-		@Override
-		public ResourceLocation getEntityTexture(ArrowCustomEntity entity) {
-			return texture;
-		}
-	}
-
-	// Made with Blockbench 3.6.1
-	// Exported for Minecraft version 1.15
-	// Paste this class into your mod and generate all required imports
-	public static class Modelcustom_arrow extends EntityModel<Entity> {
-		private final ModelRenderer arrow;
-		private final ModelRenderer bone;
-		private final ModelRenderer bb_main;
-		public Modelcustom_arrow() {
-			textureWidth = 32;
-			textureHeight = 32;
-			arrow = new ModelRenderer(this);
-			arrow.setRotationPoint(0.0F, 24.0F, 0.0F);
-			bone = new ModelRenderer(this);
-			bone.setRotationPoint(0.0F, 21.5F, 0.0F);
-			setRotationAngle(bone, -1.5708F, 0.0F, 0.0F);
-			bone.setTextureOffset(0, 0).addBox(-8.0F, -2.5F, 0.0F, 16.0F, 5.0F, 0.0F, 0.0F, false);
-			bb_main = new ModelRenderer(this);
-			bb_main.setRotationPoint(0.0F, 24.0F, 0.0F);
-			bb_main.setTextureOffset(0, 0).addBox(-7.0F, -5.0F, -2.5F, 0.0F, 5.0F, 5.0F, 0.0F, false);
-			bb_main.setTextureOffset(0, 0).addBox(-8.0F, -5.0F, 0.0F, 16.0F, 5.0F, 0.0F, 0.0F, false);
-		}
-
-		@Override
-		public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue,
-				float alpha) {
-			arrow.render(matrixStack, buffer, packedLight, packedOverlay);
-			bone.render(matrixStack, buffer, packedLight, packedOverlay);
-			bb_main.render(matrixStack, buffer, packedLight, packedOverlay);
-		}
-
-		public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
-			modelRenderer.rotateAngleX = x;
-			modelRenderer.rotateAngleY = y;
-			modelRenderer.rotateAngleZ = z;
-		}
-
-		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
 		}
 	}
 	public static ArrowCustomEntity shoot(World world, LivingEntity entity, Random random, float power, double damage, int knockback) {

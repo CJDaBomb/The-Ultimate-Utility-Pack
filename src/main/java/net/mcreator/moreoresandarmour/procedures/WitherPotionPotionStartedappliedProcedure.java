@@ -1,22 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.util.DamageSource;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.moreoresandarmour.potion.WitherPotionPotion;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModVariables;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-import java.util.Collection;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class WitherPotionPotionStartedappliedProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public WitherPotionPotionStartedappliedProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 239);
+		super(instance, 20);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -28,8 +17,10 @@ public class WitherPotionPotionStartedappliedProcedure extends MoreOresAndArmour
 			System.err.println("Failed to load dependency world for procedure WitherPotionPotionStartedapplied!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		MoreOresAndArmourModVariables.MapVariables
 				.get(world).witherTicks = (double) ((MoreOresAndArmourModVariables.MapVariables.get(world).witherTicks) + 1);
 		MoreOresAndArmourModVariables.MapVariables.get(world).syncData(world);
@@ -85,5 +76,7 @@ public class WitherPotionPotionStartedappliedProcedure extends MoreOresAndArmour
 				MoreOresAndArmourModVariables.MapVariables.get(world).syncData(world);
 			}
 		}
+
 	}
+
 }

@@ -1,29 +1,12 @@
 
 package net.mcreator.moreoresandarmour.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.item.ItemUseContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.block.BlockState;
-
-import net.mcreator.moreoresandarmour.procedures.GoldenAppleSeedsRightClickedOnBlockProcedure;
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class GoldenAppleSeedsItem extends MoreOresAndArmourModElements.ModElement {
+
 	@ObjectHolder("more_ores_and_armour:golden_apple_seed")
 	public static final Item block = null;
+
 	public GoldenAppleSeedsItem(MoreOresAndArmourModElements instance) {
 		super(instance, 38);
 	}
@@ -32,7 +15,9 @@ public class GoldenAppleSeedsItem extends MoreOresAndArmourModElements.ModElemen
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
+
 		public ItemCustom() {
 			super(new Item.Properties().group(CustomOreModItemGroup.tab).maxStackSize(64));
 			setRegistryName("golden_apple_seed");
@@ -66,15 +51,19 @@ public class GoldenAppleSeedsItem extends MoreOresAndArmourModElements.ModElemen
 			ItemStack itemstack = context.getItem();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("direction", direction);
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
+
 				GoldenAppleSeedsRightClickedOnBlockProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
+
 	}
+
 }

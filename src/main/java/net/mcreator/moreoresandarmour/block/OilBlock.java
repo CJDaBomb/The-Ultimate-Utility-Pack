@@ -1,62 +1,25 @@
 
 package net.mcreator.moreoresandarmour.block;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fluids.ForgeFlowingFluid;
-import net.minecraftforge.fluids.FluidAttributes;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.placement.ChanceConfig;
-import net.minecraft.world.gen.feature.LakesFeature;
-import net.minecraft.world.gen.feature.BlockStateFeatureConfig;
-import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraft.world.dimension.DimensionType;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.item.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.BucketItem;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.fluid.FlowingFluid;
-import net.minecraft.entity.Entity;
-import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.FlowingFluidBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
-
-import net.mcreator.moreoresandarmour.procedures.OilMobplayerCollidesBlockProcedure;
-import net.mcreator.moreoresandarmour.itemgroup.CustomOreModItemGroup;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Random;
-import java.util.Map;
-import java.util.HashMap;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class OilBlock extends MoreOresAndArmourModElements.ModElement {
+
 	@ObjectHolder("more_ores_and_armour:oil")
 	public static final FlowingFluidBlock block = null;
+
 	@ObjectHolder("more_ores_and_armour:oil_bucket")
 	public static final Item bucket = null;
+
 	public static FlowingFluid flowing = null;
 	public static FlowingFluid still = null;
+
 	private ForgeFlowingFluid.Properties fluidproperties = null;
+
 	public OilBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 43);
+		super(instance, 45);
+
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -78,9 +41,12 @@ public class OilBlock extends MoreOresAndArmourModElements.ModElement {
 		fluidproperties = new ForgeFlowingFluid.Properties(() -> still, () -> flowing, FluidAttributes
 				.builder(new ResourceLocation("more_ores_and_armour:blocks/oil_still"), new ResourceLocation("more_ores_and_armour:blocks/oil_flow"))
 				.luminosity(1).density(1000).viscosity(1000)).bucket(() -> bucket).block(() -> block);
+
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("oil");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("oil_flowing");
+
 		elements.blocks.add(() -> new FlowingFluidBlock(still, Block.Properties.create(Material.WATER)) {
+
 			@Override
 			public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
 				super.onEntityCollision(state, world, pos, entity);
@@ -89,11 +55,14 @@ public class OilBlock extends MoreOresAndArmourModElements.ModElement {
 				int z = pos.getZ();
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
+
 					$_dependencies.put("entity", entity);
+
 					OilMobplayerCollidesBlockProcedure.executeProcedure($_dependencies);
 				}
 			}
 		}.setRegistryName("oil"));
+
 		elements.items
 				.add(() -> new BucketItem(still, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(CustomOreModItemGroup.tab))
 						.setRegistryName("oil_bucket"));
@@ -107,16 +76,20 @@ public class OilBlock extends MoreOresAndArmourModElements.ModElement {
 				public boolean place(IWorld world, ChunkGenerator generator, Random rand, BlockPos pos, BlockStateFeatureConfig config) {
 					DimensionType dimensionType = world.getDimension().getType();
 					boolean dimensionCriteria = false;
+
 					if (dimensionType == DimensionType.OVERWORLD)
 						dimensionCriteria = true;
 					if (dimensionType == DimensionType.THE_NETHER)
 						dimensionCriteria = true;
+
 					if (!dimensionCriteria)
 						return false;
+
 					return super.place(world, generator, rand, pos, config);
 				}
 			}.withConfiguration(new BlockStateFeatureConfig(block.getDefaultState()))
 					.withPlacement(Placement.WATER_LAKE.configure(new ChanceConfig(5))));
 		}
 	}
+
 }

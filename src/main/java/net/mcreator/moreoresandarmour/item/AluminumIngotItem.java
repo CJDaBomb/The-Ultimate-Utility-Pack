@@ -15,7 +15,7 @@ public class AluminumIngotItem extends MoreOresAndArmourModElements.ModElement {
 	@ObjectHolder("more_ores_and_armour:aluminum_ingot")
 	public static final Item block = null;
 	public AluminumIngotItem(MoreOresAndArmourModElements instance) {
-		super(instance, 2);
+		super(instance, 51);
 	}
 
 	@Override

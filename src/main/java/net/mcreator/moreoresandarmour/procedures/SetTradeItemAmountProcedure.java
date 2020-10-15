@@ -1,47 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.inventory.container.Slot;
-import net.minecraft.inventory.container.Container;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.moreoresandarmour.item.TurquoisePickaxeItem;
-import net.mcreator.moreoresandarmour.item.TurquoiseAppleItem;
-import net.mcreator.moreoresandarmour.item.SapphireSwordItem;
-import net.mcreator.moreoresandarmour.item.SapphirePickaxeItem;
-import net.mcreator.moreoresandarmour.item.SapphireAxeItem;
-import net.mcreator.moreoresandarmour.item.SapphireArmourItem;
-import net.mcreator.moreoresandarmour.item.RubySwordItem;
-import net.mcreator.moreoresandarmour.item.RubyPickaxeItem;
-import net.mcreator.moreoresandarmour.item.RubyItem;
-import net.mcreator.moreoresandarmour.item.RubyAxeItem;
-import net.mcreator.moreoresandarmour.item.RubyArmourItem;
-import net.mcreator.moreoresandarmour.item.EmeraldCrystalItem;
-import net.mcreator.moreoresandarmour.item.DiamondAppleItem;
-import net.mcreator.moreoresandarmour.item.CopperIngotItem;
-import net.mcreator.moreoresandarmour.item.AluminumSwordItem;
-import net.mcreator.moreoresandarmour.item.AluminumIngotItem;
-import net.mcreator.moreoresandarmour.item.AluminumAxeItem;
-import net.mcreator.moreoresandarmour.item.AluminumArmourItem;
-import net.mcreator.moreoresandarmour.item.AluminumAppleItem;
-import net.mcreator.moreoresandarmour.item.AlexandriteSwordItem;
-import net.mcreator.moreoresandarmour.item.AlexandritePickaxeItem;
-import net.mcreator.moreoresandarmour.item.AlexandriteItem;
-import net.mcreator.moreoresandarmour.item.AlexandriteAxeItem;
-import net.mcreator.moreoresandarmour.item.AlexadriteAppleItem;
-import net.mcreator.moreoresandarmour.block.RubyBlockBlock;
-import net.mcreator.moreoresandarmour.block.AluminumBlockBlock;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.function.Supplier;
-import java.util.Map;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class SetTradeItemAmountProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public SetTradeItemAmountProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 354);
+		super(instance, 167);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -49,7 +13,9 @@ public class SetTradeItemAmountProcedure extends MoreOresAndArmourModElements.Mo
 			System.err.println("Failed to load dependency entity for procedure SetTradeItemAmount!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		if (((entity.getPersistentData().getDouble("playerTradesPage")) == 1)) {
 			if (((new Object() {
 				public ItemStack getItemStack(int sltid) {
@@ -691,5 +657,7 @@ public class SetTradeItemAmountProcedure extends MoreOresAndArmourModElements.Mo
 				}
 			}
 		}
+
 	}
+
 }

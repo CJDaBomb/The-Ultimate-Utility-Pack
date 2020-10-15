@@ -1,29 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.world.GameType;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.item.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.client.network.play.NetworkPlayerInfo;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.moreoresandarmour.potion.WitherPotionPotion;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class LapisAppleFoodEatenProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public LapisAppleFoodEatenProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 499);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -47,11 +29,13 @@ public class LapisAppleFoodEatenProcedure extends MoreOresAndArmourModElements.M
 			System.err.println("Failed to load dependency world for procedure LapisAppleFoodEaten!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		ItemStack item = ItemStack.EMPTY;
 		double randomItem = 0;
 		double randomEnchant = 0;
@@ -102,5 +86,7 @@ public class LapisAppleFoodEatenProcedure extends MoreOresAndArmourModElements.M
 				world.addEntity(entityToSpawn);
 			}
 		}
+
 	}
+
 }

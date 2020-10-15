@@ -1,23 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.World;
-import net.minecraft.entity.Entity;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModVariables;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class EnchantedTotemTickProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public EnchantedTotemTickProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 503);
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -26,13 +14,13 @@ public class EnchantedTotemTickProcedure extends MoreOresAndArmourModElements.Mo
 			System.err.println("Failed to load dependency entity for procedure EnchantedTotemTick!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		if (((entity.getPersistentData().getBoolean("showTotemAnimation")) == (true))) {
-			Minecraft.getInstance().gameRenderer
-					.displayItemActivation( /* @ItemStack */((entity.getCapability(MoreOresAndArmourModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new MoreOresAndArmourModVariables.PlayerVariables())).enchantedToem));
 			entity.getPersistentData().putBoolean("showTotemAnimation", (false));
 		}
+
 	}
 
 	@SubscribeEvent
@@ -53,4 +41,5 @@ public class EnchantedTotemTickProcedure extends MoreOresAndArmourModElements.Mo
 			this.executeProcedure(dependencies);
 		}
 	}
+
 }

@@ -1,15 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.entity.Entity;
-
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class PlayerTradePageProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public PlayerTradePageProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 356);
+		super(instance, 171);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -17,7 +13,9 @@ public class PlayerTradePageProcedure extends MoreOresAndArmourModElements.ModEl
 			System.err.println("Failed to load dependency entity for procedure PlayerTradePage!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		if (((entity.getPersistentData().getDouble("playerTradePage")) == 1)) {
 			entity.getPersistentData().putDouble("playerTradePage", 2);
 		} else if (((entity.getPersistentData().getDouble("playerTradePage")) == 2)) {
@@ -29,5 +27,7 @@ public class PlayerTradePageProcedure extends MoreOresAndArmourModElements.ModEl
 		} else if (((entity.getPersistentData().getDouble("playerTradePage")) == 5)) {
 			entity.getPersistentData().putDouble("playerTradePage", 6);
 		}
+
 	}
+
 }

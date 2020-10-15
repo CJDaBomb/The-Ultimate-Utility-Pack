@@ -1,0 +1,6 @@
+{
+  "parent": "item/bow",
+  "textures": {
+    "layer0": "more_ores_and_armour:items/electric_bow_pulling_0"
+  }
+}

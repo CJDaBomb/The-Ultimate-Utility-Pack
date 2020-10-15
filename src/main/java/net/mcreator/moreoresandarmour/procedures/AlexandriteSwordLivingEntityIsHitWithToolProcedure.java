@@ -1,18 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.util.Direction;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-import java.util.Collections;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class AlexandriteSwordLivingEntityIsHitWithToolProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public AlexandriteSwordLivingEntityIsHitWithToolProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 335);
+		super(instance, 134);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -32,10 +25,12 @@ public class AlexandriteSwordLivingEntityIsHitWithToolProcedure extends MoreOres
 			System.err.println("Failed to load dependency z for procedure AlexandriteSwordLivingEntityIsHitWithTool!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+
 		if (((entity.getHorizontalFacing()) == Direction.NORTH)) {
 			{
 				Entity _ent = entity;
@@ -72,5 +67,7 @@ public class AlexandriteSwordLivingEntityIsHitWithToolProcedure extends MoreOres
 				}
 			}
 		}
+
 	}
+
 }

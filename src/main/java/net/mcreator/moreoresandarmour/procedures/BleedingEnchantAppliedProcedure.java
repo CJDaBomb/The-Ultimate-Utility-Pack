@@ -1,27 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.World;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.enchantment.EnchantmentHelper;
-
-import net.mcreator.moreoresandarmour.potion.BleedingPotion;
-import net.mcreator.moreoresandarmour.enchantment.BleedingEnchantEnchantment;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BleedingEnchantAppliedProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public BleedingEnchantAppliedProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 455);
+		super(instance, 307);
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -34,8 +18,10 @@ public class BleedingEnchantAppliedProcedure extends MoreOresAndArmourModElement
 			System.err.println("Failed to load dependency sourceentity for procedure BleedingEnchantApplied!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
+
 		if (((EnchantmentHelper.getEnchantmentLevel(BleedingEnchantEnchantment.enchantment,
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) == 1)) {
 			if ((((new java.util.Random()).nextInt((int) 4 + 1)) == 1)) {
@@ -55,6 +41,7 @@ public class BleedingEnchantAppliedProcedure extends MoreOresAndArmourModElement
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(BleedingPotion.potion, (int) 800, (int) 3));
 			}
 		}
+
 	}
 
 	@SubscribeEvent
@@ -79,4 +66,5 @@ public class BleedingEnchantAppliedProcedure extends MoreOresAndArmourModElement
 			this.executeProcedure(dependencies);
 		}
 	}
+
 }

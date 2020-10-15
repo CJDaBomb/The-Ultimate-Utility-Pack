@@ -1,27 +1,23 @@
 
 package net.mcreator.moreoresandarmour.enchantment;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.enchantment.EnchantmentType;
-import net.minecraft.enchantment.Enchantment;
-
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BleedingEnchantEnchantment extends MoreOresAndArmourModElements.ModElement {
+
 	@ObjectHolder("more_ores_and_armour:bleeding_enchant")
 	public static final Enchantment enchantment = null;
+
 	public BleedingEnchantEnchantment(MoreOresAndArmourModElements instance) {
-		super(instance, 453);
+		super(instance, 304);
 	}
 
 	@Override
 	public void initElements() {
 		elements.enchantments.add(() -> new CustomEnchantment(EquipmentSlotType.MAINHAND).setRegistryName("bleeding_enchant"));
 	}
+
 	public static class CustomEnchantment extends Enchantment {
+
 		public CustomEnchantment(EquipmentSlotType... slots) {
 			super(Enchantment.Rarity.VERY_RARE, EnchantmentType.WEAPON, slots);
 		}
@@ -50,5 +46,7 @@ public class BleedingEnchantEnchantment extends MoreOresAndArmourModElements.Mod
 		public boolean isAllowedOnBooks() {
 			return true;
 		}
+
 	}
+
 }

@@ -38,5 +38,27 @@
         1
       ]
     }
-  }
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "pulling": 1
+            },
+            "model": "more_ores_and_armour:items/electric_bow_pulling_0"
+        },
+        {
+            "predicate": {
+                "pulling": 1,
+                "pull": 0.65
+            },
+            "model": "more_ores_and_armour:items/electric_bow_pulling_1"
+        },
+        {
+            "predicate": {
+                "pulling": 1,
+                "pull": 0.9
+            },
+            "model": "more_ores_and_armour:items/electric_bow_pulling_2"
+        }
+    ]
 }

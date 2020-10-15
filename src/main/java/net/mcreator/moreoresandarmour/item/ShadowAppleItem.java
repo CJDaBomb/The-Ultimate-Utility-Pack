@@ -1,40 +1,28 @@
 
 package net.mcreator.moreoresandarmour.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.World;
-import net.minecraft.item.UseAction;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.Food;
-import net.minecraft.entity.LivingEntity;
-
-import net.mcreator.moreoresandarmour.procedures.ShadowAppleFoodEatenProcedure;
-import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityFoodItemGroup;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ShadowAppleItem extends MoreOresAndArmourModElements.ModElement {
+
 	@ObjectHolder("more_ores_and_armour:shadow_apple")
 	public static final Item block = null;
+
 	public ShadowAppleItem(MoreOresAndArmourModElements instance) {
-		super(instance, 194);
+		super(instance, 95);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
+
 		public FoodItemCustom() {
 			super(new Item.Properties().group(UltimateUtilityFoodItemGroup.tab).maxStackSize(64)
-					.food((new Food.Builder()).hunger(10).saturation(3.9999999999999996f).setAlwaysEdible().build()));
+					.food((new Food.Builder()).hunger(10).saturation(3.9999999999999996f).setAlwaysEdible()
+
+							.build()));
 			setRegistryName("shadow_apple");
 		}
 
@@ -57,10 +45,14 @@ public class ShadowAppleItem extends MoreOresAndArmourModElements.ModElement {
 			double z = entity.getPosZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("entity", entity);
+
 				ShadowAppleFoodEatenProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
+
 	}
+
 }

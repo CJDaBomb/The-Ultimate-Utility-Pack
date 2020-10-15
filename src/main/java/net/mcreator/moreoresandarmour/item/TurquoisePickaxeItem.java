@@ -1,23 +1,14 @@
 
 package net.mcreator.moreoresandarmour.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
-
-import net.mcreator.moreoresandarmour.itemgroup.UltimateUtilityToolsItemGroup;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class TurquoisePickaxeItem extends MoreOresAndArmourModElements.ModElement {
+
 	@ObjectHolder("more_ores_and_armour:turquoise_pickaxe")
 	public static final Item block = null;
+
 	public TurquoisePickaxeItem(MoreOresAndArmourModElements instance) {
-		super(instance, 208);
+		super(instance, 128);
 	}
 
 	@Override
@@ -47,6 +38,8 @@ public class TurquoisePickaxeItem extends MoreOresAndArmourModElements.ModElemen
 				return Ingredient.fromStacks(new ItemStack(TurquoiseItem.block, (int) (1)));
 			}
 		}, 1, -2.7999999999999998f, new Item.Properties().group(UltimateUtilityToolsItemGroup.tab)) {
+
 		}.setRegistryName("turquoise_pickaxe"));
 	}
+
 }

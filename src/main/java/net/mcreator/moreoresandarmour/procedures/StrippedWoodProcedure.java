@@ -1,52 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.GameType;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Direction;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.AxeItem;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.client.network.play.NetworkPlayerInfo;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.client.Minecraft;
-import net.minecraft.block.BlockState;
-
-import net.mcreator.moreoresandarmour.block.StrippedNightmareWoodBlock;
-import net.mcreator.moreoresandarmour.block.StrippedLemonWoodBlock;
-import net.mcreator.moreoresandarmour.block.StrippedGrapeWoodBlock;
-import net.mcreator.moreoresandarmour.block.StrippedCherryWoodBlock;
-import net.mcreator.moreoresandarmour.block.StrippedBluestoneWoodBlock;
-import net.mcreator.moreoresandarmour.block.StrippedBlueberryWoodBlock;
-import net.mcreator.moreoresandarmour.block.NightmareWoodBlock;
-import net.mcreator.moreoresandarmour.block.LemonWoodBlock;
-import net.mcreator.moreoresandarmour.block.GrapeWoodBlock;
-import net.mcreator.moreoresandarmour.block.CherryWoodBlock;
-import net.mcreator.moreoresandarmour.block.BluestoneWoodBlock;
-import net.mcreator.moreoresandarmour.block.BlueberryWoodBlock;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Random;
-import java.util.Map;
-import java.util.HashMap;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class StrippedWoodProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public StrippedWoodProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 481);
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -71,12 +30,14 @@ public class StrippedWoodProcedure extends MoreOresAndArmourModElements.ModEleme
 			System.err.println("Failed to load dependency world for procedure StrippedWood!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+
+		if ((/*@ItemStack*/((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() instanceof AxeItem)) {
 			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BluestoneWoodBlock.block.getDefaultState()
 					.getBlock())) {
@@ -619,13 +580,16 @@ public class StrippedWoodProcedure extends MoreOresAndArmourModElements.ModEleme
 				}
 			}
 		}
+
 	}
 
 	@SubscribeEvent
 	public void onRightClickItem(PlayerInteractEvent.RightClickItem event) {
 		PlayerEntity entity = event.getPlayer();
+
 		if (event.getHand() != entity.getActiveHand())
 			return;
+
 		int i = event.getPos().getX();
 		int j = event.getPos().getY();
 		int k = event.getPos().getZ();
@@ -639,4 +603,5 @@ public class StrippedWoodProcedure extends MoreOresAndArmourModElements.ModEleme
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}
+
 }

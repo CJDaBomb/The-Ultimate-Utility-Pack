@@ -1,25 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.World;
-import net.minecraft.util.DamageSource;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.moreoresandarmour.item.ShadowSwordItem;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ShadowSwordKillProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public ShadowSwordKillProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 511);
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -32,8 +18,10 @@ public class ShadowSwordKillProcedure extends MoreOresAndArmourModElements.ModEl
 			System.err.println("Failed to load dependency sourceentity for procedure ShadowSwordKill!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
+
 		if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(ShadowSwordItem.block, (int) (1)).getItem())) {
 			if ((Math.random() >= 0.6)) {
@@ -41,6 +29,7 @@ public class ShadowSwordKillProcedure extends MoreOresAndArmourModElements.ModEl
 						(float) ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1));
 			}
 		}
+
 	}
 
 	@SubscribeEvent
@@ -65,4 +54,5 @@ public class ShadowSwordKillProcedure extends MoreOresAndArmourModElements.ModEl
 			this.executeProcedure(dependencies);
 		}
 	}
+
 }

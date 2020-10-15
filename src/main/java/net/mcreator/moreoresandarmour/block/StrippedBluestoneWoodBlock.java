@@ -1,67 +1,20 @@
 
 package net.mcreator.moreoresandarmour.block;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.items.wrapper.SidedInvWrapper;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.common.capabilities.Capability;
-
-import net.minecraft.world.storage.loot.LootContext;
-import net.minecraft.world.World;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Rotation;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.Direction;
-import net.minecraft.tileentity.TileEntityType;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.LockableLootTileEntity;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.network.play.server.SUpdateTileEntityPacket;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.BlockItem;
-import net.minecraft.inventory.container.INamedContainerProvider;
-import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ChestContainer;
-import net.minecraft.inventory.ItemStackHelper;
-import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.HorizontalBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
-
-import net.mcreator.moreoresandarmour.itemgroup.UltimateUtlityDecorItemGroup;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import javax.annotation.Nullable;
-
-import java.util.stream.IntStream;
-import java.util.List;
-import java.util.Collections;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class StrippedBluestoneWoodBlock extends MoreOresAndArmourModElements.ModElement {
+
 	@ObjectHolder("more_ores_and_armour:stripped_bluestone_wood")
 	public static final Block block = null;
+
 	@ObjectHolder("more_ores_and_armour:stripped_bluestone_wood")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
+
 	public StrippedBluestoneWoodBlock(MoreOresAndArmourModElements instance) {
-		super(instance, 158);
+		super(instance, 266);
+
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -77,11 +30,18 @@ public class StrippedBluestoneWoodBlock extends MoreOresAndArmourModElements.Mod
 		event.getRegistry()
 				.register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("stripped_bluestone_wood"));
 	}
+
 	public static class CustomBlock extends Block {
+
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 2f).lightValue(0));
+			super(
+
+					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 2f).lightValue(0));
+
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
+
 			setRegistryName("stripped_bluestone_wood");
 		}
 
@@ -110,6 +70,7 @@ public class StrippedBluestoneWoodBlock extends MoreOresAndArmourModElements.Mod
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
@@ -138,10 +99,13 @@ public class StrippedBluestoneWoodBlock extends MoreOresAndArmourModElements.Mod
 			TileEntity tileentity = world.getTileEntity(pos);
 			return tileentity == null ? false : tileentity.receiveClientEvent(eventID, eventParam);
 		}
+
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
+
 		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
+
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -149,18 +113,23 @@ public class StrippedBluestoneWoodBlock extends MoreOresAndArmourModElements.Mod
 		@Override
 		public void read(CompoundNBT compound) {
 			super.read(compound);
+
 			if (!this.checkLootAndRead(compound)) {
 				this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 			}
+
 			ItemStackHelper.loadAllItems(compound, this.stacks);
+
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT compound) {
 			super.write(compound);
+
 			if (!this.checkLootAndWrite(compound)) {
 				ItemStackHelper.saveAllItems(compound, this.stacks);
 			}
+
 			return compound;
 		}
 
@@ -241,11 +210,14 @@ public class StrippedBluestoneWoodBlock extends MoreOresAndArmourModElements.Mod
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
 			return true;
 		}
+
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
+
 		@Override
 		public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 			if (!this.removed && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 				return handlers[facing.ordinal()].cast();
+
 			return super.getCapability(capability, facing);
 		}
 
@@ -255,5 +227,7 @@ public class StrippedBluestoneWoodBlock extends MoreOresAndArmourModElements.Mod
 			for (LazyOptional<? extends IItemHandler> handler : handlers)
 				handler.invalidate();
 		}
+
 	}
+
 }

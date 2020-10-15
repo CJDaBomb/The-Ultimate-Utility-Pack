@@ -1,29 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-
-import net.minecraft.world.GameType;
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.client.network.play.NetworkPlayerInfo;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.moreoresandarmour.item.AluminumIngotItem;
-import net.mcreator.moreoresandarmour.block.AluminumBlockBlock;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class AluminumAppleFoodEatenProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public AluminumAppleFoodEatenProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 495);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -31,7 +13,9 @@ public class AluminumAppleFoodEatenProcedure extends MoreOresAndArmourModElement
 			System.err.println("Failed to load dependency entity for procedure AluminumAppleFoodEaten!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		ItemStack item = ItemStack.EMPTY;
 		double randomItem = 0;
 		double randomAmount = 0;
@@ -63,5 +47,7 @@ public class AluminumAppleFoodEatenProcedure extends MoreOresAndArmourModElement
 				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 			}
 		}
+
 	}
+
 }

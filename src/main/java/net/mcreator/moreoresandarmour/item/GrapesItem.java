@@ -1,19 +1,12 @@
 
 package net.mcreator.moreoresandarmour.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.block.BlockState;
-
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class GrapesItem extends MoreOresAndArmourModElements.ModElement {
+
 	@ObjectHolder("more_ores_and_armour:grapes")
 	public static final Item block = null;
+
 	public GrapesItem(MoreOresAndArmourModElements instance) {
 		super(instance, 233);
 	}
@@ -22,7 +15,9 @@ public class GrapesItem extends MoreOresAndArmourModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
+
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64));
 			setRegistryName("grapes");
@@ -42,5 +37,7 @@ public class GrapesItem extends MoreOresAndArmourModElements.ModElement {
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 			return 1F;
 		}
+
 	}
+
 }

@@ -1,20 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.moreoresandarmour.potion.AbsorbsionPotion;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-import java.util.Collection;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class AbsorbsionPotionStartedappliedProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public AbsorbsionPotionStartedappliedProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 256);
+		super(instance, 42);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -22,7 +13,9 @@ public class AbsorbsionPotionStartedappliedProcedure extends MoreOresAndArmourMo
 			System.err.println("Failed to load dependency entity for procedure AbsorbsionPotionStartedapplied!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		if ((((new Object() {
 			int check(LivingEntity _entity) {
 				if (_entity instanceof LivingEntity) {
@@ -274,5 +267,7 @@ public class AbsorbsionPotionStartedappliedProcedure extends MoreOresAndArmourMo
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.ABSORPTION, (int) 7200, (int) 4));
 		}
+
 	}
+
 }

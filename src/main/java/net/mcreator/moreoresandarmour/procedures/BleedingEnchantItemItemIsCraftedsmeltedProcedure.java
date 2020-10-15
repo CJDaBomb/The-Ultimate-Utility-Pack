@@ -1,22 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-
-import net.minecraft.item.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.moreoresandarmour.item.BleedingEnchantItemItem;
-import net.mcreator.moreoresandarmour.enchantment.BleedingEnchantEnchantment;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class BleedingEnchantItemItemIsCraftedsmeltedProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public BleedingEnchantItemItemIsCraftedsmeltedProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 456);
+		super(instance, 306);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -24,7 +13,9 @@ public class BleedingEnchantItemItemIsCraftedsmeltedProcedure extends MoreOresAn
 			System.err.println("Failed to load dependency entity for procedure BleedingEnchantItemItemIsCraftedsmelted!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		ItemStack enchant = ItemStack.EMPTY;
 		if (entity instanceof PlayerEntity)
 			((PlayerEntity) entity).inventory
@@ -36,5 +27,7 @@ public class BleedingEnchantItemItemIsCraftedsmeltedProcedure extends MoreOresAn
 			_setstack.setCount((int) 1);
 			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 		}
+
 	}
+
 }

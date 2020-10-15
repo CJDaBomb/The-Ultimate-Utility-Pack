@@ -1,39 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.world.Difficulty;
-import net.minecraft.util.Hand;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.enchantment.Enchantments;
-
-import net.mcreator.moreoresandarmour.item.SapphireSwordItem;
-import net.mcreator.moreoresandarmour.item.SapphireShovelItem;
-import net.mcreator.moreoresandarmour.item.SapphirePickaxeItem;
-import net.mcreator.moreoresandarmour.item.SapphireAxeItem;
-import net.mcreator.moreoresandarmour.item.SapphireArmourItem;
-import net.mcreator.moreoresandarmour.item.RubySwordItem;
-import net.mcreator.moreoresandarmour.item.RubyShovelItem;
-import net.mcreator.moreoresandarmour.item.RubyPickaxeItem;
-import net.mcreator.moreoresandarmour.item.RubyAxeItem;
-import net.mcreator.moreoresandarmour.item.RubyArmourItem;
-import net.mcreator.moreoresandarmour.item.AluminumSwordItem;
-import net.mcreator.moreoresandarmour.item.AluminumShovelItem;
-import net.mcreator.moreoresandarmour.item.AluminumPickaxeItem;
-import net.mcreator.moreoresandarmour.item.AluminumAxeItem;
-import net.mcreator.moreoresandarmour.item.AluminumArmourItem;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ChargedWitherSkeletonOnInitialEntitySpawnProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public ChargedWitherSkeletonOnInitialEntitySpawnProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 509);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -45,8 +17,10 @@ public class ChargedWitherSkeletonOnInitialEntitySpawnProcedure extends MoreOres
 			System.err.println("Failed to load dependency world for procedure ChargedWitherSkeletonOnInitialEntitySpawn!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		boolean swordOrBow = false;
 		ItemStack enchantedBow = ItemStack.EMPTY;
 		ItemStack swordItem = ItemStack.EMPTY;
@@ -341,40 +315,32 @@ public class ChargedWitherSkeletonOnInitialEntitySpawnProcedure extends MoreOres
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
-				/* @ItemStack */}
+
+				/*@ItemStack*/}
 			if ((Math.random() > 0.97)) {
 				if (entity instanceof PlayerEntity) {
 					((PlayerEntity) entity).inventory.armorInventory.set(1, (chestplate));
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
-				/* @ItemStack */}
+
+				/*@ItemStack*/}
 			if ((Math.random() > 0.97)) {
 				if (entity instanceof PlayerEntity) {
 					((PlayerEntity) entity).inventory.armorInventory.set(2, (leggings));
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
-				/* @ItemStack */}
+
+				/*@ItemStack*/}
 			if ((Math.random() > 0.96)) {
 				if (entity instanceof PlayerEntity) {
 					((PlayerEntity) entity).inventory.armorInventory.set(3, (boots));
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
-				/* @ItemStack */}
-			if (entity instanceof LivingEntity) {
-				LivingEntity livingEntity = (LivingEntity) dependencies.get("entity");
-				livingEntity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(20);
-			} ;
-			if (entity instanceof LivingEntity) {
-				LivingEntity livingEntity = (LivingEntity) dependencies.get("entity");
-				livingEntity.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(2);
-			} ;
-			if (entity instanceof LivingEntity) {
-				LivingEntity livingEntity = (LivingEntity) dependencies.get("entity");
-				livingEntity.getAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(0.2);
-			} ;
+
+				/*@ItemStack*/}
 		} else if ((world.getDifficulty() == Difficulty.NORMAL)) {
 			if ((Math.random() > 0.93)) {
 				for (int index6 = 0; index6 < (int) ((1 + ((new java.util.Random()).nextInt((int) 1 + 1)))); index6++) {
@@ -580,40 +546,32 @@ public class ChargedWitherSkeletonOnInitialEntitySpawnProcedure extends MoreOres
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
-				/* @ItemStack */}
+
+				/*@ItemStack*/}
 			if ((Math.random() > 0.7)) {
 				if (entity instanceof PlayerEntity) {
 					((PlayerEntity) entity).inventory.armorInventory.set(1, (chestplate));
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
-				/* @ItemStack */}
+
+				/*@ItemStack*/}
 			if ((Math.random() > 0.7)) {
 				if (entity instanceof PlayerEntity) {
 					((PlayerEntity) entity).inventory.armorInventory.set(2, (leggings));
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
-				/* @ItemStack */}
+
+				/*@ItemStack*/}
 			if ((Math.random() > 0.7)) {
 				if (entity instanceof PlayerEntity) {
 					((PlayerEntity) entity).inventory.armorInventory.set(3, (boots));
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
-				/* @ItemStack */}
-			if (entity instanceof LivingEntity) {
-				LivingEntity livingEntity = (LivingEntity) dependencies.get("entity");
-				livingEntity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30);
-			} ;
-			if (entity instanceof LivingEntity) {
-				LivingEntity livingEntity = (LivingEntity) dependencies.get("entity");
-				livingEntity.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(5);
-			} ;
-			if (entity instanceof LivingEntity) {
-				LivingEntity livingEntity = (LivingEntity) dependencies.get("entity");
-				livingEntity.getAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(0.8);
-			} ;
+
+				/*@ItemStack*/}
 		} else if ((world.getDifficulty() == Difficulty.HARD)) {
 			if ((Math.random() > 0.8)) {
 				for (int index12 = 0; index12 < (int) ((1 + ((new java.util.Random()).nextInt((int) 1 + 1)))); index12++) {
@@ -819,40 +777,34 @@ public class ChargedWitherSkeletonOnInitialEntitySpawnProcedure extends MoreOres
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
-				/* @ItemStack */}
+
+				/*@ItemStack*/}
 			if ((Math.random() > 0.68)) {
 				if (entity instanceof PlayerEntity) {
 					((PlayerEntity) entity).inventory.armorInventory.set(1, (chestplate));
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
-				/* @ItemStack */}
+
+				/*@ItemStack*/}
 			if ((Math.random() > 0.68)) {
 				if (entity instanceof PlayerEntity) {
 					((PlayerEntity) entity).inventory.armorInventory.set(2, (leggings));
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
-				/* @ItemStack */}
+
+				/*@ItemStack*/}
 			if ((Math.random() > 0.68)) {
 				if (entity instanceof PlayerEntity) {
 					((PlayerEntity) entity).inventory.armorInventory.set(3, (boots));
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
-				/* @ItemStack */}
-			if (entity instanceof LivingEntity) {
-				LivingEntity livingEntity = (LivingEntity) dependencies.get("entity");
-				livingEntity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(55);
-			} ;
-			if (entity instanceof LivingEntity) {
-				LivingEntity livingEntity = (LivingEntity) dependencies.get("entity");
-				livingEntity.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(10);
-			} ;
-			if (entity instanceof LivingEntity) {
-				LivingEntity livingEntity = (LivingEntity) dependencies.get("entity");
-				livingEntity.getAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(2);
-			} ;
+
+				/*@ItemStack*/}
 		}
+
 	}
+
 }

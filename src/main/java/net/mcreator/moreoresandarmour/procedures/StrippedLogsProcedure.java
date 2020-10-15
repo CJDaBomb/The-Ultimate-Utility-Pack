@@ -1,52 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.GameType;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Direction;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.AxeItem;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.client.network.play.NetworkPlayerInfo;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.client.Minecraft;
-import net.minecraft.block.BlockState;
-
-import net.mcreator.moreoresandarmour.block.StrippedNightmareLogBlock;
-import net.mcreator.moreoresandarmour.block.StrippedLemonLogBlock;
-import net.mcreator.moreoresandarmour.block.StrippedGrapeLogBlock;
-import net.mcreator.moreoresandarmour.block.StrippedCherryLogBlock;
-import net.mcreator.moreoresandarmour.block.StrippedBluestoneLogBlock;
-import net.mcreator.moreoresandarmour.block.StrippedBlueberryLogBlock;
-import net.mcreator.moreoresandarmour.block.NightmareLogBlock;
-import net.mcreator.moreoresandarmour.block.LemonLogBlock;
-import net.mcreator.moreoresandarmour.block.GrapeLogBlock;
-import net.mcreator.moreoresandarmour.block.CherryLogBlock;
-import net.mcreator.moreoresandarmour.block.BluestoneLogBlock;
-import net.mcreator.moreoresandarmour.block.BlueberryLogBlock;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Random;
-import java.util.Map;
-import java.util.HashMap;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public StrippedLogsProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 480);
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -71,12 +30,14 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 			System.err.println("Failed to load dependency world for procedure StrippedLogs!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+
+		if ((/*@ItemStack*/((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() instanceof AxeItem)) {
 			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BluestoneLogBlock.block.getDefaultState().getBlock())) {
 				if ((((new Object() {
@@ -784,13 +745,16 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 				}
 			}
 		}
+
 	}
 
 	@SubscribeEvent
 	public void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
 		PlayerEntity entity = event.getPlayer();
+
 		if (event.getHand() != entity.getActiveHand())
 			return;
+
 		int i = event.getPos().getX();
 		int j = event.getPos().getY();
 		int k = event.getPos().getZ();
@@ -804,4 +768,5 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}
+
 }

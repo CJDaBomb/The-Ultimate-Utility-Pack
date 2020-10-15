@@ -1,30 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-
-import net.minecraft.world.GameType;
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.item.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.client.network.play.NetworkPlayerInfo;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.moreoresandarmour.item.EnchantedTotemItem;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModVariables;
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class EnchantedTotemFoodEatenProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public EnchantedTotemFoodEatenProcedure(MoreOresAndArmourModElements instance) {
-		super(instance, 238);
+		super(instance, 19);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -32,7 +13,9 @@ public class EnchantedTotemFoodEatenProcedure extends MoreOresAndArmourModElemen
 			System.err.println("Failed to load dependency entity for procedure EnchantedTotemFoodEaten!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		{
 			ItemStack _setval = new ItemStack(EnchantedTotemItem.block, (int) (1));
 			entity.getCapability(MoreOresAndArmourModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -77,5 +60,7 @@ public class EnchantedTotemFoodEatenProcedure extends MoreOresAndArmourModElemen
 				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 			}
 		}
+
 	}
+
 }

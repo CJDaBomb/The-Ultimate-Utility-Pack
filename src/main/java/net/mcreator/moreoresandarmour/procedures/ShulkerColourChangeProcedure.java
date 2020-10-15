@@ -1,33 +1,11 @@
 package net.mcreator.moreoresandarmour.procedures;
 
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.Vec2f;
-import net.minecraft.item.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.monster.ShulkerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.command.ICommandSource;
-import net.minecraft.command.CommandSource;
-
-import net.mcreator.moreoresandarmour.MoreOresAndArmourModElements;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @MoreOresAndArmourModElements.ModElement.Tag
 public class ShulkerColourChangeProcedure extends MoreOresAndArmourModElements.ModElement {
+
 	public ShulkerColourChangeProcedure(MoreOresAndArmourModElements instance) {
 		super(instance, 490);
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -52,11 +30,13 @@ public class ShulkerColourChangeProcedure extends MoreOresAndArmourModElements.M
 			System.err.println("Failed to load dependency world for procedure ShulkerColourChange!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		if ((entity instanceof ShulkerEntity)) {
 			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == new ItemStack(Items.BLACK_DYE, (int) (1)).getItem())) {
@@ -188,14 +168,17 @@ public class ShulkerColourChangeProcedure extends MoreOresAndArmourModElements.M
 				}
 			}
 		}
+
 	}
 
 	@SubscribeEvent
 	public void onRightClickEntity(PlayerInteractEvent.EntityInteract event) {
 		Entity entity = event.getTarget();
 		PlayerEntity sourceentity = event.getPlayer();
+
 		if (event.getHand() != sourceentity.getActiveHand())
 			return;
+
 		int i = event.getPos().getX();
 		int j = event.getPos().getY();
 		int k = event.getPos().getZ();
@@ -210,4 +193,5 @@ public class ShulkerColourChangeProcedure extends MoreOresAndArmourModElements.M
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}
+
 }
