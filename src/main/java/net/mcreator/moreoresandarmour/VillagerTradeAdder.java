@@ -21,25 +21,27 @@ package net.mcreator.moreoresandarmour;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.BasicTrade;
 
+import net.minecraft.potion.Effects;
+import net.minecraft.item.SuspiciousStewItem;
+import net.minecraft.item.MerchantOffer;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.entity.merchant.villager.VillagerProfession;
 import net.minecraft.entity.merchant.villager.VillagerTrades;
-
+import net.minecraft.entity.merchant.villager.VillagerProfession;
+import net.minecraft.entity.Entity;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.enchantment.Enchantment;
 
 import net.mcreator.moreoresandarmour.item.RubyItem;
 
-import java.util.Random;
-import java.util.List;
-
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraft.item.MerchantOffer;
 import javax.annotation.Nullable;
 
+import java.util.Random;
+import java.util.List;
+import java.util.ArrayList;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class VillagerTradeAdder extends MoreOresAndArmourModElements.ModElement {
@@ -48,15 +50,9 @@ public class VillagerTradeAdder extends MoreOresAndArmourModElements.ModElement 
 	 */
 	public VillagerTradeAdder(MoreOresAndArmourModElements instance) {
 		super(instance, 506);
+		MinecraftForge.EVENT_BUS.register(this);
 	}
-
-	@Override
-	public void initElements() {
-	MinecraftForge.EVENT_BUS.register(this);
-
-	}
-
-
+	private static Random rand = new Random();
 	@SubscribeEvent
 	public void addNewTrade(VillagerTradesEvent event) {
 		if (event.getType() == VillagerProfession.ARMORER) {
@@ -74,19 +70,23 @@ public class VillagerTradeAdder extends MoreOresAndArmourModElements.ModElement 
 		}
 		if (event.getType() == VillagerProfession.ARMORER) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(3);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), new ItemStack(Items.CHAINMAIL_HELMET, 1), 12, 10, 0.2F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 4), new ItemStack(Items.CHAINMAIL_CHESTPLATE, 1), 12, 10, 0.2F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 5), new ItemStack(Items.SHIELD, 1), 12, 10, 0.2F));
+			trades.add(new BasicTrade(new ItemStack(Items.DIAMOND, 1), new ItemStack(Items.CHAINMAIL_HELMET, 1), 12, 10, 0.2F));
+			trades.add(new BasicTrade(new ItemStack(Items.DIAMOND, 4), new ItemStack(Items.CHAINMAIL_CHESTPLATE, 1), 12, 10, 0.2F));
+			trades.add(new BasicTrade(new ItemStack(Items.DIAMOND, 5), new ItemStack(Items.SHIELD, 1), 12, 10, 0.2F));
 		}
 		if (event.getType() == VillagerProfession.ARMORER) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(4);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 19)), randomizeEnchantment(new ItemStack(Items.DIAMOND_LEGGINGS, 1), EnchantmentType.ARMOR_LEGS, 6), 3, 15, 0.2F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 13)), randomizeEnchantment(new ItemStack(Items.DIAMOND_BOOTS, 1), EnchantmentType.ARMOR_FEET, 6), 3, 15, 0.2F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 19, 33, new ItemStack(Items.DIAMOND_LEGGINGS), 1, 1, 3, 15, 0.2F)
+					.randomizeEnchantment(EnchantmentType.ARMOR_LEGS, 3)); // 6
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 13, 27, new ItemStack(Items.DIAMOND_BOOTS), 1, 1, 3, 15, 0.2F)
+					.randomizeEnchantment(EnchantmentType.ARMOR_FEET, 3)); // 6
 		}
 		if (event.getType() == VillagerProfession.ARMORER) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 13)), randomizeEnchantment(new ItemStack(Items.DIAMOND_HELMET), EnchantmentType.ARMOR_HEAD, 6), 3, 30, 0.2F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 21)), randomizeEnchantment(new ItemStack(Items.DIAMOND_CHESTPLATE, 1), EnchantmentType.ARMOR_CHEST, 6), 3, 30, 0.2F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 13, 27, new ItemStack(Items.DIAMOND_HELMET), 1, 1, 3, 30, 0.2F)
+					.randomizeEnchantment(EnchantmentType.ARMOR_HEAD, 3)); // 6
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 21, 35, new ItemStack(Items.DIAMOND_CHESTPLATE), 1, 1, 3, 30, 0.2F)
+					.randomizeEnchantment(EnchantmentType.ARMOR_CHEST, 3)); // 6
 		}
 		if (event.getType() == VillagerProfession.BUTCHER) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(1);
@@ -161,24 +161,35 @@ public class VillagerTradeAdder extends MoreOresAndArmourModElements.ModElement 
 		if (event.getType() == VillagerProfession.FARMER) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(4);
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), new ItemStack(Items.CAKE, 1), 12, 15, 0.05F));
-			ItemStack susStew = new ItemStack(Items.SUSPICIOUS_STEW, 1);
-			susStew.getOrCreateTag().putInt("16", 100);
+			
+			ItemStack susStew = new ItemStack(Items.SUSPICIOUS_STEW);
+			SuspiciousStewItem.addEffect(susStew, Effects.NIGHT_VISION, 100);
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), susStew, 12, 15, 0.05F));
-			ItemStack susStew1 = new ItemStack(Items.SUSPICIOUS_STEW, 1);
-			susStew1.getOrCreateTag().putInt("8", 160);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), susStew1, 12, 15, 0.05F));
-			ItemStack susStew2 = new ItemStack(Items.SUSPICIOUS_STEW, 1);
-			susStew2.getOrCreateTag().putInt("18", 140);
+			
+			
+			ItemStack susStew2 = new ItemStack(Items.SUSPICIOUS_STEW);
+			SuspiciousStewItem.addEffect(susStew2, Effects.JUMP_BOOST, 160);
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), susStew2, 12, 15, 0.05F));
-			ItemStack susStew3 = new ItemStack(Items.SUSPICIOUS_STEW, 1);
-			susStew3.getOrCreateTag().putInt("15", 120);
+			
+			
+			ItemStack susStew3 = new ItemStack(Items.SUSPICIOUS_STEW);
+			SuspiciousStewItem.addEffect(susStew3, Effects.WEAKNESS, 140);
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), susStew3, 12, 15, 0.05F));
-			ItemStack susStew4 = new ItemStack(Items.SUSPICIOUS_STEW, 1);
-			susStew4.getOrCreateTag().putInt("19", 280);
+			
+
+			ItemStack susStew4 = new ItemStack(Items.SUSPICIOUS_STEW);
+			SuspiciousStewItem.addEffect(susStew4, Effects.BLINDNESS, 120);
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), susStew4, 12, 15, 0.05F));
-			ItemStack susStew5 = new ItemStack(Items.SUSPICIOUS_STEW, 1);
-			susStew5.getOrCreateTag().putInt("23", 7);
+			
+
+			ItemStack susStew5 = new ItemStack(Items.SUSPICIOUS_STEW);
+			SuspiciousStewItem.addEffect(susStew5, Effects.POISON, 280);
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), susStew5, 12, 15, 0.05F));
+			
+			ItemStack susStew6 = new ItemStack(Items.SUSPICIOUS_STEW);
+			SuspiciousStewItem.addEffect(susStew6, Effects.SATURATION, 100);
+			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), susStew6, 12, 15, 0.05F));
+			
 		}
 		if (event.getType() == VillagerProfession.FARMER) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
@@ -187,22 +198,26 @@ public class VillagerTradeAdder extends MoreOresAndArmourModElements.ModElement 
 		}
 		if (event.getType() == VillagerProfession.FISHERMAN) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(1);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), new ItemStack(Items.COD, 6), new ItemStack(Items.COOKED_COD, 6), 16, 1, 0.05F));
+			trades.add(
+					new BasicTrade(new ItemStack(RubyItem.block, 1), new ItemStack(Items.COD, 6), new ItemStack(Items.COOKED_COD, 6), 16, 1, 0.05F));
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 3), new ItemStack(Items.COD_BUCKET, 1), 16, 1, 0.05F));
 		}
 		if (event.getType() == VillagerProfession.FISHERMAN) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(2);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), new ItemStack(Items.SALMON, 6), new ItemStack(Items.COOKED_SALMON, 6), 16, 5, 0.05F));
+			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), new ItemStack(Items.SALMON, 6), new ItemStack(Items.COOKED_SALMON, 6), 16, 5,
+					0.05F));
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.CAMPFIRE, 1), 12, 5, 0.05F));
 		}
 		if (event.getType() == VillagerProfession.FISHERMAN) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(3);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(15) + 7)), randomizeEnchantment(new ItemStack(Items.FISHING_ROD, 1), EnchantmentType.FISHING_ROD, 6), 3, 10, 0.2F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 7, 22, new ItemStack(Items.FISHING_ROD), 1, 1, 3, 10, 0.2F)
+					.randomizeEnchantment(EnchantmentType.FISHING_ROD, 3)); // 6
 		}
 		if (event.getType() == VillagerProfession.FLETCHER) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(1);
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), new ItemStack(Items.ARROW, 16), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), new ItemStack(Items.GRAVEL, 10), new ItemStack(Items.FLINT, 10), 12, 1, 0.05F));
+			trades.add(
+					new BasicTrade(new ItemStack(RubyItem.block, 1), new ItemStack(Items.GRAVEL, 10), new ItemStack(Items.FLINT, 10), 12, 1, 0.05F));
 		}
 		if (event.getType() == VillagerProfession.FLETCHER) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(2);
@@ -214,12 +229,15 @@ public class VillagerTradeAdder extends MoreOresAndArmourModElements.ModElement 
 		}
 		if (event.getType() == VillagerProfession.FLETCHER) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(4);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 7)), randomizeEnchantment(new ItemStack(Items.BOW, 1), EnchantmentType.BOW, 6), 3, 15, 0.05F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 7, 21, new ItemStack(Items.BOW), 1, 1, 3, 15, 0.05F)
+					.randomizeEnchantment(EnchantmentType.BOW, 3)); // 6
 		}
 		if (event.getType() == VillagerProfession.FLETCHER) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 8)), randomizeEnchantment(new ItemStack(Items.CROSSBOW, 1), EnchantmentType.CROSSBOW, 6), 3, 15, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.ARROW, 5), new ItemStack(Items.SPECTRAL_ARROW, 5), 12, 30, 0.05F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 8, 22, new ItemStack(Items.CROSSBOW), 1, 1, 3, 15, 0.05F)
+					.randomizeEnchantment(EnchantmentType.CROSSBOW, 3)); // 6
+			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.ARROW, 5), new ItemStack(Items.SPECTRAL_ARROW, 5), 12, 30,
+					0.05F));
 		}
 		if (event.getType() == VillagerProfession.LEATHERWORKER) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(4);
@@ -231,22 +249,26 @@ public class VillagerTradeAdder extends MoreOresAndArmourModElements.ModElement 
 		}
 		if (event.getType() == VillagerProfession.LIBRARIAN) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(1);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(59) + 5)), new ItemStack(Items.BOOK, 1), randomizeEnchantmentBook(new ItemStack(Items.ENCHANTED_BOOK, 1), EnchantmentType.ALL, 1), 12, 1, 0.2F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 5, 64, new ItemStack(Items.BOOK), 1, 1, new ItemStack(Items.ENCHANTED_BOOK),
+					1, 1, 12, 1, 0.2F).randomizeEnchantment(1)); // 1
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 9), new ItemStack(Items.BOOKSHELF, 1), 12, 1, 0.05F));
 		}
 		if (event.getType() == VillagerProfession.LIBRARIAN) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(2);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(59) + 5)), new ItemStack(Items.BOOK, 1), randomizeEnchantmentBook(new ItemStack(Items.ENCHANTED_BOOK, 1), EnchantmentType.ALL, 1), 12, 5, 0.2F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 5, 64, new ItemStack(Items.BOOK), 1, 1, new ItemStack(Items.ENCHANTED_BOOK),
+					1, 1, 12, 5, 0.2F).randomizeEnchantment(1)); // 1
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), new ItemStack(Items.LANTERN, 1), 12, 5, 0.05F));
 		}
 		if (event.getType() == VillagerProfession.LIBRARIAN) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(3);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(59) + 5)), new ItemStack(Items.BOOK, 1), randomizeEnchantmentBook(new ItemStack(Items.ENCHANTED_BOOK, 1), EnchantmentType.ALL, 1), 12, 10, 0.2F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 5, 64, new ItemStack(Items.BOOK), 1, 1, new ItemStack(Items.ENCHANTED_BOOK),
+					1, 1, 12, 10, 0.2F).randomizeEnchantment(1)); // 1
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 1), new ItemStack(Items.GLASS, 4), 12, 10, 0.05F));
 		}
 		if (event.getType() == VillagerProfession.LIBRARIAN) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(4);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(59) + 5)), new ItemStack(Items.BOOK, 1), randomizeEnchantmentBook(new ItemStack(Items.ENCHANTED_BOOK, 1), EnchantmentType.ALL, 1), 12, 15, 0.2F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 5, 64, new ItemStack(Items.BOOK), 1, 1, new ItemStack(Items.ENCHANTED_BOOK),
+					1, 1, 12, 15, 0.2F).randomizeEnchantment(1)); // 1
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 5), new ItemStack(Items.CLOCK, 1), 12, 15, 0.05F));
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 4), new ItemStack(Items.COMPASS, 1), 12, 15, 0.05F));
 		}
@@ -313,79 +335,6 @@ public class VillagerTradeAdder extends MoreOresAndArmourModElements.ModElement 
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.SHEARS, 1), 12, 1, 0.05F));
 		}
 		if (event.getType() == VillagerProfession.SHEPHERD) {
-			List<VillagerTrades.ITrade> trades = event.getTrades().get(2);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.LIGHT_GRAY_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.GRAY_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.BLACK_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.BROWN_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.ORANGE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.YELLOW_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.LIME_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.GREEN_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.CYAN_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.BLUE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.LIGHT_BLUE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-		}
-		if (event.getType() == VillagerProfession.SHEPHERD) {
-			List<VillagerTrades.ITrade> trades = event.getTrades().get(3);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-		}
-		if (event.getType() == VillagerProfession.SHEPHERD) {
-			List<VillagerTrades.ITrade> trades = event.getTrades().get(4);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.WHITE_WOOL, 1), 12, 1, 0.05F));
-		}
-		if (event.getType() == VillagerProfession.SHEPHERD) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
 			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 2), new ItemStack(Items.PAINTING, 3), 12, 30, 0.05F));
 		}
@@ -402,19 +351,25 @@ public class VillagerTradeAdder extends MoreOresAndArmourModElements.ModElement 
 		}
 		if (event.getType() == VillagerProfession.TOOLSMITH) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(3);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 6)), randomizeEnchantment(new ItemStack(Items.IRON_AXE, 1), EnchantmentType.DIGGER, 10), 3, 10, 0.2F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 7)), randomizeEnchantment(new ItemStack(Items.IRON_SHOVEL, 1), EnchantmentType.DIGGER, 10), 3, 10, 0.2F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 8)), randomizeEnchantment(new ItemStack(Items.IRON_PICKAXE, 1), EnchantmentType.DIGGER, 10), 3, 10, 0.2F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 4), new ItemStack(Items.DIAMOND_HOE, 1), 3, 10, 0.2F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 6, 20, new ItemStack(Items.IRON_AXE), 1, 1, 3, 10, 0.2F)
+					.randomizeEnchantment(EnchantmentType.DIGGER, 5)); // 10
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 7, 21, new ItemStack(Items.IRON_SHOVEL), 1, 1, 3, 10, 0.2F)
+					.randomizeEnchantment(EnchantmentType.DIGGER, 5)); // 10
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 8, 22, new ItemStack(Items.IRON_PICKAXE), 1, 1, 3, 10, 0.2F)
+					.randomizeEnchantment(EnchantmentType.DIGGER, 5)); // 10
+			trades.add(new BasicTrade(new ItemStack(RubyItem.block, 4), new ItemStack(Items.DIAMOND_HOE), 3, 10, 0.2F));
 		}
 		if (event.getType() == VillagerProfession.TOOLSMITH) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(4);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 17)), randomizeEnchantment(new ItemStack(Items.DIAMOND_AXE, 1), EnchantmentType.DIGGER, 6), 3, 15, 0.2F));
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 10)), randomizeEnchantment(new ItemStack(Items.DIAMOND_SHOVEL, 1), EnchantmentType.DIGGER, 6), 3, 15, 0.2F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 17, 31, new ItemStack(Items.DIAMOND_AXE), 1, 1, 3, 15, 0.2F)
+					.randomizeEnchantment(EnchantmentType.DIGGER, 3)); // 6
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 10, 24, new ItemStack(Items.DIAMOND_SHOVEL), 1, 1, 3, 15, 0.2F)
+					.randomizeEnchantment(EnchantmentType.DIGGER, 3)); // 6
 		}
 		if (event.getType() == VillagerProfession.TOOLSMITH) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(2);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 18)), randomizeEnchantment(new ItemStack(Items.DIAMOND_PICKAXE, 1), EnchantmentType.DIGGER, 10), 3, 30, 0.2F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 18, 32, new ItemStack(Items.DIAMOND_PICKAXE), 1, 1, 3, 30, 0.2F)
+					.randomizeEnchantment(EnchantmentType.DIGGER, 5)); // 10
 		}
 		if (event.getType() == VillagerProfession.WEAPONSMITH) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(1);
@@ -422,7 +377,8 @@ public class VillagerTradeAdder extends MoreOresAndArmourModElements.ModElement 
 		}
 		if (event.getType() == VillagerProfession.WEAPONSMITH) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(2);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 7)), randomizeEnchantment(new ItemStack(Items.IRON_SWORD, 1), EnchantmentType.WEAPON, 10), 3, 1, 0.2F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 7, 21, new ItemStack(Items.IRON_SWORD), 1, 1, 3, 1, 0.2F)
+					.randomizeEnchantment(EnchantmentType.WEAPON, 5)); // 10
 		}
 		if (event.getType() == VillagerProfession.WEAPONSMITH) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(3);
@@ -430,32 +386,81 @@ public class VillagerTradeAdder extends MoreOresAndArmourModElements.ModElement 
 		}
 		if (event.getType() == VillagerProfession.WEAPONSMITH) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(4);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 17)), randomizeEnchantment(new ItemStack(Items.DIAMOND_AXE, 1), EnchantmentType.DIGGER, 6), 3, 15, 0.2F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 17, 31, new ItemStack(Items.DIAMOND_AXE), 1, 1, 3, 15, 0.2F)
+					.randomizeEnchantment(EnchantmentType.DIGGER, 3)); // 6
 		}
 		if (event.getType() == VillagerProfession.WEAPONSMITH) {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
-			trades.add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(14) + 13)), randomizeEnchantment(new ItemStack(Items.DIAMOND_SWORD, 1), EnchantmentType.WEAPON, 6), 3, 30, 0.2F));
+			trades.add(new AdvancedTrade(new ItemStack(RubyItem.block), 13, 27, new ItemStack(Items.DIAMOND_SWORD), 1, 1, 3, 30, 0.2F)
+					.randomizeEnchantment(EnchantmentType.WEAPON, 3)); // 6
 		}
 	}
-
-	private static ItemStack randomizeEnchantment(ItemStack itemStack, EnchantmentType type, int chance) {
-		Random rand = new Random();
-		for (Enchantment ench : ForgeRegistries.ENCHANTMENTS.getValues()) {
-			if (ench.type == type && rand.nextInt(chance) == 0) {
-				itemStack.addEnchantment(ench, rand.nextInt(ench.getMaxLevel()) + 1);
-			}
+	public static class AdvancedTrade extends BasicTrade {
+		private int minimumNumOfItemsP1;
+		private int maximumNumOfItemsP1;
+		private int minimumNumOfItemsP2;
+		private int maximumNumOfItemsP2;
+		private int minimumNumOfItemsForSale;
+		private int maximumNumOfItemsForSale;
+		private boolean hasRandomEnchantment;
+		private int chance;
+		private List<Enchantment> enchantments = new ArrayList<>();
+		public AdvancedTrade(ItemStack price, int minimumNumOfItemsPrice1, int maximumNumOfItemsPrice1, ItemStack price2, int minimumNumOfItemsPrice2,
+				int maximumNumOfItemsPrice2, ItemStack forSale, int minimumNumOfItemsForSale, int maximumNumOfItemsForSale, int maxTrades, int xp,
+				float priceMult) {
+			super(price, price2, forSale, maxTrades, xp, priceMult);
+			this.minimumNumOfItemsP1 = minimumNumOfItemsPrice1;
+			this.maximumNumOfItemsP1 = maximumNumOfItemsPrice1;
+			this.minimumNumOfItemsP2 = minimumNumOfItemsPrice2;
+			this.maximumNumOfItemsP2 = maximumNumOfItemsPrice2;
+			this.minimumNumOfItemsForSale = minimumNumOfItemsForSale;
+			this.maximumNumOfItemsForSale = maximumNumOfItemsForSale;
 		}
-		return itemStack;
-	}
 
-	private static ItemStack randomizeEnchantmentBook(ItemStack itemStack, EnchantmentType type, int chance) {
-		Random rand = new Random();
-		for (Enchantment ench : ForgeRegistries.ENCHANTMENTS.getValues()) {
-			if (ench.type == type && rand.nextInt(chance) == 0) {
-				itemStack.addEnchantment(ench, rand.nextInt(ench.getMaxLevel()) + 1);
-				break;
-			}
+		public AdvancedTrade(ItemStack price, int minimumNumOfItemsPrice, int maximumNumOfItemsPrice, ItemStack forSale, int minimumNumOfItemsForSale,
+				int maximumNumOfItemsForSale, int maxTrades, int xp, float priceMult) {
+			super(price, forSale, maxTrades, xp, priceMult);
+			this.minimumNumOfItemsP1 = minimumNumOfItemsPrice;
+			this.maximumNumOfItemsP1 = maximumNumOfItemsPrice;
+			this.minimumNumOfItemsForSale = minimumNumOfItemsForSale;
+			this.maximumNumOfItemsForSale = maximumNumOfItemsForSale;
 		}
-		return itemStack;
+
+		@Nullable
+		@Override
+		public MerchantOffer getOffer(Entity merchant, Random rand) {
+			if (this.maximumNumOfItemsForSale != this.minimumNumOfItemsForSale && this.maximumNumOfItemsForSale > 1)
+				this.forSale
+						.setCount(rand.nextInt(this.maximumNumOfItemsForSale - this.minimumNumOfItemsForSale) + this.minimumNumOfItemsForSale + 1);
+			if (this.maximumNumOfItemsP1 != this.minimumNumOfItemsP1 && this.maximumNumOfItemsP1 > 1)
+				this.price.setCount(rand.nextInt(this.maximumNumOfItemsP1 - this.minimumNumOfItemsP1) + this.minimumNumOfItemsP1 + 1);
+			if (this.maximumNumOfItemsP2 != this.minimumNumOfItemsP2 && this.maximumNumOfItemsP2 > 1)
+				this.price2.setCount(rand.nextInt(this.maximumNumOfItemsP2 - this.minimumNumOfItemsP2) + this.minimumNumOfItemsP2 + 1);
+			if (this.hasRandomEnchantment && rand.nextInt(this.chance) == 0) {
+				Enchantment enchantment = this.enchantments.get(rand.nextInt(this.enchantments.size()));
+				this.forSale.addEnchantment(enchantment, rand.nextInt(enchantment.getMaxLevel()) + 1);
+			}
+			return super.getOffer(merchant, rand);
+		}
+
+		public AdvancedTrade randomizeEnchantment(EnchantmentType enchantmentType, int chance) {
+			this.chance = chance;
+			this.hasRandomEnchantment = true;
+			for (Enchantment enchantment : ForgeRegistries.ENCHANTMENTS.getValues()) {
+				if (enchantment.type == enchantmentType) {
+					this.enchantments.add(enchantment);
+				}
+			}
+			return this;
+		}
+
+		public AdvancedTrade randomizeEnchantment(int chance) {
+			this.chance = chance;
+			this.hasRandomEnchantment = true;
+			for (Enchantment enchantment : ForgeRegistries.ENCHANTMENTS.getValues()) {
+				this.enchantments.add(enchantment);
+			}
+			return this;
+		}
 	}
 }

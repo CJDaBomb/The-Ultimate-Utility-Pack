@@ -2,6 +2,7 @@ package net.mcreator.moreoresandarmour.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -75,9 +76,9 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BluestoneLogBlock.block.getDefaultState().getBlock())) {
-			if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() instanceof AxeItem)) {
+		if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() instanceof AxeItem)) {
+			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BluestoneLogBlock.block.getDefaultState().getBlock())) {
 				if ((((new Object() {
 					public Direction getDirection(BlockPos pos) {
 						try {
@@ -192,11 +193,8 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 						}
 					}
 				}
-			}
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == NightmareLogBlock.block.getDefaultState()
-				.getBlock())) {
-			if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() instanceof AxeItem)) {
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == NightmareLogBlock.block.getDefaultState()
+					.getBlock())) {
 				if ((((new Object() {
 					public Direction getDirection(BlockPos pos) {
 						try {
@@ -311,10 +309,8 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 						}
 					}
 				}
-			}
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CherryLogBlock.block.getDefaultState().getBlock())) {
-			if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() instanceof AxeItem)) {
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CherryLogBlock.block.getDefaultState()
+					.getBlock())) {
 				if ((((new Object() {
 					public Direction getDirection(BlockPos pos) {
 						try {
@@ -429,10 +425,8 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 						}
 					}
 				}
-			}
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == LemonLogBlock.block.getDefaultState().getBlock())) {
-			if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() instanceof AxeItem)) {
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == LemonLogBlock.block.getDefaultState()
+					.getBlock())) {
 				if ((((new Object() {
 					public Direction getDirection(BlockPos pos) {
 						try {
@@ -547,11 +541,8 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 						}
 					}
 				}
-			}
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BlueberryLogBlock.block.getDefaultState()
-				.getBlock())) {
-			if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() instanceof AxeItem)) {
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BlueberryLogBlock.block.getDefaultState()
+					.getBlock())) {
 				if ((((new Object() {
 					public Direction getDirection(BlockPos pos) {
 						try {
@@ -666,10 +657,8 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 						}
 					}
 				}
-			}
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == GrapeLogBlock.block.getDefaultState().getBlock())) {
-			if ((/* @ItemStack */((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() instanceof AxeItem)) {
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == GrapeLogBlock.block.getDefaultState()
+					.getBlock())) {
 				if ((((new Object() {
 					public Direction getDirection(BlockPos pos) {
 						try {
@@ -786,7 +775,14 @@ public class StrippedLogsProcedure extends MoreOresAndArmourModElements.ModEleme
 				}
 			}
 		} else {
-			return;
+			if (dependencies.get("event") != null) {
+				Object _obj = dependencies.get("event");
+				if (_obj instanceof Event) {
+					Event _evt = (Event) _obj;
+					if (_evt.isCancelable())
+						_evt.setCanceled(true);
+				}
+			}
 		}
 	}
 

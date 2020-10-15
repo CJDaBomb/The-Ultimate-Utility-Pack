@@ -161,7 +161,7 @@
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "minecraft:creeper_drop_music_discs",
+          "name": "minecraft:music_discs",
           "expand": true
         }
       ],

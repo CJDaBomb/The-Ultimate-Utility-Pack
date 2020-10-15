@@ -22,7 +22,7 @@ import java.util.HashMap;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class GoldenAppleSeedsItem extends MoreOresAndArmourModElements.ModElement {
-	@ObjectHolder("more_ores_and_armour:golden_apple_seeds")
+	@ObjectHolder("more_ores_and_armour:golden_apple_seed")
 	public static final Item block = null;
 	public GoldenAppleSeedsItem(MoreOresAndArmourModElements instance) {
 		super(instance, 38);
@@ -35,7 +35,7 @@ public class GoldenAppleSeedsItem extends MoreOresAndArmourModElements.ModElemen
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(CustomOreModItemGroup.tab).maxStackSize(64));
-			setRegistryName("golden_apple_seeds");
+			setRegistryName("golden_apple_seed");
 		}
 
 		@Override

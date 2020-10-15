@@ -2,6 +2,7 @@ package net.mcreator.moreoresandarmour.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -606,6 +607,15 @@ public class StrippedWoodProcedure extends MoreOresAndArmourModElements.ModEleme
 							_ist.setDamage(0);
 						}
 					}
+				}
+			}
+		} else {
+			if (dependencies.get("event") != null) {
+				Object _obj = dependencies.get("event");
+				if (_obj instanceof Event) {
+					Event _evt = (Event) _obj;
+					if (_evt.isCancelable())
+						_evt.setCanceled(true);
 				}
 			}
 		}

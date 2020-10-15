@@ -24,24 +24,23 @@ import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.BasicTrade;
 
-import net.minecraft.util.datafix.fixes.VillagerTrades;
+import net.minecraft.item.MerchantOffer;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.entity.Entity;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.entity.merchant.villager.VillagerProfession;
-import net.minecraft.entity.merchant.villager.VillagerTrades.ITrade;
 
 import net.mcreator.moreoresandarmour.item.ShadowIngotItem;
 import net.mcreator.moreoresandarmour.item.RubyItem;
 import net.mcreator.moreoresandarmour.item.GoldenAppleSeedsItem;
 import net.mcreator.moreoresandarmour.block.EndRootsBlock;
 
-import net.minecraft.item.MerchantOffer;
 import javax.annotation.Nullable;
 
 import java.util.Random;
-
+import java.util.List;
+import java.util.ArrayList;
 
 @MoreOresAndArmourModElements.ModElement.Tag
 public class WandererTradesAdder extends MoreOresAndArmourModElements.ModElement {
@@ -50,50 +49,97 @@ public class WandererTradesAdder extends MoreOresAndArmourModElements.ModElement
 	 */
 	public WandererTradesAdder(MoreOresAndArmourModElements instance) {
 		super(instance, 507);
+		MinecraftForge.EVENT_BUS.register(this);
 	}
-
-	@Override
-	public void initElements() {
-	MinecraftForge.EVENT_BUS.register(this);
-
-	}
-
 
 	@SubscribeEvent
 	public void wt(WandererTradesEvent e) {
-		e.getGenericTrades().add(new BasicTrade(new ItemStack(Items.EMERALD, (new Random().nextInt(2) + 1)), new ItemStack(RubyItem.block, 1), 64, 1, 0.2F));
-		e.getGenericTrades().add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(5) + 1)), new ItemStack(Items.GOLDEN_APPLE, 1), 12, 1, 0.2F));
-		e.getGenericTrades().add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(3) + 5)), new ItemStack(Items.ENDER_PEARL, (new Random().nextInt(2) + 2)), 12, 1, 0.2F));
-		e.getGenericTrades().add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(5) + 5)), new ItemStack(ShadowIngotItem.block, 1), 8, 1, 0.2F));
+		e.getGenericTrades().add(new AdvancedTrade(new ItemStack(Items.EMERALD), 1, 3, new ItemStack(RubyItem.block), 1, 1, 64, 1, 0.2F));
+		e.getGenericTrades().add(new AdvancedTrade(new ItemStack(RubyItem.block), 1, 6, new ItemStack(Items.GOLDEN_APPLE), 1, 1, 12, 1, 0.2F));
+		e.getGenericTrades().add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(3) + 5)),
+				new ItemStack(Items.ENDER_PEARL, (new Random().nextInt(2) + 2)), 12, 1, 0.2F));
+		e.getGenericTrades().add(new AdvancedTrade(new ItemStack(RubyItem.block), 5, 10, new ItemStack(ShadowIngotItem.block), 1, 1, 8, 1, 0.2F));
 		e.getGenericTrades().add(new BasicTrade(new ItemStack(RubyItem.block, 1), new ItemStack(GoldenAppleSeedsItem.block, 1), 12, 1, 0.2F));
 		e.getGenericTrades().add(new BasicTrade(new ItemStack(RubyItem.block, 1), new ItemStack(EndRootsBlock.block, 1), 12, 1, 0.2F));
-		
-		e.getRareTrades().add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(35) + 5)), randomizeEnchantmentBook(new ItemStack(Items.ENCHANTED_BOOK, 1), EnchantmentType.ALL, 1), 5, 15, 0.2F));
-		e.getRareTrades().add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(20) + 10)), randomizeEnchantment(new ItemStack(Items.DIAMOND_PICKAXE, 1), EnchantmentType.DIGGER, 6), 3, 15, 0.2F));
-		e.getRareTrades().add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(20) + 5)), randomizeEnchantment(new ItemStack(Items.DIAMOND_AXE, 1), EnchantmentType.DIGGER, 6), 3, 15, 0.2F));
-		e.getRareTrades().add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(20) + 5)), randomizeEnchantment(new ItemStack(Items.DIAMOND_SHOVEL, 1), EnchantmentType.DIGGER, 6), 3, 15, 0.2F));
-		e.getRareTrades().add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(15) + 5)), randomizeEnchantment(new ItemStack(Items.DIAMOND_PICKAXE, 1), EnchantmentType.DIGGER, 6), 3, 15, 0.2F));
-		e.getRareTrades().add(new BasicTrade(new ItemStack(RubyItem.block, (new Random().nextInt(20) + 12)), new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, 1), 2, 1, 0.2F));
+		e.getRareTrades().add(new AdvancedTrade(new ItemStack(RubyItem.block), 5, 40, new ItemStack(Items.ENCHANTED_BOOK, 1), 1, 1, 5, 15, 0.2F)
+				.randomizeEnchantment(1)); // 1
+		e.getRareTrades().add(new AdvancedTrade(new ItemStack(RubyItem.block), 10, 30, new ItemStack(Items.DIAMOND_PICKAXE, 1), 1, 1, 3, 15, 0.2F)
+				.randomizeEnchantment(EnchantmentType.DIGGER, 3)); // 6
+		e.getRareTrades().add(new AdvancedTrade(new ItemStack(RubyItem.block), 5, 25, new ItemStack(Items.DIAMOND_AXE, 1), 1, 1, 3, 15, 0.2F)
+				.randomizeEnchantment(EnchantmentType.DIGGER, 3)); // 6
+		e.getRareTrades().add(new AdvancedTrade(new ItemStack(RubyItem.block), 5, 25, new ItemStack(Items.DIAMOND_SHOVEL, 1), 1, 1, 3, 15, 0.2F)
+				.randomizeEnchantment(EnchantmentType.DIGGER, 3)); // 6
+		e.getRareTrades().add(new AdvancedTrade(new ItemStack(RubyItem.block), 5, 20, new ItemStack(Items.DIAMOND_PICKAXE, 1), 1, 1, 3, 15, 0.2F)
+				.randomizeEnchantment(EnchantmentType.DIGGER, 3)); // 6
+		e.getRareTrades()
+				.add(new AdvancedTrade(new ItemStack(RubyItem.block), 12, 32, new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, 1), 1, 1, 2, 1, 0.2F));
 	}
-
-	private static ItemStack randomizeEnchantment(ItemStack itemStack, EnchantmentType type, int chance) {
-		Random rand = new Random();
-		for (Enchantment ench : ForgeRegistries.ENCHANTMENTS.getValues()) {
-			if (ench.type == type && rand.nextInt(chance) == 0) {
-				itemStack.addEnchantment(ench, rand.nextInt(ench.getMaxLevel()) + 1);
-			}
+	public static class AdvancedTrade extends BasicTrade {
+		private int minimumNumOfItemsP1;
+		private int maximumNumOfItemsP1;
+		private int minimumNumOfItemsP2;
+		private int maximumNumOfItemsP2;
+		private int minimumNumOfItemsForSale;
+		private int maximumNumOfItemsForSale;
+		private boolean hasRandomEnchantment;
+		private int chance;
+		private List<Enchantment> enchantments = new ArrayList<>();
+		public AdvancedTrade(ItemStack price, int minimumNumOfItemsPrice1, int maximumNumOfItemsPrice1, ItemStack price2, int minimumNumOfItemsPrice2,
+				int maximumNumOfItemsPrice2, ItemStack forSale, int minimumNumOfItemsForSale, int maximumNumOfItemsForSale, int maxTrades, int xp,
+				float priceMult) {
+			super(price, price2, forSale, maxTrades, xp, priceMult);
+			this.minimumNumOfItemsP1 = minimumNumOfItemsPrice1;
+			this.maximumNumOfItemsP1 = maximumNumOfItemsPrice1;
+			this.minimumNumOfItemsP2 = minimumNumOfItemsPrice2;
+			this.maximumNumOfItemsP2 = maximumNumOfItemsPrice2;
+			this.minimumNumOfItemsForSale = minimumNumOfItemsForSale;
+			this.maximumNumOfItemsForSale = maximumNumOfItemsForSale;
 		}
-		return itemStack;
-	}
 
-	private static ItemStack randomizeEnchantmentBook(ItemStack itemStack, EnchantmentType type, int chance) {
-		Random rand = new Random();
-		for (Enchantment ench : ForgeRegistries.ENCHANTMENTS.getValues()) {
-			if (ench.type == type && rand.nextInt(chance) == 0) {
-				itemStack.addEnchantment(ench, rand.nextInt(ench.getMaxLevel()) + 1);
-				break;
-			}
+		public AdvancedTrade(ItemStack price, int minimumNumOfItemsPrice, int maximumNumOfItemsPrice, ItemStack forSale, int minimumNumOfItemsForSale,
+				int maximumNumOfItemsForSale, int maxTrades, int xp, float priceMult) {
+			super(price, forSale, maxTrades, xp, priceMult);
+			this.minimumNumOfItemsP1 = minimumNumOfItemsPrice;
+			this.maximumNumOfItemsP1 = maximumNumOfItemsPrice;
+			this.minimumNumOfItemsForSale = minimumNumOfItemsForSale;
+			this.maximumNumOfItemsForSale = maximumNumOfItemsForSale;
 		}
-		return itemStack;
+
+		@Nullable
+		@Override
+		public MerchantOffer getOffer(Entity merchant, Random rand) {
+			if (this.maximumNumOfItemsForSale != this.minimumNumOfItemsForSale && this.maximumNumOfItemsForSale > 1)
+				this.forSale
+						.setCount(rand.nextInt(this.maximumNumOfItemsForSale - this.minimumNumOfItemsForSale) + this.minimumNumOfItemsForSale + 1);
+			if (this.maximumNumOfItemsP1 != this.minimumNumOfItemsP1 && this.maximumNumOfItemsP1 > 1)
+				this.price.setCount(rand.nextInt(this.maximumNumOfItemsP1 - this.minimumNumOfItemsP1) + this.minimumNumOfItemsP1 + 1);
+			if (this.maximumNumOfItemsP2 != this.minimumNumOfItemsP2 && this.maximumNumOfItemsP2 > 1)
+				this.price2.setCount(rand.nextInt(this.maximumNumOfItemsP2 - this.minimumNumOfItemsP2) + this.minimumNumOfItemsP2 + 1);
+			if (this.hasRandomEnchantment && rand.nextInt(this.chance) == 0) {
+				Enchantment enchantment = this.enchantments.get(rand.nextInt(this.enchantments.size()));
+				this.forSale.addEnchantment(enchantment, rand.nextInt(enchantment.getMaxLevel()) + 1);
+			}
+			return super.getOffer(merchant, rand);
+		}
+
+		public AdvancedTrade randomizeEnchantment(EnchantmentType enchantmentType, int chance) {
+			this.chance = chance;
+			this.hasRandomEnchantment = true;
+			for (Enchantment enchantment : ForgeRegistries.ENCHANTMENTS.getValues()) {
+				if (enchantment.type == enchantmentType) {
+					this.enchantments.add(enchantment);
+				}
+			}
+			return this;
+		}
+
+		public AdvancedTrade randomizeEnchantment(int chance) {
+			this.chance = chance;
+			this.hasRandomEnchantment = true;
+			for (Enchantment enchantment : ForgeRegistries.ENCHANTMENTS.getValues()) {
+				this.enchantments.add(enchantment);
+			}
+			return this;
+		}
 	}
 }

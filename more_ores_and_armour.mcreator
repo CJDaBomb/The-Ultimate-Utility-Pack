@@ -4769,15 +4769,6 @@
       }
     },
     {
-      "name": "WandererTradeAdder",
-      "type": "code",
-      "sortid": 465,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {},
-      "registry_name": "wanderer_trade_adder"
-    },
-    {
       "name": "InfusedAluminum",
       "type": "block",
       "sortid": 60,
@@ -5668,7 +5659,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "golden_apple_seeds"
+      "registry_name": "golden_apple_seed"
     },
     {
       "name": "GoldenAppleSeedsRightClickedOnBlock",
@@ -6183,6 +6174,159 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "shadow_shovel"
+    },
+    {
+      "name": "ShadowPickaxeBreaksBedrock",
+      "type": "procedure",
+      "sortid": 511,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_pickaxe_breaks_bedrock",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShadowSwordKill",
+      "type": "procedure",
+      "sortid": 511,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_sword_kill",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShadowPickaxeBlockDestroyedWithTool",
+      "type": "procedure",
+      "sortid": 512,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_pickaxe_block_destroyed_with_tool",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShadowAxeDestroysBlock",
+      "type": "procedure",
+      "sortid": 513,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_axe_destroys_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShadowShovelDestroysBlock",
+      "type": "procedure",
+      "sortid": 514,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_shovel_destroys_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -6244,17 +6388,17 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.more_ores_and_armour.shadow_shovel": "Shadow Shovel",
-      "item.more_ores_and_armour.aluminum_armour_helmet": "Aluminum  Helmet",
       "item.more_ores_and_armour.ruby_armourbody": "Ruby Chestplate",
+      "item.more_ores_and_armour.aluminum_armour_helmet": "Aluminum  Helmet",
+      "item.more_ores_and_armour.shadow_shovel": "Shadow Shovel",
       "item.more_ores_and_armour.aluminum_shovel": "Aluminum Shovel",
       "item.more_ores_and_armour.turquoise_shovel": "Turquoise Shovel",
       "item.more_ores_and_armour.bedrock_armourhelmet": "Shadowrock Helmet",
       "item.more_ores_and_armour.sapphire_armourhelmet": "Sapphire Helmet",
       "block.more_ores_and_armour.lemon_log": "Lemon Log",
-      "block.more_ores_and_armour.alexandrite_ore": "Alexandrite Ore",
-      "item.more_ores_and_armour.shadow_armourhelmet": "Shadow  Helmet",
       "item.more_ores_and_armour.coal_apple": "Coal Apple",
+      "item.more_ores_and_armour.shadow_armourhelmet": "Shadow  Helmet",
+      "block.more_ores_and_armour.alexandrite_ore": "Alexandrite Ore",
       "block.more_ores_and_armour.blueberry_trapdoor": "Blueberry Trapdoor",
       "block.more_ores_and_armour.shadow_block": "Shadow Block",
       "item.more_ores_and_armour.lemon": "Lemon",
@@ -6266,14 +6410,14 @@
       "item.more_ores_and_armour.cracked_end_roots": "Cracked End Roots",
       "block.more_ores_and_armour.smooth_shadow_rock_fence": "Smooth Shadow Rock Wall",
       "item.more_ores_and_armour.sapphire_armour_helmet": "Sapphire Helmet",
-      "block.more_ores_and_armour.oil_barrel_on": "Oil Barrel ",
-      "block.more_ores_and_armour.infused_redstone": "Infused Redstone",
       "itemGroup.tabultimate_utility_building_blocks": "Ultimate Utility Building Blocks",
+      "block.more_ores_and_armour.infused_redstone": "Infused Redstone",
+      "block.more_ores_and_armour.oil_barrel_on": "Oil Barrel ",
       "item.more_ores_and_armour.gold_crystal": "Gold Crystal",
       "item.more_ores_and_armour.coal_crystal": "Coal Crystal",
       "item.more_ores_and_armour.shadow_armour_boots": "Shadow Armour Boots",
-      "item.more_ores_and_armour.copper_armor_leggings": "Copper Leggings",
       "block.more_ores_and_armour.electric_furnace_on": "Electric Furnace",
+      "item.more_ores_and_armour.copper_armor_leggings": "Copper Leggings",
       "item.minecraft.lingering_potion.effect.bleeding": "Lingering Bleeding",
       "block.more_ores_and_armour.cherry_trapdoor": "Cherry Trapdoor",
       "block.more_ores_and_armour.bluestone_leaves": "Bluestone Leaves",
@@ -6425,6 +6569,7 @@
       "item.more_ores_and_armour.sapphire_armour_chestplate": "Sapphire Chestplate",
       "item.more_ores_and_armour.bedrock_armourboots": "Shadowrock  Boots",
       "block.more_ores_and_armour.bluecobblestone_stairs": "Bluecobblestone Stairs",
+      "item.more_ores_and_armour.golden_apple_seed": "Golden Apple Seeds",
       "item.more_ores_and_armour.aluminum_ingot": "Aluminum Ingot",
       "block.more_ores_and_armour.rubyore": "Ruby Ore",
       "item.more_ores_and_armour.ruby_armour_helmet": "Ruby Helmet",
@@ -6444,7 +6589,7 @@
       "effect.wither_potion": "Wither",
       "item.more_ores_and_armour.ruby_armourboots": "Ruby Boots",
       "item.more_ores_and_armour.alexadrite_apple": "Alexandrite Apple",
-      "block.more_ores_and_armour.bluestone_bricks_wall": "Bluestone Bricks Wall",
+      "block.more_ores_and_armour.bluestone_bricks_wall": "Bluestone Brick Wall",
       "item.minecraft.potion.effect.absorbsion": "Absorbsion",
       "block.more_ores_and_armour.shadow_ore": "Shadow Ore",
       "item.more_ores_and_armour.turquoise_pickaxe": "Turquoise Pickaxe",
@@ -6473,7 +6618,6 @@
       "block.more_ores_and_armour.grape_fence": "Grape Fence",
       "block.more_ores_and_armour.bluestone_wood_fence": "Bluestone Wood Fence",
       "item.more_ores_and_armour.carbon": "Carbon",
-      "item.more_ores_and_armour.golden_apple_seeds": "Golden Apple Seeds",
       "block.more_ores_and_armour.sapphire_ore": "Sapphire Ore",
       "block.more_ores_and_armour.smooth_shadow_rock_stairs": "Smooth Shadow Rock Stairs",
       "block.more_ores_and_armour.lemon_planks": "Lemon Planks",
@@ -6497,7 +6641,7 @@
       "block.more_ores_and_armour.end_roots": "End Roots",
       "item.more_ores_and_armour.alexandrite_armourbody": "Alexandrite Chestplate",
       "block.more_ores_and_armour.nightmare_wood": "Nightmare Wood",
-      "block.more_ores_and_armour.bluestone_bricks_stairs": "Bluestone Bricks Stairs",
+      "block.more_ores_and_armour.bluestone_bricks_stairs": "Bluestone Brick Stairs",
       "block.more_ores_and_armour.blueberry_stairs": "Blueberry Stairs",
       "item.more_ores_and_armour.sapphire_armourbody": "Sapphire Chestplate",
       "block.more_ores_and_armour.lemon_fence": "Lemon Fence",
